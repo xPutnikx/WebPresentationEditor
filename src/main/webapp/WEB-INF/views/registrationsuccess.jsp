@@ -45,7 +45,7 @@
             <a class="brand" href="#">Web Editor</a>
             <div class="nav-collapse">
                 <ul class="nav">
-                    <li><a href="./">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="listOfPresentations.html">List of Presentations</a></li>
@@ -64,7 +64,7 @@
 <div class="container">
 
  <h3>mail with a unique key to confirm the registration be sent to your e-mail</h3>
-
+ <li><a href="success.html">Success!</a></li>
 </div> <!-- /container -->
 
 

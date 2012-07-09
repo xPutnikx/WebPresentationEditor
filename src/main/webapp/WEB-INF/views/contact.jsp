@@ -42,7 +42,7 @@
             <a class="brand" href="../editor.html">Web Editor</a>
             <div class="nav-collapse">
                 <ul class="nav">
-                    <li><a href="./">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a class="action"  href="#">Contact</a></li>
                     <li><a href="listOfPresentations.html">List of Presentations</a></li>

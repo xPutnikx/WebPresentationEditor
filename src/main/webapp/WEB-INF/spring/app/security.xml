@@ -52,11 +52,14 @@
   		   <http pattern="/spring/listofPresentations.html*" security="none"/>
   		   <http pattern="/spring/scripts/**" security="none"/>
   		   <http pattern="/spring/about.html*" security="none"/>
-  		   <http pattern="/spring/*" security="none"/>
+  		   <http pattern="/spring/edit.html*" security="none"/>
+  		   <http pattern="/spring/home.html*" security="none"/>
   		   <http pattern="/spring/contact.html*" security="none"/>
   		   <http pattern="/spring/registrationform.html*" security="none"/>
 	<http auto-config="true">
 		<intercept-url pattern="/**" access="ROLE_USER" />
+		<intercept-url pattern="/spring/list.html*" access="ROLE_ADMIN"/>
+  		   <intercept-url pattern="/spring/edit.html*" access="ROLE_ADMIN"/>
 		<form-login login-page="/spring/loginform.html" default-target-url="/spring/"
 			authentication-failure-url="/spring/loginform.html" />
 		<logout logout-success-url="/logout" />

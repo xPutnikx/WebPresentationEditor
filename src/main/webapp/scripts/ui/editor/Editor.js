@@ -27,7 +27,7 @@ define(["vendor/amd/backbone", "./SlideEditor", "./transition_editor/TransitionE
       return this.openDialog.show(function(fileName) {
         var data;
         console.log("Attempting to open " + fileName);
-        data = FileStorage.open(fileName);
+        data = FileStorage.open(fileName);//add JSON
         if (data != null) {
           _this.model["import"](data);
           return localStorage.setItem("StrutLastPres", fileName);
@@ -100,7 +100,8 @@ define(["vendor/amd/backbone", "./SlideEditor", "./transition_editor/TransitionE
     importJSON: function(e) {
       var _this = this;
       return this.rawTextModal.show(function(json) {
-        return _this.model["import"](JSON.parse(json));
+   
+    	  return _this.model["import"](JSON.parse(json));
       });
     },
     changeBackground: function() {

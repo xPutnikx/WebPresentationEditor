@@ -115,7 +115,7 @@ public final class registrationsuccess_jsp extends org.apache.jasper.runtime.Htt
       out.write("<div class=\"container\">\n");
       out.write("\n");
       out.write(" <h3>mail with a unique key to confirm the registration be sent to your e-mail</h3>\n");
-      out.write("\n");
+      out.write(" <li><a href=\"success.html\">Success!</a></li>\n");
       out.write("</div> <!-- /container -->\n");
       out.write("\n");
       out.write("\n");

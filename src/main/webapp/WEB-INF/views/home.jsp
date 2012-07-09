@@ -77,8 +77,57 @@ body {
 		<p>
 			<a href="list">Administration Account</a><br>
 		</p>
-	</div>
+		 <div id="item">
 		${tagCloud}
+		<li>Development</li>
+		<li>web</li>
+		<li>Tutorial</li>
+		<li>ASP</li>
+		<li>CSS</li>
+		<li>Design</li>
+		<li>Flash</li>
+		<li>Experimental</li>
+		<li><a href=registrationform.html>Registration</a></li>
+		<li><a href=loginform.html>Login</a></li>
+		<li> </li>
+		<li><a href=contact.html>Contact</a></li>
+		<li>3D</li>
+		<li>Ajax</li>
+		<li><a href=about.html>About</a></li>
+		<li>Development</li>
+		<li>web</li>
+		<li>Tutorial</li>
+		<li>ASP</li>
+		<li>CSS</li>
+		<li>Design</li>
+		<li>Flash</li>
+		<li>Experimental</li>
+		<li><a href=registrationform.html>Registration</a></li>
+		<li><a href=loginform.html>Login</a></li>
+		<li> </li>
+		<li><a href=contact.html>Contact</a></li>
+		<li>3D</li>
+		<li>Ajax</li>
+		<li><a href=about.html>About</a></li>
+		<li>Development</li>
+		<li>web</li>
+		<li>Tutorial</li>
+		<li>ASP</li>
+		<li>CSS</li>
+		<li>Design</li>
+		<li>Flash</li>
+		<li>Experimental</li>
+		<li><a href=registrationform.html>Registration</a></li>
+		<li><a href=loginform.html>Login</a></li>
+		<li> </li>
+		<li><a href=contact.html>Contact</a></li>
+		<li>3D</li>
+		<li>Ajax</li>
+		<li><a href=about.html>About</a></li>
+	</ul>
+</div>
+	</div>
+		
 	<!-- /container -->
 
 
@@ -86,10 +135,7 @@ body {
 ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	
-	<script src="resources/ring/jquery-1.3.2.min.js"></script>
-	<script src="resources/ring/3DEngine.js" type="text/javascript" charset="utf-8"></script>
-	<script src="resources/ring/Ring.js" type="text/javascript" charset="utf-8"></script>
-	<script src="resources/ring/virtual.js" type="text/javascript" charset="utf-8"> </script>
+	<script src="resources/assets/js/jquery.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>
 	<script src="resources/assets/js/bootstrap-modal.js"></script>
@@ -102,6 +148,56 @@ body {
 	<script src="resources/assets/js/bootstrap-collapse.js"></script>
 	<script src="resources/assets/js/bootstrap-carousel.js"></script>
 	<script src="resources/assets/js/bootstrap-typeahead.js"></script>
+	<script type="text/javascript" src="resources/sphere/JQuery.js"></script>
+	<script src="resources/sphere/3DEngine.js" type="text/javascript" charset="utf-8"></script>
+	<script src="resources/sphere/Sphere.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//<![CDATA[
+		
+		$(document).ready(function() {
+
+			var camera = new Camera3D();
+			camera.init(0,0,0,300);
+			
+			var container = $("#item")
+			
+			var item = new Object3D(container);
+
+			item.addChild(new Sphere(200,10,100));
+			
+			var scene = new Scene3D();
+			scene.addToScene(item);
+			
+			
+			var mouseX,mouseY = 0;
+			var offsetX = $("#item").offset().left;
+			var offsetY = $("#item").offset().top;
+			var speed = 10000;
+			
+			$().mousemove(function(e){
+				mouseX = e.clientX - offsetX - (container.width() / 2);
+				mouseY = e.clientY - offsetY - (container.height() / 2);
+			});
+			
+			var animateIt = function(){
+				if (mouseX != undefined){
+					axisRotation.y += (mouseX) / speed
+				}
+				if (mouseY != undefined){
+					axisRotation.x -= mouseY / speed;
+				}
+
+				scene.renderCamera(camera);
+				
+			};
+			
+			
+			setInterval(animateIt, 20);
+			
+			
+			});
+		//]]>
+	</script>
 
 </body>
 </html>
