@@ -1,0 +1,73 @@
+<!--  <beans:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+           <http pattern="/spring/images/**" security="none"/>
+           <http pattern="/spring/lib/**" security="none"/>
+           <http pattern="/spring/preview_export/**" security="none"/>
+           <http pattern="/spring/res/**" security="none"/>
+           <http pattern="/spring/resources/**" security="none"/>
+  		   <http pattern="/spring/loginform.html*" security="none"/>
+  		   <http pattern="/spring/listofPresentations.html*" security="none"/>
+  		   <http pattern="/spring/scripts/**" security="none"/>
+  		   <http pattern="/spring/about.html*" security="none"/>
+  		   <http pattern="/spring/*" security="none"/>
+  		   <http pattern="/spring/contact.html*" security="none"/>
+  		   <http pattern="/spring/registrationform.html*" security="none"/>
+  		   <global-method-security secured-annotations="enabled" />
+           <http>
+           <intercept-url pattern="/j_spring_security_check*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+    		<intercept-url pattern='/editor.html*' access='ROLE_USER' />
+    		<intercept-url pattern='/**' access='ROLE_USER' />
+    		<form-login login-page='/spring/loginform.html' 
+    		login-processing-url='/spring/loginsuccess.html' 
+    		default-target-url='/spring/'
+            always-use-default-target='true' />
+            <logout logout-success-url="/logout" />
+  			</http>
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="mkyong" password="123456" authorities="ROLE_USER" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+</beans:beans>-->
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+	<http pattern="/spring/login.html*" security="none"/>
+	 <http pattern="/spring/images/**" security="none"/>
+           <http pattern="/spring/lib/**" security="none"/>
+           <http pattern="/spring/preview_export/**" security="none"/>
+           <http pattern="/spring/res/**" security="none"/>
+           <http pattern="/spring/resources/**" security="none"/>
+  		   <http pattern="/spring/loginform.html*" security="none"/>
+  		   <http pattern="/spring/listofPresentations.html*" security="none"/>
+  		   <http pattern="/spring/scripts/**" security="none"/>
+  		   <http pattern="/spring/about.html*" security="none"/>
+  		   <http pattern="/spring/*" security="none"/>
+  		   <http pattern="/spring/contact.html*" security="none"/>
+  		   <http pattern="/spring/registrationform.html*" security="none"/>
+	<http auto-config="true">
+		<intercept-url pattern="/**" access="ROLE_USER" />
+		<form-login login-page="/spring/loginform.html" default-target-url="/spring/"
+			authentication-failure-url="/loginfailed" />
+		<logout logout-success-url="/logout" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="mkyong" password="123456" authorities="ROLE_USER" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

@@ -1,0 +1,18 @@
+#item{
+				width:100px;
+				height:100px;
+				margin:0 auto;
+				top:300px;
+				position: relative;
+				
+			}
+			ul{
+				list-style-type: none;
+			}
+			body{
+				background-color: transparent;
+				color: #69c;
+				font-family: Arial, "MS Trebuchet", sans-serif;
+				font-weight: bold;
+				font-size:1em;
+			}

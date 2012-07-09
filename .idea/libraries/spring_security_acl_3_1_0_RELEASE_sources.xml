@@ -1,0 +1,32 @@
+<component name="libraryTable">
+  <library name="spring-security-acl-3.1.0.RELEASE-sources">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-acl-3.1.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-aspects-3.1.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-cas-3.1.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-config-3.1.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-core-3.1.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-crypto-3.1.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-ldap-3.1.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-openid-3.1.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-remoting-3.1.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-samples-contacts-3.1.0.RELEASE.war!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-samples-tutorial-3.1.0.RELEASE.war!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-taglibs-3.1.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-web-3.1.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-acl-3.1.0.RELEASE-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-cas-3.1.0.RELEASE-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-config-3.1.0.RELEASE-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-core-3.1.0.RELEASE-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-crypto-3.1.0.RELEASE-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-ldap-3.1.0.RELEASE-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-openid-3.1.0.RELEASE-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-remoting-3.1.0.RELEASE-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-taglibs-3.1.0.RELEASE-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/itransition/webeditor/spring-security-oauth/3.0.7.RELEASE/spring-security-web-3.1.0.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
