@@ -112,6 +112,7 @@ public final class loginform_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<div class=\"container\">\n");
       out.write("    <h3>Login Form</h3>\n");
+      out.write("    \n");
       out.write("\t\n");
       out.write("\t<form id=\"loginForm\" name=\"loginForm\"\n");
       out.write("\t\t\taction=\"../j_spring_security_check\" method=\"post\">\n");

@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class registrationsuccess_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -40,7 +40,7 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
 
 
     try {
-      response.setContentType("text/html");
+      response.setContentType("text/html; charset=ISO-8859-1");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -50,11 +50,13 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html lang=\"en\">\n");
       out.write("<head>\n");
       out.write("    <meta charset=\"utf-8\">\n");
-      out.write("    <title>Contacts</title>\n");
+      out.write("    <title>Web Editor Registration Success</title>\n");
       out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
       out.write("    <meta name=\"description\" content=\"\">\n");
       out.write("    <meta name=\"author\" content=\"by Putnik\">\n");
@@ -91,21 +93,19 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <span class=\"icon-bar\"></span>\n");
       out.write("                <span class=\"icon-bar\"></span>\n");
       out.write("            </a>\n");
-      out.write("            <a class=\"brand\" href=\"../editor.html\">Web Editor</a>\n");
+      out.write("            <a class=\"brand\" href=\"#\">Web Editor</a>\n");
       out.write("            <div class=\"nav-collapse\">\n");
       out.write("                <ul class=\"nav\">\n");
       out.write("                    <li><a href=\"./\">Home</a></li>\n");
       out.write("                    <li><a href=\"about.html\">About</a></li>\n");
-      out.write("                    <li><a class=\"action\"  href=\"#\">Contact</a></li>\n");
+      out.write("                    <li><a href=\"contact.html\">Contact</a></li>\n");
       out.write("                    <li><a href=\"listOfPresentations.html\">List of Presentations</a></li>\n");
       out.write("                </ul>\n");
       out.write("            </div><!--/.nav-collapse -->\n");
       out.write("            <ul class=\"nav pull-right\">\n");
       out.write("\t\t\t\t\t\n");
       out.write("\t\t\t\t\t\t\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"registrationform.html\">Registration</a></li>\n");
       out.write("\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\t\t\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">Logout</a></li>\n");
       out.write("\t\t\t\t\t\t\n");
       out.write("\t\t\t\t</ul>\n");
       out.write("        </div>\n");
@@ -114,14 +114,7 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<div class=\"container\">\n");
       out.write("\n");
-      out.write("    <h1>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${contactTitleMessage}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("</h1>\n");
-      out.write("    \n");
-      out.write("    <p> ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${controllerMessage}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("</p>\n");
-      out.write("    \n");
+      out.write(" <h3>mail with a unique key to confirm the registration be sent to your e-mail</h3>\n");
       out.write("\n");
       out.write("</div> <!-- /container -->\n");
       out.write("\n");

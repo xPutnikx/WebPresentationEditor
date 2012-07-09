@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class confirm_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -61,7 +61,6 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<!-- Le styles -->\n");
       out.write("<link href=\"resources/assets/css/bootstrap.css\" rel=\"stylesheet\">\n");
-      out.write("<link href=\"resources/ring/ring.css\" rel=\"stylesheet\">\n");
       out.write("<style>\n");
       out.write("body {\n");
       out.write("\tpadding-top: 60px;\n");
@@ -99,22 +98,19 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t</a> <a class=\"brand\" href=\"../editor.html\">Web Editor</a>\n");
       out.write("\t\t\t\t<div class=\"nav-collapse\">\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\n");
-      out.write("\t\t\t\t\t\t<li><a class=\"action\" href=\"#\">Home</a></li>\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"./\">Home</a></li>\n");
       out.write("\t\t\t\t\t\t<li><a href=\"about.html\">About</a></li>\n");
       out.write("\t\t\t\t\t\t<li><a href=\"contact.html\">Contact</a></li>\n");
       out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations.html\">List of Presentations</a></li>\n");
       out.write("\t\t\t\t\t</ul>\n");
       out.write("\t\t\t\t</div>\n");
       out.write("\t\t\t\t<!--/.nav-collapse -->\n");
-      out.write("\t\t\t\t <form class=\"navbar-search pull-left\" action=\"\">\n");
-      out.write("            <input type=\"text\" class=\"search-query span2\" placeholder=\"Search\">\n");
-      out.write("          \t</form>\n");
       out.write("\t\t\t\t<ul class=\"nav pull-right\">\n");
       out.write("\t\t\t\t\t\n");
       out.write("\t\t\t\t\t\t\n");
       out.write("\t\t\t\t\t\t\t<li><a href=\"registrationform.html\">Registration</a></li>\n");
       out.write("\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\t\t\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">Logout</a></li>\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"#\">Logout</a></li>\n");
       out.write("\t\t\t\t\t\t\n");
       out.write("\t\t\t\t</ul>\n");
       out.write("\t\t\t</div>\n");
@@ -129,23 +125,19 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<br />\n");
       out.write("\t\t</h1>\n");
       out.write("\t\t<p>\n");
-      out.write("\t\t\t<a href=\"list\">Administration Account</a><br>\n");
-      out.write("\t\t</p>\n");
-      out.write("\t</div>\n");
-      out.write("\t\t");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${tagCloud}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\t\t\t");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${confirmationMessage}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\n");
+      out.write("\t\t</p>\n");
+      out.write("\n");
+      out.write("\t</div>\n");
       out.write("\t<!-- /container -->\n");
       out.write("\n");
       out.write("\n");
       out.write("\t<!-- Le javascript\n");
       out.write("================================================== -->\n");
       out.write("\t<!-- Placed at the end of the document so the pages load faster -->\n");
-      out.write("\t\n");
-      out.write("\t<script src=\"resources/ring/jquery-1.3.2.min.js\"></script>\n");
-      out.write("\t<script src=\"resources/ring/3DEngine.js\" type=\"text/javascript\" charset=\"utf-8\"></script>\n");
-      out.write("\t<script src=\"resources/ring/Ring.js\" type=\"text/javascript\" charset=\"utf-8\"></script>\n");
-      out.write("\t<script src=\"resources/ring/virtual.js\" type=\"text/javascript\" charset=\"utf-8\"> </script>\n");
+      out.write("\t<script src=\"resources/assets/js/jquery.js\"></script>\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-transition.js\"></script>\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-alert.js\"></script>\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-modal.js\"></script>\n");

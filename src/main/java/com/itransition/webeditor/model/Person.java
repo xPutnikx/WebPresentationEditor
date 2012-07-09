@@ -24,6 +24,7 @@ public class Person implements Serializable {
         this.password=password;
         this.email=email;
         this.isActive=isActive;
+
 	}
 	public Long getId() {
 		return id;

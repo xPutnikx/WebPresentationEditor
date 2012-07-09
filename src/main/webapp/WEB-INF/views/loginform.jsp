@@ -61,6 +61,7 @@
 
 <div class="container">
     <h3>Login Form</h3>
+    
 	
 	<form id="loginForm" name="loginForm"
 			action="../j_spring_security_check" method="post">

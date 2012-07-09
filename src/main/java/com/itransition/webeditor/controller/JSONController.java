@@ -1,25 +1,17 @@
 package com.itransition.webeditor.controller;
 
-import org.codehaus.jackson.map.util.JSONPObject;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BeanPropertyBindingResult;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.itransition.webeditor.dao.PresentationDao;
 import com.itransition.webeditor.model.Presentations;
 @Controller
@@ -32,20 +24,27 @@ public class JSONController{
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
-	private String data=null;
 	@RequestMapping(value = "/json/", method = RequestMethod.POST)
 	public void savePresentation( @RequestParam ("json") String json)
 	{
-		System.out.println("<---------------"+json);
+
+		String place="D:/Work/xPutnikx-WebPresentationEditor-4bbf325/src/main/webapp/resources/data/text.txt";
+		saveJson(json,place);
 		Presentations presentations=new Presentations();
-		presentations.setJSON("42");
+		presentations.setJSON(json);
 		presentations.setUserName("Admin");
 		presentations.setId((long) 1);
 		presentations.setTags("present tags");
 		presentationDao.save(presentations);
-		System.out.println(presentationDao.find((long)1));
 	}
-	private void saveData(@ModelAttribute Presentations presentations){
-		
+	private void saveJson(String json,String place){
+		 PrintWriter writer = null;
+		    try {
+		     writer = new PrintWriter(
+		             new OutputStreamWriter(
+		             new FileOutputStream(place), "windows-1251"));
+		     writer.write(json);
+		     writer.close();
+		    } catch (Exception ex) {}
 	}
 }

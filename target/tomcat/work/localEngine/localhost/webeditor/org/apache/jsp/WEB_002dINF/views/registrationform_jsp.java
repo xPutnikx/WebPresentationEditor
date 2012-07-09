@@ -117,7 +117,7 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("            </div><!--/.nav-collapse -->\n");
       out.write("            <ul class=\"nav pull-right\">\n");
       out.write("\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\t\t\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"#\">Logout</a></li>\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">Logout</a></li>\n");
       out.write("\t\t\t\t\t\t\n");
       out.write("\t\t\t\t</ul>\n");
       out.write("        </div>\n");

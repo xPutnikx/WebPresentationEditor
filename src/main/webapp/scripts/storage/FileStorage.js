@@ -4,40 +4,7 @@ define([], function() {
   var FileStorage, prefix;
   prefix = "Strut_";
   var myKeyVals = { A1984 : 1, A9873 : 5, A1674 : 2, A8724 : 1, A3574 : 3, A1165 : 5 } 
-//  var req = new XMLHttpRequest();
-//  XMLHttpFactories = [ function() {
-//	    return new XMLHttpRequest();
-//	}, function() {
-//	    return new ActiveXObject("Msxml2.XMLHTTP");
-//	}, function() {
-//	    return new ActiveXObject("Msxml3.XMLHTTP");
-//	}, function() {
-//	    return new ActiveXObject("Microsoft.XMLHTTP");
-//	} ];
-//  function createXHRObject() {
-//	    var xhrobject = null;
-//	    for ( var i = 0; i < XMLHttpFactories.length; i++) {
-//	        try {
-//	            xhrobject = XMLHttpFactories[i]();
-//	        } catch (e) {
-//	            continue;
-//	        }
-//	        break;
-//	    }
-//	    return xhrobject;
-//	};
-//	var req = createXHRObject();
-//	function postRequest(){
-//	req.open('POST', /webeditor\/spring\/json/ , true);
-//	req.onreadystatechange = function() {
-//	  if (req.readyState == 4 && req.status == 200) {
-//	    alert(req.responseText);
-//	  }
-//	};
-//	req.setRequestHeader('text', '/webeditor/spring/json/');
-//	req.send("LALALALLA");
-//	alert("send!");
-//	}
+
   
   FileStorage = (function() {
 

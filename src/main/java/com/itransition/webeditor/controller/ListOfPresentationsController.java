@@ -17,8 +17,8 @@ public class ListOfPresentationsController {
 		logger.info("list with presentations");
 		model.addAttribute("controllerMessage",
 				"Presentations what create all users");
-		model.addAttribute("titleMessage","Presentations data base");
-		model.addAttribute("Presentations","<li class=\"span3\"><a href=\"#\" class=\"thumbnail\"> <img src=\"http://placehold.it/260x180\" alt=\"\"></a></li>");
+		model.addAttribute("titleMessage","Presentations database");
+		model.addAttribute("Presentations","<li class=\"span3\"><a href=\"/webeditor/editor.html?preview=true#/step-1\" class=\"thumbnail\"> <img src=\"http://placehold.it/260x180\" alt=\"\"></a></li>");
 		return "listOfPresentations";
 	}
 }

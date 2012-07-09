@@ -10,7 +10,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/spring/root-context.xml,
-		/WEB-INF/spring/app/security.xml</param-value>
+		/WEB-INF/spring/app/security.xml,/WEB-INF/spring/app/spring-database.xml</param-value>
 	</context-param>
 
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
@@ -25,7 +25,7 @@
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/spring/app/servlet-context.xml,
-			/WEB-INF/spring/app/security.xml</param-value>
+			/WEB-INF/spring/app/security.xml,/WEB-INF/spring/app/spring-database.xml </param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>

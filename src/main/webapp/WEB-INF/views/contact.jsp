@@ -53,7 +53,7 @@
 						
 							<li><a href="registrationform.html">Registration</a></li>
 							<li><a href="loginform.html">Login</a></li>		
-							<li><a href="#">Logout</a></li>
+							<li><a href="../j_spring_security_logout">Logout</a></li>
 						
 				</ul>
         </div>

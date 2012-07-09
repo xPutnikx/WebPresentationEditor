@@ -28,5 +28,8 @@ public class RegistrationValidation {
 					"matchingPassword.registration.password",
 					"Password and Confirm Password Not match.");
 		}
+			errors.rejectValue("userName",
+					"lengthOfUser.registration.userName",
+					"This name already exists.");
 	}
 }

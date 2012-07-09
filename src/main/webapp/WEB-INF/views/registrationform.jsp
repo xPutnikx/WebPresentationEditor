@@ -53,7 +53,7 @@
             </div><!--/.nav-collapse -->
             <ul class="nav pull-right">
 							<li><a href="loginform.html">Login</a></li>		
-							<li><a href="#">Logout</a></li>
+							<li><a href="../j_spring_security_logout">Logout</a></li>
 						
 				</ul>
         </div>
