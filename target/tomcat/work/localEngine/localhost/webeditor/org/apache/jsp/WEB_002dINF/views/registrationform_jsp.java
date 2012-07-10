@@ -63,69 +63,69 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
       out = pageContext.getOut();
       _jspx_out = out;
 
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html lang=\"en\">\n");
-      out.write("<head>\n");
-      out.write("    <meta charset=\"utf-8\">\n");
-      out.write("    <title>Web Editor Registration</title>\n");
-      out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
-      out.write("    <meta name=\"description\" content=\"\">\n");
-      out.write("    <meta name=\"author\" content=\"by Putnik\">\n");
-      out.write("\n");
-      out.write("    <!-- Le styles -->\n");
-      out.write("    <link href=\"resources/assets/css/bootstrap.css\" rel=\"stylesheet\">\n");
-      out.write("    <style>\n");
-      out.write("        body {\n");
-      out.write("            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */\n");
-      out.write("        }\n");
-      out.write("    </style>\n");
-      out.write("    <link href=\"resources/assets/css/bootstrap-responsive.css\" rel=\"stylesheet\">\n");
-      out.write("\n");
-      out.write("    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->\n");
-      out.write("    <!--[if lt IE 9]>\n");
-      out.write("    <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>\n");
-      out.write("    <![endif]-->\n");
-      out.write("\n");
-      out.write("    <!-- Le fav and touch icons -->\n");
-      out.write("    <link rel=\"shortcut icon\" href=\"resources/assets/ico/favicon.ico\">\n");
-      out.write("    <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"resources/assets/ico/apple-touch-icon-144-precomposed.png\">\n");
-      out.write("    <link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\" href=\"resources/assets/ico/apple-touch-icon-114-precomposed.png\">\n");
-      out.write("    <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"resources/assets/ico/apple-touch-icon-72-precomposed.png\">\n");
-      out.write("    <link rel=\"apple-touch-icon-precomposed\" href=\"resources/assets/ico/apple-touch-icon-57-precomposed.png\">\n");
-      out.write("</head>\n");
-      out.write("\n");
-      out.write("<body>\n");
-      out.write("\n");
-      out.write("<div class=\"navbar navbar-fixed-top\">\n");
-      out.write("    <div class=\"navbar-inner\">\n");
-      out.write("        <div class=\"container\">\n");
-      out.write("            <a class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-collapse\">\n");
-      out.write("                <span class=\"icon-bar\"></span>\n");
-      out.write("                <span class=\"icon-bar\"></span>\n");
-      out.write("                <span class=\"icon-bar\"></span>\n");
-      out.write("            </a>\n");
-      out.write("            <a class=\"brand\" href=\"#\">Web Editor</a>\n");
-      out.write("            <div class=\"nav-collapse\">\n");
-      out.write("                <ul class=\"nav\">\n");
-      out.write("                    <li><a href=\"./\">Home</a></li>\n");
-      out.write("                    <li><a href=\"about.html\">About</a></li>\n");
-      out.write("                    <li><a href=\"contact.html\">Contact</a></li>\n");
-      out.write("                    <li><a href=\"listOfPresentations.html\">List of Presentations</a></li>\n");
-      out.write("                </ul>\n");
-      out.write("            </div><!--/.nav-collapse -->\n");
-      out.write("            <ul class=\"nav pull-right\">\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\t\t\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">Logout</a></li>\n");
-      out.write("\t\t\t\t\t\t\n");
-      out.write("\t\t\t\t</ul>\n");
-      out.write("        </div>\n");
-      out.write("    </div>\n");
-      out.write("</div>\n");
-      out.write("\n");
-      out.write("<div class=\"container\">\n");
-      out.write("\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html lang=\"en\">\r\n");
+      out.write("<head>\r\n");
+      out.write("    <meta charset=\"utf-8\">\r\n");
+      out.write("    <title>Web Editor Registration</title>\r\n");
+      out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
+      out.write("    <meta name=\"description\" content=\"\">\r\n");
+      out.write("    <meta name=\"author\" content=\"by Putnik\">\r\n");
+      out.write("\r\n");
+      out.write("    <!-- Le styles -->\r\n");
+      out.write("    <link href=\"resources/assets/css/bootstrap.css\" rel=\"stylesheet\">\r\n");
+      out.write("    <style>\r\n");
+      out.write("        body {\r\n");
+      out.write("            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */\r\n");
+      out.write("        }\r\n");
+      out.write("    </style>\r\n");
+      out.write("    <link href=\"resources/assets/css/bootstrap-responsive.css\" rel=\"stylesheet\">\r\n");
+      out.write("\r\n");
+      out.write("    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->\r\n");
+      out.write("    <!--[if lt IE 9]>\r\n");
+      out.write("    <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>\r\n");
+      out.write("    <![endif]-->\r\n");
+      out.write("\r\n");
+      out.write("    <!-- Le fav and touch icons -->\r\n");
+      out.write("    <link rel=\"shortcut icon\" href=\"resources/assets/ico/favicon.ico\">\r\n");
+      out.write("    <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"resources/assets/ico/apple-touch-icon-144-precomposed.png\">\r\n");
+      out.write("    <link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\" href=\"resources/assets/ico/apple-touch-icon-114-precomposed.png\">\r\n");
+      out.write("    <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"resources/assets/ico/apple-touch-icon-72-precomposed.png\">\r\n");
+      out.write("    <link rel=\"apple-touch-icon-precomposed\" href=\"resources/assets/ico/apple-touch-icon-57-precomposed.png\">\r\n");
+      out.write("</head>\r\n");
+      out.write("\r\n");
+      out.write("<body>\r\n");
+      out.write("\r\n");
+      out.write("<div class=\"navbar navbar-fixed-top\">\r\n");
+      out.write("    <div class=\"navbar-inner\">\r\n");
+      out.write("        <div class=\"container\">\r\n");
+      out.write("            <a class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-collapse\">\r\n");
+      out.write("                <span class=\"icon-bar\"></span>\r\n");
+      out.write("                <span class=\"icon-bar\"></span>\r\n");
+      out.write("                <span class=\"icon-bar\"></span>\r\n");
+      out.write("            </a>\r\n");
+      out.write("            <a class=\"brand\" href=\"#\">Web Editor</a>\r\n");
+      out.write("            <div class=\"nav-collapse\">\r\n");
+      out.write("                <ul class=\"nav\">\r\n");
+      out.write("                    <li><a href=\"./\">Home</a></li>\r\n");
+      out.write("                    <li><a href=\"about.html\">About</a></li>\r\n");
+      out.write("                    <li><a href=\"contact.html\">Contact</a></li>\r\n");
+      out.write("                    <li><a href=\"listOfPresentations.html\">List of Presentations</a></li>\r\n");
+      out.write("                </ul>\r\n");
+      out.write("            </div><!--/.nav-collapse -->\r\n");
+      out.write("            <ul class=\"nav pull-right\">\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\t\t\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">Logout</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\r\n");
+      out.write("\t\t\t\t</ul>\r\n");
+      out.write("        </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("</div>\r\n");
+      out.write("\r\n");
+      out.write("<div class=\"container\">\r\n");
+      out.write("\r\n");
       out.write("  ");
       //  form:form
       org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
@@ -142,16 +142,16 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
         int _jspx_eval_form_005fform_005f0 = _jspx_th_form_005fform_005f0.doStartTag();
         if (_jspx_eval_form_005fform_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("\t<table>\n");
-            out.write("\t\t<tr>\n");
+            out.write("\r\n");
+            out.write("\t<table>\r\n");
+            out.write("\t\t<tr>\r\n");
             out.write("\t\t\t<td>User Name:<FONT color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f0 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f0.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
             // /WEB-INF/views/registrationform.jsp(69,35) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-            _jspx_th_form_005ferrors_005f0.setPath("userName");
+            _jspx_th_form_005ferrors_005f0.setPath("name");
             int[] _jspx_push_body_count_form_005ferrors_005f0 = new int[] { 0 };
             try {
               int _jspx_eval_form_005ferrors_005f0 = _jspx_th_form_005ferrors_005f0.doStartTag();
@@ -166,16 +166,16 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
               _jspx_th_form_005ferrors_005f0.doFinally();
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f0);
             }
-            out.write("</FONT></td>\n");
-            out.write("\t\t</tr>\n");
-            out.write("\t\t<tr>\n");
+            out.write("</FONT></td>\r\n");
+            out.write("\t\t</tr>\r\n");
+            out.write("\t\t<tr>\r\n");
             out.write("\t\t\t<td>");
             if (_jspx_meth_form_005finput_005f0(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
-            out.write("</td>\n");
-            out.write("\t\t</tr>\n");
-            out.write("\n");
-            out.write("\t\t<tr>\n");
+            out.write("</td>\r\n");
+            out.write("\t\t</tr>\r\n");
+            out.write("\r\n");
+            out.write("\t\t<tr>\r\n");
             out.write("\t\t\t<td>Password:<FONT color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f1 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
@@ -197,16 +197,16 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
               _jspx_th_form_005ferrors_005f1.doFinally();
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f1);
             }
-            out.write("</FONT></td>\n");
-            out.write("\t\t</tr>\n");
-            out.write("\t\t<tr>\n");
+            out.write("</FONT></td>\r\n");
+            out.write("\t\t</tr>\r\n");
+            out.write("\t\t<tr>\r\n");
             out.write("\t\t\t<td>");
             if (_jspx_meth_form_005fpassword_005f0(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
-            out.write("</td>\n");
-            out.write("\t\t</tr>\n");
-            out.write("\n");
-            out.write("\t\t<tr>\n");
+            out.write("</td>\r\n");
+            out.write("\t\t</tr>\r\n");
+            out.write("\r\n");
+            out.write("\t\t<tr>\r\n");
             out.write("\t\t\t<td>Confirm Password:<FONT color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f2 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
@@ -228,16 +228,16 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
               _jspx_th_form_005ferrors_005f2.doFinally();
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f2);
             }
-            out.write("</FONT></td>\n");
-            out.write("\t\t</tr>\n");
-            out.write("\t\t<tr>\n");
+            out.write("</FONT></td>\r\n");
+            out.write("\t\t</tr>\r\n");
+            out.write("\t\t<tr>\r\n");
             out.write("\t\t\t<td>");
             if (_jspx_meth_form_005fpassword_005f1(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
-            out.write("</td>\n");
-            out.write("\t\t</tr>\n");
-            out.write("\n");
-            out.write("\t\t<tr>\n");
+            out.write("</td>\r\n");
+            out.write("\t\t</tr>\r\n");
+            out.write("\r\n");
+            out.write("\t\t<tr>\r\n");
             out.write("\t\t\t<td>Email:<FONT color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f3 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
@@ -259,18 +259,18 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
               _jspx_th_form_005ferrors_005f3.doFinally();
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f3);
             }
-            out.write("</FONT></td>\n");
-            out.write("\t\t</tr>\n");
-            out.write("\t\t<tr>\n");
+            out.write("</FONT></td>\r\n");
+            out.write("\t\t</tr>\r\n");
+            out.write("\t\t<tr>\r\n");
             out.write("\t\t\t<td>");
             if (_jspx_meth_form_005finput_005f1(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
-            out.write("</td>\n");
-            out.write("\t\t</tr>\n");
-            out.write("\t\t<tr>\n");
-            out.write("\t\t\t<td><input type=\"submit\" class=\"btn\"  value=\"Submit\" /></td>\n");
-            out.write("\t\t</tr>\n");
-            out.write("\t</table>\n");
+            out.write("</td>\r\n");
+            out.write("\t\t</tr>\r\n");
+            out.write("\t\t<tr>\r\n");
+            out.write("\t\t\t<td><input type=\"submit\" class=\"btn\"  value=\"Submit\" /></td>\r\n");
+            out.write("\t\t</tr>\r\n");
+            out.write("\t</table>\r\n");
             int evalDoAfterBody = _jspx_th_form_005fform_005f0.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
               break;
@@ -287,29 +287,29 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
         _jspx_th_form_005fform_005f0.doFinally();
         _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction.reuse(_jspx_th_form_005fform_005f0);
       }
-      out.write("\n");
-      out.write("\n");
-      out.write("</div> <!-- /container -->\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!-- Le javascript\n");
-      out.write("================================================== -->\n");
-      out.write("<!-- Placed at the end of the document so the pages load faster -->\n");
-      out.write("<script src=\"resources/assets/js/jquery.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-transition.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-alert.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-modal.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-dropdown.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-scrollspy.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-tab.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-tooltip.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-popover.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-button.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-collapse.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-carousel.js\"></script>\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-typeahead.js\"></script>\n");
-      out.write("\n");
-      out.write("</body>\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("</div> <!-- /container -->\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!-- Le javascript\r\n");
+      out.write("================================================== -->\r\n");
+      out.write("<!-- Placed at the end of the document so the pages load faster -->\r\n");
+      out.write("<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-transition.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-alert.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-modal.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-dropdown.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-scrollspy.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-tab.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-tooltip.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-popover.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-button.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-collapse.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-carousel.js\"></script>\r\n");
+      out.write("<script src=\"resources/assets/js/bootstrap-typeahead.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
@@ -332,7 +332,7 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
     _jspx_th_form_005finput_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
     // /WEB-INF/views/registrationform.jsp(73,7) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005finput_005f0.setPath("userName");
+    _jspx_th_form_005finput_005f0.setPath("name");
     int[] _jspx_push_body_count_form_005finput_005f0 = new int[] { 0 };
     try {
       int _jspx_eval_form_005finput_005f0 = _jspx_th_form_005finput_005f0.doStartTag();

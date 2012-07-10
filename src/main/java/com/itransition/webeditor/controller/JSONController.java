@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.itransition.webeditor.dao.PresentationDao;
+import com.itransition.webeditor.dao.PresentationsDao;
 import com.itransition.webeditor.model.Presentations;
 @Controller
 public class JSONController{
 
 	@Autowired
-	private PresentationDao presentationDao;
+	private PresentationsDao presentationDao;
 	private static final Logger logger = LoggerFactory
 			.getLogger(JSONController.class);
 	/**
@@ -27,17 +27,16 @@ public class JSONController{
 	@RequestMapping(value = "/json/", method = RequestMethod.POST)
 	public void savePresentation( @RequestParam ("json") String json)
 	{
-
-		String place="D:/Work/xPutnikx-WebPresentationEditor-4bbf325/src/main/webapp/resources/data/text.txt";
+		/*String place="D:/Work/xPutnikx-WebPresentationEditor-4bbf325/src/main/webapp/resources/data/text.txt";
 		saveJson(json,place);
 		Presentations presentations=new Presentations();
 		presentations.setJSON(json);
 		presentations.setUserName("Admin");
 		presentations.setId((long) 1);
 		presentations.setTags("present tags");
-		presentationDao.save(presentations);
+		presentationDao.save(presentations);*/
 	}
-	private void saveJson(String json,String place){
+	/*private void saveJson(String json,String place){
 		 PrintWriter writer = null;
 		    try {
 		     writer = new PrintWriter(
@@ -46,5 +45,5 @@ public class JSONController{
 		     writer.write(json);
 		     writer.close();
 		    } catch (Exception ex) {}
-	}
+	}*/
 }

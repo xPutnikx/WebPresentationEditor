@@ -1,6 +1,7 @@
 package com.itransition.webeditor.controller;
 
-import com.itransition.webeditor.model.Person;
+import com.itransition.webeditor.model.Users;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -30,8 +31,8 @@ public class DataInitializer {
 	}
 
 	public void addPerson(String userName, String lastName) {
-		Person p = new Person();
-		p.setUserName(userName);
+		Users p = new Users();
+		p.setName(userName);
 		entityManager.persist(p);
 		people.add(p.getId());
 	}
