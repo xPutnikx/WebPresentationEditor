@@ -1,6 +1,5 @@
 package com.itransition.webeditor.controller;
 
-import com.itransition.webeditor.model.Person;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,6 +8,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.itransition.webeditor.model.Users;
 
 import java.util.List;
 
@@ -36,7 +37,7 @@ public class PersonControllerTest {
 		assertEquals("list",mav.getViewName());
 		
 		@SuppressWarnings("unchecked")
-		List<Person> people = (List<Person>) mav.getModelMap().get("people");
+		List<Users> people = (List<Users>) mav.getModelMap().get("people");
 		assertNotNull(people);		
 		assertEquals(DataInitializer.PERSON_COUNT,people.size());		
 	}
@@ -48,10 +49,10 @@ public class PersonControllerTest {
 		assertNotNull(mav);
 		assertEquals("edit", mav.getViewName());
 		Object object = mav.getModel().get("person");
-		assertTrue(Person.class.isAssignableFrom(object.getClass()));
-		Person person = (Person) object;
+		assertTrue(Users.class.isAssignableFrom(object.getClass()));
+		Users person = (Users) object;
 		assertNull(person.getId());
-		assertNull(person.getUserName());		
+		assertNull(person.getName());		
 	}
 	
 	@Test
@@ -61,8 +62,8 @@ public class PersonControllerTest {
 		assertNotNull(mav);
 		assertEquals("edit", mav.getViewName());
 		Object object = mav.getModel().get("person");
-		assertTrue(Person.class.isAssignableFrom(object.getClass()));
-		Person person = (Person) object;
+		assertTrue(Users.class.isAssignableFrom(object.getClass()));
+		Users person = (Users) object;
 		assertEquals(template,person.getId());
 	}
 	

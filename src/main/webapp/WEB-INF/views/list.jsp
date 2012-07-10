@@ -68,7 +68,7 @@
     <div id="content" style="padding:30px">
         <c:forEach items="${people}" var="v_person">
             <a href="edit?id=${v_person.id}" >${v_person.id} -
-                    ${v_person.userName}
+                    ${v_person.name}
                     ${v_person.password}
                     ${v_person.email}</a>
             <br />

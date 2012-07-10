@@ -94,7 +94,7 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <a class=\"brand\" href=\"../editor.html\">Web Editor</a>\n");
       out.write("            <div class=\"nav-collapse\">\n");
       out.write("                <ul class=\"nav\">\n");
-      out.write("                    <li><a href=\"./\">Home</a></li>\n");
+      out.write("                    <li><a href=\"home.html\">Home</a></li>\n");
       out.write("                    <li><a class=\"action\" href=\"#\">About</a></li>\n");
       out.write("                    <li><a href=\"contact.html\">Contact</a></li>\n");
       out.write("                    <li><a href=\"listOfPresentations.html\">List of Presentations</a></li>\n");

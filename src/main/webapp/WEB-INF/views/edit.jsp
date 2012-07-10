@@ -66,12 +66,12 @@
 <div class="container">
 
     <h1>
-        Editing Person ${person.id} - ${person.userName} ${person.password} ${v_person.email} ${v_person.isActive} 
+        Editing Person ${person.id} - ${person.name} ${person.password} ${v_person.email} ${v_person.enabled} 
     </h1>
-    <form:form commandName="person" style="padding:8px">
+    <form:form commandName="users" style="padding:8px">
         <p>
            User Name<br/>
-            <form:input path="userName"/>
+            <form:input path="name"/>
         </p>
         <p>
             Password<br/>

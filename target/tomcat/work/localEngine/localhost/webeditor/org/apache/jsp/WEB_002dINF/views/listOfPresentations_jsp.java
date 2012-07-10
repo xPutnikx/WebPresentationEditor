@@ -97,7 +97,7 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("\t\t\t\t</a> <a class=\"brand\" href=\"../editor.html\">Web Editor</a>\n");
       out.write("\t\t\t\t<div class=\"nav-collapse\">\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"./\">Home</a></li>\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"home.html\">Home</a></li>\n");
       out.write("\t\t\t\t\t\t<li><a href=\"about.html\">About</a></li>\n");
       out.write("\t\t\t\t\t\t<li><a href=\"contact.html\">Contact</a></li>\n");
       out.write("\t\t\t\t\t\t<li><a class=action href=\"#\">List of Presentations</a></li>\n");

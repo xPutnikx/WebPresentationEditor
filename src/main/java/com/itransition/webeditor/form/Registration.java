@@ -5,7 +5,8 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 public class Registration {
-	private String userName;
+	@NotEmpty
+	private String name;
 	@NotEmpty
 	@Size(min = 4, max = 20)
 	private String password;
@@ -15,12 +16,12 @@ public class Registration {
 	@Email
 	private String email;
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getName() {
+		return name;
 	}
 
 	public void setPassword(String password) {
@@ -45,6 +46,6 @@ public class Registration {
 
 	public String getEmail() {
 		return email;
-	}
+	}	
 
 }

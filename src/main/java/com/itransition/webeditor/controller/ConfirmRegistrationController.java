@@ -12,27 +12,26 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.itransition.webeditor.core.ConfirmKey;
-import com.itransition.webeditor.dao.PersonDao;
-import com.itransition.webeditor.model.Person;
+import com.itransition.webeditor.dao.UsersDao;
+import com.itransition.webeditor.model.Users;
 
 @Controller
 public class ConfirmRegistrationController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@Autowired
-	private PersonDao personDao;
+	private UsersDao usersDao;
 	
 	@RequestMapping(method = RequestMethod.GET, value="confirm")
 	public String confirmRegistration(Model model, 
 			@RequestParam(value = "id", required = true) Long id,			
 			@RequestParam(value = "key", required = true) String key) {
 		model.addAttribute("controllerMessage",	"Confirm Registration");				
-		Person person = personDao.find(id);
-		boolean check = checkConfirmationKey(person, key);
-		
+		Users users = usersDao.find(id);
+		boolean check = checkConfirmationKey(users, key);		
 		if (check) {
-			person.setActive(true);
-			personDao.save(person);
+			users.setEnabled(true);
+			usersDao.save(users);
 			model.addAttribute("confirmationMessage", "Success, baby!");
 		} else {
 			model.addAttribute("confirmationMessage", "Registration key is not valid!");
@@ -40,10 +39,10 @@ public class ConfirmRegistrationController {
 		return "confirm";
 	}
 	
-	private boolean checkConfirmationKey(Person person, String key) {
+	private boolean checkConfirmationKey(Users users, String key) {
 		String checkKey = null;
 		try {
-			checkKey = ConfirmKey.generate(person.getUserName(), person.getPassword());
+			checkKey = ConfirmKey.generate(users.getName(), users.getPassword());
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

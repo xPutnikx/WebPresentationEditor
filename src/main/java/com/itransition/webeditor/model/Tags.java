@@ -9,48 +9,36 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class UserRoles implements Serializable {
+public class Tags implements Serializable {
 	private static final long serialVersionUID = -1308795024262635690L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@Column
-	private Long userId;
-    @Column
-    private String authority;
-    
-	public UserRoles() {
+	private String name;
+
+	public Tags() {
 	}
-	
-	public UserRoles(Long userId, String authority) {
+
+	public Tags(String name) {
 		super();
-		this.userId = userId;
-        this.authority = authority;
+		this.name = name;
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
-	
+
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-	public Long getUserId() {
-		return userId;
+
+	public String getUserId() {
+		return name;
 	}
-	
-	public void setUserId(Long userId) {
-		this.userId = userId;
+
+	public void setUserId(String userId) {
+		this.name = userId;
 	}
-	
-	public String getAuthority() {
-		return authority;
-	}
-	
-	public void setAuthority(String authority) {
-		this.authority = authority;
-	}
-	
 }

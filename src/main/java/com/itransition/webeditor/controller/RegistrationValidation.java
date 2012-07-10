@@ -13,13 +13,13 @@ public class RegistrationValidation {
 
 	public void validate(Object target, Errors errors) {
 		Registration registration = (Registration) target;
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "userName",
-				"NotEmpty.registration.userName",
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name",
+				"NotEmpty.registration.name",
 				"User Name must not be Empty.");
-		String userName = registration.getUserName();
-		if ((userName.length()) > 50) {
-			errors.rejectValue("userName",
-					"lengthOfUser.registration.userName",
+		String name = registration.getName();
+		if ((name.length()) > 50) {
+			errors.rejectValue("name",
+					"lengthOfUser.registration.name",
 					"User Name must not more than 50 characters.");
 		}
 		if (!(registration.getPassword()).equals(registration
@@ -28,6 +28,8 @@ public class RegistrationValidation {
 					"matchingPassword.registration.password",
 					"Password and Confirm Password Not match.");
 		}
-			
+			/*errors.rejectValue("userName",
+					"lengthOfUser.registration.userName",
+					"This name already exists.");*/
 	}
 }
