@@ -66,7 +66,7 @@
 <div class="container">
 
     <h1>
-        Editing Person ${person.id} - ${person.name} ${person.password} ${v_person.email} ${v_person.enabled} 
+        Editing Person ${person.id} - ${person.name} ${person.password} ${v_person.email} 
     </h1>
     <form:form commandName="users" style="padding:8px">
         <p>
@@ -82,7 +82,6 @@
             <form:input path="email"/>
         </p>
         <input type="submit"class="btn" value="Save"/>
-        </div>
     </form:form>
 </div> <!-- /container -->
 

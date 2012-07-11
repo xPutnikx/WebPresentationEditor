@@ -30,9 +30,9 @@ public class DataInitializer {
 		entityManager.clear();
 	}
 
-	public void addPerson(String userName, String lastName) {
+	public void addPerson(String name, String lastName) {
 		Users p = new Users();
-		p.setName(userName);
+		p.setName(name);
 		entityManager.persist(p);
 		people.add(p.getId());
 	}

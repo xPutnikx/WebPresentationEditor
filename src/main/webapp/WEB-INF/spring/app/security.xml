@@ -1,41 +1,3 @@
-<!--  <beans:beans xmlns="http://www.springframework.org/schema/security"
-  xmlns:beans="http://www.springframework.org/schema/beans"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
-           http://www.springframework.org/schema/security
-           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
-           <http pattern="/spring/images/**" security="none"/>
-           <http pattern="/spring/lib/**" security="none"/>
-           <http pattern="/spring/preview_export/**" security="none"/>
-           <http pattern="/spring/res/**" security="none"/>
-           <http pattern="/spring/resources/**" security="none"/>
-  		   <http pattern="/spring/loginform.html*" security="none"/>
-  		   <http pattern="/spring/listofPresentations.html*" security="none"/>
-  		   <http pattern="/spring/scripts/**" security="none"/>
-  		   <http pattern="/spring/about.html*" security="none"/>
-  		   <http pattern="/spring/*" security="none"/>
-  		   <http pattern="/spring/contact.html*" security="none"/>
-  		   <http pattern="/spring/registrationform.html*" security="none"/>
-  		   <global-method-security secured-annotations="enabled" />
-           <http>
-           <intercept-url pattern="/j_spring_security_check*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
-    		<intercept-url pattern='/editor.html*' access='ROLE_USER' />
-    		<intercept-url pattern='/**' access='ROLE_USER' />
-    		<form-login login-page='/spring/loginform.html' 
-    		login-processing-url='/spring/loginsuccess.html' 
-    		default-target-url='/spring/'
-            always-use-default-target='true' />
-            <logout logout-success-url="/logout" />
-  			</http>
-	<authentication-manager>
-		<authentication-provider>
-			<user-service>
-				<user name="mkyong" password="123456" authorities="ROLE_USER" />
-			</user-service>
-		</authentication-provider>
-	</authentication-manager>
-</beans:beans>-->
 <beans:beans xmlns="http://www.springframework.org/schema/security"
 	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
@@ -56,10 +18,11 @@
   		   <http pattern="/spring/home.html*" security="none"/>
   		   <http pattern="/spring/contact.html*" security="none"/>
   		   <http pattern="/spring/registrationform.html*" security="none"/>
+  		   <http pattern="/spring/confirm*" security="none"/>
 	<http auto-config="true">
 		<intercept-url pattern="/**" access="ROLE_USER" />
-		<intercept-url pattern="/spring/list.html*" access="ROLE_ADMIN"/>
-  		   <intercept-url pattern="/spring/edit.html*" access="ROLE_ADMIN"/>
+		<intercept-url pattern="/spring/list.html*" access="ROLE_USER"/>
+  		   <intercept-url pattern="/spring/edit.html*" access="ROLE_USER"/>
 		<form-login login-page="/spring/loginform.html" default-target-url="/spring/"
 			authentication-failure-url="/spring/loginform.html" />
 		<logout logout-success-url="/logout" />
@@ -75,24 +38,6 @@
 				authorities-by-username-query="
                               SELECT u.name, ur.authority FROM webeditor.users u, webeditor.userroles ur 
                               WHERE u.id = ur.userId and u.name=?"/>
-		<!-- 	 <user-service>
-         	<user name="admin" password="admin" authorities="ROLE_USER, ROLE_ADMIN" />
-        	<user name="bob" password="bobspassword" authorities="ROLE_USER" />
-      </user-service>-->
 		</authentication-provider>
 	</authentication-manager>
-<!--  	<beans:bean id="daoAuthenticationProvider"
- 	class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
-  	<beans:property name="userDetailsService" ref="userDetailsService"/>
-	</beans:bean>
-
-	<beans:bean id="authenticationManager"
-    	class="org.springframework.security.authentication.ProviderManager">
-  	<beans:property name="providers">
-    	<beans:list>
-      	<beans:ref local="daoAuthenticationProvider" />
-    	</beans:list>
-  	</beans:property>
-	</beans:bean>-->
-
 </beans:beans>

@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,22 +71,14 @@ body {
 			<h2> ${titleMessage}</h2>
 			<p>${controllerMessage}</p>
 			<ul class="thumbnails">
-				<p>${Presentations}</p>
-				<p>${Presentations}</p>
-				<p>${Presentations}</p>
-				<p>${Presentations}</p>
-				<p>${Presentations}</p>
-				<p>${Presentations}</p>
-				<p>${Presentations}</p>
-				<p>${Presentations}</p>
-				<p>${Presentations}</p>
+				<c:forEach items="${presentation}" var="v_person">
+			<li class=span3><a href="/webeditor/presentationView.html?id=${v_person.id}" class=thumbnail> 
+			<img src=http://placehold.it/260x180 alt=""></a></li>
+            </c:forEach>
 			</ul>
-		</div>
+	</div> 
 	</div>
-
-	<!-- /container -->
-
-
+	
 	<!-- Le javascript
 ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->

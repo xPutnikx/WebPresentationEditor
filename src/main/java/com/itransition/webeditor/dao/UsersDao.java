@@ -21,7 +21,7 @@ public class UsersDao {
 	
 	@SuppressWarnings("unchecked")
 	public List<Users> getUsers() {
-		return entityManager.createQuery("select u from Users u").getResultList();
+		return entityManager.createQuery("select n from Users n").getResultList();
 	}
 	
 	@Transactional

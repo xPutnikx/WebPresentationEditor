@@ -35,7 +35,7 @@ public class PersonController {
 		} else {
 			users = usersDao.find(id);
 		}
-		mav.addObject("person", users);
+		mav.addObject("users", users);
 		return mav;
 	}
 
@@ -52,7 +52,6 @@ public class PersonController {
 		ModelAndView mav = new ModelAndView();
 		List<Users> people = usersDao.getUsers();
 		logger.debug("Person Listing count = " + people.size());
-		System.out.println(people.size());
 		mav.addObject("people", people);
 		mav.setViewName("list");
 		return mav;
