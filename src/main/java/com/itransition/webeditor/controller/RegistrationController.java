@@ -24,6 +24,7 @@ import com.itransition.webeditor.core.MailSender;
 import com.itransition.webeditor.dao.UsersDao;
 import com.itransition.webeditor.form.Registration;
 import com.itransition.webeditor.model.Users;
+import com.itransition.webeditor.service.UsersService;
 
 @Controller
 @RequestMapping("/registrationform.html")
@@ -34,6 +35,8 @@ public class RegistrationController {
 
 	@Autowired
 	private UsersDao usersDao;
+	@Autowired
+	private UsersService userService;
 
 	public void setRegistrationValidation(
 			RegistrationValidation registrationValidation) {
@@ -61,11 +64,12 @@ public class RegistrationController {
 		}
 		logger.debug("Received postback on person " + users);
 		try {
-			usersDao.save(users);
+			/*usersDao.save(users);
 			System.out.println(users.getId());
 			System.out.println(users.getName());
 			System.out.println(users.getPassword());
-			System.out.println(users.isEnabled());			
+			System.out.println(users.isEnabled());	*/
+			userService.save(users);
 		} catch (PersistenceException nse) {
 			errors.rejectValue("name",
 					"lengthOfUser.registration.name",

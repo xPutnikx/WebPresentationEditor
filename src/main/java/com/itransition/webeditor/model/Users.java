@@ -1,7 +1,5 @@
 package com.itransition.webeditor.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,9 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Users implements Serializable {
-	private static final long serialVersionUID = -1308795024262635690L;
-	
+public class Users {		
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -24,17 +20,6 @@ public class Users implements Serializable {
     @Column
     private boolean enabled;
     
-	public Users() {		
-	}
-	
-	public Users(String name, String password, String email, boolean enabled) {
-		super();
-		this.name = name;
-        this.password = password;
-        this.email = email;
-        this.enabled = enabled;
-	}
-
 	public Long getId() {
 		return id;
 	}

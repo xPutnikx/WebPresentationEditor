@@ -15,23 +15,44 @@ public class PresentationsDao {
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	public Presentations find(Long id) {
+	@Transactional
+	public Presentations findById(Long id) {
 		return entityManager.find(Presentations.class, id);
 	}
-
+	
+	@Transactional
 	@SuppressWarnings("unchecked")
-	public List<Presentations> getPresentations() {
-		return entityManager.createQuery("select p from Presentations p").getResultList();
+	public List<Presentations> findByUserId(Long userId) {
+		return entityManager.createQuery("" +
+				"select p from Presentations p where p.userId='" + userId + "'").getResultList();
 	}
 
 	@Transactional
-	public Presentations save(Presentations presentations) {
+	@SuppressWarnings("unchecked")
+	public List<Presentations> getPresentations() {
+		return entityManager.createQuery(
+				"select p from Presentations p").getResultList();
+	}
+
+	@Transactional
+	public void save(Presentations presentations) {
 		if (presentations.getId() == null) {
-			entityManager.persist(presentations);
-			return presentations;
+			entityManager.persist(presentations);			
 		} else {
-			return entityManager.merge(presentations);
+			entityManager.merge(presentations);
 		}
+	}
+	
+	@Transactional
+	public void removeById(Long id) {
+		Presentations presentations = entityManager.find(Presentations.class, id);
+		entityManager.remove(presentations);
+	}
+	
+	@Transactional
+	public void removeByUserId(Long userId) {
+		entityManager.createQuery(
+				"delete p from Presentations p where p.userId='" + userId + "'");
 	}
 
 }

@@ -1,7 +1,5 @@
 package com.itransition.webeditor.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,9 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class PresentationTags implements Serializable {	
-	private static final long serialVersionUID = -1308795024262635690L;
-
+public class PresentationTags {	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -19,15 +15,6 @@ public class PresentationTags implements Serializable {
 	private String presentationId;
 	@Column
 	private String tagId;
-
-	public PresentationTags() {
-	}
-
-	public PresentationTags(String presentationId, String tagId) {
-		super();
-		this.presentationId = presentationId;
-		this.tagId = tagId;
-	}
 
 	public Long getId() {
 		return id;
@@ -45,11 +32,11 @@ public class PresentationTags implements Serializable {
 		this.presentationId = userId;
 	}
 
-	public String getTagId(){
+	public String getTagId() {
 		return tagId;
 	}
 
-	public void setTagId(String tagId){
+	public void setTagId(String tagId) {
 		this.tagId = tagId;
 	}
 	

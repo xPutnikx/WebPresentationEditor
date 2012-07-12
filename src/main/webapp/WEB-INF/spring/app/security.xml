@@ -33,7 +33,7 @@
 		<jdbc-user-service data-source-ref="dataSource"
 				
 				users-by-username-query="
-                              select name,password, enabled 
+                              select name,password,enabled 
                               from users where name=?"
 				authorities-by-username-query="
                               SELECT u.name, ur.authority FROM webeditor.users u, webeditor.userroles ur 

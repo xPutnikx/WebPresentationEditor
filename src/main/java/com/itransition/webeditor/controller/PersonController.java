@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.itransition.webeditor.dao.UsersDao;
 import com.itransition.webeditor.model.Users;
+import com.itransition.webeditor.service.UsersService;
 
 import java.util.List;
 
@@ -22,6 +23,8 @@ public class PersonController {
 
 	@Autowired
 	private UsersDao usersDao;
+	@Autowired
+	private UsersService usersService;
 
 	@RequestMapping(method = RequestMethod.GET, value = "edit")
 	public ModelAndView editPerson(
@@ -33,7 +36,7 @@ public class PersonController {
 		if (id == null) {
 			users = new Users();
 		} else {
-			users = usersDao.find(id);
+			users = usersDao.findById(id);
 		}
 		mav.addObject("users", users);
 		return mav;
@@ -48,12 +51,12 @@ public class PersonController {
 
 	@RequestMapping(method = RequestMethod.GET, value = "list")
 	public ModelAndView listPeople() {
-		logger.debug("Received request to list persons");
+		logger.debug("Received request to list persons");		
 		ModelAndView mav = new ModelAndView();
 		List<Users> people = usersDao.getUsers();
 		logger.debug("Person Listing count = " + people.size());
 		mav.addObject("people", people);
-		mav.setViewName("list");
+		mav.setViewName("list");		
 		return mav;
 	}
 
