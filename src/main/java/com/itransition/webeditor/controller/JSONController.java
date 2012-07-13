@@ -38,11 +38,11 @@ public class JSONController{
 		presentationDao.save(presentations);
 	}
 	@RequestMapping(value = "/jsons/", method = RequestMethod.POST)
-	public @ResponseBody String openPresentation( @RequestParam ("json") String json)
+	public @ResponseBody String openPresentation( @RequestParam ("json") long json)
 	{
 		Long id = (long) 1;
 		Presentations presentations = null;
-		presentations = presentationDao.findById(id);
+		presentations = presentationDao.findById(json);
 		String jsonResponse=presentations.getData();
 		return jsonResponse;
 	}

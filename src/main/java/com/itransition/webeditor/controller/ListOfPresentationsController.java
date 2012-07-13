@@ -36,9 +36,16 @@ public class ListOfPresentationsController {
 		mav.setViewName("listOfPresentations");
 		return mav;
 	}
-	@RequestMapping(value ="presentationView.html", method = RequestMethod.GET)
-	public String home(Model model) {
+	@RequestMapping(value ="preview.jsp", method = RequestMethod.GET)
+	public ModelAndView home() {
 		logger.info("preview");
-		return "presentationView";
+		Long id = (long) 2;
+		ModelAndView mav = new ModelAndView();
+		Presentations presentations = null;
+		presentations = presentationDao.findById(id);
+		String jsonResponse=presentations.getData();
+		mav.addObject("jsonResponse", jsonResponse);
+		mav.setViewName("preview");
+		return mav;
 	}
 }

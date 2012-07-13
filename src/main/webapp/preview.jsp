@@ -1,5 +1,5 @@
-<taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c">
-<taglib prefix="form" uri="http://www.springframework.org/tags/form">
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,8 +66,20 @@ html,body,.editor {
 <script type="text/javascript" data-main="scripts/main"
 	src="scripts/require.js"></script>
 <script type="text/javascript" src="preview_export/scripts/impress.js"></script>
+<script>$(document).ready(function (){
+	      var getId=window.location.href.split("=")[1];
+	      var Ide={json:getId};
+	        $.ajax({
+        	    type: 'POST',
+	        	    url: "/webeditor/spring/jsons/", 
+	        	    data: Ide,
+	        	    dataType: "json",
+	        	    success: function(data){
+	        	    	localStorage.setItem("open",JSON.stringify(data));
+	          		}
+	            });
+});</script>
 </head>
 <body onload=$("#present").click();>
-<form action="${jsonResponse}"></form>
 </body>
 </html>

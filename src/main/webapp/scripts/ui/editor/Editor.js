@@ -36,7 +36,6 @@ define(["vendor/amd/backbone", "./SlideEditor", "./transition_editor/TransitionE
           	    dataType: "json",
           	    success: function(data){
           	    	_this.model["import"](data);
-            		$("#present").click();
             		}
               });
         if (data != null) {
@@ -169,20 +168,21 @@ define(["vendor/amd/backbone", "./SlideEditor", "./transition_editor/TransitionE
       }
     },
     renderPreview: function() {
+
+	   var _this = this;
+// 	      var getId=window.location.href.split("=")[1];
+// 	      var Ide={json:getId};
+// 	        $.ajax({
+// 	        	    type: 'POST',
+// 	        	    url: "/webeditor/spring/jsons/", 
+// 	        	    data: Ide,
+// 	        	    dataType: "json",
+// 	        	    success: function(data){
+// 	        	    	_this.model["import"](data);
+// 	          		}
+// 	            });
+ 	  _this.model["import"](JSON.parse(localStorage.getItem("open")));
       var cb, showStr, sourceWind;
-      var _this = this;
-      var getId=window.location.href.split("=")[1];
-      var Ide={json:getId};
-        $.ajax({
-        	    type: 'POST',
-        	    url: "/webeditor/spring/jsons/", 
-        	    data: Ide,
-        	    dataType: "json",
-        	    success: function(data){
-        	    	_this.model["import"](data);
-//          		$("#present").click();
-          		}
-            });
       showStr = ImpressRenderer.render(this.model.attributes);
       window.previewWind = window.open("./editor.html?preview=true");
       sourceWind = window;
