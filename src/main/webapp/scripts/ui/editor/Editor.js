@@ -27,17 +27,6 @@ define(["vendor/amd/backbone", "./SlideEditor", "./transition_editor/TransitionE
       return this.openDialog.show(function(fileName) {
         var data;
         console.log("Attempting to open " + fileName);
-        var getId=window.location.href.split("=")[1];
-        var Ide={json:getId};
-          $.ajax({
-          	    type: 'POST',
-          	    url: "/webeditor/spring/jsons/", 
-          	    data: Ide,
-          	    dataType: "json",
-          	    success: function(data){
-          	    	_this.model["import"](data);
-            		}
-              });
         if (data != null) {
           _this.model["import"](data);
           return localStorage.setItem("StrutLastPres", fileName);
@@ -170,18 +159,9 @@ define(["vendor/amd/backbone", "./SlideEditor", "./transition_editor/TransitionE
     renderPreview: function() {
 
 	   var _this = this;
-// 	      var getId=window.location.href.split("=")[1];
-// 	      var Ide={json:getId};
-// 	        $.ajax({
-// 	        	    type: 'POST',
-// 	        	    url: "/webeditor/spring/jsons/", 
-// 	        	    data: Ide,
-// 	        	    dataType: "json",
-// 	        	    success: function(data){
-// 	        	    	_this.model["import"](data);
-// 	          		}
-// 	            });
+	   if (window.location.href.split("=")[1]!=undefined){
  	  _this.model["import"](JSON.parse(localStorage.getItem("open")));
+	   }
       var cb, showStr, sourceWind;
       showStr = ImpressRenderer.render(this.model.attributes);
       window.previewWind = window.open("./editor.html?preview=true");

@@ -192,7 +192,7 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
           out.write("\t\t\t<li class=span3><a href=\"/webeditor/preview.jsp?id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${v_person.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\" class=thumbnail> \n");
-          out.write("\t\t\t<img src=http://placehold.it/260x180 alt=\"\"></a></li>\n");
+          out.write("\t\t\t<img src=http://www.presentermedia.com/files/clipart/00004000/4466/media_video_icon_pc_md_wm.jpg alt=\"\"></a></li>\n");
           out.write("            ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)

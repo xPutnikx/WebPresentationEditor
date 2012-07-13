@@ -73,7 +73,7 @@ body {
 			<ul class="thumbnails">
 				<c:forEach items="${presentation}" var="v_person">
 			<li class=span3><a href="/webeditor/preview.jsp?id=${v_person.id}" class=thumbnail> 
-			<img src=http://placehold.it/260x180 alt=""></a></li>
+			<img src=http://www.presentermedia.com/files/clipart/00004000/4466/media_video_icon_pc_md_wm.jpg alt=""></a></li>
             </c:forEach>
 			</ul>
 	</div> 
