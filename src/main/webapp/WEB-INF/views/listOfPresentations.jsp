@@ -49,16 +49,24 @@ body {
 						<li><a href="home.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="contact.html">Contact</a></li>
-						<li><a class=action href="#">List of Presentations</a></li>
+						<li class="active"><a href="#">List of Presentations</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
 				<ul class="nav pull-right">
 
+					<ul class="nav">
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown"> Account <b class="caret"></b>
+						</a>
+							<ul class="dropdown-menu">
+								<li class="nav-header">Account</li>
+								<li><a href="registrationform.html">Registration</a></li>
+								<li><a href="loginform.html">Login</a></li>
+								<li><a href="../j_spring_security_logout">Logout</a></li>
+							</ul></li>
+					</ul>
 
-					<li><a href="registrationform.html">Registration</a></li>
-					<li><a href="loginform.html">Login</a></li>
-					<li><a href="../j_spring_security_logout">Logout</a></li>
 
 				</ul>
 			</div>
@@ -68,17 +76,21 @@ body {
 	<div class="container">
 
 		<div class="span12">
-			<h2> ${titleMessage}</h2>
+			<h2>${titleMessage}<img src=http://icons.iconarchive.com/icons/gakuseisean/ivista/72/Web-Database-icon.png/></h2>
 			<p>${controllerMessage}</p>
 			<ul class="thumbnails">
 				<c:forEach items="${presentation}" var="v_person">
-			<li class=span3><a href="/webeditor/preview.jsp?id=${v_person.id}" class=thumbnail> 
-			<img src=http://www.presentermedia.com/files/clipart/00004000/4466/media_video_icon_pc_md_wm.jpg alt=""></a></li>
-            </c:forEach>
+					<li class=span3><a
+						href="/webeditor/preview.jsp?id=${v_person.id}" class=thumbnail>
+							<img
+							src=http://icons.iconarchive.com/icons/zyotism/digital-video-techniques/128/Slide-Show-icon.png
+							alt="">
+					</a></li>
+				</c:forEach>
 			</ul>
-	</div> 
+		</div>
 	</div>
-	
+
 	<!-- Le javascript
 ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->

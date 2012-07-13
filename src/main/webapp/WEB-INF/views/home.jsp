@@ -47,23 +47,33 @@ body {
 				</a> <a class="brand" href="../editor.html">Web Editor</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li><a class="action" href="#">Home</a></li>
+						<li class="active"><a href="#">Home</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="contact.html">Contact</a></li>
-						<li><a href="listOfPresentations.html">List of Presentations</a></li>
+						<li><a href="listOfPresentations.html">List of
+								Presentations</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
-				 <form class="navbar-search pull-left" action="">
-            <input type="text" class="search-query span2" placeholder="Search">
-          	</form>
+				<form class="navbar-search pull-left" action="">
+					<input type="text" class="search-query span2" placeholder="Search">
+				</form>
 				<ul class="nav pull-right">
-					
-						
+					<ul class="nav">
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown"> Account <b class="caret"></b>
+						</a>
+							<ul class="dropdown-menu">
+							<li class="nav-header">Account</li>
 							<li><a href="registrationform.html">Registration</a></li>
-							<li><a href="loginform.html">Login</a></li>		
+							<li><a href="loginform.html">Login</a></li>
 							<li><a href="../j_spring_security_logout">Logout</a></li>
-						
+							</ul></li>
+					</ul>
+
+
+					
+
 				</ul>
 			</div>
 		</div>
@@ -77,65 +87,65 @@ body {
 		<p>
 			<a href="list">Administration Account</a><br>
 		</p>
-		 <div id="item">
-		${tagCloud}
-		<li>Development</li>
-		<li>ShavrtzMesser</li>
-		<li>web</li>
-		<li>Tutorial</li>
-		<li>ASP</li>
-		<li>CSS</li>
-		<li>Design</li>
-		<li>Flash</li>
-		<li>Experimental</li>
-		<li><a href=registrationform.html>Registration</a></li>
-		<li><a href=loginform.html>Login</a></li>
-		<li> </li>
-		<li><a href=contact.html>Contact</a></li>
-		<li>3D</li>
-		<li>Ajax</li>
-		<li><a href=about.html>About</a></li>
-		<li>Development</li>
-		<li>web</li>
-		<li>Tutorial</li>
-		<li>ASP</li>
-		<li>CSS</li>
-		<li>Design</li>
-		<li>Flash</li>
-		<li>Experimental</li>
-		<li><a href=registrationform.html>Registration</a></li>
-		<li><a href=loginform.html>Login</a></li>
-		<li> </li>
-		<li><a href=contact.html>Contact</a></li>
-		<li>3D</li>
-		<li>Ajax</li>
-		<li><a href=about.html>About</a></li>
-		<li>Development</li>
-		<li>web</li>
-		<li>Tutorial</li>
-		<li>ASP</li>
-		<li>CSS</li>
-		<li>Design</li>
-		<li>Flash</li>
-		<li>Experimental</li>
-		<li><a href=registrationform.html>Registration</a></li>
-		<li><a href=loginform.html>Login</a></li>
-		<li> </li>
-		<li><a href=contact.html>Contact</a></li>
-		<li>3D</li>
-		<li>Ajax</li>
-		<li><a href=about.html>About</a></li>
-	</ul>
-</div>
+		<div id="item">
+			${tagCloud}
+			<li>Development</li>
+			<li>ShavrtzMesser</li>
+			<li>web</li>
+			<li>Tutorial</li>
+			<li>ASP</li>
+			<li>CSS</li>
+			<li>Design</li>
+			<li>Flash</li>
+			<li>Experimental</li>
+			<li><a href=registrationform.html>Registration</a></li>
+			<li><a href=loginform.html>Login</a></li>
+			<li></li>
+			<li><a href=contact.html>Contact</a></li>
+			<li>3D</li>
+			<li>Ajax</li>
+			<li><a href=about.html>About</a></li>
+			<li>Development</li>
+			<li>web</li>
+			<li>Tutorial</li>
+			<li>ASP</li>
+			<li>CSS</li>
+			<li>Design</li>
+			<li>Flash</li>
+			<li>Experimental</li>
+			<li><a href=registrationform.html>Registration</a></li>
+			<li><a href=loginform.html>Login</a></li>
+			<li></li>
+			<li><a href=contact.html>Contact</a></li>
+			<li>3D</li>
+			<li>Ajax</li>
+			<li><a href=about.html>About</a></li>
+			<li>Development</li>
+			<li>web</li>
+			<li>Tutorial</li>
+			<li>ASP</li>
+			<li>CSS</li>
+			<li>Design</li>
+			<li>Flash</li>
+			<li>Experimental</li>
+			<li><a href=registrationform.html>Registration</a></li>
+			<li><a href=loginform.html>Login</a></li>
+			<li></li>
+			<li><a href=contact.html>Contact</a></li>
+			<li>3D</li>
+			<li>Ajax</li>
+			<li><a href=about.html>About</a></li>
+			</ul>
+		</div>
 	</div>
-		
+
 	<!-- /container -->
 
 
 	<!-- Le javascript
 ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	
+
 	<script src="resources/assets/js/jquery.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>
@@ -150,8 +160,10 @@ body {
 	<script src="resources/assets/js/bootstrap-carousel.js"></script>
 	<script src="resources/assets/js/bootstrap-typeahead.js"></script>
 	<script type="text/javascript" src="resources/sphere/JQuery.js"></script>
-	<script src="resources/sphere/3DEngine.js" type="text/javascript" charset="utf-8"></script>
-	<script src="resources/sphere/Sphere.js" type="text/javascript" charset="utf-8"></script>
+	<script src="resources/sphere/3DEngine.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="resources/sphere/Sphere.js" type="text/javascript"
+		charset="utf-8"></script>
 	<script type="text/javascript">
 		//<![CDATA[
 		

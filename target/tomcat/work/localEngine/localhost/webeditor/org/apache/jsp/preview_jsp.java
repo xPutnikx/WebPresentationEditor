@@ -64,6 +64,7 @@ public final class preview_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<link rel=\"stylesheet\" href=\"res/css/close-btn.css\"></link>\r\n");
       out.write("<link rel=\"stylesheet\" href=\"res/css/bootstrap.css\"></link>\r\n");
       out.write("<link rel=\"stylesheet\" href=\"res/css/main.css\"></link>\r\n");
+      out.write("<link rel=\"stylesheet\" href=\"res/css/mainPreview.css\"></link>\r\n");
       out.write("<link rel=\"stylesheet\"\r\n");
       out.write("\thref=\"res/jqplugins/colorpicker/css/colorpicker.css\" type=\"text/css\" />\r\n");
       out.write("<link rel=\"stylesheet\"\r\n");

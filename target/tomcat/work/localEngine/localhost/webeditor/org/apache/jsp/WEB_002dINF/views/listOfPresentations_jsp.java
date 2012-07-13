@@ -105,16 +105,24 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("\t\t\t\t\t\t<li><a href=\"home.html\">Home</a></li>\n");
       out.write("\t\t\t\t\t\t<li><a href=\"about.html\">About</a></li>\n");
       out.write("\t\t\t\t\t\t<li><a href=\"contact.html\">Contact</a></li>\n");
-      out.write("\t\t\t\t\t\t<li><a class=action href=\"#\">List of Presentations</a></li>\n");
+      out.write("\t\t\t\t\t\t<li class=\"active\"><a href=\"#\">List of Presentations</a></li>\n");
       out.write("\t\t\t\t\t</ul>\n");
       out.write("\t\t\t\t</div>\n");
       out.write("\t\t\t\t<!--/.nav-collapse -->\n");
       out.write("\t\t\t\t<ul class=\"nav pull-right\">\n");
       out.write("\n");
+      out.write("\t\t\t\t\t<ul class=\"nav\">\n");
+      out.write("\t\t\t\t\t\t<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\"\n");
+      out.write("\t\t\t\t\t\t\tdata-toggle=\"dropdown\"> Account <b class=\"caret\"></b>\n");
+      out.write("\t\t\t\t\t\t</a>\n");
+      out.write("\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">\n");
+      out.write("\t\t\t\t\t\t\t\t<li class=\"nav-header\">Account</li>\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"registrationform.html\">Registration</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">Logout</a></li>\n");
+      out.write("\t\t\t\t\t\t\t</ul></li>\n");
+      out.write("\t\t\t\t\t</ul>\n");
       out.write("\n");
-      out.write("\t\t\t\t\t<li><a href=\"registrationform.html\">Registration</a></li>\n");
-      out.write("\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\n");
-      out.write("\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">Logout</a></li>\n");
       out.write("\n");
       out.write("\t\t\t\t</ul>\n");
       out.write("\t\t\t</div>\n");
@@ -124,9 +132,9 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("\t<div class=\"container\">\n");
       out.write("\n");
       out.write("\t\t<div class=\"span12\">\n");
-      out.write("\t\t\t<h2> ");
+      out.write("\t\t\t<h2>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${titleMessage}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("</h2>\n");
+      out.write("<img src=http://icons.iconarchive.com/icons/gakuseisean/ivista/72/Web-Database-icon.png/></h2>\n");
       out.write("\t\t\t<p>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${controllerMessage}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("</p>\n");
@@ -136,9 +144,9 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
         return;
       out.write("\n");
       out.write("\t\t\t</ul>\n");
-      out.write("\t</div> \n");
+      out.write("\t\t</div>\n");
       out.write("\t</div>\n");
-      out.write("\t\n");
+      out.write("\n");
       out.write("\t<!-- Le javascript\n");
       out.write("================================================== -->\n");
       out.write("\t<!-- Placed at the end of the document so the pages load faster -->\n");
@@ -179,9 +187,9 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /WEB-INF/views/listOfPresentations.jsp(74,4) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/listOfPresentations.jsp(82,4) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${presentation}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/views/listOfPresentations.jsp(74,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/listOfPresentations.jsp(82,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("v_person");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
@@ -189,11 +197,15 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       if (_jspx_eval_c_005fforEach_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
-          out.write("\t\t\t<li class=span3><a href=\"/webeditor/preview.jsp?id=");
+          out.write("\t\t\t\t\t<li class=span3><a\n");
+          out.write("\t\t\t\t\t\thref=\"/webeditor/preview.jsp?id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${v_person.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\" class=thumbnail> \n");
-          out.write("\t\t\t<img src=http://www.presentermedia.com/files/clipart/00004000/4466/media_video_icon_pc_md_wm.jpg alt=\"\"></a></li>\n");
-          out.write("            ");
+          out.write("\" class=thumbnail>\n");
+          out.write("\t\t\t\t\t\t\t<img\n");
+          out.write("\t\t\t\t\t\t\tsrc=http://icons.iconarchive.com/icons/zyotism/digital-video-techniques/128/Slide-Show-icon.png\n");
+          out.write("\t\t\t\t\t\t\talt=\"\">\n");
+          out.write("\t\t\t\t\t</a></li>\n");
+          out.write("\t\t\t\t");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;

@@ -70,7 +70,6 @@ define(["vendor/amd/Handlebars", "./Templates"], function(Handlebars, Templates)
         }
         return ++cnt;
       });
-      console.log("DECK = "+deckAttrs);//////////////////
       return Templates.ImpressTemplate(deckAttrs);
     };
 

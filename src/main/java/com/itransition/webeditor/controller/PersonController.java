@@ -22,8 +22,6 @@ public class PersonController {
 	private static final Logger logger = LoggerFactory.getLogger(PersonController.class);
 
 	@Autowired
-	private UsersDao usersDao;
-	@Autowired
 	private UsersService usersService;
 
 	@RequestMapping(method = RequestMethod.GET, value = "edit")
@@ -36,7 +34,7 @@ public class PersonController {
 		if (id == null) {
 			users = new Users();
 		} else {
-			users = usersDao.findById(id);
+			users = usersService.findById(id);
 		}
 		mav.addObject("users", users);
 		return mav;
@@ -45,7 +43,7 @@ public class PersonController {
 	@RequestMapping(method = RequestMethod.POST, value = "edit")
 	public String savePerson(@ModelAttribute Users users) {
 		logger.debug("Received postback on person " + users);
-		usersDao.save(users);
+		usersService.save(users);
 		return "redirect:list";
 	}
 
@@ -53,7 +51,7 @@ public class PersonController {
 	public ModelAndView listPeople() {
 		logger.debug("Received request to list persons");		
 		ModelAndView mav = new ModelAndView();
-		List<Users> people = usersDao.getUsers();
+		List<Users> people = usersService.getUsers();
 		logger.debug("Person Listing count = " + people.size());
 		mav.addObject("people", people);
 		mav.setViewName("list");		

@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="res/css/close-btn.css"></link>
 <link rel="stylesheet" href="res/css/bootstrap.css"></link>
 <link rel="stylesheet" href="res/css/main.css"></link>
+<link rel="stylesheet" href="res/css/mainPreview.css"></link>
 <link rel="stylesheet"
 	href="res/jqplugins/colorpicker/css/colorpicker.css" type="text/css" />
 <link rel="stylesheet"

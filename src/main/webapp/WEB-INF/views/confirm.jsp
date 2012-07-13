@@ -49,17 +49,26 @@ body {
 						<li><a href="home.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="contact.html">Contact</a></li>
-						<li><a href="listOfPresentations.html">List of Presentations</a></li>
+						<li><a href="listOfPresentations.html">List of
+								Presentations</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
 				<ul class="nav pull-right">
-					
-						
-							<li><a href="registrationform.html">Registration</a></li>
-							<li><a href="loginform.html">Login</a></li>		
-							<li><a href="../j_spring_security_logout">Logout</a></li>
-						
+					<ul class="nav">
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown"> Account <b class="caret"></b>
+						</a>
+							<ul class="dropdown-menu">
+								<li class="nav-header">Account</li>
+								<li><a href="registrationform.html">Registration</a></li>
+								<li><a href="loginform.html">Login</a></li>
+								<li><a href="../j_spring_security_logout">Logout</a></li>
+							</ul></li>
+					</ul>
+
+
+
 				</ul>
 			</div>
 		</div>
@@ -70,9 +79,7 @@ body {
 		<h1>
 			${controllerMessage}<br />
 		</h1>
-		<p>
-			${confirmationMessage}
-		</p>
+		<p>${confirmationMessage}</p>
 
 	</div>
 	<!-- /container -->
