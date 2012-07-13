@@ -37,11 +37,13 @@ public class JSONController{
 		presentations.setUserId("1");
 		presentationDao.save(presentations);
 	}
-//	@RequestMapping(value="presentationView.html",method=RequestMethod.GET)
-//	public String openPresentation(@RequestParam(value = "id", required = false) Long id){
-//		Presentations presentations = null;
-//		presentations = presentationDao.find(id);
-//		String jsonResponse=presentations.getData();
-//		return jsonResponse;
-//	}
+	@RequestMapping(value = "/jsons/", method = RequestMethod.POST)
+	public @ResponseBody String openPresentation( @RequestParam ("json") String json)
+	{
+		Long id = (long) 1;
+		Presentations presentations = null;
+		presentations = presentationDao.findById(id);
+		String jsonResponse=presentations.getData();
+		return jsonResponse;
+	}
 }

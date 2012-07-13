@@ -80,6 +80,7 @@ body {
 		 <div id="item">
 		${tagCloud}
 		<li>Development</li>
+		<li>ShavrtzMesser</li>
 		<li>web</li>
 		<li>Tutorial</li>
 		<li>ASP</li>
@@ -172,7 +173,7 @@ body {
 			var mouseX,mouseY = 0;
 			var offsetX = $("#item").offset().left;
 			var offsetY = $("#item").offset().top;
-			var speed = 10000;
+			var speed = 20000;
 			
 			$().mousemove(function(e){
 				mouseX = e.clientX - offsetX - (container.width() / 2);

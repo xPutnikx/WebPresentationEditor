@@ -27,11 +27,22 @@ define(["vendor/amd/backbone", "./SlideEditor", "./transition_editor/TransitionE
       return this.openDialog.show(function(fileName) {
         var data;
         console.log("Attempting to open " + fileName);
-        data = FileStorage.open(fileName);
+        var getId=window.location.href.split("=")[1];
+        var Ide={json:getId};
+          $.ajax({
+          	    type: 'POST',
+          	    url: "/webeditor/spring/jsons/", 
+          	    data: Ide,
+          	    dataType: "json",
+          	    success: function(data){
+          	    	_this.model["import"](data);
+            		$("#present").click();
+            		}
+              });
         if (data != null) {
           _this.model["import"](data);
           return localStorage.setItem("StrutLastPres", fileName);
-        }
+        };
       });
     },
     openRecent: function(e) {},
@@ -159,6 +170,19 @@ define(["vendor/amd/backbone", "./SlideEditor", "./transition_editor/TransitionE
     },
     renderPreview: function() {
       var cb, showStr, sourceWind;
+      var _this = this;
+      var getId=window.location.href.split("=")[1];
+      var Ide={json:getId};
+        $.ajax({
+        	    type: 'POST',
+        	    url: "/webeditor/spring/jsons/", 
+        	    data: Ide,
+        	    dataType: "json",
+        	    success: function(data){
+        	    	_this.model["import"](data);
+//          		$("#present").click();
+          		}
+            });
       showStr = ImpressRenderer.render(this.model.attributes);
       window.previewWind = window.open("./editor.html?preview=true");
       sourceWind = window;
@@ -249,22 +273,3 @@ define(["vendor/amd/backbone", "./SlideEditor", "./transition_editor/TransitionE
     }
   });
 });
-var preview=function() {
-	define("scripts/ui/impress_renderer/ImpressRenderer.js");
-    var cb, showStr, sourceWind;
-    showStr = ImpressRenderer.render(this.model.attributes);
-    window.previewWind = window.open("./editor.html?preview=true");
-    sourceWind = window;
-    cb = function() {
-      if (!(sourceWind.previewWind.startImpress != null)) {
-        return setTimeout(cb, 200);
-      } else {
-        sourceWind.previewWind.document.getElementsByTagName("html")[0].innerHTML = showStr;
-        if (!sourceWind.previewWind.impressStarted) {
-          sourceWind.previewWind.startImpress(sourceWind.previewWind.document, sourceWind.previewWind);
-          return sourceWind.previewWind.impress().init();
-        }
-      }
-    };
-    return $(window.previewWind.document).ready(cb);
-  };
