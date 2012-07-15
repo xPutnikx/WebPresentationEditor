@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,11 +24,13 @@ public class UsersDao {
 	
 	@Transactional
 	@SuppressWarnings("unchecked")
+	@Cacheable("users")
 	public List<Users> getUsers() {
 		return entityManager.createQuery("select u from Users u").getResultList();
 	}
 	
 	@Transactional
+	@CacheEvict(value = "users", allEntries = true)
 	public void save(Users users) {
 		if (users.getId() == null) {
 			entityManager.persist(users);
@@ -36,12 +40,14 @@ public class UsersDao {
 	}
 	
 	@Transactional
+	@CacheEvict(value = "users", allEntries = true)
 	public void removeById(Long id) {
 		Users users = entityManager.find(Users.class, id);
 		entityManager.remove(users);
 	}
 	
 	@Transactional
+	@CacheEvict(value = "users", allEntries = true)
 	public void setEnabledById(Long id, boolean enabled) {
 		Users users = entityManager.find(Users.class, id);
 		users.setEnabled(enabled);

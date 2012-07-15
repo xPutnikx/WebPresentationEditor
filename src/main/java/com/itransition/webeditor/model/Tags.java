@@ -22,11 +22,11 @@ public class Tags {
 		this.id = id;
 	}
 
-	public String getUserId() {
+	public String getName() {
 		return name;
 	}
 
-	public void setUserId(String userId) {
+	public void setName(String userId) {
 		this.name = userId;
 	}
 	

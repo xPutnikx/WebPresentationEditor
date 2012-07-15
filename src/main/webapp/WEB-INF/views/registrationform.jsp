@@ -46,35 +46,45 @@ body {
 				<a class="btn btn-navbar" data-toggle="collapse"
 					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
 					class="icon-bar"></span> <span class="icon-bar"></span>
-				</a> <a class="brand" href="#">Web Editor</a>
+				</a> <a class="brand" href="../editor.html">
+				<i class="icon-white icon-edit"></i> Web Editor</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li><a href="home.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="listOfPresentations.html">List of
-								Presentations</a></li>
+						<li><a href="home.html">
+						<i class="icon-white icon-home"></i> Home</a></li>
+						<li><a href="about.html">
+						<i class="icon-white icon-book"></i> About</a></li>
+						<li><a href="contact.html">
+						<i class="icon-white icon-pencil"></i> Contact</a></li>
+						<li><a href="listOfPresentations.html">
+						<i class="icon-white icon-picture"></i>
+						List of Presentations</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
+				<form class="navbar-search pull-left" action="">
+					<i class="icon-white icon-search"></i><input type="text" class="search-query span2" placeholder="Search">
+				</form>
 				<ul class="nav pull-right">
 					<ul class="nav">
-						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown"> Account <b class="caret"></b>
-						</a>
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+             			 <i class="icon-user"></i> Username
+             			 <span class="caret"></span>
+           				 </a>
 							<ul class="dropdown-menu">
-							<li class="nav-header">Account</li>
-								<li><a href="loginform.html">Login</a></li>
-								<li><a href="../j_spring_security_logout">Logout</a></li>
+							<li><a href="loginform.html">Login</a></li>
+							<li><a href="userpage.html">
+							<i class="icon-cog"></i> Profile</a></li>
+							<li><a href="../j_spring_security_logout">
+							<i class="icon-off"></i> Logout</a></li>
+							
 							</ul></li>
 					</ul>
-
-
+				
 				</ul>
 			</div>
 		</div>
 	</div>
-
 	<div class="container">
 
 		<form:form method="Post" action="registrationform.html"

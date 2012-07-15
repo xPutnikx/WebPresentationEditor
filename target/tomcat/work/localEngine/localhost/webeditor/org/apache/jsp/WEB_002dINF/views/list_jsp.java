@@ -82,36 +82,48 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\thref=\"resources/assets/ico/apple-touch-icon-57-precomposed.png\">\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
-      out.write("\t<div class=\"navbar navbar-fixed-top\">\r\n");
+      out.write("<div class=\"navbar navbar-fixed-top\">\r\n");
       out.write("\t\t<div class=\"navbar-inner\">\r\n");
       out.write("\t\t\t<div class=\"container\">\r\n");
       out.write("\t\t\t\t<a class=\"btn btn-navbar\" data-toggle=\"collapse\"\r\n");
       out.write("\t\t\t\t\tdata-target=\".nav-collapse\"> <span class=\"icon-bar\"></span> <span\r\n");
       out.write("\t\t\t\t\tclass=\"icon-bar\"></span> <span class=\"icon-bar\"></span>\r\n");
-      out.write("\t\t\t\t</a> <a class=\"brand\" href=\"#\">Web Editor</a>\r\n");
+      out.write("\t\t\t\t</a> <a class=\"brand\" href=\"../editor.html\">\r\n");
+      out.write("\t\t\t\t<i class=\"icon-white icon-edit\"></i> Web Editor</a>\r\n");
       out.write("\t\t\t\t<div class=\"nav-collapse\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"./\">Home</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"about.html\">About</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"contact.html\">Contact</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations.html\">List of\r\n");
-      out.write("\t\t\t\t\t\t\t\tPresentations</a></li>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"home.html\">\r\n");
+      out.write("\t\t\t\t\t\t<i class=\"icon-white icon-home\"></i> Home</a></li>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"about.html\">\r\n");
+      out.write("\t\t\t\t\t\t<i class=\"icon-white icon-book\"></i> About</a></li>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"contact.html\">\r\n");
+      out.write("\t\t\t\t\t\t<i class=\"icon-white icon-pencil\"></i> Contact</a></li>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations.html\">\r\n");
+      out.write("\t\t\t\t\t\t<i class=\"icon-white icon-picture\"></i>\r\n");
+      out.write("\t\t\t\t\t\tList of Presentations</a></li>\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t<!--/.nav-collapse -->\r\n");
+      out.write("\t\t\t\t<form class=\"navbar-search pull-left\" action=\"\">\r\n");
+      out.write("\t\t\t\t\t<i class=\"icon-white icon-search\"></i><input type=\"text\" class=\"search-query span2\" placeholder=\"Search\">\r\n");
+      out.write("\t\t\t\t</form>\r\n");
       out.write("\t\t\t\t<ul class=\"nav pull-right\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\"\r\n");
-      out.write("\t\t\t\t\t\t\tdata-toggle=\"dropdown\"> Account <b class=\"caret\"></b>\r\n");
-      out.write("\t\t\t\t\t\t</a>\r\n");
+      out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\r\n");
+      out.write("             \t\t\t <i class=\"icon-user\"></i> Username\r\n");
+      out.write("             \t\t\t <span class=\"caret\"></span>\r\n");
+      out.write("           \t\t\t\t </a>\r\n");
       out.write("\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
-      out.write("\t\t\t\t\t\t\t\t<li class=\"nav-header\">Account</li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t<li><a href=\"registrationform.html\">Registration</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">Logout</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"registrationform.html\">Registration</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"userpage.html\">\r\n");
+      out.write("\t\t\t\t\t\t\t<i class=\"icon-cog\"></i> Profile</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">\r\n");
+      out.write("\t\t\t\t\t\t\t<i class=\"icon-off\"></i> Logout</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t\r\n");
       out.write("\t\t\t\t\t\t\t</ul></li>\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
-      out.write("\r\n");
+      out.write("\t\t\t\t\r\n");
       out.write("\t\t\t\t</ul>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\r\n");
@@ -162,9 +174,9 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /WEB-INF/views/list.jsp(69,3) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/list.jsp(81,3) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${people}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/views/list.jsp(69,3) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/list.jsp(81,3) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("v_person");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {

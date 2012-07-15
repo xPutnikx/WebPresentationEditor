@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.itransition.webeditor.model.Presentations;
+import com.itransition.webeditor.model.Tags;
 import com.itransition.webeditor.service.PresentationsService;
 @Controller
 public class JSONController{
@@ -22,13 +23,15 @@ public class JSONController{
 	 */
 	@RequestMapping(value = "/json/", method = RequestMethod.POST)
 	public void savePresentation( @RequestParam ("json") String json,
-			@RequestParam ("title") String title, @RequestParam ("tagstring") String tags,
+			@RequestParam ("title") String title, @RequestParam ("tagstring") String tagstring,
 			@RequestParam ("description") String description)
 	{
 		Presentations presentations=new Presentations();
+		Tags tags =new Tags();
 		presentations.setData(json);
 		presentations.setTitle(title);
 		presentations.setDescription(description);
+		tags.setName(tagstring);
 		presentations.setUserId("1");
 		presentationsService.save(presentations);
 	}
