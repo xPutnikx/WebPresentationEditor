@@ -31,12 +31,12 @@ public class UserRolesDao {
 				"select u from UserRoles u where u.userId='" + userId + "'").getResultList();
 	}
 	
-	@Transactional
-	@SuppressWarnings("unchecked")
+	@Transactional	
 	@Cacheable("roles")
-	public List<String> getRolesByUserId(Long userId) {
-		return entityManager.createQuery(
-				"select u.authority from UserRoles u where u.userId='" + userId + "'").getResultList();
+	public String getRoleByUserId(Long userId) {
+		return (String) entityManager.createQuery(
+				"select u.authority from UserRoles u where u.userId='" + userId + "'")
+				.getResultList().get(0);
 	}
 		
 	@Transactional

@@ -31,34 +31,43 @@ public class UsersService {
 		usersDao.save(users);
 	}
 	
-	public List<String> getRolesById(Long id) {
-		return userRolesDao.getRolesByUserId(id);
+	public UserRoles getUserRoles(Long id) {
+		return userRolesDao.findById(id);
 	}
 	
-	public boolean isAdministrator(Long id) {
-		List<String> roles = getRolesById(id);
-		for (String role : roles) {
-			if (role.equals(UserRolesTypes.ROLE_ADMIN)) {
-				return true;
-			}
+	public String getRoleById(Long id) {
+		return userRolesDao.getRoleByUserId(id);
+	}	
+	
+	public boolean isAdministrator(Long id) {		
+		String role = userRolesDao.getRoleByUserId(id);
+		if (role.equals(UserRolesTypes.ROLE_ADMIN)) {
+			return true;
 		}
 		return false;
 	}
 	
 	public boolean isUser(Long id) {
-		List<String> roles = getRolesById(id);
-		for (String role : roles) {
-			if (role.equals(UserRolesTypes.ROLE_USER)) {
-				return true;
-			}
+		String role = userRolesDao.getRoleByUserId(id);
+		if (role.equals(UserRolesTypes.ROLE_USER)) {
+			return true;
 		}
 		return false;
 	}
 	
-	public void removeById(Long id) throws PermessionDeniedException {
-		if (isAdministrator(id)) {
-			throw new PermessionDeniedException();
-		}
+	public void makeAdministrator(Long id) {
+		UserRoles userRoles = userRolesDao.findById(id);
+		userRoles.setAuthority(UserRolesTypes.ROLE_ADMIN);
+		userRolesDao.save(userRoles);
+	}
+	
+	public void makeUser(Long id) {
+		UserRoles userRoles = userRolesDao.findById(id);
+		userRoles.setAuthority(UserRolesTypes.ROLE_USER);
+		userRolesDao.save(userRoles);
+	}
+	
+	public void removeById(Long id) {		
 		usersDao.removeById(id);
 		userRolesDao.removeByUserId(id);
 	}

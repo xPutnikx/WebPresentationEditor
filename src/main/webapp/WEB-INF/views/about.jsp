@@ -108,6 +108,5 @@ body {
 	<script src="resources/assets/js/bootstrap-collapse.js"></script>
 	<script src="resources/assets/js/bootstrap-carousel.js"></script>
 	<script src="resources/assets/js/bootstrap-typeahead.js"></script>
-
 </body>
 </html>
