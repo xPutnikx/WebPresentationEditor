@@ -112,7 +112,8 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t<!--/.nav-collapse -->\r\n");
       out.write("\t\t\t\t<form class=\"navbar-search pull-left\" action=\"\">\r\n");
-      out.write("\t\t\t\t\t<i class=\"icon-white icon-search\"></i><input type=\"text\"\r\n");
+      out.write("\t\t\t\t\t<i class=\"icon-white icon-search\"></i><input id=\"searchbox\"\r\n");
+      out.write("\t\t\t\t\t   type=\"text\" data-provide=\"typeahead\"\r\n");
       out.write("\t\t\t\t\t\tclass=\"search-query span2\" placeholder=\"Search\">\r\n");
       out.write("\t\t\t\t</form>\r\n");
       out.write("\t\t\t\t<ul class=\"nav pull-right\">\r\n");
@@ -219,7 +220,31 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<script src=\"resources/assets/js/bootstrap-button.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-collapse.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-carousel.js\"></script>\r\n");
-      out.write("\t<script src=\"resources/assets/js/bootstrap-typeahead.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-typeahead.js\">\r\n");
+      out.write("\t<!-- <script src=\"resources/assets/js/bootstrap-typeahead-2.0.3.js\"></script> -->\r\n");
+      out.write("\t\r\n");
+      out.write("\t<script>\t   \r\n");
+      out.write("\t\t$(document).ready(function() {\r\n");
+      out.write("\t\t\t$(\"#searchbox\").typeahead({\r\n");
+      out.write("\t\t\t\tsource : function(typeahead, query) {\r\n");
+      out.write("\t\t\t\t\treturn $.post(\"bla/json\", {\r\n");
+      out.write("\t\t\t\t\t\tquery : query\r\n");
+      out.write("\t\t\t\t\t}, function(data) {\r\n");
+      out.write("\t\t\t\t\t\treturn typeahead.process(data);\r\n");
+      out.write("\t\t\t\t\t});\r\n");
+      out.write("\t\t\t\t}\r\n");
+      out.write("\t\t\t});\r\n");
+      out.write("\t\t});\r\n");
+      out.write("\t</script>\r\n");
+      out.write("\t\r\n");
+      out.write("\t<!-- <script>\r\n");
+      out.write("\t\t$(\"#searchbox\").typeahead({\r\n");
+      out.write("\t\t\tajax: {\r\n");
+      out.write("\t\t        url: \"bla/json\",\r\n");
+      out.write("\t\t        displayField: \"name\"\r\n");
+      out.write("\t\t\t}\r\n");
+      out.write("\t    });\r\n");
+      out.write("\t</script> -->\r\n");
       out.write("\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
@@ -243,7 +268,7 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_005fif_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fif_005f0.setParent(null);
-    // /WEB-INF/views/userpage.jsp(76,7) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/userpage.jsp(77,7) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fif_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${userrole=='ROLE_ADMIN'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
     int _jspx_eval_c_005fif_005f0 = _jspx_th_c_005fif_005f0.doStartTag();
     if (_jspx_eval_c_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {

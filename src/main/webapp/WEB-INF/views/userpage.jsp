@@ -56,7 +56,8 @@ body {
 				</div>
 				<!--/.nav-collapse -->
 				<form class="navbar-search pull-left" action="">
-					<i class="icon-white icon-search"></i><input type="text"
+					<i class="icon-white icon-search"></i><input id="searchbox"
+					   type="text" data-provide="typeahead"
 						class="search-query span2" placeholder="Search">
 				</form>
 				<ul class="nav pull-right">
@@ -157,7 +158,31 @@ body {
 	<script src="resources/assets/js/bootstrap-button.js"></script>
 	<script src="resources/assets/js/bootstrap-collapse.js"></script>
 	<script src="resources/assets/js/bootstrap-carousel.js"></script>
-	<script src="resources/assets/js/bootstrap-typeahead.js"></script>
+	<script src="resources/assets/js/bootstrap-typeahead.js">
+	<!-- <script src="resources/assets/js/bootstrap-typeahead-2.0.3.js"></script> -->
+	
+	<script>	   
+		$(document).ready(function() {
+			$("#searchbox").typeahead({
+				source : function(typeahead, query) {
+					return $.post("bla/json", {
+						query : query
+					}, function(data) {
+						return typeahead.process(data);
+					});
+				}
+			});
+		});
+	</script>
+	
+	<!-- <script>
+		$("#searchbox").typeahead({
+			ajax: {
+		        url: "bla/json",
+		        displayField: "name"
+			}
+	    });
+	</script> -->
 
 </body>
 </html>
