@@ -70,7 +70,7 @@ body {
 				<ul class="nav pull-right">
 					<ul class="nav">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-							<i class="icon-user"></i> Username <span class="caret"></span>
+							<i class="icon-user"></i>Account<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
 							<li><a href="registrationform.html">Registration</a></li>

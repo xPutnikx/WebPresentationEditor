@@ -3,14 +3,20 @@ package com.itransition.webeditor.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.itransition.webeditor.core.PermessionDeniedException;
 import com.itransition.webeditor.dao.UsersDao;
+import com.itransition.webeditor.model.UserRoles;
 import com.itransition.webeditor.model.Users;
 import com.itransition.webeditor.service.UsersService;
 
@@ -37,6 +43,9 @@ public class PersonController {
 			users = usersService.findById(id);
 		}
 		mav.addObject("users", users);
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String name = user.getUsername();
+		mav.addObject("username", name);
 		return mav;
 	}
 
@@ -54,8 +63,30 @@ public class PersonController {
 		List<Users> people = usersService.getUsers();
 		logger.debug("Person Listing count = " + people.size());
 		mav.addObject("people", people);
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String name = user.getUsername();
+		mav.addObject("username", name);
 		mav.setViewName("list");		
 		return mav;
 	}
-
+	@RequestMapping(value = "/list", method = RequestMethod.POST)
+	public void changeActivity(@RequestParam ("json") long person,@RequestParam ("enable") boolean enable) throws PermessionDeniedException
+	{
+		if(enable){
+			usersService.banById(person);
+		}
+		else{
+			usersService.unbanById(person);
+		}
+	}
+	@RequestMapping(value = "/listrole", method = RequestMethod.POST)
+	public void changeRole(@RequestParam ("json") long person,@RequestParam ("role") String role)
+	{
+		System.out.println("person="+person+"role"+role);
+	}
+	@RequestMapping(value = "/listdelete", method = RequestMethod.POST)
+	public void delUser(@RequestParam ("json") long person) throws PermessionDeniedException
+	{
+		usersService.removeById(person);
+	}
 }

@@ -68,7 +68,7 @@ body {
 				<ul class="nav pull-right">
 					<ul class="nav">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-             			 <i class="icon-user"></i> Username
+             			 <i class="icon-user"></i> ${username}
              			 <span class="caret"></span>
            				 </a>
 							<ul class="dropdown-menu">
@@ -89,30 +89,25 @@ body {
 
 	<div class="container">
 
-		<h1>Editing Person ${person.id} - ${person.name}
-			${person.password} ${v_person.email}</h1>
+		<h1>Editing Person </h1>
+		<p><div class="alert alert-info">${users.name}
+			${users.password} ${users.email}</div></p>
 		<form:form commandName="users" style="padding:8px">
-			<p>
+			<div class="well">
 				User Name<br />
 				<form:input path="name" />
-			</p>
-			<p>
+			</div>
+			<div class="well">
 				Password<br />
 				<form:input path="password" />
-			</p>
-			<p>
+			</div>
+			<div class="well">
 				email<br />
 				<form:input path="email" />
-			</p>
+			</div>
 			<input type="submit" class="btn" value="Save" />
 		</form:form>
 	</div>
-	<!-- /container -->
-
-
-	<!-- Le javascript
-================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="resources/assets/js/jquery.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>

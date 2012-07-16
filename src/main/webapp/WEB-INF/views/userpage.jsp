@@ -74,9 +74,11 @@ body {
 									class="icon-off"></i> Logout
 							</a></li>
 							<c:if test="${userrole=='ROLE_ADMIN'}">
-							<div><p>
-							<li><a href="list">Administration tools</a></li>
-							</div></c:if>
+								<div>
+									<p>
+									<li><a href="list">Administration tools</a></li>
+								</div>
+							</c:if>
 
 						</ul>
 						</li>
@@ -120,14 +122,16 @@ body {
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#accordion2" href="#collapseThree"> Change Password </a>
+						data-parent="#accordion2" href="#collapseThree"> Change
+						Password </a>
 				</div>
+
 				<div id="collapseThree" class="accordion-body collapse"
 					style="height: 0px;">
-					<div class="accordion-inner">
-						<span class="label label-important">Important</span><p></p>
-						<p>Click on "Accept" and go to change password</p>
-						<a  class="btn btn-danger" href="#">Accept</a>
+					<div class="well" id="">
+						<a href="#" class="btn btn-danger" rel="popover"
+							data-content="And here's some amazing content. It's very engaging. right?"
+							data-original-title="A Title">Accept</a>
 					</div>
 				</div>
 			</div>

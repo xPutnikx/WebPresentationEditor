@@ -60,7 +60,7 @@ public class UserRolesDao {
 	@CacheEvict(value = "roles", allEntries = true)
 	public void removeByUserId(Long userId) {
 		entityManager.createQuery(
-				"delete u from UserRoles u where u.userId='" + userId + "'");
+				"delete from UserRoles u where u.userId="+userId).executeUpdate();
 	}
 	
 }

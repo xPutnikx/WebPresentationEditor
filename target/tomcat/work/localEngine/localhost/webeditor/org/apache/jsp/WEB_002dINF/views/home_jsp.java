@@ -109,7 +109,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t<ul class=\"nav pull-right\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
       out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\r\n");
-      out.write("             \t\t\t <i class=\"icon-user\"></i> Username\r\n");
+      out.write("             \t\t\t <i class=\"icon-user\"></i> Account\r\n");
       out.write("             \t\t\t <span class=\"caret\"></span>\r\n");
       out.write("           \t\t\t\t </a>\r\n");
       out.write("\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");

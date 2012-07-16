@@ -184,14 +184,16 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<div class=\"accordion-group\">\r\n");
       out.write("\t\t\t\t<div class=\"accordion-heading\">\r\n");
       out.write("\t\t\t\t\t<a class=\"accordion-toggle\" data-toggle=\"collapse\"\r\n");
-      out.write("\t\t\t\t\t\tdata-parent=\"#accordion2\" href=\"#collapseThree\"> Change Password </a>\r\n");
+      out.write("\t\t\t\t\t\tdata-parent=\"#accordion2\" href=\"#collapseThree\"> Change\r\n");
+      out.write("\t\t\t\t\t\tPassword </a>\r\n");
       out.write("\t\t\t\t</div>\r\n");
+      out.write("\r\n");
       out.write("\t\t\t\t<div id=\"collapseThree\" class=\"accordion-body collapse\"\r\n");
       out.write("\t\t\t\t\tstyle=\"height: 0px;\">\r\n");
-      out.write("\t\t\t\t\t<div class=\"accordion-inner\">\r\n");
-      out.write("\t\t\t\t\t\t<span class=\"label label-important\">Important</span><p></p>\r\n");
-      out.write("\t\t\t\t\t\t<p>Click on \"Accept\" and go to change password</p>\r\n");
-      out.write("\t\t\t\t\t\t<a  class=\"btn btn-danger\" href=\"#\">Accept</a>\r\n");
+      out.write("\t\t\t\t\t<div class=\"well\" id=\"\">\r\n");
+      out.write("\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-danger\" rel=\"popover\"\r\n");
+      out.write("\t\t\t\t\t\t\tdata-content=\"And here's some amazing content. It's very engaging. right?\"\r\n");
+      out.write("\t\t\t\t\t\t\tdata-original-title=\"A Title\">Accept</a>\r\n");
       out.write("\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t</div>\r\n");
@@ -247,9 +249,11 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("\t\t\t\t\t\t\t<div><p>\r\n");
-        out.write("\t\t\t\t\t\t\t<li><a href=\"list\">Administration tools</a></li>\r\n");
-        out.write("\t\t\t\t\t\t\t</div>");
+        out.write("\t\t\t\t\t\t\t\t<div>\r\n");
+        out.write("\t\t\t\t\t\t\t\t\t<p>\r\n");
+        out.write("\t\t\t\t\t\t\t\t\t<li><a href=\"list\">Administration tools</a></li>\r\n");
+        out.write("\t\t\t\t\t\t\t\t</div>\r\n");
+        out.write("\t\t\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_005fif_005f0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;

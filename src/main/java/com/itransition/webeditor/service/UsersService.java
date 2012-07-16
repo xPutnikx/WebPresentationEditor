@@ -54,7 +54,6 @@ public class UsersService {
 		}
 		return false;
 	}
-	
 	public void removeById(Long id) throws PermessionDeniedException {
 		if (isAdministrator(id)) {
 			throw new PermessionDeniedException();
