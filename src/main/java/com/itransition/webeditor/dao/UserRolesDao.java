@@ -26,9 +26,10 @@ public class UserRolesDao {
 	@Transactional
 	@SuppressWarnings("unchecked")
 	@Cacheable("roles")
-	public List<UserRoles> findByUserId(Long userId) {
-		return entityManager.createQuery(
-				"select u from UserRoles u where u.userId='" + userId + "'").getResultList();
+	public  UserRoles  findByUserId(Long userId) {
+		return (UserRoles) entityManager.createQuery(
+			    "select u from UserRoles u where u.userId='" + userId + "'")
+			    .getResultList().get(0);
 	}
 	
 	@Transactional	

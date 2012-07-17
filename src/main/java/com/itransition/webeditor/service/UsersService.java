@@ -56,13 +56,13 @@ public class UsersService {
 	}
 	
 	public void makeAdministrator(Long id) {
-		UserRoles userRoles = userRolesDao.findById(id);
+		UserRoles userRoles = (UserRoles) userRolesDao.findByUserId(id);
 		userRoles.setAuthority(UserRolesTypes.ROLE_ADMIN);
 		userRolesDao.save(userRoles);
 	}
 	
 	public void makeUser(Long id) {
-		UserRoles userRoles = userRolesDao.findById(id);
+		UserRoles userRoles = (UserRoles) userRolesDao.findByUserId(id);
 		userRoles.setAuthority(UserRolesTypes.ROLE_USER);
 		userRolesDao.save(userRoles);
 	}
@@ -90,5 +90,12 @@ public class UsersService {
 	public void unbanById(Long id) {
 		usersDao.setEnabledById(id, true);
 	}
-	
+	public Users getUserByName(String name){
+		return usersDao.getUserByName(name);
+		
+	}
+	public Users getUserById(Long id){
+		return usersDao.getUserById(id);
+		
+	}
 }

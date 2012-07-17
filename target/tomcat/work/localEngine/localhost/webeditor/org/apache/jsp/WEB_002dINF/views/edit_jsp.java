@@ -66,24 +66,14 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
       out.write("<meta name=\"description\" content=\"\">\r\n");
       out.write("<meta name=\"author\" content=\"by Putnik\">\r\n");
-      out.write("\r\n");
-      out.write("<!-- Le styles -->\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap.css\" rel=\"stylesheet\">\r\n");
       out.write("<style>\r\n");
       out.write("body {\r\n");
       out.write("\tpadding-top: 60px;\r\n");
-      out.write("\t/* 60px to make the container go all the way to the bottom of the topbar */\r\n");
       out.write("}\r\n");
       out.write("</style>\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap-responsive.css\"\r\n");
       out.write("\trel=\"stylesheet\">\r\n");
-      out.write("\r\n");
-      out.write("<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->\r\n");
-      out.write("<!--[if lt IE 9]>\r\n");
-      out.write("    <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>\r\n");
-      out.write("    <![endif]-->\r\n");
-      out.write("\r\n");
-      out.write("<!-- Le fav and touch icons -->\r\n");
       out.write("<link rel=\"shortcut icon\" href=\"resources/assets/ico/favicon.ico\">\r\n");
       out.write("<link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\"\r\n");
       out.write("\thref=\"resources/assets/ico/apple-touch-icon-144-precomposed.png\">\r\n");
@@ -107,18 +97,17 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t<i class=\"icon-white icon-edit\"></i> Web Editor</a>\r\n");
       out.write("\t\t\t\t<div class=\"nav-collapse\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"home.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"home\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-home\"></i> Home</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"about.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"about\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-book\"></i> About</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"contact.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"contact\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-pencil\"></i> Contact</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-picture\"></i>\r\n");
       out.write("\t\t\t\t\t\tList of Presentations</a></li>\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t</div>\r\n");
-      out.write("\t\t\t\t<!--/.nav-collapse -->\r\n");
       out.write("\t\t\t\t<form class=\"navbar-search pull-left\" action=\"\">\r\n");
       out.write("\t\t\t\t\t<i class=\"icon-white icon-search\"></i><input type=\"text\" class=\"search-query span2\" placeholder=\"Search\">\r\n");
       out.write("\t\t\t\t</form>\r\n");
@@ -131,13 +120,12 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("             \t\t\t <span class=\"caret\"></span>\r\n");
       out.write("           \t\t\t\t </a>\r\n");
       out.write("\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"registrationform.html\">Registration</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"userpage.html\">\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"registrationform\">Registration</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"loginform\">Login</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"userpage\">\r\n");
       out.write("\t\t\t\t\t\t\t<i class=\"icon-cog\"></i> Profile</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">\r\n");
       out.write("\t\t\t\t\t\t\t<i class=\"icon-off\"></i> Logout</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\r\n");
       out.write("\t\t\t\t\t\t\t</ul></li>\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t\r\n");
@@ -198,9 +186,9 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005fstyle_005fcommandName.get(org.springframework.web.servlet.tags.form.FormTag.class);
     _jspx_th_form_005fform_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005fform_005f0.setParent(null);
-    // /WEB-INF/views/edit.jsp(95,2) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/edit.jsp(83,2) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f0.setCommandName("users");
-    // /WEB-INF/views/edit.jsp(95,2) null
+    // /WEB-INF/views/edit.jsp(83,2) null
     _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "style", new String("padding:8px"));
     int[] _jspx_push_body_count_form_005fform_005f0 = new int[] { 0 };
     try {
@@ -258,7 +246,7 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f0 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/edit.jsp(98,4) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/edit.jsp(86,4) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f0.setPath("name");
     int[] _jspx_push_body_count_form_005finput_005f0 = new int[] { 0 };
     try {
@@ -285,7 +273,7 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f1 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/edit.jsp(102,4) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/edit.jsp(90,4) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f1.setPath("password");
     int[] _jspx_push_body_count_form_005finput_005f1 = new int[] { 0 };
     try {
@@ -312,7 +300,7 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f2 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f2.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/edit.jsp(106,4) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/edit.jsp(94,4) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f2.setPath("email");
     int[] _jspx_push_body_count_form_005finput_005f2 = new int[] { 0 };
     try {

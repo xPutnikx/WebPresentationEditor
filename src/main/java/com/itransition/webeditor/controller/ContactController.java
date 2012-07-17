@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ContactController {
 	private static final Logger logger = LoggerFactory
 			.getLogger(ContactController.class);
-	@RequestMapping(value = "contact.html", method = RequestMethod.GET)
+	@RequestMapping(value = "contact", method = RequestMethod.GET)
 	public String home(Model model) {
 		logger.info("My Contacts");
 		model.addAttribute("controllerMessage",

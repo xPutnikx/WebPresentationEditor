@@ -106,13 +106,13 @@ public final class loginform_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t<i class=\"icon-white icon-edit\"></i> Web Editor</a>\r\n");
       out.write("\t\t\t\t<div class=\"nav-collapse\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"home.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"home\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-home\"></i> Home</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"about.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"about\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-book\"></i> About</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"contact.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"contact\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-pencil\"></i> Contact</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-picture\"></i>\r\n");
       out.write("\t\t\t\t\t\tList of Presentations</a></li>\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
@@ -128,7 +128,7 @@ public final class loginform_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("             \t\t\t <span class=\"caret\"></span>\r\n");
       out.write("           \t\t\t\t </a>\r\n");
       out.write("\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"registrationform.html\">Registration</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"registrationform\">Registration</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">\r\n");
       out.write("\t\t\t\t\t\t\t<i class=\"icon-off\"></i> Logout</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t\r\n");

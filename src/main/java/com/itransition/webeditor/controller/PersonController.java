@@ -53,6 +53,7 @@ public class PersonController {
 	public String savePerson(@ModelAttribute Users users) {
 		logger.debug("Received postback on person " + users);
 		usersService.save(users);
+		usersService.registerById(users.getId());
 		return "redirect:list";
 	}
 
@@ -82,7 +83,13 @@ public class PersonController {
 	@RequestMapping(value = "/listrole", method = RequestMethod.POST)
 	public void changeRole(@RequestParam ("json") long person,@RequestParam ("role") String role)
 	{
-		System.out.println("person="+person+"role"+role);
+		if (role.equals("Admin")){
+			usersService.makeAdministrator(person);
+		}
+		else{
+			usersService.makeUser(person);
+		}
+		
 	}
 	@RequestMapping(value = "/listdelete", method = RequestMethod.POST)
 	public void delUser(@RequestParam ("json") long person) throws PermessionDeniedException

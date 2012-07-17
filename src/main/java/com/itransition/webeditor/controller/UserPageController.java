@@ -20,7 +20,7 @@ public class UserPageController {
 
 	private static final Logger logger = LoggerFactory
 			.getLogger(UserPageController.class);
-	@RequestMapping(value="userpage.html", method = RequestMethod.GET)
+	@RequestMapping(value="userpage", method = RequestMethod.GET)
 	public String showUserPage(ModelMap model) { 
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String name = user.getUsername();

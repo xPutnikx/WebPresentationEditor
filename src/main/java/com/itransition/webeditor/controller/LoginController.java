@@ -7,7 +7,7 @@ import org.springframework.ui.ModelMap;
 
 
 @Controller
-@RequestMapping("/loginform.html")
+@RequestMapping("/loginform")
 public class LoginController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String showForm(ModelMap model) {

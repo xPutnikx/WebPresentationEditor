@@ -11,7 +11,7 @@ public class SuccessController {
 	
 		private static final Logger logger = LoggerFactory
 				.getLogger(SuccessController.class);
-		@RequestMapping(value = "success.html", method = RequestMethod.GET)
+		@RequestMapping(value = "success", method = RequestMethod.GET)
 		public String home(Model model) {
 			logger.info("success");
 			model.addAttribute("controllerMessage",

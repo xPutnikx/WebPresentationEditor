@@ -22,7 +22,7 @@ public class ListOfPresentationsController {
 	@Autowired
 	private PresentationsService presentationService;
 	
-	@RequestMapping(value = "listOfPresentations.html", method = RequestMethod.GET)
+	@RequestMapping(value = "listOfPresentations", method = RequestMethod.GET)
 	public ModelAndView listPresentations() {
 		ModelAndView mav = new ModelAndView();
 		logger.info("list with presentations");

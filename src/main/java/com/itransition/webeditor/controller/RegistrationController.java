@@ -27,7 +27,7 @@ import com.itransition.webeditor.model.Users;
 import com.itransition.webeditor.service.UsersService;
 
 @Controller
-@RequestMapping("/registrationform.html")
+@RequestMapping("/registrationform")
 public class RegistrationController {
 	@Autowired
 	private RegistrationValidation registrationValidation;
@@ -64,11 +64,6 @@ public class RegistrationController {
 		}
 		logger.debug("Received postback on person " + users);
 		try {
-			/*usersDao.save(users);
-			System.out.println(users.getId());
-			System.out.println(users.getName());
-			System.out.println(users.getPassword());
-			System.out.println(users.isEnabled());	*/
 			userService.save(users);
 		} catch (PersistenceException nse) {
 			errors.rejectValue("name",

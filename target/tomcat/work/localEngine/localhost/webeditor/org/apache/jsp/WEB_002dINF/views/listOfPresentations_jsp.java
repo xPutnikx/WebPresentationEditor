@@ -63,8 +63,6 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
       out.write("<meta name=\"description\" content=\"\">\r\n");
       out.write("<meta name=\"author\" content=\"by Putnik\">\r\n");
-      out.write("\r\n");
-      out.write("<!-- Le styles -->\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap.css\" rel=\"stylesheet\">\r\n");
       out.write("<style>\r\n");
       out.write("body {\r\n");
@@ -73,13 +71,6 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("</style>\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap-responsive.css\"\r\n");
       out.write("\trel=\"stylesheet\">\r\n");
-      out.write("\r\n");
-      out.write("<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->\r\n");
-      out.write("<!--[if lt IE 9]>\r\n");
-      out.write("    <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>\r\n");
-      out.write("    <![endif]-->\r\n");
-      out.write("\r\n");
-      out.write("<!-- Le fav and touch icons -->\r\n");
       out.write("<link rel=\"shortcut icon\" href=\"resources/assets/ico/favicon.ico\">\r\n");
       out.write("<link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\"\r\n");
       out.write("\thref=\"resources/assets/ico/apple-touch-icon-144-precomposed.png\">\r\n");
@@ -90,9 +81,7 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("<link rel=\"apple-touch-icon-precomposed\"\r\n");
       out.write("\thref=\"resources/assets/ico/apple-touch-icon-57-precomposed.png\">\r\n");
       out.write("</head>\r\n");
-      out.write("\r\n");
       out.write("<body>\r\n");
-      out.write("\r\n");
       out.write("\t<div class=\"navbar navbar-fixed-top\">\r\n");
       out.write("\t\t<div class=\"navbar-inner\">\r\n");
       out.write("\t\t\t<div class=\"container\">\r\n");
@@ -104,16 +93,16 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("\t\t\t\t</a>\r\n");
       out.write("\t\t\t\t<div class=\"nav-collapse\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"home.html\"> <i class=\"icon-white icon-home\"></i>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"home\"> <i class=\"icon-white icon-home\"></i>\r\n");
       out.write("\t\t\t\t\t\t\t\tHome\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"about.html\"> <i class=\"icon-white icon-book\"></i>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"about\"> <i class=\"icon-white icon-book\"></i>\r\n");
       out.write("\t\t\t\t\t\t\t\tAbout\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"contact.html\"> <i\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"contact \"> <i\r\n");
       out.write("\t\t\t\t\t\t\t\tclass=\"icon-white icon-pencil\"></i> Contact\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li class=\"active\"><a href=\"listOfPresentations.html\"> <i\r\n");
+      out.write("\t\t\t\t\t\t<li class=\"active\"><a href=\"listOfPresentations \"> <i\r\n");
       out.write("\t\t\t\t\t\t\t\tclass=\"icon-white icon-picture\"></i> List of Presentations\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
@@ -129,9 +118,9 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("\t\t\t\t\t\t\t<i class=\"icon-user\"></i>Account<span class=\"caret\"></span>\r\n");
       out.write("\t\t\t\t\t\t</a>\r\n");
       out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"registrationform.html\">Registration</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"userpage.html\"> <i class=\"icon-cog\"></i>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"registrationform \">Registration</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"loginform \">Login</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"userpage \"> <i class=\"icon-cog\"></i>\r\n");
       out.write("\t\t\t\t\t\t\t\t\tProfile\r\n");
       out.write("\t\t\t\t\t\t\t</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\"> <i\r\n");
@@ -225,9 +214,9 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /WEB-INF/views/listOfPresentations.jsp(113,7) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/listOfPresentations.jsp(102,7) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${presentation}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/views/listOfPresentations.jsp(113,7) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/listOfPresentations.jsp(102,7) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("v_person");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {

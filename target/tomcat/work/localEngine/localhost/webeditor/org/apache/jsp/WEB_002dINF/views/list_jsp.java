@@ -96,16 +96,16 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t</a>\r\n");
       out.write("\t\t\t\t<div class=\"nav-collapse\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"home.html\"> <i class=\"icon-white icon-home\"></i>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"home\"> <i class=\"icon-white icon-home\"></i>\r\n");
       out.write("\t\t\t\t\t\t\t\tHome\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"about.html\"> <i class=\"icon-white icon-book\"></i>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"about\"> <i class=\"icon-white icon-book\"></i>\r\n");
       out.write("\t\t\t\t\t\t\t\tAbout\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"contact.html\"> <i\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"contact\"> <i\r\n");
       out.write("\t\t\t\t\t\t\t\tclass=\"icon-white icon-pencil\"></i> Contact\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations.html\"> <i\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations\"> <i\r\n");
       out.write("\t\t\t\t\t\t\t\tclass=\"icon-white icon-picture\"></i> List of Presentations\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
@@ -123,9 +123,9 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write(" <span class=\"caret\"></span>\r\n");
       out.write("\t\t\t\t\t\t</a>\r\n");
       out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"registrationform.html\">Registration</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"userpage.html\"> <i class=\"icon-cog\"></i>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"registrationform\">Registration</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"loginform\">Login</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"userpage\"> <i class=\"icon-cog\"></i>\r\n");
       out.write("\t\t\t\t\t\t\t\t\tProfile\r\n");
       out.write("\t\t\t\t\t\t\t</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\"> <i\r\n");
@@ -149,7 +149,6 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t<tr>\r\n");
       out.write("\t\t\t\t\t\t<th>Id</th>\r\n");
       out.write("\t\t\t\t\t\t<th>Name</th>\r\n");
-      out.write("\t\t\t\t\t\t<th>Password</th>\r\n");
       out.write("\t\t\t\t\t\t<th>Email</th>\r\n");
       out.write("\t\t\t\t\t\t<th>Enabled</th>\r\n");
       out.write("\t\t\t\t\t\t<th>User Role</th>\r\n");
@@ -206,9 +205,9 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /WEB-INF/views/list.jsp(100,5) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/list.jsp(99,5) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${people}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/views/list.jsp(100,5) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/list.jsp(99,5) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("v_person");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
@@ -229,9 +228,7 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("\t\t\t\t\t\t\t<td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${v_person.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("\t\t\t\t\t\t\t<td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${v_person.password}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("</td>\r\n");
+          out.write("\t\t\t\t\t\t\t\r\n");
           out.write("\t\t\t\t\t\t\t<td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${v_person.email}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
@@ -293,7 +290,7 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_005fif_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fif_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /WEB-INF/views/list.jsp(108,11) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/list.jsp(107,11) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fif_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${v_person.enabled}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
     int _jspx_eval_c_005fif_005f0 = _jspx_th_c_005fif_005f0.doStartTag();
     if (_jspx_eval_c_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -334,7 +331,7 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_005fif_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fif_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /WEB-INF/views/list.jsp(115,8) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/list.jsp(114,8) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fif_005f1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${!v_person.enabled}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
     int _jspx_eval_c_005fif_005f1 = _jspx_th_c_005fif_005f1.doStartTag();
     if (_jspx_eval_c_005fif_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {

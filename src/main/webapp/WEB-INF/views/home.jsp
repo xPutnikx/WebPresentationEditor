@@ -41,16 +41,15 @@ body {
 					<ul class="nav">
 						<li class="active"><a href="#">
 						<i class="icon-white icon-home"></i> Home</a></li>
-						<li><a href="about.html">
+						<li><a href="about">
 						<i class="icon-white icon-book"></i> About</a></li>
-						<li><a href="contact.html">
+						<li><a href="contact">
 						<i class="icon-white icon-pencil"></i> Contact</a></li>
-						<li><a href="listOfPresentations.html">
+						<li><a href="listOfPresentations">
 						<i class="icon-white icon-picture"></i>
 						List of Presentations</a></li>
 					</ul>
 				</div>
-				<!--/.nav-collapse -->
 				<form class="navbar-search pull-left" action="">
 					<i class="icon-white icon-search"></i><input type="text" class="search-query span2" placeholder="Search">
 				</form>
@@ -61,9 +60,9 @@ body {
              			 <span class="caret"></span>
            				 </a>
 							<ul class="dropdown-menu">
-							<li><a href="registrationform.html">Registration</a></li>
-							<li><a href="loginform.html">Login</a></li>
-							<li><a href="userpage.html">
+							<li><a href="registrationform">Registration</a></li>
+							<li><a href="loginform">Login</a></li>
+							<li><a href="userpage">
 							<i class="icon-cog"></i> Profile</a></li>
 							<li class="disabled"><a href="../j_spring_security_logout">
 							<i class="icon-off"></i> Logout</a></li>
@@ -93,10 +92,10 @@ body {
 			<li>Design</li>
 			<li>Flash</li>
 			<li>Experimental</li>
-			<li><a href=registrationform.html>Registration</a></li>
+			<li><a href=registrationform>Registration</a></li>
 			<li><a href=loginform.html>Login</a></li>
 			<li></li>
-			<li><a href=contact.html>Contact</a></li>
+			<li><a href=contact>Contact</a></li>
 			<li>3D</li>
 			<li>Ajax</li>
 			<li><a href=about.html>About</a></li>
@@ -108,13 +107,13 @@ body {
 			<li>Design</li>
 			<li>Flash</li>
 			<li>Experimental</li>
-			<li><a href=registrationform.html>Registration</a></li>
-			<li><a href=loginform.html>Login</a></li>
+			<li><a href=registrationform>Registration</a></li>
+			<li><a href=loginform>Login</a></li>
 			<li></li>
-			<li><a href=contact.html>Contact</a></li>
+			<li><a href=contact>Contact</a></li>
 			<li>3D</li>
 			<li>Ajax</li>
-			<li><a href=about.html>About</a></li>
+			<li><a href=about>About</a></li>
 			<li>Development</li>
 			<li>web</li>
 			<li>Tutorial</li>
@@ -123,23 +122,16 @@ body {
 			<li>Design</li>
 			<li>Flash</li>
 			<li>Experimental</li>
-			<li><a href=registrationform.html>Registration</a></li>
-			<li><a href=loginform.html>Login</a></li>
+			<li><a href=registrationform>Registration</a></li>
+			<li><a href=loginform>Login</a></li>
 			<li></li>
-			<li><a href=contact.html>Contact</a></li>
+			<li><a href=contact>Contact</a></li>
 			<li>3D</li>
 			<li>Ajax</li>
-			<li><a href=about.html>About</a></li>
+			<li><a href=about>About</a></li>
 			</ul>
 		</div>
 	</div>
-	<!-- /container -->
-
-
-	<!-- Le javascript
-================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-
 	<script src="resources/assets/js/jquery.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>

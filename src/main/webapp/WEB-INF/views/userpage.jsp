@@ -40,16 +40,16 @@ body {
 				</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li><a href="home.html"> <i class="icon-white icon-home"></i>
+						<li><a href="home"> <i class="icon-white icon-home"></i>
 								Home
 						</a></li>
-						<li><a href="about.html"> <i class="icon-white icon-book"></i>
+						<li><a href="about"> <i class="icon-white icon-book"></i>
 								About
 						</a></li>
-						<li><a href="contact.html"> <i
+						<li><a href="contact"> <i
 								class="icon-white icon-pencil"></i> Contact
 						</a></li>
-						<li><a href="listOfPresentations.html"> <i
+						<li><a href="listOfPresentations"> <i
 								class="icon-white icon-picture"></i> List of Presentations
 						</a></li>
 					</ul>
@@ -66,9 +66,9 @@ body {
 							<i class="icon-user"></i> ${username} <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="registrationform.html">Registration</a></li>
-							<li><a href="loginform.html">Login</a></li>
-							<li><a href="userpage.html"> <i class="icon-cog"></i>
+							<li><a href="registrationform">Registration</a></li>
+							<li><a href="loginform">Login</a></li>
+							<li><a href="userpage"> <i class="icon-cog"></i>
 									Profile
 							</a></li>
 							<li><a href="../j_spring_security_logout"> <i
@@ -130,7 +130,7 @@ body {
 				<div id="collapseThree" class="accordion-body collapse"
 					style="height: 0px;">
 					<div class="well" id="">
-						<a href="#" class="btn btn-danger" rel="popover"
+						<a href="changepassword" class="btn btn-danger" rel="popover"
 							data-content="And here's some amazing content. It's very engaging. right?"
 							data-original-title="A Title">Accept</a>
 					</div>
@@ -140,12 +140,6 @@ body {
 
 
 	</div>
-	<!-- /container -->
-
-
-	<!-- Le javascript
-================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="resources/assets/js/jquery.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>
@@ -174,15 +168,5 @@ body {
 			});
 		});
 	</script>
-	
-	<!-- <script>
-		$("#searchbox").typeahead({
-			ajax: {
-		        url: "bla/json",
-		        displayField: "name"
-			}
-	    });
-	</script> -->
-
 </body>
 </html>

@@ -114,13 +114,13 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\t\t\t\t<i class=\"icon-white icon-edit\"></i> Web Editor</a>\r\n");
       out.write("\t\t\t\t<div class=\"nav-collapse\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"home.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"home\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-home\"></i> Home</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"about.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"about\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-book\"></i> About</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"contact.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"contact\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-pencil\"></i> Contact</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations.html\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-picture\"></i>\r\n");
       out.write("\t\t\t\t\t\tList of Presentations</a></li>\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
@@ -136,8 +136,8 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("             \t\t\t <span class=\"caret\"></span>\r\n");
       out.write("           \t\t\t\t </a>\r\n");
       out.write("\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"loginform.html\">Login</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"userpage.html\">\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"loginform\">Login</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"userpage\">\r\n");
       out.write("\t\t\t\t\t\t\t<i class=\"icon-cog\"></i> Profile</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">\r\n");
       out.write("\t\t\t\t\t\t\t<i class=\"icon-off\"></i> Logout</a></li>\r\n");
@@ -159,7 +159,7 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
       // /WEB-INF/views/registrationform.jsp(90,2) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setMethod("Post");
       // /WEB-INF/views/registrationform.jsp(90,2) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_form_005fform_005f0.setAction("registrationform.html");
+      _jspx_th_form_005fform_005f0.setAction("registrationform");
       // /WEB-INF/views/registrationform.jsp(90,2) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setCommandName("registration");
       int[] _jspx_push_body_count_form_005fform_005f0 = new int[] { 0 };

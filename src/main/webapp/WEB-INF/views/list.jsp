@@ -39,16 +39,16 @@ body {
 				</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li><a href="home.html"> <i class="icon-white icon-home"></i>
+						<li><a href="home"> <i class="icon-white icon-home"></i>
 								Home
 						</a></li>
-						<li><a href="about.html"> <i class="icon-white icon-book"></i>
+						<li><a href="about"> <i class="icon-white icon-book"></i>
 								About
 						</a></li>
-						<li><a href="contact.html"> <i
+						<li><a href="contact"> <i
 								class="icon-white icon-pencil"></i> Contact
 						</a></li>
-						<li><a href="listOfPresentations.html"> <i
+						<li><a href="listOfPresentations"> <i
 								class="icon-white icon-picture"></i> List of Presentations
 						</a></li>
 					</ul>
@@ -64,9 +64,9 @@ body {
 							<i class="icon-user"></i> ${username} <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="registrationform.html">Registration</a></li>
-							<li><a href="loginform.html">Login</a></li>
-							<li><a href="userpage.html"> <i class="icon-cog"></i>
+							<li><a href="registrationform">Registration</a></li>
+							<li><a href="loginform">Login</a></li>
+							<li><a href="userpage"> <i class="icon-cog"></i>
 									Profile
 							</a></li>
 							<li><a href="../j_spring_security_logout"> <i
@@ -90,7 +90,6 @@ body {
 					<tr>
 						<th>Id</th>
 						<th>Name</th>
-						<th>Password</th>
 						<th>Email</th>
 						<th>Enabled</th>
 						<th>User Role</th>
@@ -103,7 +102,7 @@ body {
 							<td><span class="badge badge-info"><a
 									href="edit?id=${v_person.id}" style="color: #ffffff">${v_person.id}</a></span></td>
 							<td>${v_person.name}</td>
-							<td>${v_person.password}</td>
+							
 							<td>${v_person.email}</td>
 							<td><c:if test="${v_person.enabled}">
 									<button class="btn btn-success" id=${v_person.id
