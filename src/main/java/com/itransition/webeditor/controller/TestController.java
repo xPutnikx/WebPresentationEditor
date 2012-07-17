@@ -11,7 +11,6 @@ import com.itransition.webeditor.core.SearchQueryJson;
 import com.itransition.webeditor.core.SearchResponseJson;
 
 @Controller
-@RequestMapping(value = "/bla")
 public class TestController {
 	
 	/*@RequestMapping(value="{name}", method = RequestMethod.GET)
@@ -28,11 +27,12 @@ public class TestController {
 		System.out.println(shop.getName());
 	}*/
 	
-	@RequestMapping(value = "json", method = RequestMethod.POST)
+	@RequestMapping(value = "search", method = RequestMethod.POST)
 	public @ResponseBody String getJson(@ModelAttribute SearchQueryJson searchQueryJson) {
-		System.out.println("hih");
-		System.out.println(searchQueryJson.getQuery());		
-		return new String("{'asd','asdd'}");
+		//System.out.println("hih");
+		//System.out.println(searchQueryJson.getAsd());	
+		System.out.println(searchQueryJson.getQuery());			
+		return new String("[\"value\", \"google\"]");	
 	}
  
 }
