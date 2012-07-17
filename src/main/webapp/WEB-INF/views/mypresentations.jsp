@@ -1,9 +1,9 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Change Password</title>
+<title>My Presentations</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="by Putnik">
@@ -25,7 +25,6 @@ body {
 <link rel="apple-touch-icon-precomposed"
 	href="resources/assets/ico/apple-touch-icon-57-precomposed.png">
 </head>
-
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
@@ -40,11 +39,11 @@ body {
 					<li><a href="home"> <i class="icon-white icon-home"></i>
 							Home
 					</a></li>
-					<li><a href="about"> <i class="icon-white icon-book"></i>
-							About
+					<li><a href="about"> <i
+							class="icon-white icon-book"></i> About
 					</a></li>
-					<li><a href="contact"> <i class="icon-white icon-pencil"></i>
-							Contact
+					<li><a href="contact"> <i
+							class="icon-white icon-pencil"></i> Contact
 					</a></li>
 					<li><a href="listOfPresentations"> <i
 							class="icon-white icon-picture"></i> List of Presentations
@@ -58,40 +57,61 @@ body {
 			<ul class="nav pull-right">
 				<ul class="nav">
 					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="icon-user"></i> ${username} <span class="caret"></span>
+						<i class="icon-user"></i> ${name} <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="userpage"> <i class="icon-cog"></i> Profile
+						<li><a href="registrationform">Registration</a></li>
+						<li><a href="loginform">Login</a></li>
+						<li><a href="userpage"> <i class="icon-cog"></i>
+								Profile
 						</a></li>
 						<li><a href="../j_spring_security_logout"> <i
 								class="icon-off"></i> Logout
 						</a></li>
+
 					</ul>
 					</li>
 				</ul>
+
 			</ul>
 		</div>
 	</div>
 </div>
+
 <div class="container">
-	<h1>${username} change your password</h1>
-	<input type=hidden id="userPassword" name="userPassword"
-		value="${password}" /> <input type=hidden id="userId" name="userId"
-		value="${id}" />
-	<form:form method="Post" action="changepassword"
-		commandName="changepassword">
-		<div class="well">
-			Current password<br />
-			<input type="password" id="currentpassword" />
+	<h1>My Presentations</h1>
+	<div class="tabbable" style="margin-bottom: 18px;">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#tab1" data-toggle="tab">
+						Presentations</a></li>
+			</ul>
+			<div class="tab-content"
+				style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+				<div class="tab-pane active" id="tab1">
+					<div class="span9">
+
+						<ul class="thumbnails">
+						<div class="span9">
+						<ul class="thumbnails">
+							<c:forEach items="${presentation}" var="v_present">
+							<c:if test="${v_present.userId==id}">
+								<li class=span3><a
+									href="/webeditor/preview.jsp?id=${v_present.id}" class=thumbnail>
+										<img
+										src=http://icons.iconarchive.com/icons/zyotism/digital-video-techniques/128/Slide-Show-icon.png
+										alt="">
+								</a></li>
+								</c:if>
+							</c:forEach>
+							
+						</ul>
+					</div>
+						
+							</ul>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="well">
-			New password<br /> <input type="password" id="newpassword" />
-		</div>
-		<div class="well">
-			Confirm password<br /> <input type="password" id="confirmpassword" />
-		</div>
-		<input class="btn" value="Save" onclick="sub()" />
-	</form:form>
 </div>
 <script src="resources/assets/js/jquery.js"></script>
 <script src="resources/assets/js/bootstrap-transition.js"></script>
@@ -106,6 +126,5 @@ body {
 <script src="resources/assets/js/bootstrap-collapse.js"></script>
 <script src="resources/assets/js/bootstrap-carousel.js"></script>
 <script src="resources/assets/js/bootstrap-typeahead.js"></script>
-<script src="resources/changepassword.js"></script>
 </body>
 </html>

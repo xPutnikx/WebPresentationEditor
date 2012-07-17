@@ -27,6 +27,7 @@ define(["vendor/amd/backbone", "./SlideEditor", "./transition_editor/TransitionE
 				return this.openDialog.show(function(fileName) {
 					var data;
 					console.log("Attempting to open " + fileName);
+					data = FileStorage.open(fileName);
 					if (data != null) {
 						_this.model["import"](data);
 						return localStorage.setItem("StrutLastPres", fileName);

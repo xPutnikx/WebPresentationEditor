@@ -90,8 +90,6 @@ body {
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#tab1" data-toggle="tab">All
 						Presentations</a></li>
-				<li class=""><a href="#tab2" data-toggle="tab" id="">My
-						Presentations</a></li>
 			</ul>
 			<div class="tab-content"
 				style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
@@ -99,9 +97,9 @@ body {
 					<div class="span9">
 
 						<ul class="thumbnails">
-							<c:forEach items="${presentation}" var="v_person">
+							<c:forEach items="${presentation}" var="v_present">
 								<li class=span3><a
-									href="/webeditor/preview.jsp?id=${v_person.id}" class=thumbnail>
+									href="/webeditor/preview.jsp?id=${v_present.id}" class=thumbnail>
 										<img
 										src=http://icons.iconarchive.com/icons/zyotism/digital-video-techniques/128/Slide-Show-icon.png
 										alt="">
@@ -111,17 +109,9 @@ body {
 						</ul>
 					</div>
 				</div>
-				<div class="tab-pane" id="tab2">
-					<p>Now it`s empty</p>
-				</div>
 			</div>
 		</div>
 	</div>
-
-	<!-- Le javascript
-================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-
 	<script src="resources/assets/js/jquery.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>

@@ -12,7 +12,7 @@ public class Presentations {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@Column
-	private String userId;
+	private Long userId;
 	@Column
 	private String title;	
 	@Column
@@ -28,12 +28,12 @@ public class Presentations {
 		this.id = id;
 	}
 
-	public String getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setUserId(Long id) {
+		this.userId = id;
 	}
 
 	public String getTitle() {

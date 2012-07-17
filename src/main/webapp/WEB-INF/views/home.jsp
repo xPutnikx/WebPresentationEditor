@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +42,7 @@ body {
 					<ul class="nav">
 						<li class="active"><a href="#">
 						<i class="icon-white icon-home"></i> Home</a></li>
-						<li><a href="about">
+						<li><a href="about" id="about">
 						<i class="icon-white icon-book"></i> About</a></li>
 						<li><a href="contact">
 						<i class="icon-white icon-pencil"></i> Contact</a></li>
@@ -67,7 +68,7 @@ body {
 							<li class="disabled"><a href="../j_spring_security_logout">
 							<i class="icon-off"></i> Logout</a></li>
 							
-							</ul></li>
+							</ul>
 					</ul>
 				
 				</ul>
@@ -82,54 +83,12 @@ body {
 		</h1>
 			
 		<div id="item">
-			${tagCloud}
-			<li>Development</li>
-			<li>ShavrtzMesser</li>
-			<li>web</li>
-			<li>Tutorial</li>
-			<li>ASP</li>
-			<li>CSS</li>
-			<li>Design</li>
-			<li>Flash</li>
-			<li>Experimental</li>
-			<li><a href=registrationform>Registration</a></li>
-			<li><a href=loginform.html>Login</a></li>
-			<li></li>
-			<li><a href=contact>Contact</a></li>
-			<li>3D</li>
-			<li>Ajax</li>
-			<li><a href=about.html>About</a></li>
-			<li>Development</li>
-			<li>web</li>
-			<li>Tutorial</li>
-			<li>ASP</li>
-			<li>CSS</li>
-			<li>Design</li>
-			<li>Flash</li>
-			<li>Experimental</li>
-			<li><a href=registrationform>Registration</a></li>
-			<li><a href=loginform>Login</a></li>
-			<li></li>
-			<li><a href=contact>Contact</a></li>
-			<li>3D</li>
-			<li>Ajax</li>
-			<li><a href=about>About</a></li>
-			<li>Development</li>
-			<li>web</li>
-			<li>Tutorial</li>
-			<li>ASP</li>
-			<li>CSS</li>
-			<li>Design</li>
-			<li>Flash</li>
-			<li>Experimental</li>
-			<li><a href=registrationform>Registration</a></li>
-			<li><a href=loginform>Login</a></li>
-			<li></li>
-			<li><a href=contact>Contact</a></li>
-			<li>3D</li>
-			<li>Ajax</li>
-			<li><a href=about>About</a></li>
-			</ul>
+		${tagCloud}
+		<c:forEach items="${tags}" var="tag" >
+			
+			<li>${tag.name}</li>
+
+			</c:forEach>
 		</div>
 	</div>
 	<script src="resources/assets/js/jquery.js"></script>
@@ -197,6 +156,5 @@ body {
 			});
 		//]]>
 	</script>
-
 </body>
 </html>

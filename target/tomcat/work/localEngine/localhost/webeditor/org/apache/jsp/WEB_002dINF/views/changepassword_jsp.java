@@ -11,6 +11,8 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
 
   private static java.util.List _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction;
+
   private javax.el.ExpressionFactory _el_expressionfactory;
   private org.apache.AnnotationProcessor _jsp_annotationprocessor;
 
@@ -19,11 +21,13 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
   }
 
   public void _jspInit() {
+    _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
     _jsp_annotationprocessor = (org.apache.AnnotationProcessor) getServletConfig().getServletContext().getAttribute(org.apache.AnnotationProcessor.class.getName());
   }
 
   public void _jspDestroy() {
+    _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -128,27 +132,20 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\t</div>\r\n");
       out.write("</div>\r\n");
       out.write("<div class=\"container\">\r\n");
-      out.write("\t<h1> ");
+      out.write("\t<h1>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write(" change your password</h1>\r\n");
-      out.write("\t<p id = \"userId\" >");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("</p>\r\n");
-      out.write("\t<p id =\"userPassword\">");
+      out.write("\t<input type=hidden id=\"userPassword\" name=\"userPassword\"\r\n");
+      out.write("\t\tvalue=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${password}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("</p>\r\n");
-      out.write("\t<form>\r\n");
-      out.write("\t\t<div class=\"well\">\r\n");
-      out.write("\t\t\tCurrent password<br /> <input type=\"password\" id=\"currentpassword\" />\r\n");
-      out.write("\t\t</div>\r\n");
-      out.write("\t\t<div class=\"well\">\r\n");
-      out.write("\t\t\tNew password<br /> <input type=\"password\" id=\"newpassword\" />\r\n");
-      out.write("\t\t</div>\r\n");
-      out.write("\t\t<div class=\"well\">\r\n");
-      out.write("\t\t\tConfirm password<br /> <input type=\"password\" id=\"confirmpassword\" />\r\n");
-      out.write("\t\t</div>\r\n");
-      out.write("\t\t<input class=\"btn\" value=\"Save\" onclick=\"sub()\"/>\r\n");
-      out.write("\t</form>\r\n");
+      out.write("\" /> <input type=hidden id=\"userId\" name=\"userId\"\r\n");
+      out.write("\t\tvalue=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\" />\r\n");
+      out.write("\t");
+      if (_jspx_meth_form_005fform_005f0(_jspx_page_context))
+        return;
+      out.write("\r\n");
       out.write("</div>\r\n");
       out.write("<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
       out.write("<script src=\"resources/assets/js/bootstrap-transition.js\"></script>\r\n");
@@ -163,37 +160,7 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("<script src=\"resources/assets/js/bootstrap-collapse.js\"></script>\r\n");
       out.write("<script src=\"resources/assets/js/bootstrap-carousel.js\"></script>\r\n");
       out.write("<script src=\"resources/assets/js/bootstrap-typeahead.js\"></script>\r\n");
-      out.write("<script>$(function(){\r\n");
-      out.write("\tdocument.getElementById(\"userId\").style.display='none';\r\n");
-      out.write("\tdocument.getElementById(\"userPassword\").style.display='none';\r\n");
-      out.write("}) </script>\r\n");
-      out.write("<script>\r\n");
-      out.write("function sub(){\r\n");
-      out.write("\tvar newpas=$(\"#newpassword\").val();\r\n");
-      out.write("\tvar confpas=$(\"#confirmpassword\").val();\r\n");
-      out.write("\tvar enterpas=$(\"#currentpassword\").val();\r\n");
-      out.write("\tvar Idu=$(\"#userId\").text();\r\n");
-      out.write("\tvar currentpas=$(\"#userPassword\").text();\r\n");
-      out.write("\tif(enterpas == currentpas){\r\n");
-      out.write("\t\tif(newpas == confpas){\r\n");
-      out.write("\t\t\tvar newpassword={password:newpas,id:Idu};\r\n");
-      out.write("\t\t\t$.ajax({\r\n");
-      out.write("\t    \t\ttype: 'POST',\r\n");
-      out.write("    \t\t\turl: \"changepassword\", \r\n");
-      out.write("    \t\t\tdata: newpassword,\r\n");
-      out.write("    \t\t\tdataType: \"json\"\r\n");
-      out.write("        \t});\r\n");
-      out.write("\t\t\talert(\"Success!\");\r\n");
-      out.write("\t\t}\r\n");
-      out.write("\t\telse{\r\n");
-      out.write("\t\t\talert (\"Error!\");\r\n");
-      out.write("\t\t}\r\n");
-      out.write("\t}\r\n");
-      out.write("\telse{\r\n");
-      out.write("\t\talert (\"Error!\");\r\n");
-      out.write("\t}\r\n");
-      out.write("}\r\n");
-      out.write("</script>\r\n");
+      out.write("<script src=\"resources/changepassword.js\"></script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -206,5 +173,56 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_form_005fform_005f0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  form:form
+    org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
+    _jspx_th_form_005fform_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_form_005fform_005f0.setParent(null);
+    // /WEB-INF/views/changepassword.jsp(81,1) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fform_005f0.setMethod("Post");
+    // /WEB-INF/views/changepassword.jsp(81,1) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fform_005f0.setAction("changepassword");
+    // /WEB-INF/views/changepassword.jsp(81,1) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fform_005f0.setCommandName("changepassword");
+    int[] _jspx_push_body_count_form_005fform_005f0 = new int[] { 0 };
+    try {
+      int _jspx_eval_form_005fform_005f0 = _jspx_th_form_005fform_005f0.doStartTag();
+      if (_jspx_eval_form_005fform_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("\t\t<div class=\"well\">\r\n");
+          out.write("\t\t\tCurrent password<br />\r\n");
+          out.write("\t\t\t<input type=\"password\" id=\"currentpassword\" />\r\n");
+          out.write("\t\t</div>\r\n");
+          out.write("\t\t<div class=\"well\">\r\n");
+          out.write("\t\t\tNew password<br /> <input type=\"password\" id=\"newpassword\" />\r\n");
+          out.write("\t\t</div>\r\n");
+          out.write("\t\t<div class=\"well\">\r\n");
+          out.write("\t\t\tConfirm password<br /> <input type=\"password\" id=\"confirmpassword\" />\r\n");
+          out.write("\t\t</div>\r\n");
+          out.write("\t\t<input class=\"btn\" value=\"Save\" onclick=\"sub()\" />\r\n");
+          out.write("\t");
+          int evalDoAfterBody = _jspx_th_form_005fform_005f0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_form_005fform_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_form_005fform_005f0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_form_005fform_005f0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_form_005fform_005f0.doFinally();
+      _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction.reuse(_jspx_th_form_005fform_005f0);
+    }
+    return false;
   }
 }

@@ -22,6 +22,7 @@
 		<intercept-url pattern="/spring/list" access="ROLE_ADMIN" />
 		<intercept-url pattern="/spring/edit" access="ROLE_ADMIN" />
   		<intercept-url pattern="/editor.html" access="ROLE_USER,ROLE_ADMIN"/>
+  		<intercept-url pattern="/spring/mypresentations" access="ROLE_USER,ROLE_ADMIN"/>
   		<intercept-url pattern="/preview.jsp" access="ROLE_USER,ROLE_ADMIN"/>
   		<intercept-url pattern="/spring/userpage" access="ROLE_USER,ROLE_ADMIN"/>
   		<intercept-url pattern="/spring/changepassword" access="ROLE_USER,ROLE_ADMIN"/>

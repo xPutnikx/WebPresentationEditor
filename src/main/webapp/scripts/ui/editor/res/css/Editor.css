@@ -26,11 +26,11 @@
 }
 
 .editor .nav .active a:hover {
-	background-color: gray;
+	background-color: green;
 }
 
 .editor .nav li.open {
-	background-color: gray;
+	background-color: green;
 }
 
 .editor .navbar-inner {

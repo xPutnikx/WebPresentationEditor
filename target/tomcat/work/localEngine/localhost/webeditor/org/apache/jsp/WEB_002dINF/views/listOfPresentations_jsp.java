@@ -150,8 +150,6 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("\t\t\t<ul class=\"nav nav-tabs\">\r\n");
       out.write("\t\t\t\t<li class=\"active\"><a href=\"#tab1\" data-toggle=\"tab\">All\r\n");
       out.write("\t\t\t\t\t\tPresentations</a></li>\r\n");
-      out.write("\t\t\t\t<li class=\"\"><a href=\"#tab2\" data-toggle=\"tab\" id=\"\">My\r\n");
-      out.write("\t\t\t\t\t\tPresentations</a></li>\r\n");
       out.write("\t\t\t</ul>\r\n");
       out.write("\t\t\t<div class=\"tab-content\"\r\n");
       out.write("\t\t\t\tstyle=\"padding-bottom: 9px; border-bottom: 1px solid #ddd;\">\r\n");
@@ -167,17 +165,9 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("\t\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t</div>\r\n");
-      out.write("\t\t\t\t<div class=\"tab-pane\" id=\"tab2\">\r\n");
-      out.write("\t\t\t\t\t<p>Now it`s empty</p>\r\n");
-      out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
-      out.write("\r\n");
-      out.write("\t<!-- Le javascript\r\n");
-      out.write("================================================== -->\r\n");
-      out.write("\t<!-- Placed at the end of the document so the pages load faster -->\r\n");
-      out.write("\r\n");
       out.write("\t<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-transition.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-alert.js\"></script>\r\n");
@@ -214,10 +204,10 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /WEB-INF/views/listOfPresentations.jsp(102,7) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/listOfPresentations.jsp(100,7) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${presentation}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/views/listOfPresentations.jsp(102,7) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fforEach_005f0.setVar("v_person");
+    // /WEB-INF/views/listOfPresentations.jsp(100,7) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fforEach_005f0.setVar("v_present");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
       int _jspx_eval_c_005fforEach_005f0 = _jspx_th_c_005fforEach_005f0.doStartTag();
@@ -226,7 +216,7 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
           out.write("\r\n");
           out.write("\t\t\t\t\t\t\t\t<li class=span3><a\r\n");
           out.write("\t\t\t\t\t\t\t\t\thref=\"/webeditor/preview.jsp?id=");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${v_person.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${v_present.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\" class=thumbnail>\r\n");
           out.write("\t\t\t\t\t\t\t\t\t\t<img\r\n");
           out.write("\t\t\t\t\t\t\t\t\t\tsrc=http://icons.iconarchive.com/icons/zyotism/digital-video-techniques/128/Slide-Show-icon.png\r\n");

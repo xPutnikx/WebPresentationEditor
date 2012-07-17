@@ -113,11 +113,16 @@ body {
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#accordion2" href="#collapseTwo"> Settings </a>
+						data-parent="#accordion2" href="#collapseTwo"> Storage </a>
 				</div>
 				<div id="collapseTwo" class="accordion-body collapse"
 					style="height: 0px;">
 					<div class="accordion-inner"></div>
+					<div class="well" id="">
+					<a href="mypresentations" class="btn btn-danger" rel="popover"
+							data-content="And here's some amazing content. It's very engaging. right?"
+							data-original-title="A Title">Go to storage</a>
+							</div>
 				</div>
 			</div>
 			<div class="accordion-group">

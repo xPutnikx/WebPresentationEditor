@@ -11,6 +11,8 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems;
+
   private javax.el.ExpressionFactory _el_expressionfactory;
   private org.apache.AnnotationProcessor _jsp_annotationprocessor;
 
@@ -19,11 +21,13 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
+    _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
     _jsp_annotationprocessor = (org.apache.AnnotationProcessor) getServletConfig().getServletContext().getAttribute(org.apache.AnnotationProcessor.class.getName());
   }
 
   public void _jspDestroy() {
+    _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -50,6 +54,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
       out.write("<head>\r\n");
@@ -93,7 +98,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
       out.write("\t\t\t\t\t\t<li class=\"active\"><a href=\"#\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-home\"></i> Home</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"about\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"about\" id=\"about\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-book\"></i> About</a></li>\r\n");
       out.write("\t\t\t\t\t\t<li><a href=\"contact\">\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-white icon-pencil\"></i> Contact</a></li>\r\n");
@@ -119,7 +124,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t<li class=\"disabled\"><a href=\"../j_spring_security_logout\">\r\n");
       out.write("\t\t\t\t\t\t\t<i class=\"icon-off\"></i> Logout</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t\r\n");
-      out.write("\t\t\t\t\t\t\t</ul></li>\r\n");
+      out.write("\t\t\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t\r\n");
       out.write("\t\t\t\t</ul>\r\n");
@@ -136,56 +141,13 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t</h1>\r\n");
       out.write("\t\t\t\r\n");
       out.write("\t\t<div id=\"item\">\r\n");
-      out.write("\t\t\t");
+      out.write("\t\t");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${tagCloud}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\r\n");
-      out.write("\t\t\t<li>Development</li>\r\n");
-      out.write("\t\t\t<li>ShavrtzMesser</li>\r\n");
-      out.write("\t\t\t<li>web</li>\r\n");
-      out.write("\t\t\t<li>Tutorial</li>\r\n");
-      out.write("\t\t\t<li>ASP</li>\r\n");
-      out.write("\t\t\t<li>CSS</li>\r\n");
-      out.write("\t\t\t<li>Design</li>\r\n");
-      out.write("\t\t\t<li>Flash</li>\r\n");
-      out.write("\t\t\t<li>Experimental</li>\r\n");
-      out.write("\t\t\t<li><a href=registrationform>Registration</a></li>\r\n");
-      out.write("\t\t\t<li><a href=loginform.html>Login</a></li>\r\n");
-      out.write("\t\t\t<li></li>\r\n");
-      out.write("\t\t\t<li><a href=contact>Contact</a></li>\r\n");
-      out.write("\t\t\t<li>3D</li>\r\n");
-      out.write("\t\t\t<li>Ajax</li>\r\n");
-      out.write("\t\t\t<li><a href=about.html>About</a></li>\r\n");
-      out.write("\t\t\t<li>Development</li>\r\n");
-      out.write("\t\t\t<li>web</li>\r\n");
-      out.write("\t\t\t<li>Tutorial</li>\r\n");
-      out.write("\t\t\t<li>ASP</li>\r\n");
-      out.write("\t\t\t<li>CSS</li>\r\n");
-      out.write("\t\t\t<li>Design</li>\r\n");
-      out.write("\t\t\t<li>Flash</li>\r\n");
-      out.write("\t\t\t<li>Experimental</li>\r\n");
-      out.write("\t\t\t<li><a href=registrationform>Registration</a></li>\r\n");
-      out.write("\t\t\t<li><a href=loginform>Login</a></li>\r\n");
-      out.write("\t\t\t<li></li>\r\n");
-      out.write("\t\t\t<li><a href=contact>Contact</a></li>\r\n");
-      out.write("\t\t\t<li>3D</li>\r\n");
-      out.write("\t\t\t<li>Ajax</li>\r\n");
-      out.write("\t\t\t<li><a href=about>About</a></li>\r\n");
-      out.write("\t\t\t<li>Development</li>\r\n");
-      out.write("\t\t\t<li>web</li>\r\n");
-      out.write("\t\t\t<li>Tutorial</li>\r\n");
-      out.write("\t\t\t<li>ASP</li>\r\n");
-      out.write("\t\t\t<li>CSS</li>\r\n");
-      out.write("\t\t\t<li>Design</li>\r\n");
-      out.write("\t\t\t<li>Flash</li>\r\n");
-      out.write("\t\t\t<li>Experimental</li>\r\n");
-      out.write("\t\t\t<li><a href=registrationform>Registration</a></li>\r\n");
-      out.write("\t\t\t<li><a href=loginform>Login</a></li>\r\n");
-      out.write("\t\t\t<li></li>\r\n");
-      out.write("\t\t\t<li><a href=contact>Contact</a></li>\r\n");
-      out.write("\t\t\t<li>3D</li>\r\n");
-      out.write("\t\t\t<li>Ajax</li>\r\n");
-      out.write("\t\t\t<li><a href=about>About</a></li>\r\n");
-      out.write("\t\t\t</ul>\r\n");
+      out.write("\t\t");
+      if (_jspx_meth_c_005fforEach_005f0(_jspx_page_context))
+        return;
+      out.write("\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
       out.write("\t<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
@@ -206,6 +168,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\tcharset=\"utf-8\"></script>\r\n");
       out.write("\t<script src=\"resources/sphere/Sphere.js\" type=\"text/javascript\"\r\n");
       out.write("\t\tcharset=\"utf-8\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery.blend.js\"></script>\r\n");
       out.write("\t<script type=\"text/javascript\">\r\n");
       out.write("\t\t//<![CDATA[\r\n");
       out.write("\t\t\r\n");
@@ -253,7 +216,11 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t});\r\n");
       out.write("\t\t//]]>\r\n");
       out.write("\t</script>\r\n");
-      out.write("\r\n");
+      out.write("<script>\r\n");
+      out.write("\t\t\t$(document).ready(function(){\r\n");
+      out.write("\t\t\t\t$(\"#example ul\").blend();\r\n");
+      out.write("\t\t\t});\r\n");
+      out.write("\t\t</script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -266,5 +233,48 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_005fforEach_005f0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fforEach_005f0.setParent(null);
+    // /WEB-INF/views/home.jsp(87,2) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${tags}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    // /WEB-INF/views/home.jsp(87,2) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fforEach_005f0.setVar("tag");
+    int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_005fforEach_005f0 = _jspx_th_c_005fforEach_005f0.doStartTag();
+      if (_jspx_eval_c_005fforEach_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("\t\t\t\r\n");
+          out.write("\t\t\t<li>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${tag.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("</li>\r\n");
+          out.write("\r\n");
+          out.write("\t\t\t");
+          int evalDoAfterBody = _jspx_th_c_005fforEach_005f0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_005fforEach_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_005fforEach_005f0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_005fforEach_005f0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_005fforEach_005f0.doFinally();
+      _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.reuse(_jspx_th_c_005fforEach_005f0);
+    }
+    return false;
   }
 }

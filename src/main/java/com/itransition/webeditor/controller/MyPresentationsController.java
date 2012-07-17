@@ -17,34 +17,31 @@ import com.itransition.webeditor.service.PresentationsService;
 import com.itransition.webeditor.service.UsersService;
 
 @Controller
-public class ListOfPresentationsController {
+public class MyPresentationsController {
 	private static final Logger logger = LoggerFactory
 			.getLogger(ListOfPresentationsController.class);
 	@Autowired
 	private PresentationsService presentationService;
 	
-	@RequestMapping(value = "listOfPresentations", method = RequestMethod.GET)
-	public ModelAndView listPresentations() {
+	@Autowired
+	private UsersService usersService;
+	
+	@RequestMapping(value = "mypresentations", method = RequestMethod.GET)
+	public ModelAndView myPresentations() {
 		ModelAndView mav = new ModelAndView();
-		logger.info("list with presentations");
+		logger.info("list with my presentations");
 		List<Presentations> presentation = presentationService.getPresentations();
 		logger.debug("Presentation Listing count = "+presentation.size());
 		mav.addObject("controllerMessage",
 				"Presentations what create all users");
 		mav.addObject("titleMessage","Presentations database");
-//		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//		String name = user.getUsername();
-//		Long userId=usersService.getUserByName(name).getId();
-//		mav.addObject("id",userId);
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String name = user.getUsername();
+		Long userId=usersService.getUserByName(name).getId();
+		mav.addObject("name",name);
+		mav.addObject("id",userId);
 		mav.addObject("presentation", presentation);
-		mav.setViewName("listOfPresentations");
-		return mav;
-	}
-	@RequestMapping(value ="preview.jsp", method = RequestMethod.GET)
-	public ModelAndView home() {
-		logger.info("preview");
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("preview");
+		mav.setViewName("mypresentations");
 		return mav;
 	}
 }

@@ -175,11 +175,16 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<div class=\"accordion-group\">\r\n");
       out.write("\t\t\t\t<div class=\"accordion-heading\">\r\n");
       out.write("\t\t\t\t\t<a class=\"accordion-toggle\" data-toggle=\"collapse\"\r\n");
-      out.write("\t\t\t\t\t\tdata-parent=\"#accordion2\" href=\"#collapseTwo\"> Settings </a>\r\n");
+      out.write("\t\t\t\t\t\tdata-parent=\"#accordion2\" href=\"#collapseTwo\"> Storage </a>\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t<div id=\"collapseTwo\" class=\"accordion-body collapse\"\r\n");
       out.write("\t\t\t\t\tstyle=\"height: 0px;\">\r\n");
       out.write("\t\t\t\t\t<div class=\"accordion-inner\"></div>\r\n");
+      out.write("\t\t\t\t\t<div class=\"well\" id=\"\">\r\n");
+      out.write("\t\t\t\t\t<a href=\"mypresentations\" class=\"btn btn-danger\" rel=\"popover\"\r\n");
+      out.write("\t\t\t\t\t\t\tdata-content=\"And here's some amazing content. It's very engaging. right?\"\r\n");
+      out.write("\t\t\t\t\t\t\tdata-original-title=\"A Title\">Go to storage</a>\r\n");
+      out.write("\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t\t<div class=\"accordion-group\">\r\n");
