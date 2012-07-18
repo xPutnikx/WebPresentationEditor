@@ -1,7 +1,5 @@
 package com.itransition.webeditor.dao;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -23,10 +21,9 @@ public class UserRolesDao {
 		return entityManager.find(UserRoles.class, id);
 	}
 	
-	@Transactional
-	@SuppressWarnings("unchecked")
+	@Transactional	
 	@Cacheable("roles")
-	public  UserRoles  findByUserId(Long userId) {
+	public  UserRoles  findByUserId(Long userId) {		
 		return (UserRoles) entityManager.createQuery(
 			    "select u from UserRoles u where u.userId='" + userId + "'")
 			    .getResultList().get(0);
@@ -61,7 +58,8 @@ public class UserRolesDao {
 	@CacheEvict(value = "roles", allEntries = true)
 	public void removeByUserId(Long userId) {
 		entityManager.createQuery(
-				"delete from UserRoles u where u.userId="+userId).executeUpdate();
+				"delete from UserRoles u where u.userId=" + userId)
+				.executeUpdate();
 	}
 	
 }

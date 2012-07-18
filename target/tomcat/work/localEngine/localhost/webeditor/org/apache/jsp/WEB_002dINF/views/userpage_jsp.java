@@ -220,21 +220,7 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<script src=\"resources/assets/js/bootstrap-collapse.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-carousel.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-typeahead.js\">\r\n");
-      out.write("\t<!-- <script src=\"resources/assets/js/bootstrap-typeahead-2.0.3.js\"></script> -->\r\n");
       out.write("\t\r\n");
-      out.write("\t<script>\t   \r\n");
-      out.write("\t\t$(document).ready(function() {\r\n");
-      out.write("\t\t\t$(\"#searchbox\").typeahead({\r\n");
-      out.write("\t\t\t\tsource : function(typeahead, query) {\r\n");
-      out.write("\t\t\t\t\treturn $.post(\"bla/json\", {\r\n");
-      out.write("\t\t\t\t\t\tquery : query\r\n");
-      out.write("\t\t\t\t\t}, function(data) {\r\n");
-      out.write("\t\t\t\t\t\treturn typeahead.process(data);\r\n");
-      out.write("\t\t\t\t\t});\r\n");
-      out.write("\t\t\t\t}\r\n");
-      out.write("\t\t\t});\r\n");
-      out.write("\t\t});\r\n");
-      out.write("\t</script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {

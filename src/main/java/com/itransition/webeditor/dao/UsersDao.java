@@ -55,13 +55,15 @@ public class UsersDao {
 	@Transactional
 	@Cacheable("users")
 	public Users getUserByName(String name) {
-		return (Users) entityManager.createQuery("select u from Users u where u.name='"+name+"'").getResultList().get(0);
+		return (Users) entityManager.createQuery("select u from Users u where u.name='"+name+"'")
+				.getResultList().get(0);
 	}
 	
 	@Transactional
 	@Cacheable("users")
 	public Users getUserById(Long id) {
-		return (Users) entityManager.createQuery("select u from Users u where u.id='"+id+"'").getResultList().get(0);
+		return (Users) entityManager.createQuery("select u from Users u where u.id='"+id+"'")
+				.getResultList().get(0);
 	}
 	
 }

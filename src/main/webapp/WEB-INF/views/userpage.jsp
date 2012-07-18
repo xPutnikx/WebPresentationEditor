@@ -158,20 +158,6 @@ body {
 	<script src="resources/assets/js/bootstrap-collapse.js"></script>
 	<script src="resources/assets/js/bootstrap-carousel.js"></script>
 	<script src="resources/assets/js/bootstrap-typeahead.js">
-	<!-- <script src="resources/assets/js/bootstrap-typeahead-2.0.3.js"></script> -->
 	
-	<script>	   
-		$(document).ready(function() {
-			$("#searchbox").typeahead({
-				source : function(typeahead, query) {
-					return $.post("bla/json", {
-						query : query
-					}, function(data) {
-						return typeahead.process(data);
-					});
-				}
-			});
-		});
-	</script>
 </body>
 </html>

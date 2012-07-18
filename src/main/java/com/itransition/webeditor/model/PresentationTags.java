@@ -12,9 +12,9 @@ public class PresentationTags {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@Column
-	private String presentationId;
+	private Long presentationId;
 	@Column
-	private String tagId;
+	private Long tagId;
 
 	public Long getId() {
 		return id;
@@ -24,19 +24,19 @@ public class PresentationTags {
 		this.id = id;
 	}
 
-	public String getPresentationId() {
+	public Long getPresentationId() {
 		return presentationId;
 	}
 
-	public void setPresentationId(String userId) {
+	public void setPresentationId(Long userId) {
 		this.presentationId = userId;
 	}
 
-	public String getTagId() {
+	public Long getTagId() {
 		return tagId;
 	}
 
-	public void setTagId(String tagId) {
+	public void setTagId(Long tagId) {
 		this.tagId = tagId;
 	}
 	
