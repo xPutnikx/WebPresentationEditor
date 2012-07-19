@@ -23,9 +23,17 @@ public class PresentationTagsDao {
 	@Transactional
 	@SuppressWarnings("unchecked")
 	public List<PresentationTags> findByPresentationId(Long presentationId) {
-		return entityManager.createQuery("" +
+		return entityManager.createQuery(
 				"select p from PresentationTags p where p.presentationId='" + 
 				presentationId + "'").getResultList();
+	}
+	
+	@Transactional
+	@SuppressWarnings("unchecked")
+	public List<Long> findPresentationIdsByTagId(Long tagId) {
+		return entityManager.createQuery(
+				"select p.presentationId from PresentationTags p where p.tagId='" + 
+				tagId + "'").getResultList();
 	}
 
 	@Transactional
@@ -46,8 +54,8 @@ public class PresentationTagsDao {
 	@Transactional
 	public void removeByPresentationId(Long presentationId) {
 		entityManager.createQuery(
-				"delete p from PresentationTags p where p.presentationId='" + 
-				presentationId + "'");
+				"delete from PresentationTags p where p.presentationId='" + 
+				presentationId + "'").executeUpdate();
 	}
 
 }

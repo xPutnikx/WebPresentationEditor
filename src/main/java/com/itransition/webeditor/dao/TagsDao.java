@@ -1,10 +1,10 @@
 package com.itransition.webeditor.dao;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
 import org.hibernate.annotations.Index;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -24,9 +24,31 @@ public class TagsDao {
 		return entityManager.find(Tags.class, id);
 	}
 	
-	@Transactional
-	@Cacheable("tags")
+	@Transactional	
 	@SuppressWarnings("unchecked")
+	@Cacheable("tags")	
+	public Long findIdByName(String name) {
+		List<Long> result = entityManager.createQuery(
+				"select t.id from Tags t where t.name='" + name + "'")
+				.getResultList();
+		if (result.size() != 0) {
+			return result.get(0);
+		}
+		return null;
+	}
+	
+	@Transactional
+	@SuppressWarnings("unchecked")
+	@Cacheable("tags")
+	public List<String> searchByName(String name) {
+		return entityManager.createQuery(
+				"select t.name from Tags t where t.name like '%" + 
+				name + "%'").getResultList();		
+	}
+	
+	@Transactional
+	@SuppressWarnings("unchecked")
+	@Cacheable("tags")	
 	public List<Tags> getTags() {
 		return entityManager.createQuery(
 				"select t from Tags t").getResultList();

@@ -10,8 +10,8 @@ import javax.persistence.Id;
 public class UserRoles {	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	@Column
+	private Long id;	
+	@Column(unique = true)	
 	private Long userId;
     @Column
     private String authority;

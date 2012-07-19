@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,21 +47,21 @@ body {
 			<a class="btn btn-navbar" data-toggle="collapse"
 				data-target=".nav-collapse"> <span class="icon-bar"></span> <span
 				class="icon-bar"></span> <span class="icon-bar"></span>
-			</a> <a class="brand" href="../editor"> <i
+			</a> <a class="brand" href="../editor.html"> <i
 				class="icon-white icon-edit"></i> Web Editor
 			</a>
 			<div class="nav-collapse">
 				<ul class="nav">
-					<li><a href="home"> <i class="icon-white icon-home"></i>
+					<li><a href="home.html"> <i class="icon-white icon-home"></i>
 							Home
 					</a></li>
-					<li><a href="about"> <i
+					<li class="active"><a href="#"> <i
 							class="icon-white icon-book"></i> About
 					</a></li>
-					<li><a href="contact"> <i
+					<li><a href="contact.html"> <i
 							class="icon-white icon-pencil"></i> Contact
 					</a></li>
-					<li><a href="listOfPresentations"> <i
+					<li><a href="listOfPresentations.html"> <i
 							class="icon-white icon-picture"></i> List of Presentations
 					</a></li>
 				</ul>
@@ -76,9 +77,9 @@ body {
 						<i class="icon-user"></i> Account <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="registrationform">Registration</a></li>
-						<li><a href="loginform">Login</a></li>
-						<li><a href="userpage"> <i class="icon-cog"></i>
+						<li><a href="registrationform.html">Registration</a></li>
+						<li><a href="loginform.html">Login</a></li>
+						<li><a href="userpage.html"> <i class="icon-cog"></i>
 								Profile
 						</a></li>
 						<li><a href="../j_spring_security_logout"> <i
@@ -98,18 +99,39 @@ body {
 
 	<h1>Search</h1>
 	<br />
-	<div style="width: 260px; float: left;">
+	<div style="width: 255px; float: left;">
 		<form class="well">
 			<label>Title: </label>
-			<textarea id="textarea" rows="1"></textarea>
+			<textarea id="title-text-area" rows="1"></textarea>
 			<br /> <label>Tags: </label>
-			<textarea id="textarea2" rows="2"></textarea>
+			<textarea id="tags-text-area" rows="3"></textarea>
 			<br />
-			<button type="submit" class="btn">Submit</button>
+			<button id="search-btn" type="submit" class="btn">Search</button>
 		</form>
 	</div>
-	<div style="float: left; margin-left: 10px">
-		<p>LIST OF PRESENTATIONS</p>
+	<div style="float: left; margin-left: 20px">
+		<table class="table table-striped"
+			style="width: 875px; margin-top: -10px;">
+			<thead>
+				<tr>
+					<th style="width: 300px">Title</th>
+					<th style="width: 495px">Description</th>
+					<th style="width: 80px">Preview</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${presentations}" var="presentation">
+					<tr id="${presentation.id}">
+						<td>${presentation.title}</td>
+						<td>${presentation.description}</td>
+						<td><button class="btn btn-success"
+								onclick="previewPresentation(${presentation.id})">
+								Preview</button></td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+
 	</div>
 
 
@@ -137,8 +159,15 @@ body {
 <script src="resources/assets/js/jquery-textext-1.3.0.js"></script>
 
 <script type="text/javascript">
-	$('#textarea').textext({
-		plugins : 'autocomplete ajax',
+	function previewPresentation(id) {
+		alert("preview " + id);
+	}
+
+	$('#title-text-area').textext({});
+
+	$('#tags-text-area').textext({
+		plugins : 'autocomplete tags ajax',
+		tagsItems : new String('${tagsAreaValue}').split(','),				
 		ajax : {
 			type : 'POST',
 			url : 'search',
@@ -150,19 +179,44 @@ body {
 			}
 		}
 	});
-	$('#textarea2').textext({
-		plugins : 'autocomplete filter tags ajax',
-		ajax : {
-			type : 'POST',
-			url : 'search',
-			dataType : 'json',			
-			dataCallback : function(query) {
-                return {
-                    'query' : query
-                }
-            }
-		}
-	});
+		
+	$('#title-text-area').val('${titleAreaValue}');
+
+	$("#search-btn").click(
+			function() {
+				function buildTitleURI() {
+					var titleParam = {
+						title : JSON.parse('"' + titleText + '"')
+					};
+					return decodeURIComponent($.param(titleParam));
+				}
+
+				function buildTagsURI() {
+					var tagsParam = {
+						tag : JSON.parse(tagsText)
+					};
+					return decodeURIComponent($.param(tagsParam));
+				}
+
+				var titleTextArea = $("#title-text-area");
+				var titleText = $.trim(titleTextArea.val());
+				var tagsTextArea = $("#tags-text-area");
+				var tagsText = $.trim(tagsTextArea.textext()[0].hiddenInput()
+						.val());
+
+				if (titleText.length != 0 && tagsText.length != 2) {
+					window.location = 'search?' + buildTitleURI() + '&'
+							+ buildTagsURI();
+				} else if (titleText.length == 0 && tagsText.length != 2) {
+					window.location = 'search?' + buildTagsURI();
+				} else if (titleText.length != 0 && tagsText.length == 2) {
+					window.location = 'search?' + buildTitleURI();
+				} else {
+					window.location = 'search';
+				}
+				
+				return false;
+			});
 </script>
 
 </body>

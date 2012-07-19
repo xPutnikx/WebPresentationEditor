@@ -27,8 +27,18 @@ public class PresentationsDao {
 	@SuppressWarnings("unchecked")
 	@Cacheable("presentations")
 	public List<Presentations> findByUserId(Long userId) {
-		return entityManager.createQuery("" +
-				"select p from Presentations p where p.userId='" + userId + "'").getResultList();
+		return entityManager.createQuery(
+				"select p from Presentations p where p.userId='" + userId + "'")
+				.getResultList();
+	}
+	
+	@Transactional
+	@SuppressWarnings("unchecked")
+	@Cacheable("presentations")
+	public List<Presentations> searchByTitle(String title) {
+		return entityManager.createQuery(
+				"select p from Presentations p where p.title like '%" + title + "%'")
+				.getResultList();
 	}
 
 	@Transactional
@@ -60,7 +70,8 @@ public class PresentationsDao {
 	@CacheEvict(value = "presentations", allEntries = true)
 	public void removeByUserId(Long userId) {
 		entityManager.createQuery(
-				"delete p from Presentations p where p.userId='" + userId + "'");
+				"delete from Presentations p where p.userId='" + userId + "'")
+				.executeUpdate();
 	}
 
 }
