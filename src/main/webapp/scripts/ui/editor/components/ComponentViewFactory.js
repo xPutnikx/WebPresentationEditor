@@ -3,7 +3,7 @@
 @author Tantaman
 */
 
-define(["./ImageView", "./TableView", "./TextBoxView", "./WebFrameView", "./VideoView"], function(ImageView, TableView, TextBoxView, WebFrameView, VideoView) {
+define(["./ImageView","./TableView", "./TextBoxView", "./WebFrameView", "./VideoView"], function(ImageView, TableView, TextBoxView, WebFrameView, VideoView) {
   var ComponentViewFactory;
   return ComponentViewFactory = {
     createView: function(model) {

@@ -3,7 +3,7 @@
 @author Matt Crinklaw-Vogt
 */
 
-define(["common/Throttler", "./TextboxDrawer", "./ImageModelDrawer"], function(Throttler, TextBoxDrawer, ImageModelDrawer) {
+define(["common/Throttler", "./TextboxDrawer", "./ImageModelDrawer","./ShapeModelDrawer"], function(Throttler, TextBoxDrawer, ImageModelDrawer,ShapeModelDrawer) {
   var SlideDrawer;
   return SlideDrawer = (function() {
 
@@ -23,7 +23,8 @@ define(["common/Throttler", "./TextboxDrawer", "./ImageModelDrawer"], function(T
       };
       this.drawers = {
         TextBox: new TextBoxDrawer(this.g2d),
-        ImageModel: new ImageModelDrawer(this.g2d)
+        ImageModel: new ImageModelDrawer(this.g2d),
+        ShapeModel:new ShapeModelDrawer(this.g2d)
       };
       _ref = this.drawers;
       for (key in _ref) {

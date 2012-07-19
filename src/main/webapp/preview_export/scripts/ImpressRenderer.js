@@ -19,7 +19,9 @@ define(["./Handlebars", "./Templates"], function(Handlebars, Templates) {
             }
             break;
           case "TextBox":
-            result = Templates.TextBox(_this.convertTextBoxData(componentModel.attributes));
+            result = Templates.TextBox(componentModel.attributes);
+          case "ShapeModel":
+              result = Templates.Shape(componentModel.attributes);
         }
         return new Handlebars.SafeString(result);
       });

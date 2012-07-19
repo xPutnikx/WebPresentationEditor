@@ -41,6 +41,52 @@
     	
 		<script type="text/javascript" data-main="scripts/main" src="scripts/require.js"></script>
 		<script type="text/javascript" src="preview_export/scripts/impress.js"></script>
+		<script>
+		function canvas(){
+		$(".slideContainer").append("<div class=\"component textBox\" style=\"top: 256px; left: 341.3333333333333px; font-family: Lato, sans-serif; font-size: 72px; \"><div class=\"content-scale\" style=\"-webkit-transform: scale(1, 1); \"><div class=\"content\" style=\"\" contenteditable=\"false\"><canvas id=\"canv\"></canvas></div></div><span class=\"topLabel label\" data-delta=\"skewX\">Skew X</span><span class=\"leftLabel label\" data-delta=\"skewY\">Skew Y</span><span class=\"rightLabel label\" data-delta=\"rotate\">Rotate</span><span class=\"scale label\" data-delta=\"scale\">Scale</span><span class=\"close-btn-red-20 removeBtn\" title=\"Remove\"></span><div class=\"positioningCtrls form-inline\"><span class=\"label\">x</span><input class=\"position\" type=\"text\" data-option=\"x\" value=\"341.3333333333333\"><span class=\"label\">y</span><input class=\"position\" type=\"text\" data-option=\"y\" value=\"256\"></div></div>");}
+		
+		</script>
+		<script type="text/javascript">
+function getRandomArbitary(min, max)
+{
+  return Math.random() * (max - min) + min;
+}
+</script>
+<script>
+function rectangle(){
+	canvas();
+	var canv=document.getElementById("canv");
+	var x=canv.getContext("2d");
+	x.strokeRect(getRandomArbitary(70, 200),getRandomArbitary(50, 100),getRandomArbitary(40, 70),getRandomArbitary(40, 70));
+	
+}
+</script>
+<script>
+function poligon(){
+	canvas();
+	var canv=document.getElementById("canv")
+	var x=canv.getContext("2d");
+x.beginPath();
+x.moveTo(75,25);
+x.quadraticCurveTo(25,25,25,62.5);
+x.quadraticCurveTo(25,100,50,100);
+x.quadraticCurveTo(50,120,30,125);
+x.quadraticCurveTo(60,120,65,100);
+x.quadraticCurveTo(125,100,125,62.5);
+x.quadraticCurveTo(125,25,75,25);
+x.stroke();}
+</script>
+<script>
+canvas();
+function elipse(){
+	canvas();
+	var canv=document.getElementById("canv")
+	var x=canv.getContext("2d");
+	x.beginPath();
+	x.arc(getRandomArbitary(50, 70),getRandomArbitary(30, 70),50,0,Math.PI*2,true);
+	x.stroke();
+}
+</script>
 	</head>
 	<body>
 	</body>

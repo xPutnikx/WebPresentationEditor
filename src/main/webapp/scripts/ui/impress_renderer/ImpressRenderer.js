@@ -22,6 +22,8 @@ define(["vendor/amd/Handlebars", "./Templates"], function(Handlebars, Templates)
             break;
           case "Video":
             result = Templates.Video(componentModel.attributes);
+          case "Shape":
+              result = Templates.Shape(componentModel.attributes);
         }
         return new Handlebars.SafeString(result);
       });

@@ -3,7 +3,7 @@
 @author Tantaman
 */
 
-define(["./Image", "./Table", "./TextBox", "./WebFrame", "./Video"], function(Image, Table, TextBox, WebFrame, Video) {
+define(["./Image", "./Table", "./TextBox", "./WebFrame", "./Video","./Shape"], function(Image, Table, TextBox, WebFrame, Video,Shape) {
   var ComponentFactory;
   return ComponentFactory = {
     createTextBox: function(configuration) {
@@ -26,6 +26,8 @@ define(["./Image", "./Table", "./TextBox", "./WebFrame", "./Video"], function(Im
           return new TextBox(rawComp);
         case "Video":
           return new Video(rawComp);
+        case "ShapeModel":
+          return new Shape(rawComp);
       }
     }
   };

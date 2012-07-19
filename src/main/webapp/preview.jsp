@@ -72,7 +72,7 @@ html,body,.editor {
 	      var Ide={json:getId};
 	        $.ajax({
         	    type: 'POST',
-	        	    url: "/webeditor/spring/jsons/", 
+	        	    url: "/webeditor/social/jsons/", 
 	        	    data: Ide,
 	        	    dataType: "json",
 	        	    success: function(data){

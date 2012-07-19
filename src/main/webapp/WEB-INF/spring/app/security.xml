@@ -4,31 +4,31 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
 	http://www.springframework.org/schema/security
 	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
-	<http pattern="/spring/login*" security="none"/>
-	 <http pattern="/spring/images/**" security="none"/>
-           <http pattern="/spring/lib/**" security="none"/>
-           <http pattern="/spring/preview_export/**" security="none"/>
-           <http pattern="/spring/res/**" security="none"/>
-           <http pattern="/spring/resources/**" security="none"/>
-  		   <http pattern="/spring/loginform*" security="none"/>
-  		   <http pattern="/spring/listofPresentations*" security="none"/>
-  		   <http pattern="/spring/scripts/**" security="none"/>
-  		   <http pattern="/spring/about*" security="none"/>
-  		   <http pattern="/spring/home*" security="none"/>
-  		   <http pattern="/spring/contact*" security="none"/>
-  		   <http pattern="/spring/registrationform*" security="none"/>
-  		   <http pattern="/spring/confirm*" security="none"/>
+	<http pattern="/social/login*" security="none"/>
+	 <http pattern="/social/images/**" security="none"/>
+           <http pattern="/social/lib/**" security="none"/>
+           <http pattern="/social/preview_export/**" security="none"/>
+           <http pattern="/social/res/**" security="none"/>
+           <http pattern="/social/resources/**" security="none"/>
+  		   <http pattern="/social/loginform*" security="none"/>
+  		   <http pattern="/social/listofPresentations*" security="none"/>
+  		   <http pattern="/social/scripts/**" security="none"/>
+  		   <http pattern="/social/about*" security="none"/>
+  		   <http pattern="/social/home*" security="none"/>
+  		   <http pattern="/social/contact*" security="none"/>
+  		   <http pattern="/social/registrationform*" security="none"/>
+  		   <http pattern="/social/confirm*" security="none"/>
 	<http auto-config="true">
-		<intercept-url pattern="/spring/list" access="ROLE_ADMIN" />
-		<intercept-url pattern="/spring/edit" access="ROLE_ADMIN" />
+		<intercept-url pattern="/social/list" access="ROLE_ADMIN" />
+		<intercept-url pattern="/social/edit" access="ROLE_ADMIN" />
   		<intercept-url pattern="/editor.html" access="ROLE_USER,ROLE_ADMIN"/>
-  		<intercept-url pattern="/spring/mypresentations" access="ROLE_USER,ROLE_ADMIN"/>
+  		<intercept-url pattern="/social/mypresentations" access="ROLE_USER,ROLE_ADMIN"/>
   		<intercept-url pattern="/preview.jsp" access="ROLE_USER,ROLE_ADMIN"/>
-  		<intercept-url pattern="/spring/userpage" access="ROLE_USER,ROLE_ADMIN"/>
-  		<intercept-url pattern="/spring/changepassword" access="ROLE_USER,ROLE_ADMIN"/>
-		<form-login login-page="/spring/loginform" default-target-url="/spring/home"
-			authentication-failure-url="/spring/loginform" />
-		<logout logout-success-url="/spring/home" />
+  		<intercept-url pattern="/social/userpage" access="ROLE_USER,ROLE_ADMIN"/>
+  		<intercept-url pattern="/social/changepassword" access="ROLE_USER,ROLE_ADMIN"/>
+		<form-login login-page="/social/loginform" default-target-url="/spring/home"
+			authentication-failure-url="/social/loginform" />
+		<logout logout-success-url="/social/home" />
 	</http>
 
 	<authentication-manager>

@@ -6,7 +6,32 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.apache.solr.analysis.LowerCaseFilterFactory;
+import org.apache.solr.analysis.SnowballPorterFilterFactory;
+import org.apache.solr.analysis.StandardTokenizerFactory;
+import org.hibernate.search.annotations.Analyze;
+import org.hibernate.search.annotations.Analyzer;
+import org.hibernate.search.annotations.AnalyzerDef;
+import org.hibernate.search.annotations.DateBridge;
+import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Index;
+import org.hibernate.search.annotations.Indexed;
+import org.hibernate.search.annotations.Parameter;
+import org.hibernate.search.annotations.Resolution;
+import org.hibernate.search.annotations.Store;
+import org.hibernate.search.annotations.TokenFilterDef;
+import org.hibernate.search.annotations.TokenizerDef;
+
 @Entity
+@Indexed
+@AnalyzerDef(name = "customanalyzer",
+tokenizer = @TokenizerDef(factory = StandardTokenizerFactory.class),
+filters = {
+		@TokenFilterDef(factory = LowerCaseFilterFactory.class),
+		@TokenFilterDef(factory = SnowballPorterFilterFactory.class, params = {
+				@Parameter(name = "language", value = "English")
+		})
+})
 public class Presentations {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -35,7 +60,8 @@ public class Presentations {
 	public void setUserId(Long id) {
 		this.userId = id;
 	}
-
+	@Field(index=Index.YES, analyze=Analyze.YES, store=Store.NO)
+	@Analyzer(definition = "customanalyzer")
 	public String getTitle() {
 		return title;
 	}
@@ -43,7 +69,8 @@ public class Presentations {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
+	@Field(index=Index.YES, analyze=Analyze.YES, store=Store.NO)
+	@Analyzer(definition = "customanalyzer")
 	public String getDescription() {
 		return description;
 	}
