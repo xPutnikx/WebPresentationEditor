@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.itransition.webeditor.core.ConfirmKey;
+import com.itransition.webeditor.core.ConfirmationKey;
 import com.itransition.webeditor.dao.UsersDao;
 import com.itransition.webeditor.model.Users;
 import com.itransition.webeditor.service.UsersService;
@@ -23,6 +24,7 @@ public class ConfirmRegistrationController {
 	
 	@Autowired
 	private UsersService usersService;
+	private ConfirmationKey confirmKey=new ConfirmationKey(); 
 	
 	@RequestMapping(method = RequestMethod.GET, value="confirm")
 	public String confirmRegistration(Model model, 
@@ -30,7 +32,7 @@ public class ConfirmRegistrationController {
 			@RequestParam(value = "key", required = true) String key) {
 		model.addAttribute("controllerMessage",	"Confirm Registration");				
 		Users users = usersService.findById(id);
-		boolean check = checkConfirmationKey(users, key);		
+		boolean check = confirmKey.checkConfirmationKey(users, key);		
 		if (check) {
 			usersService.registerById(id);
 			model.addAttribute("confirmationMessage", "Success, baby!");
@@ -38,20 +40,5 @@ public class ConfirmRegistrationController {
 			model.addAttribute("confirmationMessage", "Registration key is not valid!");
 		}
 		return "confirm";
-	}
-	
-	private boolean checkConfirmationKey(Users users, String key) {
-		String checkKey = null;
-		try {
-			checkKey = ConfirmKey.generate(users.getName(), users.getPassword());
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		if (key.equals(checkKey)) {
-			return true;
-		} else {
-			return false;
-		}
 	}
 }

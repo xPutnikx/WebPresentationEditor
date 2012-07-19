@@ -8,11 +8,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.itransition.webeditor.model.Users;
-
 import java.util.List;
-
+import org.junit.*;
 import static org.junit.Assert.*;
 
 @ContextConfiguration("/test-context.xml")
@@ -35,24 +33,27 @@ public class PersonControllerTest {
 	public void shouldReturnPersonListView() {
 		ModelAndView mav = personController.listPeople();
 		assertEquals("list",mav.getViewName());
-		
 		@SuppressWarnings("unchecked")
 		List<Users> people = (List<Users>) mav.getModelMap().get("people");
 		assertNotNull(people);		
-		assertEquals(DataInitializer.PERSON_COUNT,people.size());		
+		assertEquals(DataInitializer.PERSON_COUNT,people.size());
+//		String username=(String) mav.getModelMap().get("username");
+//		assertNull(username);
 	}
 	
 	
-
+	@Test
 	public void shouldReturnNewPersonWithEditMav() {
 		ModelAndView mav = personController.editPerson(null);
 		assertNotNull(mav);
 		assertEquals("edit", mav.getViewName());
-		Object object = mav.getModel().get("person");
+		Object object = mav.getModel().get("users");
 		assertTrue(Users.class.isAssignableFrom(object.getClass()));
-		Users person = (Users) object;
-		assertNull(person.getId());
-		assertNull(person.getName());		
+		Users users = (Users) object;
+		assertNull(users.getId());
+		assertNull(users.getName());
+//		String username=(String) mav.getModelMap().get("username");
+//		assertNull(username);
 	}
 	
 	@Test
@@ -61,10 +62,12 @@ public class PersonControllerTest {
 		ModelAndView mav = personController.editPerson(template);
 		assertNotNull(mav);
 		assertEquals("edit", mav.getViewName());
-		Object object = mav.getModel().get("person");
+		Object object = mav.getModel().get("users");
 		assertTrue(Users.class.isAssignableFrom(object.getClass()));
-		Users person = (Users) object;
-		assertEquals(template,person.getId());
+		Users users = (Users) object;
+		assertEquals(template,users.getId());
+//		String username=(String) mav.getModelMap().get("username");
+//		assertNull(username);
 	}
 	
 }

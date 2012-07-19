@@ -15,6 +15,11 @@ body {
 	padding-top: 60px;
 }
 </style>
+<style>
+   a { 
+    text-decoration: none;
+   } 
+  </style>
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
@@ -56,7 +61,7 @@ body {
 				</form>
 				<ul class="nav pull-right">
 					<ul class="nav">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<a class="btn dropdown-toggle" data-toggle="dropdown">
              			 <i class="icon-user"></i> ${username}
              			 <span class="caret"></span>
            				 </a>
@@ -78,24 +83,25 @@ body {
 	<div class="container">
 
 		<h1>Editing Person </h1>
-		<p><div class="alert alert-info">${users.name}
-			${users.password} ${users.email}</div></p>
+		<p><div class="alert alert-info" style="color:#061AF8">${users.name}
+			${users.email}</div></p>
 		<form:form commandName="users" style="padding:8px">
-			<div class="well">
+			<div class="well" style="color:black">
 				User Name<br />
-				<form:input path="name" />
+				<form:input path="name"/>
 			</div>
-			<div class="well">
+			<div class="well" style="color:black">
 				Password<br />
 				<form:input path="password" />
 			</div>
-			<div class="well">
+			<div class="well" style="color:black">
 				email<br />
 				<form:input path="email" />
 			</div>
 			<input type="submit" class="btn" value="Save" />
 		</form:form>
 	</div>
+	
 	<script src="resources/assets/js/jquery.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>

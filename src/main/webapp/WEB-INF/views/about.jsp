@@ -12,6 +12,11 @@ body {
 	padding-top: 60px;
 }
 </style>
+<style>
+   a { 
+    text-decoration: none;
+   } 
+  </style>
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
@@ -55,7 +60,7 @@ body {
 			</form>
 			<ul class="nav pull-right">
 				<ul class="nav">
-					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+					<a class="btn dropdown-toggle" data-toggle="dropdown" >
 						<i class="icon-user"></i> Account <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
@@ -77,10 +82,14 @@ body {
 	</div>
 </div>
 
-<div class="container">
+<div class="container" style="margin-top: 20px;">
 	<h1>About</h1>
 	<p>${controllerMessage}</p>
-</div>
+</div><!-- 
+<canvas id='draw' width='300' height='200' style='border:1px solid' onclick="draw()"></canvas>  -->
+<canvas id="processing-canvas"> </canvas>
+<script src="resources/processing.js"></script>
+<script src="resources/processing-api.js"></script>
 <script src="resources/assets/js/jquery.js"></script>
 <script src="resources/assets/js/bootstrap-transition.js"></script>
 <script src="resources/assets/js/bootstrap-alert.js"></script>
@@ -94,5 +103,13 @@ body {
 <script src="resources/assets/js/bootstrap-collapse.js"></script>
 <script src="resources/assets/js/bootstrap-carousel.js"></script>
 <script src="resources/assets/js/bootstrap-typeahead.js"></script>
+<!-- <script type='text/javascript'>
+function draw(){
+var canvas=document.getElementById("draw")
+var x=canvas.getContext("2d");
+x.fillRect(50,40,55,55);
+x.strokeRect(150,70,55,55);
+x.clearRect(68,57,20,20);}
+</script>  -->
 </body>
 </html>

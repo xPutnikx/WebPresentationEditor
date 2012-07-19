@@ -17,6 +17,11 @@ body {
 	padding-top: 60px;
 }
 </style>
+<style>
+   a { 
+    text-decoration: none;
+   } 
+  </style>
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
@@ -59,7 +64,7 @@ body {
 				</form>
 				<ul class="nav pull-right">
 					<ul class="nav">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<a class="btn dropdown-toggle" data-toggle="dropdown">
              			 <i class="icon-user"></i> Account
              			 <span class="caret"></span>
            				 </a>
@@ -77,7 +82,7 @@ body {
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container" style="margin-top: 20px;">
 		<form:form method="Post" action="registrationform"
 			commandName="registration">
 			<table>
@@ -118,6 +123,7 @@ body {
 		</form:form>
 
 	</div>
+	
 	<!-- /container -->
 
 

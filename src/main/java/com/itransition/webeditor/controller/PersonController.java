@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.util.NestedServletException;
 
 import com.itransition.webeditor.core.PermessionDeniedException;
 import com.itransition.webeditor.dao.UsersDao;
@@ -43,14 +44,12 @@ public class PersonController {
 			users = usersService.findById(id);
 		}
 		mav.addObject("users", users);
-		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		String name = user.getUsername();
-		mav.addObject("username", name);
+		mav.addObject("username",getCurrentUserName());
 		return mav;
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "edit")
-	public String savePerson(@ModelAttribute Users users) {
+	public String savePerson(@ModelAttribute Users users) throws NestedServletException {
 		logger.debug("Received postback on person " + users);
 		usersService.save(users);
 		usersService.registerById(users.getId());
@@ -64,9 +63,7 @@ public class PersonController {
 		List<Users> people = usersService.getUsers();
 		logger.debug("Person Listing count = " + people.size());
 		mav.addObject("people", people);
-		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		String name = user.getUsername();
-		mav.addObject("username", name);
+		mav.addObject("username", getCurrentUserName());
 		mav.setViewName("list");		
 		return mav;
 	}
@@ -83,6 +80,7 @@ public class PersonController {
 	@RequestMapping(value = "/listrole", method = RequestMethod.POST)
 	public void changeRole(@RequestParam ("json") long person,@RequestParam ("role") String role)
 	{
+		
 		if (role.equals("Admin")){
 			usersService.makeAdministrator(person);
 		}
@@ -95,5 +93,10 @@ public class PersonController {
 	public void delUser(@RequestParam ("json") long person) throws PermessionDeniedException
 	{
 		usersService.removeById(person);
+	}
+	private String getCurrentUserName(){
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String name = user.getUsername();
+		return name;
 	}
 }

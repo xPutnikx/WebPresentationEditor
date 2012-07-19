@@ -11,7 +11,7 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
 
   private static java.util.List _jspx_dependants;
 
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fform_0026_005fstyle_005fmethod_005fcommandName_005faction;
 
   private javax.el.ExpressionFactory _el_expressionfactory;
   private org.apache.AnnotationProcessor _jsp_annotationprocessor;
@@ -21,13 +21,13 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
   }
 
   public void _jspInit() {
-    _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fform_005fform_0026_005fstyle_005fmethod_005fcommandName_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
     _jsp_annotationprocessor = (org.apache.AnnotationProcessor) getServletConfig().getServletContext().getAttribute(org.apache.AnnotationProcessor.class.getName());
   }
 
   public void _jspDestroy() {
-    _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction.release();
+    _005fjspx_005ftagPool_005fform_005fform_0026_005fstyle_005fmethod_005fcommandName_005faction.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -69,6 +69,11 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\tpadding-top: 60px;\r\n");
       out.write("}\r\n");
       out.write("</style>\r\n");
+      out.write("<style>\r\n");
+      out.write("   a { \r\n");
+      out.write("    text-decoration: none;\r\n");
+      out.write("   } \r\n");
+      out.write("  </style>\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap-responsive.css\"\r\n");
       out.write("\trel=\"stylesheet\">\r\n");
       out.write("<link rel=\"shortcut icon\" href=\"resources/assets/ico/favicon.ico\">\r\n");
@@ -113,7 +118,7 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\t\t\t</form>\r\n");
       out.write("\t\t\t<ul class=\"nav pull-right\">\r\n");
       out.write("\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\r\n");
+      out.write("\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" >\r\n");
       out.write("\t\t\t\t\t\t<i class=\"icon-user\"></i> ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write(" <span class=\"caret\"></span>\r\n");
@@ -131,7 +136,7 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
       out.write("</div>\r\n");
-      out.write("<div class=\"container\">\r\n");
+      out.write("<div class=\"container\" style=\"margin-top: 20px;\">\r\n");
       out.write("\t<h1>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write(" change your password</h1>\r\n");
@@ -147,6 +152,7 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
         return;
       out.write("\r\n");
       out.write("</div>\r\n");
+      out.write("\r\n");
       out.write("<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
       out.write("<script src=\"resources/assets/js/bootstrap-transition.js\"></script>\r\n");
       out.write("<script src=\"resources/assets/js/bootstrap-alert.js\"></script>\r\n");
@@ -180,29 +186,31 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:form
-    org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
+    org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005fstyle_005fmethod_005fcommandName_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
     _jspx_th_form_005fform_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005fform_005f0.setParent(null);
-    // /WEB-INF/views/changepassword.jsp(81,1) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/changepassword.jsp(86,1) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f0.setMethod("Post");
-    // /WEB-INF/views/changepassword.jsp(81,1) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/changepassword.jsp(86,1) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f0.setAction("changepassword");
-    // /WEB-INF/views/changepassword.jsp(81,1) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/changepassword.jsp(86,1) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f0.setCommandName("changepassword");
+    // /WEB-INF/views/changepassword.jsp(86,1) null
+    _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "style", new String("margin-top: 40px;"));
     int[] _jspx_push_body_count_form_005fform_005f0 = new int[] { 0 };
     try {
       int _jspx_eval_form_005fform_005f0 = _jspx_th_form_005fform_005f0.doStartTag();
       if (_jspx_eval_form_005fform_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("\t\t<div class=\"well\">\r\n");
+          out.write("\t\t<div class=\"well\" style=\"color:black;\">\r\n");
           out.write("\t\t\tCurrent password<br />\r\n");
           out.write("\t\t\t<input type=\"password\" id=\"currentpassword\" />\r\n");
           out.write("\t\t</div>\r\n");
-          out.write("\t\t<div class=\"well\">\r\n");
+          out.write("\t\t<div class=\"well\" style=\"color:black;\">\r\n");
           out.write("\t\t\tNew password<br /> <input type=\"password\" id=\"newpassword\" />\r\n");
           out.write("\t\t</div>\r\n");
-          out.write("\t\t<div class=\"well\">\r\n");
+          out.write("\t\t<div class=\"well\" style=\"color:black;\">\r\n");
           out.write("\t\t\tConfirm password<br /> <input type=\"password\" id=\"confirmpassword\" />\r\n");
           out.write("\t\t</div>\r\n");
           out.write("\t\t<input class=\"btn\" value=\"Save\" onclick=\"sub()\" />\r\n");
@@ -221,7 +229,7 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
       _jspx_th_form_005fform_005f0.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_005fform_005f0.doFinally();
-      _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction.reuse(_jspx_th_form_005fform_005f0);
+      _005fjspx_005ftagPool_005fform_005fform_0026_005fstyle_005fmethod_005fcommandName_005faction.reuse(_jspx_th_form_005fform_005f0);
     }
     return false;
   }

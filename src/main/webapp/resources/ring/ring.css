@@ -11,8 +11,8 @@
 			}
 			body{
 				background-color: url('http://www.springsource.org/sites/all/themes/s2org11/images/BG_SiteBillboardAndHeader.png');
-				color: #69c;
-				font-family: Arial, "MS Trebuchet", sans-serif;
-				font-weight: bold;
-				font-size:1em;
+				/* color: #69c; */
+			/* 	font-family: Arial, "MS Trebu */chet", sans-serif; */
+				/* font-weight: bold;
+				font-size:1em; */
 			}

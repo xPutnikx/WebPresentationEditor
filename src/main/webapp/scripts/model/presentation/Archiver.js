@@ -57,7 +57,7 @@ define(["vendor/amd/jszip", "./Deck", "ui/impress_renderer/ImpressRenderer", "co
     };
 
     Archiver.prototype._archiveIndexHtml = function(str) {
-      return this.archive.file("./editor.html", str);
+      return this.archive.file("editor.html", str);
     };
 
     Archiver.prototype._archiveScripts = function() {};

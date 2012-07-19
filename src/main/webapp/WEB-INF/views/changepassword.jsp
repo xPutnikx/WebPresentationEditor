@@ -13,6 +13,11 @@ body {
 	padding-top: 60px;
 }
 </style>
+<style>
+   a { 
+    text-decoration: none;
+   } 
+  </style>
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
@@ -57,7 +62,7 @@ body {
 			</form>
 			<ul class="nav pull-right">
 				<ul class="nav">
-					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+					<a class="btn dropdown-toggle" data-toggle="dropdown" >
 						<i class="icon-user"></i> ${username} <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
@@ -73,26 +78,27 @@ body {
 		</div>
 	</div>
 </div>
-<div class="container">
+<div class="container" style="margin-top: 20px;">
 	<h1>${username} change your password</h1>
 	<input type=hidden id="userPassword" name="userPassword"
 		value="${password}" /> <input type=hidden id="userId" name="userId"
 		value="${id}" />
 	<form:form method="Post" action="changepassword"
-		commandName="changepassword">
-		<div class="well">
+		commandName="changepassword" style="margin-top: 40px;">
+		<div class="well" style="color:black;">
 			Current password<br />
 			<input type="password" id="currentpassword" />
 		</div>
-		<div class="well">
+		<div class="well" style="color:black;">
 			New password<br /> <input type="password" id="newpassword" />
 		</div>
-		<div class="well">
+		<div class="well" style="color:black;">
 			Confirm password<br /> <input type="password" id="confirmpassword" />
 		</div>
 		<input class="btn" value="Save" onclick="sub()" />
 	</form:form>
 </div>
+
 <script src="resources/assets/js/jquery.js"></script>
 <script src="resources/assets/js/bootstrap-transition.js"></script>
 <script src="resources/assets/js/bootstrap-alert.js"></script>

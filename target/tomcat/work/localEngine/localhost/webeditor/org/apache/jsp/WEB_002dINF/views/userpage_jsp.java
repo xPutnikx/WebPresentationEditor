@@ -69,9 +69,13 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<style>\r\n");
       out.write("body {\r\n");
       out.write("\tpadding-top: 60px;\r\n");
-      out.write("\t/* 60px to make the container go all the way to the bottom of the topbar */\r\n");
       out.write("}\r\n");
       out.write("</style>\r\n");
+      out.write("<style>\r\n");
+      out.write("   a { \r\n");
+      out.write("    text-decoration: none;\r\n");
+      out.write("   } \r\n");
+      out.write("  </style>\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap-responsive.css\"\r\n");
       out.write("\trel=\"stylesheet\">\r\n");
       out.write("<link rel=\"shortcut icon\" href=\"resources/assets/ico/favicon.ico\">\r\n");
@@ -118,7 +122,7 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t</form>\r\n");
       out.write("\t\t\t\t<ul class=\"nav pull-right\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\r\n");
+      out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\">\r\n");
       out.write("\t\t\t\t\t\t\t<i class=\"icon-user\"></i> ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write(" <span class=\"caret\"></span>\r\n");
@@ -146,7 +150,7 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
       out.write("\r\n");
-      out.write("\t<div class=\"container\">\r\n");
+      out.write("\t<div class=\"container\" style=\"margin-top: 20px;\">\r\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("\t\t<h1>Welcome ");
@@ -158,15 +162,15 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<div class=\"accordion-group\">\r\n");
       out.write("\t\t\t\t<div class=\"accordion-heading\">\r\n");
       out.write("\t\t\t\t\t<a class=\"accordion-toggle\" data-toggle=\"collapse\"\r\n");
-      out.write("\t\t\t\t\t\tdata-parent=\"#accordion2\" href=\"#collapseOne\"> Information </a>\r\n");
+      out.write("\t\t\t\t\t\tdata-parent=\"#accordion2\" href=\"#collapseOne\" style=\"color:white;\"> Information </a>\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t<div id=\"collapseOne\" class=\"accordion-body in collapse\"\r\n");
       out.write("\t\t\t\t\tstyle=\"height: auto;\">\r\n");
-      out.write("\t\t\t\t\t<div class=\"accordion-inner\">\r\n");
-      out.write("\t\t\t\t\t\t<p>Nickname : ");
+      out.write("\t\t\t\t\t<div class=\"well\" id=\"\">\r\n");
+      out.write("\t\t\t\t\t\t<p style=\"color: black;\">Nickname : ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("</p>\r\n");
-      out.write("\t\t\t\t\t\t<p>Role : ");
+      out.write("\t\t\t\t\t\t<p style=\"color: black;\">Role : ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${userrole}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("</p>\r\n");
       out.write("\t\t\t\t\t</div>\r\n");
@@ -175,10 +179,10 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<div class=\"accordion-group\">\r\n");
       out.write("\t\t\t\t<div class=\"accordion-heading\">\r\n");
       out.write("\t\t\t\t\t<a class=\"accordion-toggle\" data-toggle=\"collapse\"\r\n");
-      out.write("\t\t\t\t\t\tdata-parent=\"#accordion2\" href=\"#collapseTwo\"> Storage </a>\r\n");
+      out.write("\t\t\t\t\t\tdata-parent=\"#accordion2\" href=\"#collapseTwo\" style=\"color:white;\"> Storage </a>\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t<div id=\"collapseTwo\" class=\"accordion-body collapse\"\r\n");
-      out.write("\t\t\t\t\tstyle=\"height: 0px;\">\r\n");
+      out.write("\t\t\t\t\tstyle=\"height: 0px;\" >\r\n");
       out.write("\t\t\t\t\t<div class=\"accordion-inner\"></div>\r\n");
       out.write("\t\t\t\t\t<div class=\"well\" id=\"\">\r\n");
       out.write("\t\t\t\t\t<a href=\"mypresentations\" class=\"btn btn-danger\" rel=\"popover\"\r\n");
@@ -190,7 +194,7 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<div class=\"accordion-group\">\r\n");
       out.write("\t\t\t\t<div class=\"accordion-heading\">\r\n");
       out.write("\t\t\t\t\t<a class=\"accordion-toggle\" data-toggle=\"collapse\"\r\n");
-      out.write("\t\t\t\t\t\tdata-parent=\"#accordion2\" href=\"#collapseThree\"> Change\r\n");
+      out.write("\t\t\t\t\t\tdata-parent=\"#accordion2\" href=\"#collapseThree\" style=\"color:white;\"> Change\r\n");
       out.write("\t\t\t\t\t\tPassword </a>\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\r\n");
@@ -257,7 +261,7 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_005fif_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fif_005f0.setParent(null);
-    // /WEB-INF/views/userpage.jsp(77,7) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/userpage.jsp(81,7) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fif_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${userrole=='ROLE_ADMIN'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
     int _jspx_eval_c_005fif_005f0 = _jspx_th_c_005fif_005f0.doStartTag();
     if (_jspx_eval_c_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {

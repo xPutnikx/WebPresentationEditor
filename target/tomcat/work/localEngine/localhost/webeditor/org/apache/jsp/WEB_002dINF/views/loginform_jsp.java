@@ -74,6 +74,11 @@ public final class loginform_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t/* 60px to make the container go all the way to the bottom of the topbar */\r\n");
       out.write("}\r\n");
       out.write("</style>\r\n");
+      out.write("<style>\r\n");
+      out.write("   a { \r\n");
+      out.write("    text-decoration: none;\r\n");
+      out.write("   } \r\n");
+      out.write("  </style>\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap-responsive.css\"\r\n");
       out.write("\trel=\"stylesheet\">\r\n");
       out.write("\r\n");
@@ -123,7 +128,7 @@ public final class loginform_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t</form>\r\n");
       out.write("\t\t\t\t<ul class=\"nav pull-right\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\r\n");
+      out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\">\r\n");
       out.write("             \t\t\t <i class=\"icon-user\"></i> Account\r\n");
       out.write("             \t\t\t <span class=\"caret\"></span>\r\n");
       out.write("           \t\t\t\t </a>\r\n");
@@ -140,7 +145,7 @@ public final class loginform_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
       out.write("\r\n");
-      out.write("\t<div class=\"container\">\r\n");
+      out.write("\t<div class=\"container\" style=\"margin-top: 20px;\">\r\n");
       out.write("\t\t<h3>Login Form</h3>\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -162,6 +167,7 @@ public final class loginform_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t</tr>\r\n");
       out.write("\t\t</form>\r\n");
       out.write("\t</div>\r\n");
+      out.write("\t\r\n");
       out.write("\t<!-- /container -->\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -204,7 +210,7 @@ public final class loginform_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f0 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_005furl_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005furl_005f0.setParent(null);
-    // /WEB-INF/views/loginform.jsp(92,25) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/loginform.jsp(97,25) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005furl_005f0.setValue("../j_spring_security_check");
     int _jspx_eval_c_005furl_005f0 = _jspx_th_c_005furl_005f0.doStartTag();
     if (_jspx_th_c_005furl_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {

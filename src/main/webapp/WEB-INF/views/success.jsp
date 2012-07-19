@@ -9,6 +9,11 @@
 
 <!-- Le styles -->
 <link href="resources/assets/css/bootstrap.css" rel="stylesheet">
+<style>
+   a { 
+    text-decoration: none;
+   } 
+  </style>
 <style type="text/css" media="screen">
 #item {
 	width: 100px;
@@ -80,7 +85,7 @@ body {
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" style="margin-top: 20px;">
 
 		<div id="item">
 			<ul>
@@ -295,6 +300,7 @@ body {
 
 
 	</div>
+	
 	<!-- /container -->
 
 

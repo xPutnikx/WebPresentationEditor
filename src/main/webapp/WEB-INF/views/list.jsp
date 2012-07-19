@@ -15,6 +15,11 @@ body {
 	/* 60px to make the container go all the way to the bottom of the topbar */
 }
 </style>
+<style>
+a {
+	text-decoration: none;
+}
+</style>
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
@@ -45,8 +50,8 @@ body {
 						<li><a href="about"> <i class="icon-white icon-book"></i>
 								About
 						</a></li>
-						<li><a href="contact"> <i
-								class="icon-white icon-pencil"></i> Contact
+						<li><a href="contact"> <i class="icon-white icon-pencil"></i>
+								Contact
 						</a></li>
 						<li><a href="listOfPresentations"> <i
 								class="icon-white icon-picture"></i> List of Presentations
@@ -60,14 +65,13 @@ body {
 				</form>
 				<ul class="nav pull-right">
 					<ul class="nav">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-							<i class="icon-user"></i> ${username} <span class="caret"></span>
+						<a class="btn dropdown-toggle" data-toggle="dropdown"> <i
+							class="icon-user"></i> ${username} <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
 							<li><a href="registrationform">Registration</a></li>
 							<li><a href="loginform">Login</a></li>
-							<li><a href="userpage"> <i class="icon-cog"></i>
-									Profile
+							<li><a href="userpage"> <i class="icon-cog"></i> Profile
 							</a></li>
 							<li><a href="../j_spring_security_logout"> <i
 									class="icon-off"></i> Logout
@@ -82,7 +86,7 @@ body {
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" style="margin-top: 20px;">
 		<h1>Listing People</h1>
 		<div id="content" style="padding: 30px">
 			<table class="table table-striped">
@@ -96,22 +100,22 @@ body {
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${people}" var="v_person" >
-				
-						<tr id="${v_person.name}">
+					<c:forEach items="${people}" var="v_person">
+
+						<tr id="tr${v_person.id}">
 							<td><span class="badge badge-info"><a
-									href="edit?id=${v_person.id}" style="color: #ffffff">${v_person.id}</a></span></td>
+									style="color: #ffffff">${v_person.id}</a></span></td>
 							<td>${v_person.name}</td>
-							
+
 							<td>${v_person.email}</td>
 							<td><c:if test="${v_person.enabled}">
 									<button class="btn btn-success" id=${v_person.id
 										}
-									 value=${v_person.enabled
+										value=${v_person.enabled
 										}
-									onclick="check(${v_person.id},${v_person.enabled})">
-									${v_person.enabled}</button></c:if>
-								<c:if test="${!v_person.enabled}">
+										onclick="check(${v_person.id},${v_person.enabled})">
+										${v_person.enabled}</button>
+								</c:if> <c:if test="${!v_person.enabled}">
 									<button class="btn btn-danger" id=${v_person.id
 										}
 										value=${v_person.enabled
@@ -119,23 +123,23 @@ body {
 										onclick="check(${v_person.id},${v_person.enabled})">
 										${v_person.enabled}</button>
 								</c:if></td>
-								
+
 							<td><select class="span2" id="span${v_person.id}"
 								onclick="change(${v_person.id})">
 									<option>User</option>
 									<option>Admin</option>
 							</select></td>
 							<td><button class="btn btn-danger" id="del${v_person.id}"
-									onclick="del(${v_person.id},${v_person.name})">
+									onclick="del(${v_person.id})">
 									<i class="icon-remove-sign"></i>
 								</button></td>
-								
+
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
 			<p>
-				<a class="btn" href="edit">Add / Edit Person →</a>
+				<a class="btn" href="edit">Add Person →</a>
 			</p>
 		</div>
 	</div>
@@ -156,5 +160,6 @@ body {
 	<script src="resources/deletelist.js"></script>
 	<script src="resources/checklist.js"></script>
 	<script src="resources/changelist.js"></script>
+	<script src="resources/jquery.ba-dotimeout.js"></script>
 </body>
 </html>

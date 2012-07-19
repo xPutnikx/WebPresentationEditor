@@ -23,12 +23,12 @@ import com.itransition.webeditor.model.Users;
 @Controller
 public class HomeController {
 	@Autowired
-	TagsDao tagsDao;
+	private TagsDao tagsDao;
 	private static final Logger logger = LoggerFactory
 			.getLogger(HomeController.class);
 	
 	@RequestMapping(value = "home", method = RequestMethod.GET)
-	public ModelAndView home(Model model) {
+	public ModelAndView home() {
 		ModelAndView mav = new ModelAndView();
 		logger.info("Welcome home!");
 		mav.addObject("controllerMessage",

@@ -10,8 +10,10 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.itransition.webeditor.core.PermessionDeniedException;
 import com.itransition.webeditor.model.Presentations;
 import com.itransition.webeditor.service.PresentationsService;
 import com.itransition.webeditor.service.UsersService;
@@ -22,7 +24,7 @@ public class ListOfPresentationsController {
 			.getLogger(ListOfPresentationsController.class);
 	@Autowired
 	private PresentationsService presentationService;
-	
+
 	@RequestMapping(value = "listOfPresentations", method = RequestMethod.GET)
 	public ModelAndView listPresentations() {
 		ModelAndView mav = new ModelAndView();
@@ -32,10 +34,6 @@ public class ListOfPresentationsController {
 		mav.addObject("controllerMessage",
 				"Presentations what create all users");
 		mav.addObject("titleMessage","Presentations database");
-//		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//		String name = user.getUsername();
-//		Long userId=usersService.getUserByName(name).getId();
-//		mav.addObject("id",userId);
 		mav.addObject("presentation", presentation);
 		mav.setViewName("listOfPresentations");
 		return mav;

@@ -13,6 +13,11 @@ body {
 	padding-top: 60px;
 }
 </style>
+<style>
+   a { 
+    text-decoration: none;
+   } 
+  </style>
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
@@ -56,7 +61,7 @@ body {
 			</form>
 			<ul class="nav pull-right">
 				<ul class="nav">
-					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+					<a class="btn dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-user"></i> ${name} <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
@@ -113,6 +118,7 @@ body {
 			</div>
 		</div>
 </div>
+
 <script src="resources/assets/js/jquery.js"></script>
 <script src="resources/assets/js/bootstrap-transition.js"></script>
 <script src="resources/assets/js/bootstrap-alert.js"></script>

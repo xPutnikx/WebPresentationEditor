@@ -13,6 +13,11 @@ body {
 	/* 60px to make the container go all the way to the bottom of the topbar */
 }
 </style>
+<style>
+   a { 
+    text-decoration: none;
+   } 
+  </style>
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
@@ -57,7 +62,7 @@ body {
 				</form>
 				<ul class="nav pull-right">
 					<ul class="nav">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<a class="btn dropdown-toggle" data-toggle="dropdown" >
 							<i class="icon-user"></i> Account <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
@@ -76,10 +81,11 @@ body {
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container" style="margin-top: 20px;">
 		<h1>${contactTitleMessage}</h1>
 		<p>${controllerMessage}</p>
 	</div>
+	
 	<script src="resources/assets/js/jquery.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>

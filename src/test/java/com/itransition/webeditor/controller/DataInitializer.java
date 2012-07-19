@@ -14,7 +14,7 @@ import java.util.List;
 @Scope("prototype")
 public class DataInitializer {
 
-	public static final int PERSON_COUNT = 3;
+	public static final int PERSON_COUNT = 7;
 
 	@PersistenceContext
 	private EntityManager entityManager;
@@ -23,20 +23,23 @@ public class DataInitializer {
 
 	public void initData() {
 		people.clear();// clear out the previous list of people
-		addPerson("Jim", "Smith");
-		addPerson("Tina", "Marsh");
-		addPerson("Steve", "Blair");
+		addPerson("Jim", "xputnikx@mail","41223",true);
+		addPerson("Tina", "xputnikx@mail","1111",true);
+		addPerson("Steve", "xputnikx@mail","34342",true);
 		entityManager.flush();
 		entityManager.clear();
 	}
 
-	public void addPerson(String name, String lastName) {
+	public void addPerson(String name, String email, String password,boolean enabled) {
 		Users p = new Users();
 		p.setName(name);
+		p.setEmail(email);
+		p.setPassword(password);
+		p.setEnabled(enabled);
 		entityManager.persist(p);
 		people.add(p.getId());
 	}
-	
+
 	public EntityManager getEntityManager() {
 		return entityManager;
 	}

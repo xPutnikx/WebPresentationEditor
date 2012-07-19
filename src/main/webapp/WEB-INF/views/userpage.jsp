@@ -13,9 +13,13 @@
 <style>
 body {
 	padding-top: 60px;
-	/* 60px to make the container go all the way to the bottom of the topbar */
 }
 </style>
+<style>
+   a { 
+    text-decoration: none;
+   } 
+  </style>
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
@@ -62,7 +66,7 @@ body {
 				</form>
 				<ul class="nav pull-right">
 					<ul class="nav">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<a class="btn dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-user"></i> ${username} <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
@@ -90,7 +94,7 @@ body {
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" style="margin-top: 20px;">
 
 
 		<h1>Welcome ${username}</h1>
@@ -100,23 +104,23 @@ body {
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#accordion2" href="#collapseOne"> Information </a>
+						data-parent="#accordion2" href="#collapseOne" style="color:white;"> Information </a>
 				</div>
 				<div id="collapseOne" class="accordion-body in collapse"
 					style="height: auto;">
-					<div class="accordion-inner">
-						<p>Nickname : ${username}</p>
-						<p>Role : ${userrole}</p>
+					<div class="well" id="">
+						<p style="color: black;">Nickname : ${username}</p>
+						<p style="color: black;">Role : ${userrole}</p>
 					</div>
 				</div>
 			</div>
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#accordion2" href="#collapseTwo"> Storage </a>
+						data-parent="#accordion2" href="#collapseTwo" style="color:white;"> Storage </a>
 				</div>
 				<div id="collapseTwo" class="accordion-body collapse"
-					style="height: 0px;">
+					style="height: 0px;" >
 					<div class="accordion-inner"></div>
 					<div class="well" id="">
 					<a href="mypresentations" class="btn btn-danger" rel="popover"
@@ -128,7 +132,7 @@ body {
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#accordion2" href="#collapseThree"> Change
+						data-parent="#accordion2" href="#collapseThree" style="color:white;"> Change
 						Password </a>
 				</div>
 

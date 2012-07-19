@@ -20,7 +20,7 @@ public class AboutController {
 	public String home(Model model) {
 		logger.info("About");
 		model.addAttribute("controllerMessage",
-				" This cool web editor with black jack and whores");
+				"This cool web editor with black jack and whores");
 		return "about";
 	}
 }

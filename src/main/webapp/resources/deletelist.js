@@ -1,9 +1,12 @@
-function del(id,name){
+function del(id){
 		var delet={json:id};
-		 $.ajax({
-	    	    type: 'POST',
-	        	url: "listdelete", 
-	        	data: delet,
-	        	dataType: "json"
-	            });
+		$("#tr"+id).fadeOut('slow')
+		 $.doTimeout(500, function(){
+			 $.ajax({
+		    	    type: 'POST',
+		        	url: "listdelete", 
+		        	data: delet,
+		        	dataType: "json"
+		            });
+        	});
 	}

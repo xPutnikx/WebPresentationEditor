@@ -69,6 +69,11 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("\tpadding-top: 60px;\r\n");
       out.write("}\r\n");
       out.write("</style>\r\n");
+      out.write("<style>\r\n");
+      out.write("   a { \r\n");
+      out.write("    text-decoration: none;\r\n");
+      out.write("   } \r\n");
+      out.write("  </style>\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap-responsive.css\"\r\n");
       out.write("\trel=\"stylesheet\">\r\n");
       out.write("<link rel=\"shortcut icon\" href=\"resources/assets/ico/favicon.ico\">\r\n");
@@ -114,7 +119,7 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
       out.write("\t\t\t\t</form>\r\n");
       out.write("\t\t\t\t<ul class=\"nav pull-right\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\r\n");
+      out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\">\r\n");
       out.write("\t\t\t\t\t\t\t<i class=\"icon-user\"></i>Account<span class=\"caret\"></span>\r\n");
       out.write("\t\t\t\t\t\t</a>\r\n");
       out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
@@ -204,9 +209,9 @@ public final class listOfPresentations_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /WEB-INF/views/listOfPresentations.jsp(100,7) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/listOfPresentations.jsp(105,7) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${presentation}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/views/listOfPresentations.jsp(100,7) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/listOfPresentations.jsp(105,7) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("v_present");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {

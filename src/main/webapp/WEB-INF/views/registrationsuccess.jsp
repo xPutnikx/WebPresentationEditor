@@ -18,6 +18,11 @@ body {
 	/* 60px to make the container go all the way to the bottom of the topbar */
 }
 </style>
+<style>
+   a { 
+    text-decoration: none;
+   } 
+  </style>
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 
@@ -42,7 +47,7 @@ body {
 
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
-			<div class="container">
+			<div class="container" style="margin-top: 20px;">
 				<a class="btn btn-navbar" data-toggle="collapse"
 					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
 					class="icon-bar"></span> <span class="icon-bar"></span>
@@ -67,7 +72,7 @@ body {
 				</form>
 				<ul class="nav pull-right">
 					<ul class="nav">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<a class="btn dropdown-toggle" data-toggle="dropdown">
              			 <i class="icon-user"></i> Account
              			 <span class="caret"></span>
            				 </a>
@@ -90,6 +95,7 @@ body {
 			your e-mail</h3>
 		<li><a href="success">Success!</a></li>
 	</div>
+	
 	<script src="resources/assets/js/jquery.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>
