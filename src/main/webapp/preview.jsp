@@ -64,23 +64,28 @@ html,body,.editor {
 		};
     	</script>
 
-<script type="text/javascript" data-main="scripts/main"
+<script type="text/javascript" data-main="scripts/mainpreview"
 	src="scripts/require.js"></script>
 <script type="text/javascript" src="preview_export/scripts/impress.js"></script>
+<script src="resources/jquery.ba-dotimeout.js"></script>
 <script>$(document).ready(function (){
 	      var getId=window.location.href.split("=")[1];
 	      var Ide={json:getId};
 	        $.ajax({
         	    type: 'POST',
-	        	    url: "/webeditor/social/jsons/", 
+	        	    url: "/webeditor/social/jsons", 
 	        	    data: Ide,
 	        	    dataType: "json",
 	        	    success: function(data){
 	        	    	localStorage.setItem("open",JSON.stringify(data));
+	        	    	$.doTimeout(1500, function(){
+	        	    		$("#present").click();
+	        	        	});
+	        	    	
 	          		}
 	            });
 });</script>
 </head>
-<body onload=$("#present").click();>
+<body>
 </body>
 </html>

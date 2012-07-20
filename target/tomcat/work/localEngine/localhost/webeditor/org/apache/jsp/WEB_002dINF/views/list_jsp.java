@@ -66,12 +66,14 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<meta name=\"description\" content=\"\">\r\n");
       out.write("<meta name=\"author\" content=\"by Putnik\">\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap.css\" rel=\"stylesheet\">\r\n");
+      out.write("<link rel=\"stylesheet\" href=\"../res/css/jquery.ui.all.css\">\r\n");
       out.write("<style>\r\n");
       out.write("body {\r\n");
       out.write("\tpadding-top: 60px;\r\n");
       out.write("\t/* 60px to make the container go all the way to the bottom of the topbar */\r\n");
       out.write("}\r\n");
       out.write("</style>\r\n");
+      out.write("\r\n");
       out.write("<style>\r\n");
       out.write("a {\r\n");
       out.write("\ttext-decoration: none;\r\n");
@@ -88,6 +90,7 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\thref=\"resources/assets/ico/apple-touch-icon-72-precomposed.png\">\r\n");
       out.write("<link rel=\"apple-touch-icon-precomposed\"\r\n");
       out.write("\thref=\"resources/assets/ico/apple-touch-icon-57-precomposed.png\">\r\n");
+      out.write("<link rel=\"stylesheet\" href=\"../res/css/jquery.ui.all.css\">\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
       out.write("\t<div class=\"navbar navbar-fixed-top\">\r\n");
@@ -158,7 +161,7 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t<th>User Role</th>\r\n");
       out.write("\t\t\t\t\t</tr>\r\n");
       out.write("\t\t\t\t</thead>\r\n");
-      out.write("\t\t\t\t<tbody>\r\n");
+      out.write("\t\t\t\t<tbody id=\"tbody\">\r\n");
       out.write("\t\t\t\t\t");
       if (_jspx_meth_c_005fforEach_005f0(_jspx_page_context))
         return;
@@ -166,12 +169,72 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t</tbody>\r\n");
       out.write("\t\t\t</table>\r\n");
       out.write("\t\t\t<p>\r\n");
-      out.write("\t\t\t\t<a class=\"btn\" href=\"edit\">Add Person â</a>\r\n");
+      out.write("\t\t\t\t<a class=\"btn\" id=\"edit\">Add Person â</a>\r\n");
       out.write("\t\t\t</p>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\t</div>\r\n");
+      out.write("\t<div\r\n");
+      out.write("\t\tstyle=\"display: none; z-index: 1002; outline: 0px; position: absolute; height: auto; width: 350px; top: 217px; left: 660px;\"\r\n");
+      out.write("\t\tclass=\"ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable\"\r\n");
+      out.write("\t\ttabindex=\"-1\" role=\"dialog\"\r\n");
+      out.write("\t\taria-labelledby=\"ui-dialog-title-dialog-form\">\r\n");
+      out.write("\t\t<div\r\n");
+      out.write("\t\t\tclass=\"ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix\">\r\n");
+      out.write("\t\t\t<span class=\"ui-dialog-title\" id=\"ui-dialog-title-dialog-form\"> Create\r\n");
+      out.write("\t\t\t\tnew user</span><a href=\"#\" class=\"ui-dialog-titlebar-close ui-corner-all\"\r\n");
+      out.write("\t\t\t\trole=\"button\"><span class=\"ui-icon ui-icon-closethick\">close</span></a>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\t\t<div id=\"dialog-form\"\r\n");
+      out.write("\t\t\tstyle=\"width: auto; min-height: 0px; height: 216px;\"\r\n");
+      out.write("\t\t\tclass=\"ui-dialog-content ui-widget-content\" scrolltop=\"0\"\r\n");
+      out.write("\t\t\tscrollleft=\"0\">\r\n");
+      out.write("\t\t\t<p class=\"validateTips\" style=\"color:transpanent\"></p>\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t<form>\r\n");
+      out.write("\t\t\t\t<fieldset>\r\n");
+      out.write("\t\t\t\t\t<label for=\"name\">Name</label> <input type=\"text\" name=\"name\"\r\n");
+      out.write("\t\t\t\t\t\tid=\"name\" class=\"text ui-widget-content ui-corner-all\"> <label\r\n");
+      out.write("\t\t\t\t\t\tfor=\"email\">Email</label> <input type=\"text\" name=\"email\"\r\n");
+      out.write("\t\t\t\t\t\tid=\"email\" value=\"\" class=\"text ui-widget-content ui-corner-all\">\r\n");
+      out.write("\t\t\t\t\t<label for=\"password\">Password</label> <input type=\"password\"\r\n");
+      out.write("\t\t\t\t\t\tname=\"password\" id=\"password\" value=\"\"\r\n");
+      out.write("\t\t\t\t\t\tclass=\"text ui-widget-content ui-corner-all\">\r\n");
+      out.write("\t\t\t\t</fieldset>\r\n");
+      out.write("\t\t\t</form>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\t\t<div class=\"ui-resizable-handle ui-resizable-n\" style=\"z-index: 1000;\"></div>\r\n");
+      out.write("\t\t<div class=\"ui-resizable-handle ui-resizable-e\" style=\"z-index: 1000;\"></div>\r\n");
+      out.write("\t\t<div class=\"ui-resizable-handle ui-resizable-s\" style=\"z-index: 1000;\"></div>\r\n");
+      out.write("\t\t<div class=\"ui-resizable-handle ui-resizable-w\" style=\"z-index: 1000;\"></div>\r\n");
+      out.write("\t\t<div\r\n");
+      out.write("\t\t\tclass=\"ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se\"\r\n");
+      out.write("\t\t\tstyle=\"z-index: 1000;\"></div>\r\n");
+      out.write("\t\t<div class=\"ui-resizable-handle ui-resizable-sw\"\r\n");
+      out.write("\t\t\tstyle=\"z-index: 1000;\"></div>\r\n");
+      out.write("\t\t<div class=\"ui-resizable-handle ui-resizable-ne\"\r\n");
+      out.write("\t\t\tstyle=\"z-index: 1000;\"></div>\r\n");
+      out.write("\t\t<div class=\"ui-resizable-handle ui-resizable-nw\"\r\n");
+      out.write("\t\t\tstyle=\"z-index: 1000;\"></div>\r\n");
+      out.write("\t\t<div class=\"ui-dialog-buttonpane ui-widget-content ui-helper-clearfix\">\r\n");
+      out.write("\t\t\t<div class=\"ui-dialog-buttonset\">\r\n");
+      out.write("\t\t\t\t<button type=\"button\"\r\n");
+      out.write("\t\t\t\t\tclass=\"ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only\"\r\n");
+      out.write("\t\t\t\t\trole=\"button\" aria-disabled=\"false\">\r\n");
+      out.write("\t\t\t\t\t<span class=\"ui-button-text\">Create an account</span>\r\n");
+      out.write("\t\t\t\t</button>\r\n");
+      out.write("\t\t\t\t<button type=\"button\"\r\n");
+      out.write("\t\t\t\t\tclass=\"ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only\"\r\n");
+      out.write("\t\t\t\t\trole=\"button\" aria-disabled=\"false\">\r\n");
+      out.write("\t\t\t\t\t<span class=\"ui-button-text\">Cancel</span>\r\n");
+      out.write("\t\t\t\t</button>\r\n");
+      out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
       out.write("\r\n");
       out.write("\t<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery-ui-1.8.21.custom.min.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/createuserdialog.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery-ui-1.8.21.custom.min.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-transition.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-alert.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-modal.js\"></script>\r\n");
@@ -188,6 +251,15 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<script src=\"resources/checklist.js\"></script>\r\n");
       out.write("\t<script src=\"resources/changelist.js\"></script>\r\n");
       out.write("\t<script src=\"resources/jquery.ba-dotimeout.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery.ui.core.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery.ui.widget.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery.ui.mouse.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery.ui/jquery.ui.button.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery.ui/jquery.ui.draggable.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery.ui/jquery.ui.position.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery.ui/jquery.ui.resizable.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery.ui/jquery.ui.dialog.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/jquery.ui/jquery.effects.core.js\"></script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");
     } catch (Throwable t) {
@@ -210,9 +282,9 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /WEB-INF/views/list.jsp(103,5) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/list.jsp(106,5) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${people}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/views/list.jsp(103,5) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/list.jsp(106,5) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("v_person");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
@@ -290,7 +362,7 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_005fif_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fif_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /WEB-INF/views/list.jsp(111,11) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/list.jsp(114,11) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fif_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${v_person.enabled}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
     int _jspx_eval_c_005fif_005f0 = _jspx_th_c_005fif_005f0.doStartTag();
     if (_jspx_eval_c_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -332,7 +404,7 @@ public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_005fif_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fif_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /WEB-INF/views/list.jsp(118,16) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/list.jsp(121,16) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fif_005f1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${!v_person.enabled}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
     int _jspx_eval_c_005fif_005f1 = _jspx_th_c_005fif_005f1.doStartTag();
     if (_jspx_eval_c_005fif_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {

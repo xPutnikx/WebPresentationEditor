@@ -9,12 +9,14 @@
 <meta name="description" content="">
 <meta name="author" content="by Putnik">
 <link href="resources/assets/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="../res/css/jquery.ui.all.css">
 <style>
 body {
 	padding-top: 60px;
 	/* 60px to make the container go all the way to the bottom of the topbar */
 }
 </style>
+
 <style>
 a {
 	text-decoration: none;
@@ -31,6 +33,7 @@ a {
 	href="resources/assets/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="resources/assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="stylesheet" href="../res/css/jquery.ui.all.css">
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
@@ -99,7 +102,7 @@ a {
 						<th>User Role</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="tbody">
 					<c:forEach items="${people}" var="v_person">
 
 						<tr id="tr${v_person.id}">
@@ -139,12 +142,72 @@ a {
 				</tbody>
 			</table>
 			<p>
-				<a class="btn" href="edit">Add Person →</a>
+				<a class="btn" id="edit">Add Person →</a>
 			</p>
+		</div>
+	</div>
+	<div
+		style="display: none; z-index: 1002; outline: 0px; position: absolute; height: auto; width: 350px; top: 217px; left: 660px;"
+		class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable"
+		tabindex="-1" role="dialog"
+		aria-labelledby="ui-dialog-title-dialog-form">
+		<div
+			class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+			<span class="ui-dialog-title" id="ui-dialog-title-dialog-form"> Create
+				new user</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all"
+				role="button"><span class="ui-icon ui-icon-closethick">close</span></a>
+		</div>
+		<div id="dialog-form"
+			style="width: auto; min-height: 0px; height: 216px;"
+			class="ui-dialog-content ui-widget-content" scrolltop="0"
+			scrollleft="0">
+			<p class="validateTips" style="color:transpanent"></p>
+
+			<form>
+				<fieldset>
+					<label for="name">Name</label> <input type="text" name="name"
+						id="name" class="text ui-widget-content ui-corner-all"> <label
+						for="email">Email</label> <input type="text" name="email"
+						id="email" value="" class="text ui-widget-content ui-corner-all">
+					<label for="password">Password</label> <input type="password"
+						name="password" id="password" value=""
+						class="text ui-widget-content ui-corner-all">
+				</fieldset>
+			</form>
+		</div>
+		<div class="ui-resizable-handle ui-resizable-n" style="z-index: 1000;"></div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000;"></div>
+		<div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000;"></div>
+		<div class="ui-resizable-handle ui-resizable-w" style="z-index: 1000;"></div>
+		<div
+			class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se"
+			style="z-index: 1000;"></div>
+		<div class="ui-resizable-handle ui-resizable-sw"
+			style="z-index: 1000;"></div>
+		<div class="ui-resizable-handle ui-resizable-ne"
+			style="z-index: 1000;"></div>
+		<div class="ui-resizable-handle ui-resizable-nw"
+			style="z-index: 1000;"></div>
+		<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+			<div class="ui-dialog-buttonset">
+				<button type="button"
+					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+					role="button" aria-disabled="false">
+					<span class="ui-button-text">Create an account</span>
+				</button>
+				<button type="button"
+					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+					role="button" aria-disabled="false">
+					<span class="ui-button-text">Cancel</span>
+				</button>
+			</div>
 		</div>
 	</div>
 
 	<script src="resources/assets/js/jquery.js"></script>
+	<script src="resources/jquery-ui-1.8.21.custom.min.js"></script>
+	<script src="resources/createuserdialog.js"></script>
+	<script src="resources/jquery-ui-1.8.21.custom.min.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>
 	<script src="resources/assets/js/bootstrap-modal.js"></script>
@@ -161,5 +224,14 @@ a {
 	<script src="resources/checklist.js"></script>
 	<script src="resources/changelist.js"></script>
 	<script src="resources/jquery.ba-dotimeout.js"></script>
+	<script src="resources/jquery.ui.core.js"></script>
+	<script src="resources/jquery.ui.widget.js"></script>
+	<script src="resources/jquery.ui.mouse.js"></script>
+	<script src="resources/jquery.ui/jquery.ui.button.js"></script>
+	<script src="resources/jquery.ui/jquery.ui.draggable.js"></script>
+	<script src="resources/jquery.ui/jquery.ui.position.js"></script>
+	<script src="resources/jquery.ui/jquery.ui.resizable.js"></script>
+	<script src="resources/jquery.ui/jquery.ui.dialog.js"></script>
+	<script src="resources/jquery.ui/jquery.effects.core.js"></script>
 </body>
 </html>

@@ -52,15 +52,6 @@ a {
 					<li><a href="listOfPresentations"> <i
 							class="icon-white icon-picture"></i> List of Presentations
 					</a></li>
-					<li><a class="btn dropdown-toggle " data-toggle="dropdown" data-option="shapes" style="background-color:rgba(142, 241, 35, 0.73)">
-					<i class="icon-star"></i>Shapes <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a onclick="rectangle()">Rectangle</a></li>
-						<li><a onclick="elipse()">Elipse</a></li>
-						<li><a onclick="poligon()">Poligon</a></li>
-						<li><a onclick="line()">Line</a></li>
-					</ul>
-					</li>
 			</ul>
 		</div>
 		<form class="navbar-search pull-left" action="">
@@ -95,9 +86,6 @@ a {
 	<p>${controllerMessage}</p>
 </div>
 
-<canvas id='draw'></canvas>
-<script src="resources/processing.js"></script>
-<script src="resources/processing-api.js"></script>
 <script src="resources/assets/js/jquery.js"></script>
 <script src="resources/assets/js/bootstrap-transition.js"></script>
 <script src="resources/assets/js/bootstrap-alert.js"></script>
@@ -111,38 +99,5 @@ a {
 <script src="resources/assets/js/bootstrap-collapse.js"></script>
 <script src="resources/assets/js/bootstrap-carousel.js"></script>
 <script src="resources/assets/js/bootstrap-typeahead.js"></script>
-<script type='text/javascript'>
-function rectangle(){
-var canvas=document.getElementById("draw")
-var x=canvas.getContext("2d");
-x.strokeRect(getRandomArbitary(70, 200),getRandomArbitary(50, 100),getRandomArbitary(40, 70),getRandomArbitary(40, 70));}
-function elipse(){
-	var canvas=document.getElementById("draw")
-	var x=canvas.getContext("2d");
-	x.beginPath();
-	x.arc(event.clientY,event.clientX,50,0,Math.PI*2,true);
-	x.stroke();
-}
-</script>
-<script type='text/javascript'>
-function poligon(){
-	var canvas=document.getElementById("draw")
-	var x=canvas.getContext("2d");
-x.beginPath();
-x.moveTo(75,25);
-x.quadraticCurveTo(25,25,25,62.5);
-x.quadraticCurveTo(25,100,50,100);
-x.quadraticCurveTo(50,120,30,125);
-x.quadraticCurveTo(60,120,65,100);
-x.quadraticCurveTo(125,100,125,62.5);
-x.quadraticCurveTo(125,25,75,25);
-x.stroke();}
-</script>
-<script type="text/javascript">
-function getRandomArbitary(min, max)
-{
-  return Math.random() * (max - min) + min;
-}
-</script>
 </body>
 </html>

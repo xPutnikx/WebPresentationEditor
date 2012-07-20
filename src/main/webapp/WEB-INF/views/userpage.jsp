@@ -16,10 +16,11 @@ body {
 }
 </style>
 <style>
-   a { 
-    text-decoration: none;
-   } 
-  </style>
+a {
+	text-decoration: none;
+}
+</style>
+<link rel="stylesheet" href="../res/css/jquery.ui.all.css">
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
@@ -50,8 +51,8 @@ body {
 						<li><a href="about"> <i class="icon-white icon-book"></i>
 								About
 						</a></li>
-						<li><a href="contact"> <i
-								class="icon-white icon-pencil"></i> Contact
+						<li><a href="contact"> <i class="icon-white icon-pencil"></i>
+								Contact
 						</a></li>
 						<li><a href="listOfPresentations"> <i
 								class="icon-white icon-picture"></i> List of Presentations
@@ -61,19 +62,18 @@ body {
 				<!--/.nav-collapse -->
 				<form class="navbar-search pull-left" action="">
 					<i class="icon-white icon-search"></i><input id="searchbox"
-					   type="text" data-provide="typeahead"
-						class="search-query span2" placeholder="Search">
+						type="text" data-provide="typeahead" class="search-query span2"
+						placeholder="Search">
 				</form>
 				<ul class="nav pull-right">
 					<ul class="nav">
-						<a class="btn dropdown-toggle" data-toggle="dropdown">
-							<i class="icon-user"></i> ${username} <span class="caret"></span>
+						<a class="btn dropdown-toggle" data-toggle="dropdown"> <i
+							class="icon-user"></i> ${username} <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
 							<li><a href="registrationform">Registration</a></li>
 							<li><a href="loginform">Login</a></li>
-							<li><a href="userpage"> <i class="icon-cog"></i>
-									Profile
+							<li><a href="userpage"> <i class="icon-cog"></i> Profile
 							</a></li>
 							<li><a href="../j_spring_security_logout"> <i
 									class="icon-off"></i> Logout
@@ -100,56 +100,61 @@ body {
 		<h1>Welcome ${username}</h1>
 		<p></p>
 		<p></p>
-		<div class="accordion" id="accordion2">
-			<div class="accordion-group">
-				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#accordion2" href="#collapseOne" style="color:white;"> Information </a>
-				</div>
-				<div id="collapseOne" class="accordion-body in collapse"
-					style="height: auto;">
-					<div class="well" id="">
-						<p style="color: black;">Nickname : ${username}</p>
-						<p style="color: black;">Role : ${userrole}</p>
-					</div>
-				</div>
-			</div>
-			<div class="accordion-group">
-				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#accordion2" href="#collapseTwo" style="color:white;"> Storage </a>
-				</div>
-				<div id="collapseTwo" class="accordion-body collapse"
-					style="height: 0px;" >
-					<div class="accordion-inner"></div>
-					<div class="well" id="">
-					<a href="mypresentations" class="btn btn-danger" rel="popover"
-							data-content="And here's some amazing content. It's very engaging. right?"
-							data-original-title="A Title">Go to storage</a>
-							</div>
-				</div>
-			</div>
-			<div class="accordion-group">
-				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#accordion2" href="#collapseThree" style="color:white;"> Change
-						Password </a>
-				</div>
+		<div class="demo">
 
-				<div id="collapseThree" class="accordion-body collapse"
-					style="height: 0px;">
-					<div class="well" id="">
-						<a href="changepassword" class="btn btn-danger" rel="popover"
-							data-content="And here's some amazing content. It's very engaging. right?"
-							data-original-title="A Title">Accept</a>
-					</div>
+			<div id="accordion"
+				class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons"
+				role="tablist">
+				<h3
+					class="ui-accordion-header ui-helper-reset ui-state-active ui-corner-top"
+					role="tab" aria-expanded="true" aria-selected="true" tabindex="0">
+					<span class="ui-icon ui-icon-triangle-1-s"></span><a href="#">Information</a>
+				</h3>
+				<div
+					class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"
+					style="height: 103px; display: block; overflow: auto; padding-top: 11px; padding-bottom: 11px; color: transpanent;"
+					role="tabpanel">
+
+					<p style="color: white;">Nickname : ${username}</p>
+					<p style="color: white;">Role : ${userrole}</p>
+				</div>
+				<h3
+					class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
+					role="tab" aria-expanded="false" aria-selected="false"
+					tabindex="-1">
+					<span class="ui-icon ui-icon-triangle-1-e"></span><a href="#">Storage</a>
+				</h3>
+				<div
+					class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
+					style="height: 103px; overflow: auto; display: none; padding-top: 11px; padding-bottom: 11px; color: transpanent;"
+					role="tabpanel">
+					<a href="mypresentations" class="btn btn-danger" rel="popover"
+						data-content="And here's some amazing content. It's very engaging. right?"
+						data-original-title="A Title">Go to storage</a>
+				</div>
+				<h3
+					class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
+					role="tab" aria-expanded="false" aria-selected="false"
+					tabindex="-1">
+					<span class="ui-icon ui-icon-triangle-1-e"></span><a href="#">Change
+						Password</a>
+				</h3>
+				<div
+					class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
+					style="height: 103px; overflow: auto; display: none; padding-top: 11px; padding-bottom: 11px; color: transpanent;"
+					role="tabpanel">
+					<a href="changepassword" class="btn btn-danger" rel="popover"
+						data-content="And here's some amazing content. It's very engaging. right?"
+						data-original-title="A Title">Accept</a>
 				</div>
 			</div>
+
 		</div>
 
 
 	</div>
 	<script src="resources/assets/js/jquery.js"></script>
+	<script src="resources/jquery-ui-1.8.21.custom.min.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>
 	<script src="resources/assets/js/bootstrap-modal.js"></script>
@@ -161,7 +166,14 @@ body {
 	<script src="resources/assets/js/bootstrap-button.js"></script>
 	<script src="resources/assets/js/bootstrap-collapse.js"></script>
 	<script src="resources/assets/js/bootstrap-carousel.js"></script>
-	<script src="resources/assets/js/bootstrap-typeahead.js">
-	
+	<script src="resources/assets/js/bootstrap-typeahead.js"></script>
+	<script>
+	$(function() {
+		$( "#accordion" ).accordion({
+			event: "mouseover"
+		});
+	});
+	</script>
+
 </body>
 </html>

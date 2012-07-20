@@ -3,7 +3,6 @@ package com.itransition.webeditor.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
@@ -11,13 +10,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.NestedServletException;
-
 import com.itransition.webeditor.core.PermessionDeniedException;
-import com.itransition.webeditor.dao.UsersDao;
-import com.itransition.webeditor.model.UserRoles;
 import com.itransition.webeditor.model.Users;
 import com.itransition.webeditor.service.UsersService;
 
@@ -49,7 +44,12 @@ public class PersonController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "edit")
-	public String savePerson(@ModelAttribute Users users) throws NestedServletException {
+	public String savePerson(@RequestParam ("name") String name,@RequestParam ("email") String email,@RequestParam ("password") String password) throws NestedServletException {
+		Users users=new Users();
+		users.setEmail(email);
+		users.setName(name);
+		users.setPassword(password);
+		users.setEnabled(true);
 		logger.debug("Received postback on person " + users);
 		usersService.save(users);
 		usersService.registerById(users.getId());

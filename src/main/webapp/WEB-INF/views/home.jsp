@@ -16,16 +16,16 @@ body {
 }
 </style>
 <style>
-   a { 
-    text-decoration: none;
-   } 
-  </style>
+a {
+	text-decoration: none;
+}
+</style>
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144"
 	href="resources/assets/ico/apple-touch-icon-144-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144"
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
 	href="resources/assets/img/3616589.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114"
 	href="resources/assets/ico/apple-touch-icon-114-precomposed.png">
@@ -40,26 +40,26 @@ body {
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				 <a class="btn btn-navbar" data-toggle="collapse"
+				<a class="btn btn-navbar" data-toggle="collapse"
 					data-target=".nav-collapse" style="color: rgb(218, 173, 30);">
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
-				</a> <a class="brand" href="../editor.html"> <i
+				</a> <a class="brand" href="../editor.html" id="webeditor"> <i
 					class="icon-white icon-edit"></i> Web Editor
 				</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li class="active"><a href="#"> <i
+						<li class="active"><a href="#" id="home"> <i
 								class="icon-white icon-home"></i> Home
 						</a></li>
 						<li><a href="about" id="about"> <i
 								class="icon-white icon-book"></i> About
 						</a></li>
-						<li><a href="contact"> <i class="icon-white icon-pencil"></i>
-								Contact
+						<li><a href="contact" id="contact"> <i
+								class="icon-white icon-pencil"></i> Contact
 						</a></li>
-						<li><a href="listOfPresentations"> <i
-								class="icon-white icon-picture"></i> List of Presentations
+						<li><a href="listOfPresentations" id="listofpresentations">
+								<i class="icon-white icon-picture"></i> List of Presentations
 						</a></li>
 
 					</ul>
@@ -70,7 +70,7 @@ body {
 				</form>
 				<ul class="nav pull-right">
 					<ul class="nav">
-						<a class="btn dropdown-toggle" data-toggle="dropdown">
+						<a class="btn dropdown-toggle" data-toggle="dropdown" id="account">
 							<i class="icon-user"></i> Account <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
@@ -91,11 +91,6 @@ body {
 	</div>
 
 	<div class="container" style="margin-top: 20px;">
-
-		<h1>
-			${controllerMessage}<br />
-		</h1>
-
 		<div id="item">
 			${tagCloud}
 			<c:forEach items="${tags}" var="tag">
@@ -107,6 +102,7 @@ body {
 	</div>
 
 	<script src="resources/assets/js/jquery.js"></script>
+	<script src="resources/local/local.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>
 	<script src="resources/assets/js/bootstrap-modal.js"></script>
@@ -125,18 +121,16 @@ body {
 	<script src="resources/sphere/Sphere.js" type="text/javascript"
 		charset="utf-8"></script>
 	<script type="text/javascript">
-		//         
-
 		$(document).ready(function() {
 
 			var camera = new Camera3D();
-			camera.init(0, 0, 0, 250);
+			camera.init(0, 0, 0, 150);
 
 			var container = $("#item")
 
 			var item = new Object3D(container);
 
-			item.addChild(new Sphere(200, 10, 100));
+			item.addChild(new Sphere(100, 10, 100));
 
 			var scene = new Scene3D();
 			scene.addToScene(item);
@@ -166,7 +160,6 @@ body {
 			setInterval(animateIt, 20);
 
 		});
-		//
 	</script>
 </body>
 </html>

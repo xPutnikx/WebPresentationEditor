@@ -83,8 +83,6 @@ body {
 	<div class="container">
 
 		<h1>Editing Person </h1>
-		<p><div class="alert alert-info" style="color:#061AF8">${users.name}
-			${users.email}</div></p>
 		<form:form commandName="users" style="padding:8px">
 			<div class="well" style="color:black">
 				User Name<br />

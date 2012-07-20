@@ -2,11 +2,9 @@ package com.itransition.webeditor.controller;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
-
 import javax.mail.MessagingException;
 import javax.persistence.PersistenceException;
 import javax.validation.Valid;
-
 import org.hibernate.exception.ConstraintViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +16,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.util.NestedServletException;
-
 import com.itransition.webeditor.core.ConfirmKey;
 import com.itransition.webeditor.core.MailSender;
 import com.itransition.webeditor.dao.UsersDao;
@@ -83,7 +80,7 @@ public class RegistrationController {
 			String password = users.getPassword();
 			String email = users.getEmail();
 			String key = ConfirmKey.generate(user, password);
-			String link = "http://localhost:8080/webeditor/spring/confirm?id="
+			String link = "http://localhost:8080/webeditor/social/confirm?id="
 					+ +id + "&key=" + key;
 			String message = "Hello " + user + "! " + link;
 			MailSender mailSender = new MailSender(email, message);

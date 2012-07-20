@@ -16,10 +16,24 @@ function sub(){
 			window.location.replace("userpage");
 		}
 		else{
-			alert ("New Password and Confirm Password Not match.");
+			errordialog();
+			$( "#dialog" ).text("Password and Confirm Password Not match.")
+			$( "#dialog" ).dialog( "open" );
 		}
 	}
 	else{
-		alert ("Entered passwords do not match!");
+		errordialog();
+		$( "#dialog" ).text(" The Current Password is not Correct.")
+		$( "#dialog" ).dialog( "open" );
 	}
 }
+function errordialog() {
+	
+	$.fx.speeds._default = 1000;
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "explode"
+		});
+	
+};

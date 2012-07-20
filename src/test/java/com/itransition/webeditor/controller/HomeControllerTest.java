@@ -49,8 +49,6 @@ public class HomeControllerTest {
 		assertNotNull(mav);
 		assertEquals("home", mav.getViewName());
 		assertNotNull(tags);		
-		assertEquals(TagsInitializer.TAG_COUNT,tags.size());	
-		Object message = mav.getModel().get("controllerMessage");
-		Assert.assertEquals("Home page",message);
+		assertEquals(TagsInitializer.TAG_COUNT,tags.size());
 	}
 }

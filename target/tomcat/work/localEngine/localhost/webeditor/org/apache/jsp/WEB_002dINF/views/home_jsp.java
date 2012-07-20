@@ -72,16 +72,16 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("}\r\n");
       out.write("</style>\r\n");
       out.write("<style>\r\n");
-      out.write("   a { \r\n");
-      out.write("    text-decoration: none;\r\n");
-      out.write("   } \r\n");
-      out.write("  </style>\r\n");
+      out.write("a {\r\n");
+      out.write("\ttext-decoration: none;\r\n");
+      out.write("}\r\n");
+      out.write("</style>\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap-responsive.css\"\r\n");
       out.write("\trel=\"stylesheet\">\r\n");
       out.write("<link rel=\"shortcut icon\" href=\"resources/assets/ico/favicon.ico\">\r\n");
       out.write("<link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\"\r\n");
       out.write("\thref=\"resources/assets/ico/apple-touch-icon-144-precomposed.png\">\r\n");
-      out.write("\t<link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\"\r\n");
+      out.write("<link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\"\r\n");
       out.write("\thref=\"resources/assets/img/3616589.png\">\r\n");
       out.write("<link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\"\r\n");
       out.write("\thref=\"resources/assets/ico/apple-touch-icon-114-precomposed.png\">\r\n");
@@ -96,26 +96,26 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<div class=\"navbar navbar-fixed-top\">\r\n");
       out.write("\t\t<div class=\"navbar-inner\">\r\n");
       out.write("\t\t\t<div class=\"container\">\r\n");
-      out.write("\t\t\t\t <a class=\"btn btn-navbar\" data-toggle=\"collapse\"\r\n");
+      out.write("\t\t\t\t<a class=\"btn btn-navbar\" data-toggle=\"collapse\"\r\n");
       out.write("\t\t\t\t\tdata-target=\".nav-collapse\" style=\"color: rgb(218, 173, 30);\">\r\n");
       out.write("\t\t\t\t\t<span class=\"icon-bar\"></span> <span class=\"icon-bar\"></span> <span\r\n");
       out.write("\t\t\t\t\tclass=\"icon-bar\"></span>\r\n");
-      out.write("\t\t\t\t</a> <a class=\"brand\" href=\"../editor.html\"> <i\r\n");
+      out.write("\t\t\t\t</a> <a class=\"brand\" href=\"../editor.html\" id=\"webeditor\"> <i\r\n");
       out.write("\t\t\t\t\tclass=\"icon-white icon-edit\"></i> Web Editor\r\n");
       out.write("\t\t\t\t</a>\r\n");
       out.write("\t\t\t\t<div class=\"nav-collapse\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<li class=\"active\"><a href=\"#\"> <i\r\n");
+      out.write("\t\t\t\t\t\t<li class=\"active\"><a href=\"#\" id=\"home\"> <i\r\n");
       out.write("\t\t\t\t\t\t\t\tclass=\"icon-white icon-home\"></i> Home\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
       out.write("\t\t\t\t\t\t<li><a href=\"about\" id=\"about\"> <i\r\n");
       out.write("\t\t\t\t\t\t\t\tclass=\"icon-white icon-book\"></i> About\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"contact\"> <i class=\"icon-white icon-pencil\"></i>\r\n");
-      out.write("\t\t\t\t\t\t\t\tContact\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"contact\" id=\"contact\"> <i\r\n");
+      out.write("\t\t\t\t\t\t\t\tclass=\"icon-white icon-pencil\"></i> Contact\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations\"> <i\r\n");
-      out.write("\t\t\t\t\t\t\t\tclass=\"icon-white icon-picture\"></i> List of Presentations\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations\" id=\"listofpresentations\">\r\n");
+      out.write("\t\t\t\t\t\t\t\t<i class=\"icon-white icon-picture\"></i> List of Presentations\r\n");
       out.write("\t\t\t\t\t\t</a></li>\r\n");
       out.write("\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
@@ -126,7 +126,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t</form>\r\n");
       out.write("\t\t\t\t<ul class=\"nav pull-right\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\">\r\n");
+      out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" id=\"account\">\r\n");
       out.write("\t\t\t\t\t\t\t<i class=\"icon-user\"></i> Account <span class=\"caret\"></span>\r\n");
       out.write("\t\t\t\t\t\t</a>\r\n");
       out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
@@ -147,13 +147,6 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t</div>\r\n");
       out.write("\r\n");
       out.write("\t<div class=\"container\" style=\"margin-top: 20px;\">\r\n");
-      out.write("\r\n");
-      out.write("\t\t<h1>\r\n");
-      out.write("\t\t\t");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${controllerMessage}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("<br />\r\n");
-      out.write("\t\t</h1>\r\n");
-      out.write("\r\n");
       out.write("\t\t<div id=\"item\">\r\n");
       out.write("\t\t\t");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${tagCloud}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
@@ -166,6 +159,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t</div>\r\n");
       out.write("\r\n");
       out.write("\t<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/local/local.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-transition.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-alert.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-modal.js\"></script>\r\n");
@@ -184,18 +178,16 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<script src=\"resources/sphere/Sphere.js\" type=\"text/javascript\"\r\n");
       out.write("\t\tcharset=\"utf-8\"></script>\r\n");
       out.write("\t<script type=\"text/javascript\">\r\n");
-      out.write("\t\t//         \r\n");
-      out.write("\r\n");
       out.write("\t\t$(document).ready(function() {\r\n");
       out.write("\r\n");
       out.write("\t\t\tvar camera = new Camera3D();\r\n");
-      out.write("\t\t\tcamera.init(0, 0, 0, 250);\r\n");
+      out.write("\t\t\tcamera.init(0, 0, 0, 150);\r\n");
       out.write("\r\n");
       out.write("\t\t\tvar container = $(\"#item\")\r\n");
       out.write("\r\n");
       out.write("\t\t\tvar item = new Object3D(container);\r\n");
       out.write("\r\n");
-      out.write("\t\t\titem.addChild(new Sphere(200, 10, 100));\r\n");
+      out.write("\t\t\titem.addChild(new Sphere(100, 10, 100));\r\n");
       out.write("\r\n");
       out.write("\t\t\tvar scene = new Scene3D();\r\n");
       out.write("\t\t\tscene.addToScene(item);\r\n");
@@ -225,7 +217,6 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\tsetInterval(animateIt, 20);\r\n");
       out.write("\r\n");
       out.write("\t\t});\r\n");
-      out.write("\t\t//\r\n");
       out.write("\t</script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
@@ -249,9 +240,9 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /WEB-INF/views/home.jsp(101,3) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/home.jsp(96,3) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${tags}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/views/home.jsp(101,3) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/home.jsp(96,3) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("tag");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {

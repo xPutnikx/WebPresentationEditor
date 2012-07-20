@@ -8,16 +8,17 @@
 <meta name="description" content="">
 <meta name="author" content="by Putnik">
 <link href="resources/assets/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="../res/css/jquery.ui.all.css">
 <style>
 body {
 	padding-top: 60px;
 }
 </style>
 <style>
-   a { 
-    text-decoration: none;
-   } 
-  </style>
+a {
+	text-decoration: none;
+}
+</style>
 <link href="resources/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
@@ -62,8 +63,8 @@ body {
 			</form>
 			<ul class="nav pull-right">
 				<ul class="nav">
-					<a class="btn dropdown-toggle" data-toggle="dropdown" >
-						<i class="icon-user"></i> ${username} <span class="caret"></span>
+					<a class="btn dropdown-toggle" data-toggle="dropdown"> <i
+						class="icon-user"></i> ${username} <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="userpage"> <i class="icon-cog"></i> Profile
@@ -85,20 +86,42 @@ body {
 		value="${id}" />
 	<form:form method="Post" action="changepassword"
 		commandName="changepassword" style="margin-top: 40px;">
-		<div class="well" style="color:black;">
-			Current password<br />
-			<input type="password" id="currentpassword" />
+		<div class="well" style="color: black;">
+			Current password<br /> <input type="password" id="currentpassword" />
 		</div>
-		<div class="well" style="color:black;">
+		<div class="well" style="color: black;">
 			New password<br /> <input type="password" id="newpassword" />
 		</div>
-		<div class="well" style="color:black;">
+		<div class="well" style="color: black;">
 			Confirm password<br /> <input type="password" id="confirmpassword" />
 		</div>
 		<input class="btn" value="Save" onclick="sub()" />
 	</form:form>
 </div>
-
+<div
+	style="display: none; z-index: 1000; outline: 0px; position: absolute; background-color: whiteSmoke;"
+	class="ui-dialog ui-widget ui-widget-content-error ui-corner-all ui-draggable ui-resizable"
+	tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-dialog">
+	<div
+		class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" >
+		<span class="ui-dialog-title" id="ui-dialog-title-dialog">Basic
+			dialog</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all"
+			role="button"><span class="ui-icon ui-icon-closethick">close</span></a>
+	</div>
+	<div id="dialog" style="" class="ui-dialog-content ui-widget-content" style="background-color: whiteSmoke;">
+		<p></p>
+	</div>
+	<div class="ui-resizable-handle ui-resizable-n" style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-w" style="z-index: 1000;"></div>
+	<div
+		class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se"
+		style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000;"></div>
+</div>
 <script src="resources/assets/js/jquery.js"></script>
 <script src="resources/assets/js/bootstrap-transition.js"></script>
 <script src="resources/assets/js/bootstrap-alert.js"></script>
@@ -113,5 +136,15 @@ body {
 <script src="resources/assets/js/bootstrap-carousel.js"></script>
 <script src="resources/assets/js/bootstrap-typeahead.js"></script>
 <script src="resources/changepassword.js"></script>
+<script src="resources/jquery.ui.core.js"></script>
+<script src="resources/jquery.ui.widget.js"></script>
+<script src="resources/jquery.ui.mouse.js"></script>
+<script src="resources/jquery.ui/jquery.ui.button.js"></script>
+<script src="resources/jquery.ui/jquery.ui.draggable.js"></script>
+<script src="resources/jquery.ui/jquery.ui.position.js"></script>
+<script src="resources/jquery.ui/jquery.ui.resizable.js"></script>
+<script src="resources/jquery.ui/jquery.ui.dialog.js"></script>
+<script src="resources/jquery.ui/jquery.effects.core.js"></script>
+<script src="resources/jquery-ui-1.8.21.custom.min.js"></script>
 </body>
 </html>

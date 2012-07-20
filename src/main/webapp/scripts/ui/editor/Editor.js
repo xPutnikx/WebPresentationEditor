@@ -165,9 +165,14 @@ define(["vendor/amd/backbone", "./SlideEditor", "./transition_editor/TransitionE
       var _this = this;
 		if (window.location.href.split("=")[1]!=undefined){
 			_this.model["import"](JSON.parse(localStorage.getItem("open")));
+			showStr = ImpressRenderer.render(this.model.attributes);
+			 window.previewWind = window;
+			
 		}
-      showStr = ImpressRenderer.render(this.model.attributes);
-      window.previewWind = window.open("editor.html?preview=true");
+		else{
+			 showStr = ImpressRenderer.render(this.model.attributes);
+		      window.previewWind = window.open("editor.html?preview=true");
+		}
       sourceWind = window;
       cb = function() {
         if (!(sourceWind.previewWind.startImpress != null)) {

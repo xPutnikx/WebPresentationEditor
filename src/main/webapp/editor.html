@@ -8,6 +8,7 @@
 		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 		<title>Strut - ALPHA</title>
 		<link rel="stylesheet" href="res/css/close-btn.css"></link>
+		<link rel="stylesheet" href="res/css/jquery.ui.all.css"></link>
 		<link rel="stylesheet" href="res/css/bootstrap.css"></link>
 		<link rel="stylesheet" href="res/css/main.css"></link>
 		<link rel="stylesheet" href="res/jqplugins/colorpicker/css/colorpicker.css" type="text/css" />
@@ -20,6 +21,32 @@
 		<script type="text/javascript" src="scripts/vendor/E-bootstrapDropdown.js"></script>
 		<script type="text/javascript" src="res/jqplugins/colorpicker/js/colorpicker.js"></script>
 		<script type="text/javascript" src="res/jqplugins/gradient_picker/jquery.gradientPicker.js"></script>
+		<script src="resources/jquery.ui.core.js"></script>
+		<script src="resources/jquery.ui.widget.js"></script>
+		<script src="resources/jquery.ui.mouse.js"></script>
+		<script src="resources/jquery.ui.slider.js"></script>
+		<style>
+	#red, #green, #blue {
+		float: left;
+		clear: left;
+		width: 300px;
+		margin: 15px;
+	}
+	#swatch {
+		width: 120px;
+		height: 100px;
+		margin-top: 18px;
+		margin-left: 350px;
+		background-image: none;
+	}
+	#red .ui-slider-range { background: #ef2929; }
+	#red .ui-slider-handle { border-color: #ef2929; }
+	#green .ui-slider-range { background: #8ae234; }
+	#green .ui-slider-handle { border-color: #8ae234; }
+	#blue .ui-slider-range { background: #729fcf; }
+	#blue .ui-slider-handle { border-color: #729fcf; }
+	#demo-frame > div.demo { padding: 10px !important; };
+	</style>
     	<script>
     	jQuery.fn.selectText = function(){
 		    var doc = document;
@@ -41,51 +68,15 @@
     	
 		<script type="text/javascript" data-main="scripts/main" src="scripts/require.js"></script>
 		<script type="text/javascript" src="preview_export/scripts/impress.js"></script>
+		<script type="text/javascript" src="scripts/shapes/shapes.js"></script>
 		<script>
 		function canvas(){
-		$(".slideContainer").append("<div class=\"component textBox\" style=\"top: 256px; left: 341.3333333333333px; font-family: Lato, sans-serif; font-size: 72px; \"><div class=\"content-scale\" style=\"-webkit-transform: scale(1, 1); \"><div class=\"content\" style=\"\" contenteditable=\"false\"><canvas id=\"canv\"></canvas></div></div><span class=\"topLabel label\" data-delta=\"skewX\">Skew X</span><span class=\"leftLabel label\" data-delta=\"skewY\">Skew Y</span><span class=\"rightLabel label\" data-delta=\"rotate\">Rotate</span><span class=\"scale label\" data-delta=\"scale\">Scale</span><span class=\"close-btn-red-20 removeBtn\" title=\"Remove\"></span><div class=\"positioningCtrls form-inline\"><span class=\"label\">x</span><input class=\"position\" type=\"text\" data-option=\"x\" value=\"341.3333333333333\"><span class=\"label\">y</span><input class=\"position\" type=\"text\" data-option=\"y\" value=\"256\"></div></div>");}
-		
+		$("#text").click();
+		$(".selected > .content-scale > .content").text("");
+		$(".selected > .content-scale > .content").append("<div style=\"width:200px;height:200px;border:1px solid #000;\"></div>");}		
 		</script>
-		<script type="text/javascript">
-function getRandomArbitary(min, max)
-{
-  return Math.random() * (max - min) + min;
-}
-</script>
-<script>
-function rectangle(){
-	canvas();
-	var canv=document.getElementById("canv");
-	var x=canv.getContext("2d");
-	x.strokeRect(getRandomArbitary(70, 200),getRandomArbitary(50, 100),getRandomArbitary(40, 70),getRandomArbitary(40, 70));
-	
-}
-</script>
-<script>
-function poligon(){
-	canvas();
-	var canv=document.getElementById("canv")
-	var x=canv.getContext("2d");
-x.beginPath();
-x.moveTo(75,25);
-x.quadraticCurveTo(25,25,25,62.5);
-x.quadraticCurveTo(25,100,50,100);
-x.quadraticCurveTo(50,120,30,125);
-x.quadraticCurveTo(60,120,65,100);
-x.quadraticCurveTo(125,100,125,62.5);
-x.quadraticCurveTo(125,25,75,25);
-x.stroke();}
-</script>
-<script>
-canvas();
-function elipse(){
-	canvas();
-	var canv=document.getElementById("canv")
-	var x=canv.getContext("2d");
-	x.beginPath();
-	x.arc(getRandomArbitary(50, 70),getRandomArbitary(30, 70),50,0,Math.PI*2,true);
-	x.stroke();
-}
+<script>function opaque(){
+	$(".component.*.selected").fadeTo(0,0.1);}
 </script>
 	</head>
 	<body>
