@@ -43,7 +43,7 @@ public class Presentations {
 	@Column
 	private String description;
 	@Column(length = 16777215)	
-	private String data;	
+	private String data;
 
 	public Long getId() {
 		return id;

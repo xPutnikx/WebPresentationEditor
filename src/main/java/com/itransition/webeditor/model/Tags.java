@@ -6,14 +6,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.apache.solr.analysis.StandardTokenizerFactory;
 import org.hibernate.search.annotations.Analyze;
+import org.hibernate.search.annotations.Analyzer;
+import org.hibernate.search.annotations.AnalyzerDef;
 import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Indexed;
 import org.hibernate.search.annotations.Store;
+import org.hibernate.search.annotations.TokenizerDef;
 
 @Entity
 @Indexed
+
 public class Tags {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,6 +34,7 @@ public class Tags {
 		this.id = id;
 	}
 	@Field(index=Index.YES, analyze=Analyze.YES, store=Store.NO)
+	@Analyzer(definition = "customanalyzer")
 	public String getName() {
 		return name;
 	}

@@ -1,15 +1,29 @@
 package com.itransition.webeditor.dao;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
-import org.hibernate.annotations.Index;
+
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.queryParser.MultiFieldQueryParser;
+import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.util.Version;
+import org.hibernate.EntityMode;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.search.FullTextSession;
+import org.hibernate.search.Search;
+import org.hibernate.search.jpa.FullTextEntityManager;
+import org.hibernate.search.query.dsl.QueryBuilder;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.itransition.webeditor.model.Tags;
 
@@ -70,6 +84,25 @@ public class TagsDao {
 		Tags tags = entityManager.find(Tags.class, id);
 		entityManager.remove(tags);
 	}
-	
+	@Transactional
+	@CacheEvict(value = "tags", allEntries = true)
+	public void luceneSearch() throws ParseException{
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("acme");
+		EntityManager em = emf.createEntityManager();
+		
+	FullTextEntityManager fullTextEntityManager = 
+	    org.hibernate.search.jpa.Search.getFullTextEntityManager(em);
+	// create native Lucene query
+	String[] fields = new String[]{"name"};
+	StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_35);
+	MultiFieldQueryParser parser = new MultiFieldQueryParser(Version.LUCENE_35, fields, analyzer);
+	org.apache.lucene.search.Query query = parser.parse( "sise4ki" );
+	javax.persistence.Query persistenceQuery = fullTextEntityManager.createFullTextQuery(query, Tags.class);
+
+	// execute search
+	List result = persistenceQuery.getResultList();
+	System.out.println(result);
+	em.getTransaction().commit();
+	}
 }	
 	

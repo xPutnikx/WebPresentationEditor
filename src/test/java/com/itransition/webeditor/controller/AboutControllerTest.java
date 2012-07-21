@@ -2,6 +2,7 @@ package com.itransition.webeditor.controller;
 
 import junit.framework.Assert;
 
+import org.apache.lucene.queryParser.ParseException;
 import org.junit.Test;
 import org.springframework.ui.ExtendedModelMap;
 import org.springframework.ui.Model;

@@ -13,9 +13,6 @@ public class RegistrationValidation {
 
 	public void validate(Object target, Errors errors) {
 		Registration registration = (Registration) target;
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name",
-				"NotEmpty.registration.name",
-				"User Name must not be Empty.");
 		String name = registration.getName();
 		if ((name.length()) > 50) {
 			errors.rejectValue("name",
