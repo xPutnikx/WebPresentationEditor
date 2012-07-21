@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="webeditor:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="webeditor.war">
+      <element id="artifact" artifact-name="webeditor:war exploded" />
+    </root>
+  </artifact>
+</component>

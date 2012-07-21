@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="4.245" errors="1" skipped="0" tests="2" name="com.itransition.webeditor.controller.PersonControllerTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jre7\bin"/>
+    <property name="java.vm.version" value="22.1-b02"/>
+    <property name="user.country.format" value="RU"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Work\xPutnikx-WebPresentationEditor-382ca53"/>
+    <property name="java.runtime.version" value="1.7.0_03-b05"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="D:\Work\xPutnikx-WebPresentationEditor-382ca53"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jre7\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="surefire.real.class.path" value="D:\Work\xPutnikx-WebPresentationEditor-382ca53\target\surefire\surefirebooter1531864641455996753.jar"/>
+    <property name="java.io.tmpdir" value="C:\Users\V6439~1.HUD\AppData\Local\Temp\1\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows Server 2008 R2"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files (x86)/Java/jre7/bin/client;C:/Program Files (x86)/Java/jre7/bin;C:/Program Files (x86)/Java/jre7/lib/i386;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Users\v.hudnitsky\bin\apache-maven-3.0.4-bin\apache-maven-3.0.4\bin;C:\Program Files\Java\jdk1.7.0_02\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;;D:\Программирование\eclipse;;."/>
+    <property name="surefire.test.class.path" value="D:\Work\xPutnikx-WebPresentationEditor-382ca53\target\test-classes;D:\Work\xPutnikx-WebPresentationEditor-382ca53\target\classes;C:\Users\v.hudnitsky\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar;C:\Users\v.hudnitsky\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.3\jackson-mapper-asl-1.9.3.jar;C:\Users\v.hudnitsky\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.9.3\jackson-core-asl-1.9.3.jar;C:\Users\v.hudnitsky\.m2\repository\org\hibernate\hibernate-validator\4.0.0.GA\hibernate-validator-4.0.0.GA.jar;C:\Users\v.hudnitsky\.m2\repository\javax\xml\bind\jaxb-api\2.1\jaxb-api-2.1.jar;C:\Users\v.hudnitsky\.m2\repository\javax\xml\stream\stax-api\1.0-2\stax-api-1.0-2.jar;C:\Users\v.hudnitsky\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\v.hudnitsky\.m2\repository\com\sun\xml\bind\jaxb-impl\2.1.3\jaxb-impl-2.1.3.jar;C:\Users\v.hudnitsky\.m2\repository\org\hibernate\hibernate-entitymanager\3.6.0.Final\hibernate-entitymanager-3.6.0.Final.jar;C:\Users\v.hudnitsky\.m2\repository\org\hibernate\hibernate-core\3.6.0.Final\hibernate-core-3.6.0.Final.jar;C:\Users\v.hudnitsky\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\v.hudnitsky\.m2\repository\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Users\v.hudnitsky\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\v.hudnitsky\.m2\repository\org\hibernate\hibernate-commons-annotations\3.2.0.Final\hibernate-commons-annotations-3.2.0.Final.jar;C:\Users\v.hudnitsky\.m2\repository\javax\transaction\jta\1.1\jta-1.1.jar;C:\Users\v.hudnitsky\.m2\repository\cglib\cglib\2.2\cglib-2.2.jar;C:\Users\v.hudnitsky\.m2\repository\asm\asm\3.1\asm-3.1.jar;C:\Users\v.hudnitsky\.m2\repository\javassist\javassist\3.12.0.GA\javassist-3.12.0.GA.jar;C:\Users\v.hudnitsky\.m2\repository\hsqldb\hsqldb\1.8.0.10\hsqldb-1.8.0.10.jar;C:\Users\v.hudnitsky\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.0.Final\hibernate-jpa-2.0-api-1.0.0.Final.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-aop\3.1.1.RELEASE\spring-aop-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-beans\3.1.1.RELEASE\spring-beans-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-core\3.1.1.RELEASE\spring-core-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-expression\3.1.1.RELEASE\spring-expression-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-asm\3.1.1.RELEASE\spring-asm-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-context-support\3.1.1.RELEASE\spring-context-support-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\net\sf\ehcache\ehcache-core\2.4.2\ehcache-core-2.4.2.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-web\3.1.1.RELEASE\spring-web-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-tx\3.1.1.RELEASE\spring-tx-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-webmvc\3.1.1.RELEASE\spring-webmvc-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-orm\3.1.1.RELEASE\spring-orm-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-jdbc\3.1.1.RELEASE\spring-jdbc-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-test\3.1.1.RELEASE\spring-test-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\commons-dbcp\commons-dbcp\20030825.184428\commons-dbcp-20030825.184428.jar;C:\Users\v.hudnitsky\.m2\repository\commons-pool\commons-pool\20030825.183949\commons-pool-20030825.183949.jar;C:\Users\v.hudnitsky\.m2\repository\mysql\mysql-connector-java\5.1.20\mysql-connector-java-5.1.20.jar;C:\Users\v.hudnitsky\.m2\repository\taglibs\standard\1.1.2\standard-1.1.2.jar;C:\Users\v.hudnitsky\.m2\repository\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar;C:\Users\v.hudnitsky\.m2\repository\javax\servlet\jstl\1.2\jstl-1.2.jar;C:\Users\v.hudnitsky\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\v.hudnitsky\.m2\repository\org\slf4j\slf4j-api\1.5.10\slf4j-api-1.5.10.jar;C:\Users\v.hudnitsky\.m2\repository\org\slf4j\jcl-over-slf4j\1.5.10\jcl-over-slf4j-1.5.10.jar;C:\Users\v.hudnitsky\.m2\repository\org\slf4j\slf4j-log4j12\1.5.10\slf4j-log4j12-1.5.10.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\oauth\spring-security-oauth\1.0.0.M4\spring-security-oauth-1.0.0.M4.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-core\3.1.0.RC3\spring-security-core-3.1.0.RC3.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-crypto\3.1.0.RC3\spring-security-crypto-3.1.0.RC3.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-config\3.1.0.RC3\spring-security-config-3.1.0.RC3.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-web\3.1.0.RC3\spring-security-web-3.1.0.RC3.jar;C:\Users\v.hudnitsky\.m2\repository\commons-codec\commons-codec\1.3\commons-codec-1.3.jar;C:\Users\v.hudnitsky\.m2\repository\org\apache\httpcomponents\httpclient\4.1.1\httpclient-4.1.1.jar;C:\Users\v.hudnitsky\.m2\repository\org\apache\httpcomponents\httpcore\4.1\httpcore-4.1.jar;C:\Users\v.hudnitsky\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-taglibs\3.0.7.RELEASE\spring-security-taglibs-3.0.7.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-acl\3.0.7.RELEASE\spring-security-acl-3.0.7.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;C:\Users\v.hudnitsky\.m2\repository\javax\mail\mail\1.4\mail-1.4.jar;C:\Users\v.hudnitsky\.m2\repository\javax\jms\jms\1.1\jms-1.1.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\v.hudnitsky"/>
+    <property name="user.timezone" value="Asia/Magadan"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="user.name" value="v.hudnitsky"/>
+    <property name="java.class.path" value="D:\Work\xPutnikx-WebPresentationEditor-382ca53\target\test-classes;D:\Work\xPutnikx-WebPresentationEditor-382ca53\target\classes;C:\Users\v.hudnitsky\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar;C:\Users\v.hudnitsky\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.3\jackson-mapper-asl-1.9.3.jar;C:\Users\v.hudnitsky\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.9.3\jackson-core-asl-1.9.3.jar;C:\Users\v.hudnitsky\.m2\repository\org\hibernate\hibernate-validator\4.0.0.GA\hibernate-validator-4.0.0.GA.jar;C:\Users\v.hudnitsky\.m2\repository\javax\xml\bind\jaxb-api\2.1\jaxb-api-2.1.jar;C:\Users\v.hudnitsky\.m2\repository\javax\xml\stream\stax-api\1.0-2\stax-api-1.0-2.jar;C:\Users\v.hudnitsky\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\v.hudnitsky\.m2\repository\com\sun\xml\bind\jaxb-impl\2.1.3\jaxb-impl-2.1.3.jar;C:\Users\v.hudnitsky\.m2\repository\org\hibernate\hibernate-entitymanager\3.6.0.Final\hibernate-entitymanager-3.6.0.Final.jar;C:\Users\v.hudnitsky\.m2\repository\org\hibernate\hibernate-core\3.6.0.Final\hibernate-core-3.6.0.Final.jar;C:\Users\v.hudnitsky\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\v.hudnitsky\.m2\repository\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Users\v.hudnitsky\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\v.hudnitsky\.m2\repository\org\hibernate\hibernate-commons-annotations\3.2.0.Final\hibernate-commons-annotations-3.2.0.Final.jar;C:\Users\v.hudnitsky\.m2\repository\javax\transaction\jta\1.1\jta-1.1.jar;C:\Users\v.hudnitsky\.m2\repository\cglib\cglib\2.2\cglib-2.2.jar;C:\Users\v.hudnitsky\.m2\repository\asm\asm\3.1\asm-3.1.jar;C:\Users\v.hudnitsky\.m2\repository\javassist\javassist\3.12.0.GA\javassist-3.12.0.GA.jar;C:\Users\v.hudnitsky\.m2\repository\hsqldb\hsqldb\1.8.0.10\hsqldb-1.8.0.10.jar;C:\Users\v.hudnitsky\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.0.Final\hibernate-jpa-2.0-api-1.0.0.Final.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-aop\3.1.1.RELEASE\spring-aop-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-beans\3.1.1.RELEASE\spring-beans-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-core\3.1.1.RELEASE\spring-core-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-expression\3.1.1.RELEASE\spring-expression-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-asm\3.1.1.RELEASE\spring-asm-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-context-support\3.1.1.RELEASE\spring-context-support-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\net\sf\ehcache\ehcache-core\2.4.2\ehcache-core-2.4.2.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-web\3.1.1.RELEASE\spring-web-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-tx\3.1.1.RELEASE\spring-tx-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-webmvc\3.1.1.RELEASE\spring-webmvc-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-orm\3.1.1.RELEASE\spring-orm-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-jdbc\3.1.1.RELEASE\spring-jdbc-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\spring-test\3.1.1.RELEASE\spring-test-3.1.1.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\commons-dbcp\commons-dbcp\20030825.184428\commons-dbcp-20030825.184428.jar;C:\Users\v.hudnitsky\.m2\repository\commons-pool\commons-pool\20030825.183949\commons-pool-20030825.183949.jar;C:\Users\v.hudnitsky\.m2\repository\mysql\mysql-connector-java\5.1.20\mysql-connector-java-5.1.20.jar;C:\Users\v.hudnitsky\.m2\repository\taglibs\standard\1.1.2\standard-1.1.2.jar;C:\Users\v.hudnitsky\.m2\repository\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar;C:\Users\v.hudnitsky\.m2\repository\javax\servlet\jstl\1.2\jstl-1.2.jar;C:\Users\v.hudnitsky\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\v.hudnitsky\.m2\repository\org\slf4j\slf4j-api\1.5.10\slf4j-api-1.5.10.jar;C:\Users\v.hudnitsky\.m2\repository\org\slf4j\jcl-over-slf4j\1.5.10\jcl-over-slf4j-1.5.10.jar;C:\Users\v.hudnitsky\.m2\repository\org\slf4j\slf4j-log4j12\1.5.10\slf4j-log4j12-1.5.10.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\oauth\spring-security-oauth\1.0.0.M4\spring-security-oauth-1.0.0.M4.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-core\3.1.0.RC3\spring-security-core-3.1.0.RC3.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-crypto\3.1.0.RC3\spring-security-crypto-3.1.0.RC3.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-config\3.1.0.RC3\spring-security-config-3.1.0.RC3.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-web\3.1.0.RC3\spring-security-web-3.1.0.RC3.jar;C:\Users\v.hudnitsky\.m2\repository\commons-codec\commons-codec\1.3\commons-codec-1.3.jar;C:\Users\v.hudnitsky\.m2\repository\org\apache\httpcomponents\httpclient\4.1.1\httpclient-4.1.1.jar;C:\Users\v.hudnitsky\.m2\repository\org\apache\httpcomponents\httpcore\4.1\httpcore-4.1.jar;C:\Users\v.hudnitsky\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-taglibs\3.0.7.RELEASE\spring-security-taglibs-3.0.7.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\org\springframework\security\spring-security-acl\3.0.7.RELEASE\spring-security-acl-3.0.7.RELEASE.jar;C:\Users\v.hudnitsky\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;C:\Users\v.hudnitsky\.m2\repository\javax\mail\mail\1.4\mail-1.4.jar;C:\Users\v.hudnitsky\.m2\repository\javax\jms\jms\1.1\jms-1.1.jar;"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="C:\Program Files (x86)\Java\jre7"/>
+    <property name="sun.java.command" value="D:\Work\xPutnikx-WebPresentationEditor-382ca53\target\surefire\surefirebooter1531864641455996753.jar D:\Work\xPutnikx-WebPresentationEditor-382ca53\target\surefire\surefire8987490182553656406tmp D:\Work\xPutnikx-WebPresentationEditor-382ca53\target\surefire\surefire5805194447955716299tmp"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="user.language.format" value="ru"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.7.0_03"/>
+    <property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jre7\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jre7\lib\resources.jar;C:\Program Files (x86)\Java\jre7\lib\rt.jar;C:\Program Files (x86)\Java\jre7\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre7\lib\jsse.jar;C:\Program Files (x86)\Java\jre7\lib\jce.jar;C:\Program Files (x86)\Java\jre7\lib\charsets.jar;C:\Program Files (x86)\Java\jre7\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="localRepository" value="C:\Users\v.hudnitsky\.m2\repository"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+  </properties>
+  <testcase time="3.888" classname="com.itransition.webeditor.controller.PersonControllerTest" name="shouldReturnSecondPersonWithEditMav">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.itransition.webeditor.controller.PersonControllerTest.shouldReturnSecondPersonWithEditMav(PersonControllerTest.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+</error>
+    <system-out>@SLTests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.256 sec &lt;&lt;&lt; FAILURE!
+@SLRunning com.itransition.webeditor.controller.PersonControllerTest
+INFO : org.springframework.test.context.TestContextManager - @TestExecutionListeners is not present for class [class com.itransition.webeditor.controller.PersonControllerTest]: using defaults.
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [test-context.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [test-db.xml]
+INFO : org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@457235: startup date [Sun Jul 15 23:52:28 MAGT 2012]; root of context hierarchy
+INFO : org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [db.properties]
+INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@12e4ffa: defining beans [placeholderConfig,entityManagerFactory,dataSource,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,dataInitializer,aboutController,confirmRegistrationController,contactController,editorController,homeController,JSONController,listOfPresentationsController,logController,loginController,personController,registrationController,registrationValidator,successController,userPageController,presentationsDao,presentationTagsDao,tagsDao,userRolesDao,usersDao,presentationsService,usersService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+INFO : org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit &apos;acme&apos;
+INFO : org.hibernate.annotations.common.Version - Hibernate Commons Annotations 3.2.0.Final
+INFO : org.hibernate.cfg.Environment - Hibernate 3.6.0.Final
+INFO : org.hibernate.cfg.Environment - hibernate.properties not found
+INFO : org.hibernate.cfg.Environment - Bytecode provider name : javassist
+INFO : org.hibernate.cfg.Environment - using JDK 1.4 java.sql.Timestamp handling
+INFO : org.hibernate.ejb.Version - Hibernate EntityManager 3.6.0.Final
+INFO : org.hibernate.ejb.Ejb3Configuration - Processing PersistenceUnitInfo [
+	name: acme
+	...]
+WARN : org.hibernate.ejb.Ejb3Configuration - Defining hibernate.transaction.flush_before_completion=true ignored in HEM
+INFO : org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.itransition.webeditor.model.Presentations
+INFO : org.hibernate.cfg.annotations.EntityBinder - Bind entity com.itransition.webeditor.model.Presentations on table Presentations
+INFO : org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.itransition.webeditor.model.Tags
+INFO : org.hibernate.cfg.annotations.EntityBinder - Bind entity com.itransition.webeditor.model.Tags on table Tags
+INFO : org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.itransition.webeditor.model.UserRoles
+INFO : org.hibernate.cfg.annotations.EntityBinder - Bind entity com.itransition.webeditor.model.UserRoles on table UserRoles
+INFO : org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.itransition.webeditor.model.PresentationTags
+INFO : org.hibernate.cfg.annotations.EntityBinder - Bind entity com.itransition.webeditor.model.PresentationTags on table PresentationTags
+INFO : org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.itransition.webeditor.model.Users
+INFO : org.hibernate.cfg.annotations.EntityBinder - Bind entity com.itransition.webeditor.model.Users on table Users
+INFO : org.hibernate.cfg.Configuration - Hibernate Validator not found: ignoring
+INFO : org.hibernate.validator.util.Version - Hibernate Validator 4.0.0.GA
+INFO : org.hibernate.validator.engine.resolver.DefaultTraversableResolver - Instantiated an instance of org.hibernate.validator.engine.resolver.JPATraversableResolver.
+INFO : org.hibernate.validator.engine.resolver.DefaultTraversableResolver - Instantiated an instance of org.hibernate.validator.engine.resolver.JPATraversableResolver.
+INFO : org.hibernate.validator.engine.resolver.DefaultTraversableResolver - Instantiated an instance of org.hibernate.validator.engine.resolver.JPATraversableResolver.
+INFO : org.hibernate.cfg.search.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+INFO : org.hibernate.connection.ConnectionProviderFactory - Initializing connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+INFO : org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider - Using provided datasource
+INFO : org.hibernate.cfg.SettingsFactory - Database -&gt;
+       name : HSQL Database Engine
+    version : 1.8.0
+      major : 1
+      minor : 8
+INFO : org.hibernate.cfg.SettingsFactory - Driver -&gt;
+       name : HSQL Database Engine Driver
+    version : 1.8.0
+      major : 1
+      minor : 8
+INFO : org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.HSQLDialect
+INFO : org.hibernate.engine.jdbc.JdbcSupportLoader - Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+INFO : org.hibernate.transaction.TransactionFactoryFactory - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+INFO : org.hibernate.transaction.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+INFO : org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+INFO : org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+INFO : org.hibernate.cfg.SettingsFactory - JDBC batch size: 15
+INFO : org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+INFO : org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+INFO : org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): disabled
+INFO : org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+INFO : org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+INFO : org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+INFO : org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+INFO : org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+INFO : org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+INFO : org.hibernate.hql.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+INFO : org.hibernate.cfg.SettingsFactory - Query language substitutions: {}
+INFO : org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: enabled
+INFO : org.hibernate.cfg.SettingsFactory - Second-level cache: enabled
+INFO : org.hibernate.cfg.SettingsFactory - Query cache: disabled
+INFO : org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.bridge.RegionFactoryCacheProviderBridge
+INFO : org.hibernate.cache.impl.bridge.RegionFactoryCacheProviderBridge - Cache provider: org.hibernate.cache.HashtableCacheProvider
+INFO : org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+INFO : org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+INFO : org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+INFO : org.hibernate.cfg.SettingsFactory - Statistics: disabled
+INFO : org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+INFO : org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+INFO : org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+INFO : org.hibernate.cfg.SettingsFactory - Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+INFO : org.hibernate.impl.SessionFactoryImpl - building session factory
+INFO : org.hibernate.impl.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate - Running hbm2ddl schema update
+INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate - fetching database metadata
+INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate - updating schema
+INFO : org.hibernate.validator.engine.resolver.DefaultTraversableResolver - Instantiated an instance of org.hibernate.validator.engine.resolver.JPATraversableResolver.
+INFO : org.hibernate.tool.hbm2ddl.DatabaseMetadata - table not found: PresentationTags
+INFO : org.hibernate.tool.hbm2ddl.DatabaseMetadata - table not found: Presentations
+INFO : org.hibernate.tool.hbm2ddl.DatabaseMetadata - table not found: Tags
+INFO : org.hibernate.tool.hbm2ddl.DatabaseMetadata - table not found: UserRoles
+INFO : org.hibernate.tool.hbm2ddl.DatabaseMetadata - table not found: Users
+INFO : org.hibernate.tool.hbm2ddl.DatabaseMetadata - table not found: PresentationTags
+INFO : org.hibernate.tool.hbm2ddl.DatabaseMetadata - table not found: Presentations
+INFO : org.hibernate.tool.hbm2ddl.DatabaseMetadata - table not found: Tags
+INFO : org.hibernate.tool.hbm2ddl.DatabaseMetadata - table not found: UserRoles
+INFO : org.hibernate.tool.hbm2ddl.DatabaseMetadata - table not found: Users
+INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate - schema update complete
+INFO : org.springframework.test.context.transaction.TransactionalTestExecutionListener - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@a0ca7d]; rollback [true]
+Hibernate: insert into Users (id, email, enabled, name, password) values (null, ?, ?, ?, ?)
+Hibernate: call identity()
+Hibernate: insert into Users (id, email, enabled, name, password) values (null, ?, ?, ?, ?)
+Hibernate: call identity()
+Hibernate: insert into Users (id, email, enabled, name, password) values (null, ?, ?, ?, ?)
+Hibernate: call identity()
+Hibernate: select users0_.id as id4_0_, users0_.email as email4_0_, users0_.enabled as enabled4_0_, users0_.name as name4_0_, users0_.password as password4_0_ from Users users0_ where users0_.id=?
+INFO : org.springframework.test.context.transaction.TransactionalTestExecutionListener - Rolled back transaction after test execution for test context [[TestContext@1f96f01 testClass = PersonControllerTest, testInstance = com.itransition.webeditor.controller.PersonControllerTest@e6bd1a, testMethod = shouldReturnSecondPersonWithEditMav@PersonControllerTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@891d67 testClass = PersonControllerTest, locations = &apos;{classpath:/test-context.xml}&apos;, classes = &apos;{}&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]]]
+</system-out>
+  </testcase>
+  <testcase time="0.238" classname="com.itransition.webeditor.controller.PersonControllerTest" name="shouldReturnPersonListView"/>
+</testsuite>

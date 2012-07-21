@@ -1,0 +1,46 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+	
+	 <!-- <http pattern="/social/images/**" security="none"/>
+           <http pattern="/social/lib/**" security="none"/>
+           <http pattern="/social/preview_export/**" security="none"/>
+           <http pattern="/social/res/**" security="none"/>
+           <http pattern="/social/resources/**" security="none"/>
+  		   <http pattern="/social/login*" security="none"/>
+  		   <http pattern="/social/listofPresentations*" security="none"/>
+  		   <http pattern="/social/scripts/**" security="none"/>
+  		   <http pattern="/social/about*" security="none"/>
+  		   <http pattern="/social/home*" security="none"/>
+  		   <http pattern="/social/contact*" security="none"/>
+  		   <http pattern="/social/registrationform*" security="none"/>
+  		   <http pattern="/social/confirm*" security="none"/> -->
+	<http auto-config="true">
+		<intercept-url pattern="/social/list" access="ROLE_ADMIN" />
+		<intercept-url pattern="/social/edit" access="ROLE_ADMIN" />
+  		<intercept-url pattern="/editor.html" access="ROLE_USER,ROLE_ADMIN"/>
+  		<intercept-url pattern="/social/mypresentations" access="ROLE_USER,ROLE_ADMIN"/>
+  		<intercept-url pattern="/preview.jsp" access="ROLE_USER,ROLE_ADMIN"/>
+  		<intercept-url pattern="/social/userpage" access="ROLE_USER,ROLE_ADMIN"/>
+  		<intercept-url pattern="/social/changepassword" access="ROLE_USER,ROLE_ADMIN"/>
+		<form-login login-page="/social/login" default-target-url="/spring/home"
+			authentication-failure-url="/social/login" />
+		<logout logout-success-url="/social/home" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+		<jdbc-user-service data-source-ref="dataSource"
+				
+				users-by-username-query="
+                              select name,password,enabled 
+                              from users where name=?"
+				authorities-by-username-query="
+                              SELECT u.name, ur.authority FROM webeditor.users u, webeditor.userroles ur 
+                              WHERE u.id = ur.userId and u.name=?"/>
+		</authentication-provider>
+	</authentication-manager>
+</beans:beans>

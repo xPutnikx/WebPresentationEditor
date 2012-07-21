@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:jee="http://www.springframework.org/schema/jee" xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:sec="http://www.springframework.org/schema/security" xmlns:oauth="http://www.springframework.org/schema/security/oauth2"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd
+            http://www.springframework.org/schema/tx 
+            http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+            http://www.springframework.org/schema/jee
+            http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+            http://www.springframework.org/schema/mvc
+            http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+            http://www.springframework.org/schema/security
+            http://www.springframework.org/schema/security/spring-security-3.0.xsd
+            http://www.springframework.org/schema/security/oauth2
+            http://www.springframework.org/schema/security/spring-security-oauth2.xsd">
+    <!-- tapestry-spring does not support using AnnotationConfigWebApplicationContext as the context class,
+         therefore we had to revert using an xml centric approach, instead of including this xml file from
+         within SpringConfiguration -->
+    <!-- <bean class="org.acoveo.debating.spring.SpringConfiguration"/> -->
+    <!-- 
+    <bean class="org.springframework.transaction.aspectj.AnnotationTransactionAspect"
+        factory-method="aspectOf">
+        <property name="transactionManager" ref="transactionManager" />
+    </bean>
+     -->
+    <!-- JSR-303 support will be detected on classpath and enabled automatically -->
+    <mvc:annotation-driven/>
+    
+    <!-- Spring security configuration -->
+    <bean id="userDetailsService" class="com.itransition.webeditor.core.SecurityService"/>
+    <sec:authentication-manager alias="authenticationManager">
+        <sec:authentication-provider user-service-ref='userDetailsService'/>
+        <sec:authentication-provider ref="facebookAuthenticationProvider"/>
+    </sec:authentication-manager>
+    <bean id="oauth2ResourceDetailsService" class="org.springframework.security.oauth2.config.ResourceDetailsServiceFactoryBean"/>
+    <sec:http>
+        <sec:custom-filter before="FILTER_SECURITY_INTERCEPTOR " ref="oauth2AuthFilter"/>
+        <sec:openid-login>
+            <sec:attribute-exchange>
+                <sec:openid-attribute name="email" type="http://schema.openid.net/contact/email" required="true"/>
+                <sec:openid-attribute name="forename" type="http://schema.openid.net/namePerson/first" required="true"/>
+                <sec:openid-attribute name="surname" type="http://schema.openid.net/namePerson/last" required="true"/>
+                <sec:openid-attribute name="name" type="http://schema.openid.net/namePerson/friendly" required="true"/>
+            </sec:attribute-exchange>
+        </sec:openid-login>
+        <sec:form-login login-page='/login/' default-target-url='/' />
+        <sec:http-basic />
+        <sec:logout />
+    </sec:http>
+    <bean id="oauth2TokenServices" class="org.springframework.security.oauth2.consumer.token.InMemoryOAuth2ClientTokenServices" />
+    <!--define an oauth 2 resource for facebook. according to the facebook docs, the 'clientId' 
+        is the App ID, and the 'clientSecret' is the App Secret -->
+    <oauth:resource id="facebook" type="authorization_code"
+        clientId="202086623166314" clientSecret="0838b1813f49ad5625e7c518c0741439"
+        bearerTokenMethod="query" accessTokenUri="https://graph.facebook.com/oauth/access_token"
+        scope="email" userAuthorizationUri="https://www.facebook.com/dialog/oauth" />
+</beans>
