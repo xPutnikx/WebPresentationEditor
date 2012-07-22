@@ -33,7 +33,7 @@ body {
 				<a class="brand" href="../editor.html">Web Editor</a>
 				<ul class="nav">
 					<li><a href="home">Home</a></li>
-					<li><a href="presentations">Presentations</a></li>
+					<li class="active"><a href="presentations">Presentations</a></li>
 					<li><a href="about">About</a></li>
 				</ul>
 				<form class="navbar-search pull-left" action="presentations">
@@ -81,23 +81,18 @@ body {
 				<thead>
 					<tr>
 						<th style="width: 160px">Title</th>
-						<th style="width: 220px">Description</th>
-						<th style="width: 80px">Preview</th>
+						<th style="width: 300px">Description</th>						
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach items="${presentations}" var="presentation">
-						<tr id="${presentation.id}">
-							<td>${presentation.title}</td>
-							<td>${presentation.description}</td>
-							<td><button class="btn btn-success"
-									onclick="previewPresentation(${presentation.id})">
-									Preview</button></td>
+						<tr>
+							<td><a href="presentation?id=${presentation.id}">${presentation.title}</a></td>
+							<td>${presentation.description}</td>							
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
-
 		</div>
 	</div>
 	<!-- /container -->
@@ -114,11 +109,7 @@ body {
 	<script src="resources/assets/js/bootstrap-twipsy.js"></script>
 	<script src="resources/assets/js/jquery-textext-1.3.0.js"></script>
 
-	<script type="text/javascript">	
-	    function previewPresentation(id) {
-	        alert("preview " + id);
-	    }
-	
+	<script type="text/javascript">	  
 	    $('#title-text-area').textext({});
 	
 	    $('#tags-text-area').textext({

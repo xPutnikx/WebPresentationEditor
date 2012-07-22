@@ -80,45 +80,6 @@ body {
 		</form:form>
 	</div>
 	<!-- /container -->
-	<%-- <div class="container" style="width: 800px">
-		<form:form method="Post" action="register" commandName="registration"
-			style="width: 230px; margin-left: auto; margin-right: auto;">
-			<div class="well"
-				style="color: black; width: 500px; height: 40px; margin-left: -150px;">
-				<div style="margin-top:10px;">
-				<b style="margin-right:40px;">User Name:</b>
-				<form:input path="name" style="margin-right:5px;"/><font color="red"><form:errors path="name" /></font>
-				</div>
-			</div>
-			<div class="well"
-				style="color: black; width: 500px; height: 40px; margin-left: -150px;">
-				<div style="margin-top:10px;">
-				<b  style="margin-right:49px;">Password:</b>
-				<form:password path="password"  style="margin-right:5px;"/><font color="red"><form:errors
-						path="password" /></font>
-				</div>
-			</div>
-			<div class="well"
-				style="color: black; width: 500px; height: 40px; margin-left: -150px;">
-				<div style="margin-top:10px;">
-				<b>Confirm Password:</b>
-				<form:password path="confirmPassword" style="margin-right:5px;"/>
-				<font color="red"><form:errors
-						path="confirmPassword" /></font>
-				</div>
-			</div>
-			<div class="well"
-				style="color: black; width: 500px; height: 40px; margin-left: -150px;">
-				<div style="margin-top:10px;">
-				<b style="margin-right:74px;">Email:</b>
-				<form:input path="email" style="margin-right:5px;" />
-				<font color="red"><form:errors path="email" /></font>
-				</div>
-			</div>
-			<input type="submit" class="btn primary" value="Submit"
-				style="margin-left: -150px;" />
-		</form:form>
-	</div> --%>
 
 	<!-- Le javascript -->
 	<script src="resources/assets/js/jquery.js"></script>

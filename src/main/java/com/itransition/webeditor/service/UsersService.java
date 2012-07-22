@@ -57,13 +57,13 @@ public class UsersService {
 	
 	public void makeAdministrator(Long id) {
 		UserRoles userRoles = (UserRoles) userRolesDao.findByUserId(id);
-		userRoles.setAuthority("ROLE_ADMIN");
+		userRoles.setAuthority(UserRolesTypes.ROLE_ADMIN);
 		userRolesDao.save(userRoles);
 	}
 	
 	public void makeUser(Long id) {
 		UserRoles userRoles = (UserRoles) userRolesDao.findByUserId(id);
-		userRoles.setAuthority("ROLE_USER");
+		userRoles.setAuthority(UserRolesTypes.ROLE_USER);
 		userRolesDao.save(userRoles);
 	}
 	

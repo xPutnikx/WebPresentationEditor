@@ -1,12 +1,10 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
 <!DOCTYPE html>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Change Password</title>
+<title>Web Editor List</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="by Putnik">
@@ -15,8 +13,10 @@
 <style>
 body {
 	padding-top: 60px;
+	/* 60px to make the container go all the way to the bottom of the topbar */
 }
 </style>
+
 <style>
 a {
 	text-decoration: none;
@@ -33,49 +33,63 @@ a {
 	href="resources/assets/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="resources/assets/ico/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
-<link rel="apple-touch-icon"
-	href="resources/assets/ico/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72"
-	href="resources/assets/ico/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114"
-	href="resources/assets/ico/apple-touch-icon-114x114.png">
+<link rel="stylesheet" href="../res/css/jquery.ui.all.css">
 </head>
+<body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> <a class="brand" href="../editor.html"> <i
+					class="icon-white icon-edit"></i> Web Editor
+				</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="home"> <i class="icon-white icon-home"></i>
+								Home
+						</a></li>
+						<li><a href="about"> <i class="icon-white icon-book"></i>
+								About
+						</a></li>
+						<li><a href="contact"> <i class="icon-white icon-pencil"></i>
+								Contact
+						</a></li>
+						<li><a href="listOfPresentations"> <i
+								class="icon-white icon-picture"></i> List of Presentations
+						</a></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+				<form class="navbar-search pull-left" action="">
+					<i class="icon-white icon-search"></i><input type="text"
+						class="search-query span2" placeholder="Search">
+				</form>
+				<ul class="nav pull-right">
+					<ul class="nav">
+						<a class="btn dropdown-toggle" data-toggle="dropdown"> <i
+							class="icon-user"></i> ${username} <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="registrationform">Registration</a></li>
+							<li><a href="loginform">Login</a></li>
+							<li><a href="userpage"> <i class="icon-cog"></i> Profile
+							</a></li>
+							<li><a href="../j_spring_security_logout"> <i
+									class="icon-off"></i> Logout
+							</a></li>
 
-<div class="topbar">
-	<div class="fill">
-		<div class="container" style="width: 760px">
-			<a class="brand" href="../editor.html">Web Editor</a>
-			<ul class="nav">
-				<li class="active"><a href="home">Home</a></li>
-				<li><a href="presentation/show">Presentations</a></li>
-				<li><a href="about">About</a></li>
-			</ul>
-			<c:choose>
-				<c:when test="${authenticated}">
-					<form class="pull-right">
-						<button class="btn" type="submit"
-							onClick="window.location='../j_spring_security_logout'; return false;">Log
-							out</button>
-					</form>
-					<p class="pull-right" style="margin-right: 10px">
-						Logged in as <a href="userpage">${userName}</a>
-					</p>
-				</c:when>
-				<c:otherwise>
-					<form class="pull-right">
-						<button class="btn" type="submit"
-							onClick="window.location='login'; return false;">Log in</button>
-						<button class="btn" type="submit"
-							onClick="window.location='register'; return false;">Register</button>
-					</form>
-				</c:otherwise>
-			</c:choose>
+						</ul>
+						</li>
+					</ul>
+
+				</ul>
+			</div>
 		</div>
 	</div>
-</div>
 
-	<div class="container" style="margin-top: 20px;width: 800px;">
+	<div class="container" style="margin-top: 20px;">
 		<h1>Listing People</h1>
 		<div id="content" style="padding: 30px">
 			<table class="table table-striped">
@@ -92,20 +106,20 @@ a {
 					<c:forEach items="${people}" var="v_person">
 
 						<tr id="tr${v_person.id}">
-							<td><span class="label success"><a
-									style="color: #FFF">${v_person.id}</a></span></td>
+							<td><span class="badge badge-info"><a
+									style="color: #ffffff">${v_person.id}</a></span></td>
 							<td>${v_person.name}</td>
 
 							<td>${v_person.email}</td>
 							<td><c:if test="${v_person.enabled}">
-									<button class="btn success" id=${v_person.id
+									<button class="btn btn-success" id=${v_person.id
 										}
 										value=${v_person.enabled
 										}
 										onclick="check(${v_person.id},${v_person.enabled})">
 										${v_person.enabled}</button>
 								</c:if> <c:if test="${!v_person.enabled}">
-									<button class="btn danger" id=${v_person.id
+									<button class="btn btn-danger" id=${v_person.id
 										}
 										value=${v_person.enabled
 										}
@@ -113,21 +127,22 @@ a {
 										${v_person.enabled}</button>
 								</c:if></td>
 
-							<td><select class="medium" id="span${v_person.id}"
+							<td><select class="span2" id="span${v_person.id}"
 								onclick="change(${v_person.id})">
 									<option>User</option>
 									<option>Admin</option>
 							</select></td>
-							<td>
-									<img src="resources/assets/png/glyphicons_207_remove_2.png" id="del${v_person.id}" onclick="del(${v_person.id})"/>
-								</td>
+							<td><button class="btn btn-danger" id="del${v_person.id}"
+									onclick="del(${v_person.id})">
+									<i class="icon-remove-sign"></i>
+								</button></td>
 
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
 			<p>
-				<a class="btn" id="edit" data-controls-modal="modal-from-dom" data-backdrop="true" data-keyboard="true">Add Person</a>
+				<a class="btn" id="edit">Add Person →</a>
 			</p>
 		</div>
 	</div>
@@ -138,16 +153,15 @@ a {
 		aria-labelledby="ui-dialog-title-dialog-form">
 		<div
 			class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
-			<span class="ui-dialog-title" id="ui-dialog-title-dialog-form">
-				Create new user</span><a href="#"
-				class="ui-dialog-titlebar-close ui-corner-all" role="button"><span
-				class="ui-icon ui-icon-closethick">close</span></a>
+			<span class="ui-dialog-title" id="ui-dialog-title-dialog-form"> Create
+				new user</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all"
+				role="button"><span class="ui-icon ui-icon-closethick">close</span></a>
 		</div>
 		<div id="dialog-form"
 			style="width: auto; min-height: 0px; height: 216px;"
 			class="ui-dialog-content ui-widget-content" scrolltop="0"
 			scrollleft="0">
-			<p class="validateTips" style="color: transpanent"></p>
+			<p class="validateTips" style="color:transpanent"></p>
 
 			<form>
 				<fieldset>
@@ -177,20 +191,23 @@ a {
 		<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
 			<div class="ui-dialog-buttonset">
 				<button type="button"
-					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only btn primary"
-					role="button" aria-disabled="false" style="background-color:white;">
-					<span class="btn primary">Create an account</span>
+					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+					role="button" aria-disabled="false">
+					<span class="ui-button-text">Create an account</span>
 				</button>
 				<button type="button"
-					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only btn secondary"
-					role="button" aria-disabled="false" style="background-color:white;">
-					<span class="btn secondary">Cancel</span>
+					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+					role="button" aria-disabled="false">
+					<span class="ui-button-text">Cancel</span>
 				</button>
 			</div>
 		</div>
 	</div>
+
 	<script src="resources/assets/js/jquery.js"></script>
-	<script src="resources/jquery.ba-dotimeout.js"></script>
+	<script src="resources/jquery-ui-1.8.21.custom.min.js"></script>
+	<script src="resources/createuserdialog.js"></script>
+	<script src="resources/jquery-ui-1.8.21.custom.min.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>
 	<script src="resources/assets/js/bootstrap-modal.js"></script>
@@ -198,7 +215,6 @@ a {
 	<script src="resources/assets/js/bootstrap-scrollspy.js"></script>
 	<script src="resources/assets/js/bootstrap-tab.js"></script>
 	<script src="resources/assets/js/bootstrap-tooltip.js"></script>
-	<script src="resources/assets/js/bootstrap-twipsy.js"></script>
 	<script src="resources/assets/js/bootstrap-popover.js"></script>
 	<script src="resources/assets/js/bootstrap-button.js"></script>
 	<script src="resources/assets/js/bootstrap-collapse.js"></script>
@@ -207,6 +223,7 @@ a {
 	<script src="resources/deletelist.js"></script>
 	<script src="resources/checklist.js"></script>
 	<script src="resources/changelist.js"></script>
+	<script src="resources/jquery.ba-dotimeout.js"></script>
 	<script src="resources/jquery.ui.core.js"></script>
 	<script src="resources/jquery.ui.widget.js"></script>
 	<script src="resources/jquery.ui.mouse.js"></script>
@@ -216,6 +233,5 @@ a {
 	<script src="resources/jquery.ui/jquery.ui.resizable.js"></script>
 	<script src="resources/jquery.ui/jquery.ui.dialog.js"></script>
 	<script src="resources/jquery.ui/jquery.effects.core.js"></script>
-	<script src="resources/createuserdialog.js"></script>
 </body>
 </html>

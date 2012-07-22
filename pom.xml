@@ -75,16 +75,16 @@
 			<version>4.1.1.Final</version>
 		</dependency>
 		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-search-analyzers</artifactId>
-			<version>4.1.1.Final</version>
-		</dependency>
-		<!-- Infinispan integration: -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-search-infinispan</artifactId>
-			<version>4.1.1.Final</version>
-		</dependency>
+   <groupId>org.hibernate</groupId>
+   <artifactId>hibernate-search-analyzers</artifactId>
+   <version>4.1.1.Final</version>
+</dependency>
+<!-- Infinispan integration: -->
+<dependency>
+   <groupId>org.hibernate</groupId>
+   <artifactId>hibernate-search-infinispan</artifactId>
+   <version>4.1.1.Final</version>
+</dependency>
 		<!-- Spring Dependencies -->
 
 		<dependency>
@@ -139,12 +139,12 @@
 			<type>jar</type>
 			<scope>test</scope>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>org.springframework.social</groupId>
-			<artifactId>spring-social-core</artifactId>
-			<version>1.0.1.RELEASE</version>
-		</dependency>
+	<groupId>org.springframework.social</groupId>
+	<artifactId>spring-social-core</artifactId>
+	<version>1.0.1.RELEASE</version>
+</dependency> 
 
 		<!-- DB Dependencies -->
 
@@ -243,12 +243,12 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.easymock</groupId>
-			<artifactId>easymock</artifactId>
-			<version>3.1</version>
-			<scope>test</scope>
-		</dependency>
+		 <dependency>
+      <groupId>org.easymock</groupId>
+      <artifactId>easymock</artifactId>
+      <version>3.1</version>
+      <scope>test</scope>
+    </dependency>
 
 
 		<dependency>

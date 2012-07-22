@@ -47,7 +47,7 @@ public class AuthenticationManager {
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Get user role from security context.
 	 * 

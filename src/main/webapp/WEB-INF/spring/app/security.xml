@@ -26,7 +26,7 @@
   		<intercept-url pattern="/preview.jsp" access="ROLE_USER,ROLE_ADMIN"/>
   		<intercept-url pattern="/social/userpage" access="ROLE_USER,ROLE_ADMIN"/>
   		<intercept-url pattern="/social/changepassword" access="ROLE_USER,ROLE_ADMIN"/>
-		<form-login login-page="/social/login" default-target-url="/social/home"
+		<form-login login-page="/social/login" default-target-url="/spring/home"
 			authentication-failure-url="/social/login" />
 		<logout logout-success-url="/social/home" />
 	</http>
