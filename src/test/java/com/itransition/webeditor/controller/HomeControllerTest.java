@@ -42,18 +42,5 @@ public class HomeControllerTest {
 		homeController = new HomeController();
 		authenticationManager = EasyMock.createMock(AuthenticationManager.class);
 	  }
-	
-	@Test
-	public void testController() {
-		ModelAndView mav = 	homeController.getHomePage();
-		assertNotNull(mav);
-		assertEquals("home", mav.getViewName());
-		EasyMock.expect(authenticationManager.getUserName()). andReturn("admin");
-		EasyMock.expect(authenticationManager.getUserRole()). andReturn("ROLE_ADMIN");
-		EasyMock.expect(authenticationManager.isAuthenticated()). andReturn(true);
-		EasyMock.replay(authenticationManager);
-		assertEquals("home",homeController.getHomePage());
-		assertNotNull(mav.getModelMap().get("authenticated"));
-		EasyMock.verify(authenticationManager);
-	}
+
 }

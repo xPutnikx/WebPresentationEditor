@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +35,7 @@ body {
 			<div class="container" style="width: 760px">
 				<a class="brand" href="../editor.html">Web Editor</a>
 				<ul class="nav">
-					<li class="active"><a href="home">Home</a></li>
+					<li class="active"><a href="home"><spring:message code="btn.home"/></a></li>
 					<li><a href="presentation/show">Presentations</a></li>
 					<li><a href="about">About</a></li>
 				</ul>
@@ -60,7 +61,14 @@ body {
 		</div>
 	</div>
 
-
+ 
+<h3><spring:message code="label.title"/></h3>
+ 
+<span style="float: right">
+    <a href="?lang=en">en</a> 
+    | 
+    <a href="?lang=ru">ru</a>
+</span>
 	<div class="container" style="width:500px;">
 		<section>
 			<div class="page-header">
