@@ -83,7 +83,7 @@ public class RegisterController {
 			String password = users.getPassword();
 			String email = users.getEmail();
 			String key = ConfirmKey.generate(user, password);
-			String link = "http://localhost:8080/webeditor/spring/confirm?id="
+			String link = "http://localhost:8080/webeditor/social/confirm?id="
 					+ +id + "&key=" + key;
 			String message = "Hello " + user + "! " + link;
 			MailSender mailSender = new MailSender(email, message);

@@ -1,13 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title>WebEditor: Home</title>
-
 <!-- Le styles -->
 <link href="resources/assets/css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
@@ -15,7 +14,6 @@ body {
 	padding-top: 60px;
 }
 </style>
-
 <!-- Le fav and touch icons -->
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
 <link rel="apple-touch-icon"
@@ -25,83 +23,76 @@ body {
 <link rel="apple-touch-icon" sizes="114x114"
 	href="resources/assets/ico/apple-touch-icon-114x114.png">
 </head>
-
 <body>
 	<div class="topbar">
 		<div class="fill">
 			<div class="container" style="width: 760px">
 				<a class="brand" href="../editor.html">Web Editor</a>
 				<ul class="nav">
-					<li class="active"><a href="home">Home</a></li>
-					<li><a href="presentations">Presentations</a></li>
-					<li><a href="about">About</a></li>
+					<li class="active"><a href="home"><spring:message code="btn.home"/></a></li>
+					<li><a href="presentations"><spring:message code="btn.presentations"/></a></li>
+					<li><a href="about"><spring:message code="btn.about"/></a></li>
 				</ul>
 				<c:choose>
 					<c:when test="${authenticated}">
 						<form class="pull-right">
 							<button class="btn" type="submit"
-								onClick="window.location='../j_spring_security_logout'; return false;">Log
-								out</button>
+								onClick="window.location='../j_spring_security_logout'; return false;"><spring:message code="btn.logout"/></button>
 						</form>
 						<p class="pull-right" style="margin-right: 10px">
-							Logged in as <a href="userpage">${userName}</a>
+							<spring:message code="lbl.loggedinas"/><a href="userpage">${userName}</a>
 						</p>
 					</c:when>
 					<c:otherwise>
 						<form class="pull-right">
 							<button class="btn" type="submit"
-								onClick="window.location='login'; return false;">Log in</button>
+								onClick="window.location='login'; return false;"><spring:message code="btn.login"/></button>
 							<button class="btn" type="submit"
-								onClick="window.location='register'; return false;">Register</button>
+								onClick="window.location='register'; return false;"><spring:message code="btn.registration"/></button>
 						</form>
 					</c:otherwise>
 				</c:choose>
 			</div>
 		</div>
 	</div>
-
 	<div class="container" style="width: 800px">
 
 		<!-- Main hero unit for a primary marketing message or call to action -->
 		<div class="hero-unit" style="">
 			<h1>Web Editor</h1>
-			<p>This project allows you to create an extensible, maintainable,
-				and clean presentations based on ImpressJS engine.</p>
+			<p><spring:message code="text.createproject"/></p>
 			<p>
 				<a href="https://github.com/xPutnikx/WebPresentationEditor"
-					class="btn primary large">Visit the github project &raquo;</a>
+					class="btn primary large"><spring:message code="text.visitthegithub"/> &raquo;</a>
 			</p>
 		</div>
 
 		<!-- Example row of columns -->
 		<div class="row">
 			<div class="span-one-third" style="width: 250px">
-				<h2>Based on Bootstrap</h2>
-				<p>Bootstrap is based on Twitter's excellent Bootstrap, as the
-					name might indicate.</p>
+				<h2><spring:message code="text.basedonbootstrap"/></h2>
+				<p><spring:message code="text.aboutbootstrap"/></p>
 				<p>
-					<a class="btn" href="http://twitter.github.com/bootstrap">View
-						details &raquo;</a>
+					<a class="btn" href="http://twitter.github.com/bootstrap"><spring:message code="btn.viewdetails"/> &raquo;</a>
 				</p>
 			</div>
 			<div class="span-one-third" style="width: 250px">
-				<h2>Built with Strut</h2>
-				<p>Strut is a powerfull tool for creating presentations with ImpressJS.</p>
+				<h2><spring:message code="btn.builtwithStrut"/></h2>
+				<p><spring:message code="lbl.Strut"/></p>
 				<p>
-                    <a class="btn" href="https://github.com/tantaman/Strut">View
-                        details &raquo;</a>
+                    <a class="btn" href="https://github.com/tantaman/Strut"><spring:message code="btn.viewdetails"/> &raquo;</a>
                 </p>
 			</div>
 			<div class="span-one-third" style="width: 250px">
-                <h2>Try it</h2>
-                <p>You can easily run preview for presentations. Choose your favorite one and enjoy.</p>
-                <p><a class="btn primary" href="presentation/show">Presentations &raquo;</a></p>
+                <h2><spring:message code="btn.tryit"/></h2>
+                <p><spring:message code="lbl.createyourpresentations"/>.</p>
+                <p><a class="btn primary" href="presentation/show"><spring:message code="btn.presentations"/> &raquo;</a></p>
             </div>
 			
 		</div>
 
 		<footer>
-			<p>&copy; Web Editor 2012</p>
+			<p>&copy; Web Editor 2012 <a href="?lang=en">en</a> | <a href="?lang=ru">ru</a></span></p>
 		</footer>
 
 	</div>

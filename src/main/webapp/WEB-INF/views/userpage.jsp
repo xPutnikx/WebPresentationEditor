@@ -1,12 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title>WebEditor: Home</title>
 
 <!-- Le styles -->
@@ -33,57 +32,51 @@ body {
 	<div class="topbar">
 		<div class="fill">
 			<div class="container" style="width: 760px">
-				<a class="brand" href="../editor.html">Web Editor</a>
+				<a class="brand" href="../editor.html"><spring:message code="btn.webeditor"/></a>
 				<ul class="nav">
-					<li class="active"><a href="home">Home</a></li>
-					<li><a href="presentation/show">Presentations</a></li>
-					<li><a href="about">About</a></li>
+					<li><a href="home"><spring:message code="btn.home"/></a></li>
+					<li><a href="presentation/show"><spring:message code="btn.presentations"/></a></li>
+					<li><a href="about"><spring:message code="btn.about"/></a></li>
 				</ul>
 				<c:choose>
 					<c:when test="${authenticated}">
 						<form class="pull-right">
 							<button class="btn" type="submit"
-								onClick="window.location='../j_spring_security_logout'; return false;">Log
-								out</button>
+								onClick="window.location='../j_spring_security_logout'; return false;"><spring:message code="btn.logout"/></button>
 						</form>
 						<p class="pull-right" style="margin-right: 10px">
-							Logged in as <a href="userpage">${userName}</a>
+							<spring:message code="lbl.loggedinas"/> <a href="userpage">${userName}</a>
 						</p>
 					</c:when>
 					<c:otherwise>
 						<form class="pull-right">
 							<button class="btn" type="submit"
-								onClick="window.location='../j_spring_security_logout'; return false;">Logout</button>
+								onClick="window.location='../j_spring_security_logout'; return false;"><spring:message code="btn.logout"/></button>
 						</form>
 					</c:otherwise>
 				</c:choose>
 			</div>
 		</div>
 	</div>
-
- 
-
 	<div class="container" style="width:500px;">
 		<section>
 			<div class="page-header">
-				<h1 style="margin-left: 20px">Information</h1>
+				<h1 style="margin-left: 20px"><spring:message code="lbl.information"/></h1>
 			</div>
 			<div class="well">
-			<p style="color: #1D2A5B">Nickname : ${userName}</p>
-			<p style="color: #1D2A5B">Role : ${userrole}</p>
+			<p style="color: #1D2A5B"><spring:message code="lbl.nickname"/> : ${userName}</p>
+			<p style="color: #1D2A5B"><spring:message code="lbl.role"/> : ${userrole}</p>
 			</div>
 			<div class="well">
 			<p style="font-size: 13px;">
-				List with My Presentations: <a href="mypresentations" class="btn">My
-					Presentations</a>
+				<spring:message code="lbl.listwithmypresentations"/>: <a href="mypresentations" class="btn"><spring:message code="btn.mypresentations"/></a>
 			</p>
 			</div>
 			
 			<div class="well">
 
 			<p style="font-size: 13px;">
-				Change password: <a href="changepassword" class="btn">Accept</a>
-			</p>
+				<spring:message code="lbl.changepassword"/>: <a href="changepassword" class="btn"><spring:message code="btn.accept"/></a>			</p>
 			</div>
 		</section>
 		<div class="page-header" ></div>
@@ -91,8 +84,7 @@ body {
 			<div>
 				<p>
 					<button class="btn" type="submit"
-						onClick="window.location='list'; return false;">Administration
-						tools</button>
+						onClick="window.location='list'; return false;"><spring:message code="btn.administrationtools"/></button>
 			</div>
 		</c:if>
 	</div>
