@@ -28,8 +28,8 @@
 }
 
 .ui-widget-content {
-	border: 1px solid #33D3CC /*{borderColorContent}*/;
-	background: rgba(207, 238, 190, 0.28) /*{bgColorContent}*/
+	border: 1px solid black /*{borderColorContent}*/;
+	background: #FFF /*{bgColorContent}*/
 		/*{bgImgUrlContent}*/   50% /*{bgContentXPos}*/   50%
 		/*{bgContentYPos}*/   repeat-x /*{bgContentRepeat}*/;
 	color: #222222 /*{fcContent}*/;
@@ -47,7 +47,7 @@
 }
 
 .ui-widget-header {
-	border: 1px solid #aaaaaa /*{borderColorHeader}*/;
+	border: 1px solid black/*{borderColorHeader}*/;
 	background: #cccccc /*{bgColorHeader}*/ /*{bgImgUrlHeader}*/   50%
 		/*{bgHeaderXPos}*/   50% /*{bgHeaderYPos}*/   repeat-x
 		/*{bgHeaderRepeat}*/;
@@ -63,7 +63,7 @@
 ----------------------------------*/
 .ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default
 	{
-	border: 1px solid #32DBB9 /*{borderColorDefault}*/;
+	border: 1px solid black /*{borderColorDefault}*/;
 	background: transpanent /*{bgColorDefault}*/*{bgImgUrlDefault
 }
 
@@ -96,8 +96,8 @@ color
 
 .ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus
 	{
-	border: 1px solid #999999 /*{borderColorHover}*/;
-	background: rgba(131, 255, 205, 0.27) /*{bgColorHover}*/
+	border: 1px solid black /*{borderColorHover}*/;
+	background: #E6E6E6 /*{bgColorHover}*/
 		/*{bgImgUrlHover}*/   50% /*{bgHoverXPos}*/   50% /*{bgHoverYPos}*/  
 		repeat-x /*{bgHoverRepeat}*/; font-weight : normal /*{fwDefault}*/;
 	color: #212121 /*{fcHover}*/;

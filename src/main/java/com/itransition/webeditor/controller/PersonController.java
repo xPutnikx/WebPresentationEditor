@@ -6,12 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.NestedServletException;
+
+import com.itransition.webeditor.core.AuthenticationManager;
 import com.itransition.webeditor.core.PermessionDeniedException;
 import com.itransition.webeditor.model.Users;
 import com.itransition.webeditor.service.UsersService;
@@ -25,23 +28,8 @@ public class PersonController {
 
 	@Autowired
 	private UsersService usersService;
-
-	@RequestMapping(method = RequestMethod.GET, value = "edit")
-	public ModelAndView editPerson(
-			@RequestParam(value = "id", required = false) Long id) {
-		logger.debug("Received request to edit person id : " + id);
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("edit");
-		Users users = null;
-		if (id == null) {
-			users = new Users();
-		} else {
-			users = usersService.findById(id);
-		}
-		mav.addObject("users", users);
-		mav.addObject("username",getCurrentUserName());
-		return mav;
-	}
+	
+	
 
 	@RequestMapping(method = RequestMethod.POST, value = "edit")
 	public String savePerson(@RequestParam ("name") String name,@RequestParam ("email") String email,@RequestParam ("password") String password) throws NestedServletException {
@@ -57,15 +45,20 @@ public class PersonController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "list")
-	public ModelAndView listPeople() {
-		logger.debug("Received request to list persons");		
-		ModelAndView mav = new ModelAndView();
-		List<Users> people = usersService.getUsers();
-		logger.debug("Person Listing count = " + people.size());
-		mav.addObject("people", people);
-		mav.addObject("username", getCurrentUserName());
-		mav.setViewName("list");		
-		return mav;
+	public String listPeople(ModelMap modelMap) {
+		AuthenticationManager authenticationManager = new AuthenticationManager();
+		boolean authenticated = authenticationManager.isAuthenticated();
+		modelMap.addAttribute("authenticated", authenticated);
+		if (authenticated) {
+			modelMap.addAttribute("userName",
+					authenticationManager.getUserName());
+		}
+		logger.debug("Received request to list persons");
+		List<Users> users = usersService.getUsers();
+		logger.debug("Person Listing count = " + users.size());
+		modelMap.addAttribute("people", users);
+		modelMap.addAttribute("username", getCurrentUserName());
+		return "list";
 	}
 	@RequestMapping(value = "/list", method = RequestMethod.POST)
 	public void changeActivity(@RequestParam ("json") long person,@RequestParam ("enable") boolean enable) throws PermessionDeniedException

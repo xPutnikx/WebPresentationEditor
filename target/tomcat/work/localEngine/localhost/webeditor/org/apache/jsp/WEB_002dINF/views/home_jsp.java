@@ -108,7 +108,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<div class=\"container\" style=\"width: 800px\">\r\n");
       out.write("\r\n");
       out.write("\t\t<!-- Main hero unit for a primary marketing message or call to action -->\r\n");
-      out.write("\t\t<div class=\"hero-unit\">\r\n");
+      out.write("\t\t<div class=\"hero-unit\" style=\"\">\r\n");
       out.write("\t\t\t<h1>Web Editor</h1>\r\n");
       out.write("\t\t\t<p>This project allows you to create an extensible, maintainable,\r\n");
       out.write("\t\t\t\tand clean presentations based on ImpressJS engine.</p>\r\n");
@@ -231,7 +231,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("\t\t\t\t\t\t\t\tout</button>\r\n");
         out.write("\t\t\t\t\t\t</form>\r\n");
         out.write("\t\t\t\t\t\t<p class=\"pull-right\" style=\"margin-right: 10px\">\r\n");
-        out.write("\t\t\t\t\t\t\tLogged in as <a href=\"#\">");
+        out.write("\t\t\t\t\t\t\tLogged in as <a href=\"userpage\">");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${userName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
         out.write("</a>\r\n");
         out.write("\t\t\t\t\t\t</p>\r\n");

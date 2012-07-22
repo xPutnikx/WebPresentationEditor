@@ -478,7 +478,8 @@ textarea {
  * Basic and global styles for generating a grid system, structural layout, and page templates
  * ------------------------------------------------------------------------------------------- */
 body {
-  background-color: #ffffff;
+  background: url(../img/background.png) repeat-x;
+  background-color:#d4d9e8;
   margin: 0;
   overflow: hidden;
   font-family: "lucida grande", tahoma, verdana, arial, sans-serif;

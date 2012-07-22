@@ -267,6 +267,8 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\t</div>\r\n");
       out.write("\t<!-- /container -->\r\n");
+      out.write("\t");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("\t<!-- Le javascript -->\r\n");
       out.write("\t<script src=\"resources/assets/js/jquery.js\"></script>\r\n");

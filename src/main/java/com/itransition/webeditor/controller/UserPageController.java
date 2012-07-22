@@ -14,6 +14,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.itransition.webeditor.core.AuthenticationManager;
+
 
 @Controller
 public class UserPageController {
@@ -21,13 +23,19 @@ public class UserPageController {
 	private static final Logger logger = LoggerFactory
 			.getLogger(UserPageController.class);
 	@RequestMapping(value="userpage", method = RequestMethod.GET)
-	public String showUserPage(ModelMap model) { 
+	public String showUserPage(ModelMap modelMap) { 
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String name = user.getUsername();
 		List<GrantedAuthority> roles =  (List<GrantedAuthority>) SecurityContextHolder.getContext().getAuthentication().getAuthorities();
 		String role=roles.get(0).toString();
-		model.addAttribute("username", name);
-		model.addAttribute("userrole",role);
+		AuthenticationManager authenticationManager = new AuthenticationManager();
+		boolean authenticated = authenticationManager.isAuthenticated();
+		modelMap.addAttribute("authenticated", authenticated);
+		if (authenticated) {
+			modelMap.addAttribute("userName",
+					authenticationManager.getUserName());
+		}
+		modelMap.addAttribute("userrole",role);
 		return "userpage"; 
 	}
 }

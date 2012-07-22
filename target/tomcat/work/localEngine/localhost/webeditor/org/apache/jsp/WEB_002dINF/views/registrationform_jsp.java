@@ -82,10 +82,10 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("}\r\n");
       out.write("</style>\r\n");
       out.write("<style>\r\n");
-      out.write("   a { \r\n");
-      out.write("    text-decoration: none;\r\n");
-      out.write("   } \r\n");
-      out.write("  </style>\r\n");
+      out.write("a {\r\n");
+      out.write("\ttext-decoration: none;\r\n");
+      out.write("}\r\n");
+      out.write("</style>\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap-responsive.css\"\r\n");
       out.write("\trel=\"stylesheet\">\r\n");
       out.write("<link rel=\"shortcut icon\" href=\"resources/assets/ico/favicon.ico\">\r\n");
@@ -100,47 +100,54 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("</head>\r\n");
       out.write("\r\n");
       out.write("<body>\r\n");
+      out.write("\r\n");
       out.write("\t<div class=\"navbar navbar-fixed-top\">\r\n");
       out.write("\t\t<div class=\"navbar-inner\">\r\n");
       out.write("\t\t\t<div class=\"container\">\r\n");
       out.write("\t\t\t\t<a class=\"btn btn-navbar\" data-toggle=\"collapse\"\r\n");
       out.write("\t\t\t\t\tdata-target=\".nav-collapse\"> <span class=\"icon-bar\"></span> <span\r\n");
       out.write("\t\t\t\t\tclass=\"icon-bar\"></span> <span class=\"icon-bar\"></span>\r\n");
-      out.write("\t\t\t\t</a> <a class=\"brand\" href=\"../editor.html\">\r\n");
-      out.write("\t\t\t\t<i class=\"icon-white icon-edit\"></i> Web Editor</a>\r\n");
+      out.write("\t\t\t\t</a> <a class=\"brand\" href=\"../editor.html\"> <i\r\n");
+      out.write("\t\t\t\t\tclass=\"icon-white icon-edit\"></i> Web Editor\r\n");
+      out.write("\t\t\t\t</a>\r\n");
       out.write("\t\t\t\t<div class=\"nav-collapse\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"home\">\r\n");
-      out.write("\t\t\t\t\t\t<i class=\"icon-white icon-home\"></i> Home</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"about\">\r\n");
-      out.write("\t\t\t\t\t\t<i class=\"icon-white icon-book\"></i> About</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"contact\">\r\n");
-      out.write("\t\t\t\t\t\t<i class=\"icon-white icon-pencil\"></i> Contact</a></li>\r\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations\">\r\n");
-      out.write("\t\t\t\t\t\t<i class=\"icon-white icon-picture\"></i>\r\n");
-      out.write("\t\t\t\t\t\tList of Presentations</a></li>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"home\"> <i class=\"icon-white icon-home\"></i>\r\n");
+      out.write("\t\t\t\t\t\t\t\tHome\r\n");
+      out.write("\t\t\t\t\t\t</a></li>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"about\"> <i class=\"icon-white icon-book\"></i>\r\n");
+      out.write("\t\t\t\t\t\t\t\tAbout\r\n");
+      out.write("\t\t\t\t\t\t</a></li>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"contact\"> <i class=\"icon-white icon-pencil\"></i>\r\n");
+      out.write("\t\t\t\t\t\t\t\tContact\r\n");
+      out.write("\t\t\t\t\t\t</a></li>\r\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"listOfPresentations\"> <i\r\n");
+      out.write("\t\t\t\t\t\t\t\tclass=\"icon-white icon-picture\"></i> List of Presentations\r\n");
+      out.write("\t\t\t\t\t\t</a></li>\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t<!--/.nav-collapse -->\r\n");
       out.write("\t\t\t\t<form class=\"navbar-search pull-left\" action=\"\">\r\n");
-      out.write("\t\t\t\t\t<i class=\"icon-white icon-search\"></i><input type=\"text\" class=\"search-query span2\" placeholder=\"Search\">\r\n");
+      out.write("\t\t\t\t\t<i class=\"icon-white icon-search\"></i><input type=\"text\"\r\n");
+      out.write("\t\t\t\t\t\tclass=\"search-query span2\" placeholder=\"Search\">\r\n");
       out.write("\t\t\t\t</form>\r\n");
       out.write("\t\t\t\t<ul class=\"nav pull-right\">\r\n");
       out.write("\t\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\">\r\n");
-      out.write("             \t\t\t <i class=\"icon-user\"></i> Account\r\n");
-      out.write("             \t\t\t <span class=\"caret\"></span>\r\n");
-      out.write("           \t\t\t\t </a>\r\n");
-      out.write("\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
+      out.write("\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\"> <i\r\n");
+      out.write("\t\t\t\t\t\t\tclass=\"icon-user\"></i> Account <span class=\"caret\"></span>\r\n");
+      out.write("\t\t\t\t\t\t</a>\r\n");
+      out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
       out.write("\t\t\t\t\t\t\t<li><a href=\"loginform\">Login</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"userpage\">\r\n");
-      out.write("\t\t\t\t\t\t\t<i class=\"icon-cog\"></i> Profile</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\">\r\n");
-      out.write("\t\t\t\t\t\t\t<i class=\"icon-off\"></i> Logout</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\r\n");
-      out.write("\t\t\t\t\t\t\t</ul></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"userpage\"> <i class=\"icon-cog\"></i> Profile\r\n");
+      out.write("\t\t\t\t\t\t\t</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t<li><a href=\"../j_spring_security_logout\"> <i\r\n");
+      out.write("\t\t\t\t\t\t\t\t\tclass=\"icon-off\"></i> Logout\r\n");
+      out.write("\t\t\t\t\t\t\t</a></li>\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t\t\t\t</ul>\r\n");
+      out.write("\t\t\t\t\t\t</li>\r\n");
       out.write("\t\t\t\t\t</ul>\r\n");
-      out.write("\t\t\t\t\r\n");
+      out.write("\r\n");
       out.write("\t\t\t\t</ul>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\r\n");
@@ -151,11 +158,11 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
       org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
       _jspx_th_form_005fform_005f0.setPageContext(_jspx_page_context);
       _jspx_th_form_005fform_005f0.setParent(null);
-      // /WEB-INF/views/registrationform.jsp(85,2) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/views/registrationform.jsp(92,2) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setMethod("Post");
-      // /WEB-INF/views/registrationform.jsp(85,2) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/views/registrationform.jsp(92,2) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setAction("registrationform");
-      // /WEB-INF/views/registrationform.jsp(85,2) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/views/registrationform.jsp(92,2) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setCommandName("registration");
       int[] _jspx_push_body_count_form_005fform_005f0 = new int[] { 0 };
       try {
@@ -163,14 +170,13 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
         if (_jspx_eval_form_005fform_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
             out.write("\r\n");
-            out.write("\t\t\t<table>\r\n");
-            out.write("\t\t\t\t<tr>\r\n");
-            out.write("\t\t\t\t\t<td>User Name:<FONT color=\"red\">");
+            out.write("\t\t\t<div class=\"well\" style=\"color: black; width: 500px; height: 40px;\">\r\n");
+            out.write("\t\t\t\tUser Name:<FONT color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f0 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f0.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/views/registrationform.jsp(89,37) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/views/registrationform.jsp(95,32) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f0.setPath("name");
             int[] _jspx_push_body_count_form_005ferrors_005f0 = new int[] { 0 };
             try {
@@ -186,22 +192,19 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
               _jspx_th_form_005ferrors_005f0.doFinally();
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f0);
             }
-            out.write("</FONT></td>\r\n");
-            out.write("\t\t\t\t</tr>\r\n");
-            out.write("\t\t\t\t<tr>\r\n");
-            out.write("\t\t\t\t\t<td>");
+            out.write("</FONT>\r\n");
+            out.write("\t\t\t\t");
             if (_jspx_meth_form_005finput_005f0(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
-            out.write("</td>\r\n");
-            out.write("\t\t\t\t</tr>\r\n");
             out.write("\r\n");
-            out.write("\t\t\t\t<tr>\r\n");
-            out.write("\t\t\t\t\t<td>Password:<FONT color=\"red\">");
+            out.write("\t\t\t</div>\r\n");
+            out.write("\t\t\t<div class=\"well\" style=\"color: black; width: 500px; height: 40px;\">\r\n");
+            out.write("\t\t\t\tPassword:<FONT color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f1 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f1.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/views/registrationform.jsp(97,36) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/views/registrationform.jsp(99,31) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f1.setPath("password");
             int[] _jspx_push_body_count_form_005ferrors_005f1 = new int[] { 0 };
             try {
@@ -217,22 +220,19 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
               _jspx_th_form_005ferrors_005f1.doFinally();
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f1);
             }
-            out.write("</FONT></td>\r\n");
-            out.write("\t\t\t\t</tr>\r\n");
-            out.write("\t\t\t\t<tr>\r\n");
-            out.write("\t\t\t\t\t<td>");
+            out.write("</FONT>\r\n");
+            out.write("\t\t\t\t");
             if (_jspx_meth_form_005fpassword_005f0(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
-            out.write("</td>\r\n");
-            out.write("\t\t\t\t</tr>\r\n");
             out.write("\r\n");
-            out.write("\t\t\t\t<tr>\r\n");
-            out.write("\t\t\t\t\t<td>Confirm Password:<FONT color=\"red\">");
+            out.write("\t\t\t</div>\r\n");
+            out.write("\t\t\t<div class=\"well\" style=\"color: black; width: 500px; height: 40px;\">\r\n");
+            out.write("\t\t\t\tConfirm Password:<FONT color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f2 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f2.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/views/registrationform.jsp(105,44) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/views/registrationform.jsp(103,39) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f2.setPath("confirmPassword");
             int[] _jspx_push_body_count_form_005ferrors_005f2 = new int[] { 0 };
             try {
@@ -248,22 +248,19 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
               _jspx_th_form_005ferrors_005f2.doFinally();
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f2);
             }
-            out.write("</FONT></td>\r\n");
-            out.write("\t\t\t\t</tr>\r\n");
-            out.write("\t\t\t\t<tr>\r\n");
-            out.write("\t\t\t\t\t<td>");
+            out.write("</FONT>\r\n");
+            out.write("\t\t\t\t");
             if (_jspx_meth_form_005fpassword_005f1(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
-            out.write("</td>\r\n");
-            out.write("\t\t\t\t</tr>\r\n");
             out.write("\r\n");
-            out.write("\t\t\t\t<tr>\r\n");
-            out.write("\t\t\t\t\t<td>Email:<FONT color=\"red\">");
+            out.write("\t\t\t</div>\r\n");
+            out.write("\t\t\t<div class=\"well\" style=\"color: black; width: 500px; height: 40px;\">\r\n");
+            out.write("\t\t\t\tEmail:<FONT color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f3 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f3.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/views/registrationform.jsp(113,33) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/views/registrationform.jsp(108,28) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f3.setPath("email");
             int[] _jspx_push_body_count_form_005ferrors_005f3 = new int[] { 0 };
             try {
@@ -279,18 +276,13 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
               _jspx_th_form_005ferrors_005f3.doFinally();
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f3);
             }
-            out.write("</FONT></td>\r\n");
-            out.write("\t\t\t\t</tr>\r\n");
-            out.write("\t\t\t\t<tr>\r\n");
-            out.write("\t\t\t\t\t<td>");
+            out.write("</FONT>\r\n");
+            out.write("\t\t\t\t");
             if (_jspx_meth_form_005finput_005f1(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
-            out.write("</td>\r\n");
-            out.write("\t\t\t\t</tr>\r\n");
-            out.write("\t\t\t\t<tr>\r\n");
-            out.write("\t\t\t\t\t<td><input type=\"submit\" class=\"btn\" value=\"Submit\" /></td>\r\n");
-            out.write("\t\t\t\t</tr>\r\n");
-            out.write("\t\t\t</table>\r\n");
+            out.write("\r\n");
+            out.write("\t\t\t</div>\r\n");
+            out.write("\t\t\t<input type=\"submit\" class=\"btn\" value=\"Submit\" />\r\n");
             out.write("\t\t");
             int evalDoAfterBody = _jspx_th_form_005fform_005f0.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -309,9 +301,8 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
         _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fcommandName_005faction.reuse(_jspx_th_form_005fform_005f0);
       }
       out.write("\r\n");
-      out.write("\r\n");
       out.write("\t</div>\r\n");
-      out.write("\t\r\n");
+      out.write("\r\n");
       out.write("\t<!-- /container -->\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -354,7 +345,7 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f0 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/registrationform.jsp(93,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/registrationform.jsp(96,4) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f0.setPath("name");
     int[] _jspx_push_body_count_form_005finput_005f0 = new int[] { 0 };
     try {
@@ -381,7 +372,7 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
     org.springframework.web.servlet.tags.form.PasswordInputTag _jspx_th_form_005fpassword_005f0 = (org.springframework.web.servlet.tags.form.PasswordInputTag) _005fjspx_005ftagPool_005fform_005fpassword_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.PasswordInputTag.class);
     _jspx_th_form_005fpassword_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005fpassword_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/registrationform.jsp(101,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/registrationform.jsp(100,4) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fpassword_005f0.setPath("password");
     int[] _jspx_push_body_count_form_005fpassword_005f0 = new int[] { 0 };
     try {
@@ -408,7 +399,7 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
     org.springframework.web.servlet.tags.form.PasswordInputTag _jspx_th_form_005fpassword_005f1 = (org.springframework.web.servlet.tags.form.PasswordInputTag) _005fjspx_005ftagPool_005fform_005fpassword_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.PasswordInputTag.class);
     _jspx_th_form_005fpassword_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005fpassword_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/registrationform.jsp(109,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/registrationform.jsp(105,4) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fpassword_005f1.setPath("confirmPassword");
     int[] _jspx_push_body_count_form_005fpassword_005f1 = new int[] { 0 };
     try {
@@ -435,7 +426,7 @@ public final class registrationform_jsp extends org.apache.jasper.runtime.HttpJs
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f1 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/registrationform.jsp(116,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/registrationform.jsp(109,4) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f1.setPath("email");
     int[] _jspx_push_body_count_form_005finput_005f1 = new int[] { 0 };
     try {
