@@ -7,6 +7,7 @@ import java.util.List;
 
 import junit.framework.Assert;
 
+import org.easymock.EasyMock;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,6 +19,7 @@ import org.springframework.ui.ExtendedModelMap;
 import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.itransition.webeditor.core.AuthenticationManager;
 import com.itransition.webeditor.dao.TagsDao;
 import com.itransition.webeditor.model.Tags;
 import com.itransition.webeditor.model.Users;
@@ -35,14 +37,12 @@ public class HomeControllerTest {
 	@Autowired
 	private HomeController homeController;
 	
-<<<<<<< HEAD
 	 @Before
 	  public void setUp() {
 		homeController = new HomeController();
-		authenticationManager = EasyMock.createMock(AuthenticationManager.class);
+		AuthenticationManager authenticationManager = EasyMock.createMock(AuthenticationManager.class);
 	  }
 
-=======
 	@Before
 	public void before() {
 		tagsInitializer.initData();
@@ -61,5 +61,4 @@ public class HomeControllerTest {
 //		Object message = mav.getModel().get("controllerMessage");
 //		Assert.assertEquals("Home page",message);
 	}
->>>>>>> 2b5512fbb7e8a47071e76100d94e4098df04307d
 }

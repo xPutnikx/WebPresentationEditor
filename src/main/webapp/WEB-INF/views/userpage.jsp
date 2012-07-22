@@ -35,7 +35,7 @@ body {
 			<div class="container" style="width: 760px">
 				<a class="brand" href="../editor.html">Web Editor</a>
 				<ul class="nav">
-					<li class="active"><a href="home"><spring:message code="btn.home"/></a></li>
+					<li class="active"><a href="home">Home</a></li>
 					<li><a href="presentation/show">Presentations</a></li>
 					<li><a href="about">About</a></li>
 				</ul>
@@ -62,13 +62,7 @@ body {
 	</div>
 
  
-<h3><spring:message code="label.title"/></h3>
- 
-<span style="float: right">
-    <a href="?lang=en">en</a> 
-    | 
-    <a href="?lang=ru">ru</a>
-</span>
+
 	<div class="container" style="width:500px;">
 		<section>
 			<div class="page-header">

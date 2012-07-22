@@ -8,12 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.itransition.webeditor.core.AuthenticationManager;
 import com.itransition.webeditor.model.Tags;
 import com.itransition.webeditor.model.Users;
 import com.itransition.webeditor.service.UsersService;
@@ -35,19 +37,24 @@ public class ChangePasswordController {
 		return "redirect:userpage";
 	}
 	@RequestMapping(method = RequestMethod.GET, value = "changepassword")
-	public ModelAndView changePassword(
-			@RequestParam(value = "id", required = false) Long id) {
+	public String changePassword(
+			@RequestParam(value = "id", required = false) Long id,ModelMap modelMap) {
+		AuthenticationManager authenticationManager = new AuthenticationManager();
+		boolean authenticated = authenticationManager.isAuthenticated();
+		modelMap.addAttribute("authenticated", authenticated);
+		if (authenticated) {
+			modelMap.addAttribute("userName",
+					authenticationManager.getUserName());
+		}
 		logger.debug("change password : " + id);
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("changepassword");
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String name = user.getUsername();
 		Users users=usersService.getUserByName(name);
 		String pass=users.getPassword();
 		Long ID =users.getId();
-		mav.addObject("username", name);
-		mav.addObject("password", pass);
-		mav.addObject("id", ID);
-		return mav;
+		modelMap.addAttribute("username", name);
+		modelMap.addAttribute("password", pass);
+		modelMap.addAttribute("id", ID);
+		return "changepassword";
 	}
 }

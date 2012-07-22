@@ -118,18 +118,21 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\"\r\n");
       out.write("\t\t\tmethod='POST'\r\n");
       out.write("\t\t\tstyle=\"width: 360px; margin-left: auto; margin-right: auto;\">\r\n");
-      out.write("\t\t\t<div style=\"margin-left: -60px\">\r\n");
+      out.write("\t\t\t<div style=\"margin-left: -85px\">\r\n");
+      out.write("\t\t\t<div class=\"well\" style=\"color: black; width:500px; height:40px;\">\r\n");
       out.write("\t\t\t\t<br />\r\n");
       out.write("\t\t\t\t<p>\r\n");
       out.write("\t\t\t\t\t<label>Username:</label> <input type='text' name='j_username'\r\n");
       out.write("\t\t\t\t\t\tstyle=\"margin-left: 10px\" />\r\n");
       out.write("\t\t\t\t</p>\r\n");
       out.write("\t\t\t\t<br />\r\n");
-      out.write("\t\t\t\t<p>\r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t\t\t<div class=\"well\" style=\"color: black; width:500px; height:40px;\">\r\n");
+      out.write("\t\t\t\t<p style=\"margin-top:10px;\">\r\n");
       out.write("\t\t\t\t\t<label>Password:</label> <input type='password' name='j_password'\r\n");
       out.write("\t\t\t\t\t\tstyle=\"margin-left: 10px\" />\r\n");
       out.write("\t\t\t\t</p>\r\n");
-      out.write("\t\t\t\t<br />\r\n");
+      out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t<div style=\"float: right; margin-right: 60px;\">\r\n");
       out.write("\t\t\t\t\t<input name=\"submit\" class=\"btn primary\" type=\"submit\"\r\n");
       out.write("\t\t\t\t\t\tvalue=\"Log in\" />\r\n");
@@ -151,7 +154,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<script src=\"resources/assets/js/bootstrap-twipsy.js\"></script>\r\n");
       out.write("\r\n");
       out.write("</body>\r\n");
-      out.write("</html>\r\n");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

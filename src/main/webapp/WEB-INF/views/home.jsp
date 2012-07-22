@@ -44,7 +44,7 @@ body {
 								out</button>
 						</form>
 						<p class="pull-right" style="margin-right: 10px">
-							Logged in as <a href="#">${userName}</a>
+							Logged in as <a href="userpage">${userName}</a>
 						</p>
 					</c:when>
 					<c:otherwise>
@@ -63,7 +63,7 @@ body {
 	<div class="container" style="width: 800px">
 
 		<!-- Main hero unit for a primary marketing message or call to action -->
-		<div class="hero-unit">
+		<div class="hero-unit" style="">
 			<h1>Web Editor</h1>
 			<p>This project allows you to create an extensible, maintainable,
 				and clean presentations based on ImpressJS engine.</p>
