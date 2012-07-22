@@ -8,10 +8,10 @@ function check(id,enabled){
             })
         if(enabled)
         	{
-        	$("#"+id).text("false").toggleClass("success danger");
+        	$("#"+id).text("false").toggleClass("btn-success btn-danger");
         	}
         else{
-        	$("#"+id).text("true").toggleClass("danger success");
+        	$("#"+id).text("true").toggleClass("btn-danger btn-success");
         }
         $.doTimeout(1000, function(){
         	 window.location.replace("list");

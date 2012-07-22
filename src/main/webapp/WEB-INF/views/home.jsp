@@ -33,7 +33,7 @@ body {
 				<a class="brand" href="../editor.html">Web Editor</a>
 				<ul class="nav">
 					<li class="active"><a href="home">Home</a></li>
-					<li><a href="presentation/show">Presentations</a></li>
+					<li><a href="presentations">Presentations</a></li>
 					<li><a href="about">About</a></li>
 				</ul>
 				<c:choose>
@@ -44,7 +44,7 @@ body {
 								out</button>
 						</form>
 						<p class="pull-right" style="margin-right: 10px">
-							Logged in as <a href="userpage">${userName}</a>
+							Logged in as <a href="#">${userName}</a>
 						</p>
 					</c:when>
 					<c:otherwise>
@@ -63,7 +63,7 @@ body {
 	<div class="container" style="width: 800px">
 
 		<!-- Main hero unit for a primary marketing message or call to action -->
-		<div class="hero-unit" style="">
+		<div class="hero-unit">
 			<h1>Web Editor</h1>
 			<p>This project allows you to create an extensible, maintainable,
 				and clean presentations based on ImpressJS engine.</p>

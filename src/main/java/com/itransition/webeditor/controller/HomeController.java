@@ -6,8 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-
 import com.itransition.webeditor.core.AuthenticationManager;
 
 @Controller
@@ -16,17 +14,15 @@ public class HomeController {
 			.getLogger(HomeController.class);
 
 	@RequestMapping(value = "home", method = RequestMethod.GET)
-	public ModelAndView getHomePage() {
-		ModelAndView mav=new ModelAndView();
+	public String getHomePage(ModelMap modelMap) {
 		AuthenticationManager authenticationManager = new AuthenticationManager();
 		boolean authenticated = authenticationManager.isAuthenticated();
-		mav.addObject("authenticated", authenticated);
+		modelMap.addAttribute("authenticated", authenticated);
 		if (authenticated) {
-			mav.addObject("userName",
+			modelMap.addAttribute("userName",
 					authenticationManager.getUserName());
 		}
-		mav.setViewName("home");
-		return mav;
+		return "home";
 	}
 
 }

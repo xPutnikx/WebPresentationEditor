@@ -22,7 +22,7 @@ public class UserRolesDao {
 	}
 	
 	@Transactional	
-	@Cacheable("roles")
+	@CacheEvict(value = "roles", allEntries = true)
 	public  UserRoles  findByUserId(Long userId) {		
 		return (UserRoles) entityManager.createQuery(
 			    "select u from UserRoles u where u.userId='" + userId + "'")
@@ -30,7 +30,7 @@ public class UserRolesDao {
 	}
 	
 	@Transactional	
-	@Cacheable("roles")
+	@CacheEvict(value = "roles", allEntries = true)
 	public String getRoleByUserId(Long userId) {
 		return (String) entityManager.createQuery(
 				"select u.authority from UserRoles u where u.userId='" + userId + "'")

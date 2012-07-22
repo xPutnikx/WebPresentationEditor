@@ -26,7 +26,7 @@ public class TagsDao {
 	
 	@Transactional	
 	@SuppressWarnings("unchecked")
-	@Cacheable("tags")	
+	@CacheEvict(value = "tags", allEntries = true)	
 	public Long findIdByName(String name) {
 		List<Long> result = entityManager.createQuery(
 				"select t.id from Tags t where t.name='" + name + "'")
@@ -48,7 +48,7 @@ public class TagsDao {
 	
 	@Transactional
 	@SuppressWarnings("unchecked")
-	@Cacheable("tags")	
+	@CacheEvict(value = "tags", allEntries = true)
 	public List<Tags> getTags() {
 		return entityManager.createQuery(
 				"select t from Tags t").getResultList();

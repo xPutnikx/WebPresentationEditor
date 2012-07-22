@@ -25,7 +25,7 @@ public class PresentationsDao {
 	
 	@Transactional
 	@SuppressWarnings("unchecked")
-	@Cacheable("presentations")
+	@CacheEvict(value = "presentations", allEntries = true)
 	public List<Presentations> findByUserId(Long userId) {
 		return entityManager.createQuery(
 				"select p from Presentations p where p.userId='" + userId + "'")
@@ -34,7 +34,7 @@ public class PresentationsDao {
 	
 	@Transactional
 	@SuppressWarnings("unchecked")
-	@Cacheable("presentations")
+	@CacheEvict(value = "presentations", allEntries = true)
 	public List<Presentations> searchByTitle(String title) {
 		return entityManager.createQuery(
 				"select p from Presentations p where p.title like '%" + title + "%'")
@@ -43,7 +43,7 @@ public class PresentationsDao {
 
 	@Transactional
 	@SuppressWarnings("unchecked")
-	@Cacheable("presentations")
+	@CacheEvict(value = "presentations", allEntries = true)
 	public List<Presentations> getPresentations() {
 		return entityManager.createQuery(
 				"select p from Presentations p").getResultList();

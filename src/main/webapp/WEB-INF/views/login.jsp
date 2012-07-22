@@ -67,21 +67,18 @@ body {
 		<form name='f' action="<c:url value='../j_spring_security_check' />"
 			method='POST'
 			style="width: 360px; margin-left: auto; margin-right: auto;">
-			<div style="margin-left: -85px">
-			<div class="well" style="color: black; width:500px; height:40px;">
+			<div style="margin-left: -60px">
 				<br />
 				<p>
 					<label>Username:</label> <input type='text' name='j_username'
 						style="margin-left: 10px" />
 				</p>
 				<br />
-			</div>
-				<div class="well" style="color: black; width:500px; height:40px;">
-				<p style="margin-top:10px;">
+				<p>
 					<label>Password:</label> <input type='password' name='j_password'
 						style="margin-left: 10px" />
 				</p>
-				</div>
+				<br />
 				<div style="float: right; margin-right: 60px;">
 					<input name="submit" class="btn primary" type="submit"
 						value="Log in" />

@@ -22,7 +22,7 @@ public class UsersDao {
 	
 	@Transactional
 	@SuppressWarnings("unchecked")
-	@Cacheable("users")
+	@CacheEvict(value = "users", allEntries = true)
 	public List<Users> getUsers() {
 		return entityManager.createQuery("select u from Users u").getResultList();
 	}
@@ -53,14 +53,14 @@ public class UsersDao {
 	}
 	
 	@Transactional
-	@Cacheable("users")
+	@CacheEvict(value = "users", allEntries = true)
 	public Users getUserByName(String name) {
 		return (Users) entityManager.createQuery("select u from Users u where u.name='"+name+"'")
 				.getResultList().get(0);
 	}
 	
 	@Transactional
-	@Cacheable("users")
+	@CacheEvict(value = "users", allEntries = true)
 	public Users getUserById(Long id) {
 		return (Users) entityManager.createQuery("select u from Users u where u.id='"+id+"'")
 				.getResultList().get(0);

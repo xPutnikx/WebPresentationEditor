@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -33,78 +30,97 @@ a {
 	href="resources/assets/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="resources/assets/ico/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
-<link rel="apple-touch-icon"
-	href="resources/assets/ico/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72"
-	href="resources/assets/ico/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114"
-	href="resources/assets/ico/apple-touch-icon-114x114.png">
 </head>
 
-<div class="topbar">
-	<div class="fill">
-		<div class="container" style="width: 760px">
-			<a class="brand" href="../editor.html">Web Editor</a>
-			<ul class="nav">
-				<li class="active"><a href="home">Home</a></li>
-				<li><a href="presentation/show">Presentations</a></li>
-				<li><a href="about">About</a></li>
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse"
+				data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+				class="icon-bar"></span> <span class="icon-bar"></span>
+			</a> <a class="brand" href="../editor.html"> <i
+				class="icon-white icon-edit"></i> Web editor
+			</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li><a href="home"> <i class="icon-white icon-home"></i>
+							Home
+					</a></li>
+					<li><a href="about"> <i class="icon-white icon-book"></i>
+							About
+					</a></li>
+					<li><a href="contact"> <i class="icon-white icon-pencil"></i>
+							Contact
+					</a></li>
+					<li><a href="listOfPresentations"> <i
+							class="icon-white icon-picture"></i> List of Presentations
+					</a></li>
+				</ul>
+			</div>
+			<form class="navbar-search pull-left" action="">
+				<i class="icon-white icon-search"></i><input type="text"
+					class="search-query span2" placeholder="Search">
+			</form>
+			<ul class="nav pull-right">
+				<ul class="nav">
+					<a class="btn dropdown-toggle" data-toggle="dropdown"> <i
+						class="icon-user"></i> ${username} <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="userpage"> <i class="icon-cog"></i> Profile
+						</a></li>
+						<li><a href="../j_spring_security_logout"> <i
+								class="icon-off"></i> Logout
+						</a></li>
+					</ul>
+					</li>
+				</ul>
 			</ul>
-			<c:choose>
-				<c:when test="${authenticated}">
-					<form class="pull-right">
-						<button class="btn" type="submit"
-							onClick="window.location='../j_spring_security_logout'; return false;">Log
-							out</button>
-					</form>
-					<p class="pull-right" style="margin-right: 10px">
-						Logged in as <a href="userpage">${userName}</a>
-					</p>
-				</c:when>
-				<c:otherwise>
-					<form class="pull-right">
-						<button class="btn" type="submit"
-							onClick="window.location='login'; return false;">Log in</button>
-						<button class="btn" type="submit"
-							onClick="window.location='register'; return false;">Register</button>
-					</form>
-				</c:otherwise>
-			</c:choose>
 		</div>
 	</div>
 </div>
-
-<div class="container" style="width: 500px;">
+<div class="container" style="margin-top: 20px;">
 	<h1>${username} change your password</h1>
 	<input type=hidden id="userPassword" name="userPassword"
 		value="${password}" /> <input type=hidden id="userId" name="userId"
 		value="${id}" />
 	<form:form method="Post" action="changepassword"
-		commandName="changepassword" style="margin-top:40px;">
-		<div class="well" style="color: black; width: 500px; height: 40px;">
-			<div style="float: left;">
-				Current password<br /> <input type="password" id="currentpassword"
-					style="margin-top: 10px;" />
-			</div>
-			<div style="float: left; margin-top: 25px;" id="currentlabel"></div>
+		commandName="changepassword" style="margin-top: 40px;">
+		<div class="well" style="color: black;">
+			Current password<br /> <input type="password" id="currentpassword" />
 		</div>
-		<div class="well" style="color: black; width: 500px; height: 40px;">
-			<div style="float: left;">
-				New password<br /> <input type="password" id="newpassword"
-					style="margin-top: 10px;" />
-			</div>
-			<div style="float: left; margin-top: 25px;" id="newtlabel"></div>
+		<div class="well" style="color: black;">
+			New password<br /> <input type="password" id="newpassword" />
 		</div>
-		<div class="well" style="color: black; width: 500px; height: 40px;">
-			<div style="float: left;">
-				Confirm password<br /> <input type="password" id="confirmpassword"
-					style="margin-top: 10px;" />
-			</div>
-			<div style="float: left; margin-top: 25px;" id="confirmlabel"></div>
+		<div class="well" style="color: black;">
+			Confirm password<br /> <input type="password" id="confirmpassword" />
 		</div>
-		<input class="btn" value="Save" onclick="sub()" style="width: 60px;" />
+		<input class="btn" value="Save" onclick="sub()" />
 	</form:form>
+</div>
+<div
+	style="display: none; z-index: 1000; outline: 0px; position: absolute; background-color: whiteSmoke;"
+	class="ui-dialog ui-widget ui-widget-content-error ui-corner-all ui-draggable ui-resizable"
+	tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-dialog">
+	<div
+		class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" >
+		<span class="ui-dialog-title" id="ui-dialog-title-dialog">Basic
+			dialog</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all"
+			role="button"><span class="ui-icon ui-icon-closethick">close</span></a>
+	</div>
+	<div id="dialog" style="" class="ui-dialog-content ui-widget-content" style="background-color: whiteSmoke;">
+		<p></p>
+	</div>
+	<div class="ui-resizable-handle ui-resizable-n" style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-w" style="z-index: 1000;"></div>
+	<div
+		class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se"
+		style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000;"></div>
+	<div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000;"></div>
 </div>
 <script src="resources/assets/js/jquery.js"></script>
 <script src="resources/assets/js/bootstrap-transition.js"></script>
@@ -114,7 +130,6 @@ a {
 <script src="resources/assets/js/bootstrap-scrollspy.js"></script>
 <script src="resources/assets/js/bootstrap-tab.js"></script>
 <script src="resources/assets/js/bootstrap-tooltip.js"></script>
-<script src="resources/assets/js/bootstrap-twipsy.js"></script>
 <script src="resources/assets/js/bootstrap-popover.js"></script>
 <script src="resources/assets/js/bootstrap-button.js"></script>
 <script src="resources/assets/js/bootstrap-collapse.js"></script>
@@ -131,11 +146,5 @@ a {
 <script src="resources/jquery.ui/jquery.ui.dialog.js"></script>
 <script src="resources/jquery.ui/jquery.effects.core.js"></script>
 <script src="resources/jquery-ui-1.8.21.custom.min.js"></script>
-<script src="resources/assets/js/less-1.1.5.min.js"></script>
-<script src="resources/assets/js/bootstrap-buttons.js"></script>
-<script src="resources/assets/js/bootstrap-modal.js"></script>
-<script src="resources/assets/js/bootstrap-tabs.js"></script>
-<script src="resources/jquery.ba-dotimeout.js"></script>
-
 </body>
 </html>

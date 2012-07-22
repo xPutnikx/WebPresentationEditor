@@ -11,10 +11,6 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List _jspx_dependants;
 
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fchoose;
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest;
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fotherwise;
-
   private javax.el.ExpressionFactory _el_expressionfactory;
   private org.apache.AnnotationProcessor _jsp_annotationprocessor;
 
@@ -23,17 +19,11 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
-    _005fjspx_005ftagPool_005fc_005fchoose = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _005fjspx_005ftagPool_005fc_005fotherwise = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
     _jsp_annotationprocessor = (org.apache.AnnotationProcessor) getServletConfig().getServletContext().getAttribute(org.apache.AnnotationProcessor.class.getName());
   }
 
   public void _jspDestroy() {
-    _005fjspx_005ftagPool_005fc_005fchoose.release();
-    _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest.release();
-    _005fjspx_005ftagPool_005fc_005fotherwise.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -50,7 +40,7 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
 
 
     try {
-      response.setContentType("text/html; charset=ISO-8859-1");
+      response.setContentType("text/html");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -60,53 +50,108 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
       out.write("<head>\r\n");
       out.write("<meta charset=\"utf-8\">\r\n");
-      out.write("<title>WebEditor: Home</title>\r\n");
-      out.write("\r\n");
-      out.write("<!-- Le styles -->\r\n");
+      out.write("<title>About</title>\r\n");
+      out.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
+      out.write("<meta name=\"description\" content=\"\">\r\n");
+      out.write("<meta name=\"author\" content=\"by Putnik\">\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap.css\" rel=\"stylesheet\">\r\n");
-      out.write("<style type=\"text/css\">\r\n");
+      out.write("<style>\r\n");
       out.write("body {\r\n");
       out.write("\tpadding-top: 60px;\r\n");
       out.write("}\r\n");
       out.write("</style>\r\n");
-      out.write("\r\n");
-      out.write("<!-- Le fav and touch icons -->\r\n");
+      out.write("<style>\r\n");
+      out.write("a {\r\n");
+      out.write("\ttext-decoration: none;\r\n");
+      out.write("}\r\n");
+      out.write("</style>\r\n");
+      out.write("<link href=\"resources/assets/css/bootstrap-responsive.css\"\r\n");
+      out.write("\trel=\"stylesheet\">\r\n");
       out.write("<link rel=\"shortcut icon\" href=\"resources/assets/ico/favicon.ico\">\r\n");
-      out.write("<link rel=\"apple-touch-icon\"\r\n");
-      out.write("\thref=\"resources/assets/ico/apple-touch-icon.png\">\r\n");
-      out.write("<link rel=\"apple-touch-icon\" sizes=\"72x72\"\r\n");
-      out.write("\thref=\"resources/assets/ico/apple-touch-icon-72x72.png\">\r\n");
-      out.write("<link rel=\"apple-touch-icon\" sizes=\"114x114\"\r\n");
-      out.write("\thref=\"resources/assets/ico/apple-touch-icon-114x114.png\">\r\n");
+      out.write("<link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\"\r\n");
+      out.write("\thref=\"resources/assets/ico/apple-touch-icon-144-precomposed.png\">\r\n");
+      out.write("<link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\"\r\n");
+      out.write("\thref=\"resources/assets/ico/apple-touch-icon-114-precomposed.png\">\r\n");
+      out.write("<link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\"\r\n");
+      out.write("\thref=\"resources/assets/ico/apple-touch-icon-72-precomposed.png\">\r\n");
+      out.write("<link rel=\"apple-touch-icon-precomposed\"\r\n");
+      out.write("\thref=\"resources/assets/ico/apple-touch-icon-57-precomposed.png\">\r\n");
       out.write("</head>\r\n");
-      out.write("\r\n");
-      out.write("<body>\r\n");
-      out.write("\t<div class=\"topbar\">\r\n");
-      out.write("\t\t<div class=\"fill\">\r\n");
-      out.write("\t\t\t<div class=\"container\" style=\"width: 760px\">\r\n");
-      out.write("\t\t\t\t<a class=\"brand\" href=\"../editor.html\">Web Editor</a>\r\n");
+      out.write("<div class=\"navbar navbar-fixed-top\">\r\n");
+      out.write("\t<div class=\"navbar-inner\">\r\n");
+      out.write("\t\t<div class=\"container\">\r\n");
+      out.write("\t\t\t<a class=\"btn btn-navbar\" data-toggle=\"collapse\"\r\n");
+      out.write("\t\t\t\tdata-target=\".nav-collapse\"> <span class=\"icon-bar\"></span> <span\r\n");
+      out.write("\t\t\t\tclass=\"icon-bar\"></span> <span class=\"icon-bar\"></span>\r\n");
+      out.write("\t\t\t</a> <a class=\"brand\" href=\"../editor.html\"> <i\r\n");
+      out.write("\t\t\t\tclass=\"icon-white icon-edit\"></i> Web editor\r\n");
+      out.write("\t\t\t</a>\r\n");
+      out.write("\t\t\t<div class=\"nav-collapse\">\r\n");
       out.write("\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t<li><a href=\"home\">Home</a></li>\r\n");
-      out.write("\t\t\t\t\t<li><a href=\"presentation/show\">Presentations</a></li>\r\n");
-      out.write("\t\t\t\t\t<li class=\"active\"><a href=\"about\">About</a></li>\r\n");
-      out.write("\t\t\t\t</ul>\r\n");
-      out.write("\t\t\t\t");
-      if (_jspx_meth_c_005fchoose_005f0(_jspx_page_context))
-        return;
-      out.write("\r\n");
-      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"home\"> <i class=\"icon-white icon-home\"></i>\r\n");
+      out.write("\t\t\t\t\t\t\tHome\r\n");
+      out.write("\t\t\t\t\t</a></li>\r\n");
+      out.write("\t\t\t\t\t<li class=\"active\"><a href=\"#\"> <i\r\n");
+      out.write("\t\t\t\t\t\t\tclass=\"icon-white icon-book\"></i> About\r\n");
+      out.write("\t\t\t\t\t</a></li>\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"contact\"> <i class=\"icon-white icon-pencil\"></i>\r\n");
+      out.write("\t\t\t\t\t\t\tContact\r\n");
+      out.write("\t\t\t\t\t</a></li>\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"listOfPresentations\"> <i\r\n");
+      out.write("\t\t\t\t\t\t\tclass=\"icon-white icon-picture\"></i> List of Presentations\r\n");
+      out.write("\t\t\t\t\t</a></li>\r\n");
+      out.write("\t\t\t\t\t<li><a class=\"btn dropdown-toggle \" data-toggle=\"dropdown\" data-option=\"shapes\" style=\"background-color:rgba(142, 241, 35, 0.73)\">\r\n");
+      out.write("\t\t\t\t\t<i class=\"icon-star\"></i>Shapes <span class=\"caret\"></span></a>\r\n");
+      out.write("\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
+      out.write("\t\t\t\t\t\t<li><a onclick=\"rectangle()\">Rectangle</a></li>\r\n");
+      out.write("\t\t\t\t\t\t<li><a onclick=\"elipse()\">Elipse</a></li>\r\n");
+      out.write("\t\t\t\t\t\t<li><a onclick=\"poligon()\">Poligon</a></li>\r\n");
+      out.write("\t\t\t\t\t\t<li><a onclick=\"line()\">Line</a></li>\r\n");
+      out.write("\t\t\t\t\t</ul>\r\n");
+      out.write("\t\t\t\t\t</li>\r\n");
+      out.write("\t\t\t</ul>\r\n");
       out.write("\t\t</div>\r\n");
+      out.write("\t\t<form class=\"navbar-search pull-left\" action=\"\">\r\n");
+      out.write("\t\t\t<i class=\"icon-white icon-search\"></i><input type=\"text\"\r\n");
+      out.write("\t\t\t\tclass=\"search-query span2\" placeholder=\"Search\">\r\n");
+      out.write("\t\t</form>\r\n");
+      out.write("\t\t<ul class=\"nav pull-right\">\r\n");
+      out.write("\t\t\t<ul class=\"nav\">\r\n");
+      out.write("\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\"> <i\r\n");
+      out.write("\t\t\t\t\tclass=\"icon-user\"></i> Account <span class=\"caret\"></span>\r\n");
+      out.write("\t\t\t\t</a>\r\n");
+      out.write("\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"registrationform\">Registration</a></li>\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"loginform\">Login</a></li>\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"userpage\"> <i class=\"icon-cog\"></i> Profile\r\n");
+      out.write("\t\t\t\t\t</a></li>\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"../j_spring_security_logout\"> <i\r\n");
+      out.write("\t\t\t\t\t\t\tclass=\"icon-off\"></i> Logout\r\n");
+      out.write("\t\t\t\t\t</a></li>\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t\t</ul>\r\n");
+      out.write("\t\t\t\t</li>\r\n");
+      out.write("\t\t\t</ul>\r\n");
+      out.write("\r\n");
+      out.write("\t\t</ul>\r\n");
       out.write("\t</div>\r\n");
+      out.write("</div>\r\n");
+      out.write("</div>\r\n");
       out.write("\r\n");
+      out.write("<div class=\"container\" style=\"margin-top: 20px;\">\r\n");
+      out.write("\t<h1>About</h1>\r\n");
+      out.write("\t<p>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${controllerMessage}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("</p>\r\n");
+      out.write("</div>\r\n");
       out.write("\r\n");
-      out.write("<iframe src=\"http://mrdoob.com/lab/javascript/webgl/clouds/\" width=\"1800\" height=\"1240\" style=\"margin-top:-250px;margin-left:-15px;\"></iframe>\r\n");
+      out.write("<canvas id='draw'></canvas>\r\n");
+      out.write("<script src=\"resources/processing.js\"></script>\r\n");
+      out.write("<script src=\"resources/processing-api.js\"></script>\r\n");
       out.write("<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
       out.write("<script src=\"resources/assets/js/bootstrap-transition.js\"></script>\r\n");
       out.write("<script src=\"resources/assets/js/bootstrap-alert.js\"></script>\r\n");
@@ -120,6 +165,39 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<script src=\"resources/assets/js/bootstrap-collapse.js\"></script>\r\n");
       out.write("<script src=\"resources/assets/js/bootstrap-carousel.js\"></script>\r\n");
       out.write("<script src=\"resources/assets/js/bootstrap-typeahead.js\"></script>\r\n");
+      out.write("<script type='text/javascript'>\r\n");
+      out.write("function rectangle(){\r\n");
+      out.write("var canvas=document.getElementById(\"draw\")\r\n");
+      out.write("var x=canvas.getContext(\"2d\");\r\n");
+      out.write("x.strokeRect(getRandomArbitary(70, 200),getRandomArbitary(50, 100),getRandomArbitary(40, 70),getRandomArbitary(40, 70));}\r\n");
+      out.write("function elipse(){\r\n");
+      out.write("\tvar canvas=document.getElementById(\"draw\")\r\n");
+      out.write("\tvar x=canvas.getContext(\"2d\");\r\n");
+      out.write("\tx.beginPath();\r\n");
+      out.write("\tx.arc(event.clientY,event.clientX,50,0,Math.PI*2,true);\r\n");
+      out.write("\tx.stroke();\r\n");
+      out.write("}\r\n");
+      out.write("</script>\r\n");
+      out.write("<script type='text/javascript'>\r\n");
+      out.write("function poligon(){\r\n");
+      out.write("\tvar canvas=document.getElementById(\"draw\")\r\n");
+      out.write("\tvar x=canvas.getContext(\"2d\");\r\n");
+      out.write("x.beginPath();\r\n");
+      out.write("x.moveTo(75,25);\r\n");
+      out.write("x.quadraticCurveTo(25,25,25,62.5);\r\n");
+      out.write("x.quadraticCurveTo(25,100,50,100);\r\n");
+      out.write("x.quadraticCurveTo(50,120,30,125);\r\n");
+      out.write("x.quadraticCurveTo(60,120,65,100);\r\n");
+      out.write("x.quadraticCurveTo(125,100,125,62.5);\r\n");
+      out.write("x.quadraticCurveTo(125,25,75,25);\r\n");
+      out.write("x.stroke();}\r\n");
+      out.write("</script>\r\n");
+      out.write("<script type=\"text/javascript\">\r\n");
+      out.write("function getRandomArbitary(min, max)\r\n");
+      out.write("{\r\n");
+      out.write("  return Math.random() * (max - min) + min;\r\n");
+      out.write("}\r\n");
+      out.write("</script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -132,109 +210,5 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
-  }
-
-  private boolean _jspx_meth_c_005fchoose_005f0(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:choose
-    org.apache.taglibs.standard.tag.common.core.ChooseTag _jspx_th_c_005fchoose_005f0 = (org.apache.taglibs.standard.tag.common.core.ChooseTag) _005fjspx_005ftagPool_005fc_005fchoose.get(org.apache.taglibs.standard.tag.common.core.ChooseTag.class);
-    _jspx_th_c_005fchoose_005f0.setPageContext(_jspx_page_context);
-    _jspx_th_c_005fchoose_005f0.setParent(null);
-    int _jspx_eval_c_005fchoose_005f0 = _jspx_th_c_005fchoose_005f0.doStartTag();
-    if (_jspx_eval_c_005fchoose_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\r\n");
-        out.write("\t\t\t\t\t");
-        if (_jspx_meth_c_005fwhen_005f0(_jspx_th_c_005fchoose_005f0, _jspx_page_context))
-          return true;
-        out.write("\r\n");
-        out.write("\t\t\t\t\t");
-        if (_jspx_meth_c_005fotherwise_005f0(_jspx_th_c_005fchoose_005f0, _jspx_page_context))
-          return true;
-        out.write("\r\n");
-        out.write("\t\t\t\t");
-        int evalDoAfterBody = _jspx_th_c_005fchoose_005f0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_005fchoose_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fc_005fchoose.reuse(_jspx_th_c_005fchoose_005f0);
-      return true;
-    }
-    _005fjspx_005ftagPool_005fc_005fchoose.reuse(_jspx_th_c_005fchoose_005f0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_005fwhen_005f0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fchoose_005f0, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:when
-    org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_005fwhen_005f0 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
-    _jspx_th_c_005fwhen_005f0.setPageContext(_jspx_page_context);
-    _jspx_th_c_005fwhen_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fchoose_005f0);
-    // /WEB-INF/views/about.jsp(40,5) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fwhen_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${authenticated}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
-    int _jspx_eval_c_005fwhen_005f0 = _jspx_th_c_005fwhen_005f0.doStartTag();
-    if (_jspx_eval_c_005fwhen_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\r\n");
-        out.write("\t\t\t\t\t\t<form class=\"pull-right\">\r\n");
-        out.write("\t\t\t\t\t\t\t<button class=\"btn\" type=\"submit\"\r\n");
-        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='../j_spring_security_logout'; return false;\">Log\r\n");
-        out.write("\t\t\t\t\t\t\t\tout</button>\r\n");
-        out.write("\t\t\t\t\t\t</form>\r\n");
-        out.write("\t\t\t\t\t\t<p class=\"pull-right\" style=\"margin-right: 10px\">\r\n");
-        out.write("\t\t\t\t\t\t\tLogged in as <a href=\"userpage\">");
-        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${userName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-        out.write("</a>\r\n");
-        out.write("\t\t\t\t\t\t</p>\r\n");
-        out.write("\t\t\t\t\t");
-        int evalDoAfterBody = _jspx_th_c_005fwhen_005f0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_005fwhen_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest.reuse(_jspx_th_c_005fwhen_005f0);
-      return true;
-    }
-    _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest.reuse(_jspx_th_c_005fwhen_005f0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_005fotherwise_005f0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fchoose_005f0, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:otherwise
-    org.apache.taglibs.standard.tag.common.core.OtherwiseTag _jspx_th_c_005fotherwise_005f0 = (org.apache.taglibs.standard.tag.common.core.OtherwiseTag) _005fjspx_005ftagPool_005fc_005fotherwise.get(org.apache.taglibs.standard.tag.common.core.OtherwiseTag.class);
-    _jspx_th_c_005fotherwise_005f0.setPageContext(_jspx_page_context);
-    _jspx_th_c_005fotherwise_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fchoose_005f0);
-    int _jspx_eval_c_005fotherwise_005f0 = _jspx_th_c_005fotherwise_005f0.doStartTag();
-    if (_jspx_eval_c_005fotherwise_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\r\n");
-        out.write("\t\t\t\t\t\t<form class=\"pull-right\">\r\n");
-        out.write("\t\t\t\t\t\t\t<button class=\"btn\" type=\"submit\"\r\n");
-        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='login'; return false;\">Log in</button>\r\n");
-        out.write("\t\t\t\t\t\t\t<button class=\"btn\" type=\"submit\"\r\n");
-        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='register'; return false;\">Register</button>\r\n");
-        out.write("\t\t\t\t\t\t</form>\r\n");
-        out.write("\t\t\t\t\t");
-        int evalDoAfterBody = _jspx_th_c_005fotherwise_005f0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_005fotherwise_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fc_005fotherwise.reuse(_jspx_th_c_005fotherwise_005f0);
-      return true;
-    }
-    _005fjspx_005ftagPool_005fc_005fotherwise.reuse(_jspx_th_c_005fotherwise_005f0);
-    return false;
   }
 }
