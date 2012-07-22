@@ -28,7 +28,7 @@ public class PresentationsService {
 	public Presentations findById(Long id) {
 		return presentationsDao.findById(id);
 	}
-	
+
 	public List<Presentations> findPresentationsByUserId(Long userId) {
 		return presentationsDao.findByUserId(userId);
 	}
@@ -72,6 +72,29 @@ public class PresentationsService {
 
 	public void save(Presentations presentations) {
 		presentationsDao.save(presentations);
+	}
+
+	/**
+	 * Add list of tags to Tags table and foreign keys to PresentationTags.
+	 * Creates new tag if it doesn't exist.
+	 * 
+	 * @param tags
+	 *            list of tags.
+	 */
+	public void addTags(List<String> tags, Long id) {
+		for (String tag : tags) {
+			Long tagId = tagsDao.findIdByName(tag);
+			if (tagId == null) {
+				Tags newTags = new Tags();
+				newTags.setName(tag);
+				tagsDao.save(newTags);
+				Long newTagId = tagsDao.findIdByName(tag);
+				PresentationTags presentationTags = new PresentationTags();
+				presentationTags.setPresentationId(id);
+				presentationTags.setTagId(newTagId);
+				presentationTagsDao.save(presentationTags);
+			}
+		}
 	}
 
 	public void removeById(Long id) {
