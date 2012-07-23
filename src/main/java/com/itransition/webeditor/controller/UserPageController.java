@@ -21,11 +21,12 @@ import com.itransition.webeditor.service.UsersService;
 
 @Controller
 public class UserPageController {
-	@Autowired
-	UsersService usersService;
-
 	private static final Logger logger = LoggerFactory
 			.getLogger(UserPageController.class);
+	
+	@Autowired
+	private UsersService usersService;
+	
 	@RequestMapping(value="userpage", method = RequestMethod.GET)
 	public String showUserPage(ModelMap modelMap) { 
 		AuthenticationManager authenticationManager = new AuthenticationManager();

@@ -43,7 +43,6 @@ public class RegisterController {
 		this.registrationValidation = registrationValidation;
 	}
 
-	// Display the form on the get request
 	@RequestMapping(method = RequestMethod.GET)
 	public String showRegistration(Map model) {
 		Registration registration = new Registration();
@@ -88,12 +87,10 @@ public class RegisterController {
 			String message = "Hello " + user + "! " + link;
 			MailSender mailSender = new MailSender(email, message);
 			mailSender.send();
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (NoSuchAlgorithmException e) {			
+			logger.error("No such algorithm detected!");
 		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("Messaging exceptions detected!");
 		}
 	}
 }

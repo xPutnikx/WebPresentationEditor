@@ -21,13 +21,17 @@ import java.util.List;
 @Controller
 @RequestMapping("/")
 public class PersonController {
-	private static final Logger logger = LoggerFactory.getLogger(PersonController.class);
+	private static final Logger logger = LoggerFactory
+			.getLogger(PersonController.class);
 	@Autowired
 	private UsersService usersService;
-	
+
 	@RequestMapping(method = RequestMethod.POST, value = "edit")
-	public String savePerson(@RequestParam ("name") String name,@RequestParam ("email") String email,@RequestParam ("password") String password) throws NestedServletException {
-		Users users=new Users();
+	public String savePerson(@RequestParam("name") String name,
+			@RequestParam("email") String email,
+			@RequestParam("password") String password)
+			throws NestedServletException {
+		Users users = new Users();
 		users.setEmail(email);
 		users.setName(name);
 		users.setPassword(password);
@@ -54,38 +58,39 @@ public class PersonController {
 		modelMap.addAttribute("username", getCurrentUserName());
 		return "list";
 	}
-	
+
 	@RequestMapping(value = "/list", method = RequestMethod.POST)
-	public void changeActivity(@RequestParam ("json") long person,@RequestParam ("enable") boolean enable) throws PermessionDeniedException
-	{
-		if(enable){
+	public void changeActivity(@RequestParam("json") long person,
+			@RequestParam("enable") boolean enable)
+			throws PermessionDeniedException {
+		if (enable) {
 			usersService.banById(person);
-		}
-		else{
+		} else {
 			usersService.unbanById(person);
 		}
 	}
-	
+
 	@RequestMapping(value = "/listrole", method = RequestMethod.POST)
-	public void changeRole(@RequestParam ("json") long person,@RequestParam ("role") String role)
-	{
-		
-		if (role.equals("Admin")){
+	public void changeRole(@RequestParam("json") long person,
+			@RequestParam("role") String role) {
+
+		if (role.equals("Admin")) {
 			usersService.makeAdministrator(person);
-		}
-		else{
+		} else {
 			usersService.makeUser(person);
 		}
-		
+
 	}
-	
+
 	@RequestMapping(value = "/listdelete", method = RequestMethod.POST)
-	public void delUser(@RequestParam ("json") long person) throws PermessionDeniedException
-	{
+	public void delUser(@RequestParam("json") long person)
+			throws PermessionDeniedException {
 		usersService.removeById(person);
 	}
-	private String getCurrentUserName(){
-		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+	private String getCurrentUserName() {
+		User user = (User) SecurityContextHolder.getContext()
+				.getAuthentication().getPrincipal();
 		String name = user.getUsername();
 		return name;
 	}

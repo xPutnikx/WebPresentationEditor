@@ -12,26 +12,45 @@ import com.itransition.webeditor.core.ConfirmationKey;
 import com.itransition.webeditor.model.Users;
 import com.itransition.webeditor.service.UsersService;
 
+/**
+ * Confirms registration of specified user.
+ * 
+ */
 @Controller
 public class ConfirmRegistrationController {
-	private static final Logger logger = LoggerFactory.getLogger(ConfirmRegistrationController.class);
+	private static final Logger logger = LoggerFactory
+			.getLogger(ConfirmRegistrationController.class);
 
 	@Autowired
 	private UsersService usersService;
-	private ConfirmationKey confirmKey=new ConfirmationKey(); 
 
-	@RequestMapping(method = RequestMethod.GET, value="confirm")
-	public String confirmRegistration(Model model, 
-			@RequestParam(value = "id", required = true) Long id,			
+	private ConfirmationKey confirmKey = new ConfirmationKey();
+
+	/**
+	 * Handles requests for confirm.jsp.
+	 * 
+	 * @param model
+	 *            Confirm model.
+	 * @param id
+	 *            user id.
+	 * @param key
+	 *            user key.
+	 * @return Confirm page.
+	 */
+	@RequestMapping(method = RequestMethod.GET, value = "confirm")
+	public String confirmRegistration(Model model,
+			@RequestParam(value = "id", required = true) Long id,
 			@RequestParam(value = "key", required = true) String key) {
-		model.addAttribute("controllerMessage",	"Confirm Registration");				
+		model.addAttribute("controllerMessage", "Confirm Registration");
 		Users users = usersService.findById(id);
-		boolean check = confirmKey.checkConfirmationKey(users, key);		
+		boolean check = confirmKey.checkConfirmationKey(users, key);
 		if (check) {
 			usersService.registerById(id);
-			model.addAttribute("confirmationMessage", "Success, baby!");
+			model.addAttribute("confirmationMessage",
+					"Congratulations. You've been successfully registred.");
 		} else {
-			model.addAttribute("confirmationMessage", "Registration key is not valid!");
+			model.addAttribute("confirmationMessage",
+					"Registration key is not valid!");
 		}
 		return "confirm";
 	}

@@ -304,7 +304,6 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<script src=\"resources/assets/js/bootstrap-modal.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-scrollspy.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/bootstrap-tabs.js\"></script>\r\n");
-      out.write("\t<script src=\"resources/assets/js/bootstrap-twipsy.js\"></script>\r\n");
       out.write("\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");

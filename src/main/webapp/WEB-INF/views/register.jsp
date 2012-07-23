@@ -114,7 +114,6 @@ body {
 	<script src="resources/assets/js/bootstrap-modal.js"></script>
 	<script src="resources/assets/js/bootstrap-scrollspy.js"></script>
 	<script src="resources/assets/js/bootstrap-tabs.js"></script>
-	<script src="resources/assets/js/bootstrap-twipsy.js"></script>
 
 </body>
 </html>

@@ -5,13 +5,13 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 public class Registration {
-	@NotEmpty
+	@NotEmpty(message="Password is emtpy")
 	private String name;
 	@Size(min = 4,message="Password is too short")
 	private String password;
-	@NotEmpty
+	@NotEmpty(message="Password is emtpy")
 	private String confirmPassword;
-	@NotEmpty
+	@NotEmpty(message="Email is emtpy")
 	@Email
 	private String email;
 

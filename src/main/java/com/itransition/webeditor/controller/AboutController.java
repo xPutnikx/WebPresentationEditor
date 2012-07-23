@@ -12,13 +12,25 @@ import com.itransition.webeditor.core.AuthenticationManager;
 import com.itransition.webeditor.dao.TagsDao;
 import com.itransition.webeditor.model.Tags;
 
+/**
+ * Handles requests for about.jsp. Information about this website.
+ * 
+ */
 @Controller
 public class AboutController {
-	@Autowired
-	private TagsDao tagsDao;
 	private static final Logger logger = LoggerFactory
 			.getLogger(AboutController.class);
-	
+
+	@Autowired
+	private TagsDao tagsDao;
+
+	/**
+	 * Handles requests for about.jsp.
+	 * 
+	 * @param modelMap
+	 *            About model.
+	 * @return About page.
+	 */
 	@RequestMapping(value = "about", method = RequestMethod.GET)
 	public String home(ModelMap modelMap) {
 		AuthenticationManager authenticationManager = new AuthenticationManager();

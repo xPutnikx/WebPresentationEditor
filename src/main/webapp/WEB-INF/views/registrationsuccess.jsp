@@ -83,9 +83,8 @@ a {
 	</div>
 
 	<div class="container">
-
-		<h3>mail with a unique key to confirm the registration be sent to
-			your e-mail</h3>
+		<p style="margin-top: 70px;">Mail with a unique key to confirm the registration be sent to
+			your e-mail</p>
 	</div>
 
 	<script src="resources/assets/js/jquery.js"></script>

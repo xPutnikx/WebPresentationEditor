@@ -17,6 +17,10 @@ import com.itransition.webeditor.model.Users;
 import com.itransition.webeditor.service.PresentationsService;
 import com.itransition.webeditor.service.UsersService;
 
+/**
+ * Handles requests for presentaion editor and saves created presentations.
+ * 
+ */
 @Controller
 public class EditorController {
 	private static final Logger logger = LoggerFactory
@@ -27,6 +31,13 @@ public class EditorController {
 	@Autowired
 	private PresentationsService presentationsService;
 
+	/**
+	 * Handles requests for editor.html.
+	 * 
+	 * @param model
+	 *            Editor model.
+	 * @return Editor page.
+	 */
 	@RequestMapping(value = "editor", method = RequestMethod.GET)
 	public String home(Model model) {
 		logger.info("editor!");
@@ -34,38 +45,53 @@ public class EditorController {
 		return "editor";
 	}
 
+	/**
+	 * Saves created presentations.
+	 * 
+	 * @param json
+	 *            presentation json.
+	 * @param title
+	 *            presentation title.
+	 * @param description
+	 *            presentation description.
+	 * @param tags
+	 *            presentation tags.
+	 */
 	@RequestMapping(value = "json", method = RequestMethod.POST)
 	public void savePresentation(@RequestParam("json") String json,
 			@RequestParam("title") String title,
 			@RequestParam("description") String description,
-			@RequestParam("tags") String tags) {		
+			@RequestParam("tags") String tags) {
 		String[] tagsArray = tags.replace("\"", "").replace("[", "")
 				.replace("]", "").split(",");
 		AuthenticationManager authenticationManager = new AuthenticationManager();
-		if (authenticationManager.isAuthenticated()) {			
+		if (authenticationManager.isAuthenticated()) {
 			String userName = authenticationManager.getUserName();
-			Users users = usersService.getUserByName(userName);					
+			Users users = usersService.getUserByName(userName);
 			List<Presentations> presentationsList = presentationsService
-					.findPresentationsByUserId(users.getId());						
-			for (Presentations presentation : presentationsList) {				
-				if (presentation.getTitle().equals(title)) {					
+					.findPresentationsByUserId(users.getId());
+			for (Presentations presentation : presentationsList) {
+				if (presentation.getTitle().equals(title)) {
 					presentation.setDescription(description);
 					presentation.setData(json);
 					presentationsService.save(presentation);
-					presentationsService.addTags(Arrays.asList(tagsArray), presentation.getId());
+					presentationsService.addTags(Arrays.asList(tagsArray),
+							presentation.getId());
 					return;
 				}
-			}			
+			}
 			Presentations presentations = new Presentations();
 			presentations.setUserId(users.getId());
 			presentations.setTitle(title);
 			presentations.setDescription(description);
 			presentations.setData(json);
-			presentationsService.save(presentations);			
-			presentationsList = presentationsService.findPresentationsByUserId(users.getId());						
-			for (Presentations presentation : presentationsList) {				
-				if (presentation.getTitle().equals(title)) {						
-					presentationsService.addTags(Arrays.asList(tagsArray), presentation.getId());
+			presentationsService.save(presentations);
+			presentationsList = presentationsService
+					.findPresentationsByUserId(users.getId());
+			for (Presentations presentation : presentationsList) {
+				if (presentation.getTitle().equals(title)) {
+					presentationsService.addTags(Arrays.asList(tagsArray),
+							presentation.getId());
 					break;
 				}
 			}
@@ -74,9 +100,16 @@ public class EditorController {
 		}
 	}
 
+	/**
+	 * Opens presentations.
+	 * 
+	 * @param json
+	 *            presentation json.
+	 * @return presentation.
+	 */
 	@RequestMapping(value = "/jsons", method = RequestMethod.POST)
-	public @ResponseBody
-	String openPresentation(@RequestParam("json") long json) {
+	public @ResponseBody String openPresentation(
+			@RequestParam("json") long json) {
 		Presentations presentations = null;
 		presentations = presentationsService.findById(json);
 		String jsonResponse = presentations.getData();
