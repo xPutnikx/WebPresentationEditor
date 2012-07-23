@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
@@ -15,27 +16,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.itransition.webeditor.core.AuthenticationManager;
+import com.itransition.webeditor.service.UsersService;
 
 
 @Controller
 public class UserPageController {
+	@Autowired
+	UsersService usersService;
 
 	private static final Logger logger = LoggerFactory
 			.getLogger(UserPageController.class);
 	@RequestMapping(value="userpage", method = RequestMethod.GET)
 	public String showUserPage(ModelMap modelMap) { 
-		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		String name = user.getUsername();
-		List<GrantedAuthority> roles =  (List<GrantedAuthority>) SecurityContextHolder.getContext().getAuthentication().getAuthorities();
-		String role=roles.get(0).toString();
 		AuthenticationManager authenticationManager = new AuthenticationManager();
 		boolean authenticated = authenticationManager.isAuthenticated();
 		modelMap.addAttribute("authenticated", authenticated);
-		if (authenticated) {
-			modelMap.addAttribute("userName",
-					authenticationManager.getUserName());
-		}
+		String name=authenticationManager.getUserName();
+		modelMap.addAttribute("userName", name);
+		String role=authenticationManager.getUserRole();
 		modelMap.addAttribute("userrole",role);
+		Long id = usersService.getUserByName(name).getId();
+		modelMap.addAttribute("userId",id);
 		return "userpage"; 
 	}
 }

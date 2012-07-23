@@ -156,7 +156,9 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t");
       if (_jspx_meth_spring_005fmessage_005f10(_jspx_page_context))
         return;
-      out.write(": <a href=\"mypresentations\" class=\"btn\">");
+      out.write(": <a href=\"user?id=");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${userId}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\" class=\"btn\">");
       if (_jspx_meth_spring_005fmessage_005f11(_jspx_page_context))
         return;
       out.write("</a>\r\n");
@@ -620,7 +622,7 @@ public final class userpage_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f11 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f11.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f11.setParent(null);
-    // /WEB-INF/views/userpage.jsp(72,96) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/userpage.jsp(72,98) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f11.setCode("btn.mypresentations");
     int[] _jspx_push_body_count_spring_005fmessage_005f11 = new int[] { 0 };
     try {

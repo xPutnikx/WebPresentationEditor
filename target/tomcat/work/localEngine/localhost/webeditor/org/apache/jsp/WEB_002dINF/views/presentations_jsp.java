@@ -104,7 +104,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
       if (_jspx_meth_spring_005fmessage_005f0(_jspx_page_context))
         return;
       out.write("</a></li>\r\n");
-      out.write("\t\t\t\t\t<li  class=\"active\"><a href=\"presentations\">");
+      out.write("\t\t\t\t\t<li class=\"active\"><a href=\"presentations\">");
       if (_jspx_meth_spring_005fmessage_005f1(_jspx_page_context))
         return;
       out.write("</a></li>\r\n");
@@ -124,21 +124,25 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\t<div class=\"container\" style=\"width: 800px\">\r\n");
       out.write("\t\t<div style=\"width: 255px; float: left; color: black;\">\r\n");
       out.write("\t\t\t<form class=\"well\">\r\n");
-      out.write("\t\t\t\t<label style=\"width:0\">");
+      out.write("\t\t\t\t<label style=\"width: 0\">");
       if (_jspx_meth_spring_005fmessage_005f7(_jspx_page_context))
         return;
-      out.write(":</label><br /><br />\r\n");
+      out.write(":</label><br />\r\n");
+      out.write("\t\t\t\t<br />\r\n");
       out.write("\t\t\t\t<textarea id=\"title-text-area\" rows=\"1\"></textarea>\r\n");
-      out.write("\t\t\t\t<br /> <label style=\"width:0\">");
+      out.write("\t\t\t\t<br /> <label style=\"width: 0\">");
       if (_jspx_meth_spring_005fmessage_005f8(_jspx_page_context))
         return;
-      out.write(":</label><br /><br />\r\n");
+      out.write(":</label><br />\r\n");
+      out.write("\t\t\t\t<br />\r\n");
       out.write("\t\t\t\t<textarea id=\"tags-text-area\" rows=\"3\"></textarea>\r\n");
       out.write("\t\t\t\t<br />\r\n");
-      out.write("\t\t\t\t<button id=\"search-btn\" type=\"submit\" class=\"btn primary\">");
+      out.write("\t\t\t\t<button id=\"search-btn\" type=\"submit\" class=\"btn primary\">\r\n");
+      out.write("\t\t\t\t\t");
       if (_jspx_meth_spring_005fmessage_005f9(_jspx_page_context))
         return;
-      out.write("</button>\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t\t</button>\r\n");
       out.write("\t\t\t</form>\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\t\t<div style=\"float: left; margin-left: 20px\">\r\n");
@@ -153,7 +157,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\t\t\t\t\t\t<th style=\"width: 300px\">");
       if (_jspx_meth_spring_005fmessage_005f11(_jspx_page_context))
         return;
-      out.write("</th>\t\t\t\t\t\t\r\n");
+      out.write("</th>\r\n");
       out.write("\t\t\t\t\t</tr>\r\n");
       out.write("\t\t\t\t</thead>\r\n");
       out.write("\t\t\t\t<tbody>\r\n");
@@ -179,65 +183,65 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\t<script src=\"resources/assets/js/bootstrap-twipsy.js\"></script>\r\n");
       out.write("\t<script src=\"resources/assets/js/jquery-textext-1.3.0.js\"></script>\r\n");
       out.write("\r\n");
-      out.write("\t<script type=\"text/javascript\">\t  \r\n");
-      out.write("\t    $('#title-text-area').textext({});\r\n");
-      out.write("\t\r\n");
-      out.write("\t    $('#tags-text-area').textext({\r\n");
-      out.write("\t        plugins : 'autocomplete tags ajax',\r\n");
-      out.write("\t        tagsItems : new String('");
+      out.write("\t<script type=\"text/javascript\">\r\n");
+      out.write("\t\t$('#title-text-area').textext({});\r\n");
+      out.write("\r\n");
+      out.write("\t\t$('#tags-text-area').textext({\r\n");
+      out.write("\t\t\tplugins : 'autocomplete tags ajax',\r\n");
+      out.write("\t\t\ttagsItems : new String('");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${tagsAreaValue}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("').split(','),              \r\n");
-      out.write("\t        ajax : {\r\n");
-      out.write("\t            type : 'POST',\r\n");
-      out.write("\t            url : 'presentations',\r\n");
-      out.write("\t            dataType : 'json',\r\n");
-      out.write("\t            dataCallback : function(query) {\r\n");
-      out.write("\t                return {\r\n");
-      out.write("\t                    'query' : query\r\n");
-      out.write("\t                }\r\n");
-      out.write("\t            }\r\n");
-      out.write("\t        }\r\n");
-      out.write("\t    });\r\n");
-      out.write("\t        \r\n");
-      out.write("\t    $('#title-text-area').val('");
+      out.write("').split(','),\r\n");
+      out.write("\t\t\tajax : {\r\n");
+      out.write("\t\t\t\ttype : 'POST',\r\n");
+      out.write("\t\t\t\turl : 'presentations',\r\n");
+      out.write("\t\t\t\tdataType : 'json',\r\n");
+      out.write("\t\t\t\tdataCallback : function(query) {\r\n");
+      out.write("\t\t\t\t\treturn {\r\n");
+      out.write("\t\t\t\t\t\t'query' : query\r\n");
+      out.write("\t\t\t\t\t}\r\n");
+      out.write("\t\t\t\t}\r\n");
+      out.write("\t\t\t}\r\n");
+      out.write("\t\t});\r\n");
+      out.write("\r\n");
+      out.write("\t\t$('#title-text-area').val('");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${titleAreaValue}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("');\r\n");
-      out.write("\t\r\n");
-      out.write("\t    $(\"#search-btn\").click(\r\n");
-      out.write("\t            function() {\r\n");
-      out.write("\t                function buildTitleURI() {\r\n");
-      out.write("\t                    var titleParam = {\r\n");
-      out.write("\t                        title : JSON.parse('\"' + titleText + '\"')\r\n");
-      out.write("\t                    };\r\n");
-      out.write("\t                    return decodeURIComponent($.param(titleParam));\r\n");
-      out.write("\t                }\r\n");
-      out.write("\t\r\n");
-      out.write("\t                function buildTagsURI() {\r\n");
-      out.write("\t                    var tagsParam = {\r\n");
-      out.write("\t                        tag : JSON.parse(tagsText)\r\n");
-      out.write("\t                    };\r\n");
-      out.write("\t                    return decodeURIComponent($.param(tagsParam));\r\n");
-      out.write("\t                }\r\n");
-      out.write("\t\r\n");
-      out.write("\t                var titleTextArea = $(\"#title-text-area\");\r\n");
-      out.write("\t                var titleText = $.trim(titleTextArea.val());\r\n");
-      out.write("\t                var tagsTextArea = $(\"#tags-text-area\");\r\n");
-      out.write("\t                var tagsText = $.trim(tagsTextArea.textext()[0].hiddenInput()\r\n");
-      out.write("\t                        .val());\r\n");
-      out.write("\t\r\n");
-      out.write("\t                if (titleText.length != 0 && tagsText.length != 2) {\r\n");
-      out.write("\t                    window.location = 'presentations?' + buildTitleURI() + '&'\r\n");
-      out.write("\t                            + buildTagsURI();\r\n");
-      out.write("\t                } else if (titleText.length == 0 && tagsText.length != 2) {\r\n");
-      out.write("\t                    window.location = 'presentations?' + buildTagsURI();\r\n");
-      out.write("\t                } else if (titleText.length != 0 && tagsText.length == 2) {\r\n");
-      out.write("\t                    window.location = 'presentations?' + buildTitleURI();\r\n");
-      out.write("\t                } else {\r\n");
-      out.write("\t                    window.location = 'presentations';\r\n");
-      out.write("\t                }\r\n");
-      out.write("\t                \r\n");
-      out.write("\t                return false;\r\n");
-      out.write("\t            });\r\n");
+      out.write("\r\n");
+      out.write("\t\t$(\"#search-btn\").click(\r\n");
+      out.write("\t\t\t\tfunction() {\r\n");
+      out.write("\t\t\t\t\tfunction buildTitleURI() {\r\n");
+      out.write("\t\t\t\t\t\tvar titleParam = {\r\n");
+      out.write("\t\t\t\t\t\t\ttitle : JSON.parse('\"' + titleText + '\"')\r\n");
+      out.write("\t\t\t\t\t\t};\r\n");
+      out.write("\t\t\t\t\t\treturn decodeURIComponent($.param(titleParam));\r\n");
+      out.write("\t\t\t\t\t}\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t\t\tfunction buildTagsURI() {\r\n");
+      out.write("\t\t\t\t\t\tvar tagsParam = {\r\n");
+      out.write("\t\t\t\t\t\t\ttag : JSON.parse(tagsText)\r\n");
+      out.write("\t\t\t\t\t\t};\r\n");
+      out.write("\t\t\t\t\t\treturn decodeURIComponent($.param(tagsParam));\r\n");
+      out.write("\t\t\t\t\t}\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t\t\tvar titleTextArea = $(\"#title-text-area\");\r\n");
+      out.write("\t\t\t\t\tvar titleText = $.trim(titleTextArea.val());\r\n");
+      out.write("\t\t\t\t\tvar tagsTextArea = $(\"#tags-text-area\");\r\n");
+      out.write("\t\t\t\t\tvar tagsText = $.trim(tagsTextArea.textext()[0]\r\n");
+      out.write("\t\t\t\t\t\t\t.hiddenInput().val());\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t\t\tif (titleText.length != 0 && tagsText.length != 2) {\r\n");
+      out.write("\t\t\t\t\t\twindow.location = 'presentations?' + buildTitleURI()\r\n");
+      out.write("\t\t\t\t\t\t\t\t+ '&' + buildTagsURI();\r\n");
+      out.write("\t\t\t\t\t} else if (titleText.length == 0 && tagsText.length != 2) {\r\n");
+      out.write("\t\t\t\t\t\twindow.location = 'presentations?' + buildTagsURI();\r\n");
+      out.write("\t\t\t\t\t} else if (titleText.length != 0 && tagsText.length == 2) {\r\n");
+      out.write("\t\t\t\t\t\twindow.location = 'presentations?' + buildTitleURI();\r\n");
+      out.write("\t\t\t\t\t} else {\r\n");
+      out.write("\t\t\t\t\t\twindow.location = 'presentations';\r\n");
+      out.write("\t\t\t\t\t}\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t\t\treturn false;\r\n");
+      out.write("\t\t\t\t});\r\n");
       out.write("\t</script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");
@@ -261,7 +265,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f0 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f0.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f0.setParent(null);
-    // /WEB-INF/views/presentations.jsp(35,24) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(36,24) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f0.setCode("btn.home");
     int[] _jspx_push_body_count_spring_005fmessage_005f0 = new int[] { 0 };
     try {
@@ -288,7 +292,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f1 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f1.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f1.setParent(null);
-    // /WEB-INF/views/presentations.jsp(36,49) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(37,48) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f1.setCode("btn.presentations");
     int[] _jspx_push_body_count_spring_005fmessage_005f1 = new int[] { 0 };
     try {
@@ -315,7 +319,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f2 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f2.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f2.setParent(null);
-    // /WEB-INF/views/presentations.jsp(37,25) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(39,25) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f2.setCode("btn.about");
     int[] _jspx_push_body_count_spring_005fmessage_005f2 = new int[] { 0 };
     try {
@@ -376,7 +380,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_005fwhen_005f0 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
     _jspx_th_c_005fwhen_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fwhen_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fchoose_005f0);
-    // /WEB-INF/views/presentations.jsp(40,5) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(42,5) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fwhen_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${authenticated}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
     int _jspx_eval_c_005fwhen_005f0 = _jspx_th_c_005fwhen_005f0.doStartTag();
     if (_jspx_eval_c_005fwhen_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -384,16 +388,19 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
         out.write("\r\n");
         out.write("\t\t\t\t\t\t<form class=\"pull-right\">\r\n");
         out.write("\t\t\t\t\t\t\t<button class=\"btn\" type=\"submit\"\r\n");
-        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='../j_spring_security_logout'; return false;\">");
+        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='../j_spring_security_logout'; return false;\">\r\n");
+        out.write("\t\t\t\t\t\t\t\t");
         if (_jspx_meth_spring_005fmessage_005f3(_jspx_th_c_005fwhen_005f0, _jspx_page_context))
           return true;
-        out.write("</button>\r\n");
+        out.write("\r\n");
+        out.write("\t\t\t\t\t\t\t</button>\r\n");
         out.write("\t\t\t\t\t\t</form>\r\n");
         out.write("\t\t\t\t\t\t<p class=\"pull-right\" style=\"margin-right: 10px\">\r\n");
         out.write("\t\t\t\t\t\t\t");
         if (_jspx_meth_spring_005fmessage_005f4(_jspx_th_c_005fwhen_005f0, _jspx_page_context))
           return true;
-        out.write("<a href=\"userpage\">");
+        out.write("\r\n");
+        out.write("\t\t\t\t\t\t\t<a href=\"userpage\">");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${userName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
         out.write("</a>\r\n");
         out.write("\t\t\t\t\t\t</p>\r\n");
@@ -419,7 +426,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f3 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f3.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fwhen_005f0);
-    // /WEB-INF/views/presentations.jsp(43,79) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(46,8) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f3.setCode("btn.logout");
     int[] _jspx_push_body_count_spring_005fmessage_005f3 = new int[] { 0 };
     try {
@@ -446,7 +453,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f4 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f4.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fwhen_005f0);
-    // /WEB-INF/views/presentations.jsp(46,7) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(50,7) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f4.setCode("lbl.loggedinas");
     int[] _jspx_push_body_count_spring_005fmessage_005f4 = new int[] { 0 };
     try {
@@ -479,15 +486,19 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
         out.write("\r\n");
         out.write("\t\t\t\t\t\t<form class=\"pull-right\">\r\n");
         out.write("\t\t\t\t\t\t\t<button class=\"btn\" type=\"submit\"\r\n");
-        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='login'; return false;\">");
+        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='login'; return false;\">\r\n");
+        out.write("\t\t\t\t\t\t\t\t");
         if (_jspx_meth_spring_005fmessage_005f5(_jspx_th_c_005fotherwise_005f0, _jspx_page_context))
           return true;
-        out.write("</button>\r\n");
+        out.write("\r\n");
+        out.write("\t\t\t\t\t\t\t</button>\r\n");
         out.write("\t\t\t\t\t\t\t<button class=\"btn\" type=\"submit\"\r\n");
-        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='register'; return false;\">");
+        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='register'; return false;\">\r\n");
+        out.write("\t\t\t\t\t\t\t\t");
         if (_jspx_meth_spring_005fmessage_005f6(_jspx_th_c_005fotherwise_005f0, _jspx_page_context))
           return true;
-        out.write("</button>\r\n");
+        out.write("\r\n");
+        out.write("\t\t\t\t\t\t\t</button>\r\n");
         out.write("\t\t\t\t\t\t</form>\r\n");
         out.write("\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_005fotherwise_005f0.doAfterBody();
@@ -511,7 +522,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f5 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f5.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fotherwise_005f0);
-    // /WEB-INF/views/presentations.jsp(52,57) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(58,8) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f5.setCode("btn.login");
     int[] _jspx_push_body_count_spring_005fmessage_005f5 = new int[] { 0 };
     try {
@@ -538,7 +549,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f6 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f6.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fotherwise_005f0);
-    // /WEB-INF/views/presentations.jsp(54,60) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(62,8) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f6.setCode("btn.registration");
     int[] _jspx_push_body_count_spring_005fmessage_005f6 = new int[] { 0 };
     try {
@@ -565,7 +576,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f7 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f7.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f7.setParent(null);
-    // /WEB-INF/views/presentations.jsp(65,27) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(74,28) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f7.setCode("lbl.title");
     int[] _jspx_push_body_count_spring_005fmessage_005f7 = new int[] { 0 };
     try {
@@ -592,7 +603,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f8 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f8.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f8.setParent(null);
-    // /WEB-INF/views/presentations.jsp(67,34) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(77,35) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f8.setCode("lbl.tags");
     int[] _jspx_push_body_count_spring_005fmessage_005f8 = new int[] { 0 };
     try {
@@ -619,7 +630,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f9 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f9.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f9.setParent(null);
-    // /WEB-INF/views/presentations.jsp(70,62) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(83,5) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f9.setCode("btn.search");
     int[] _jspx_push_body_count_spring_005fmessage_005f9 = new int[] { 0 };
     try {
@@ -646,7 +657,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f10 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f10.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f10.setParent(null);
-    // /WEB-INF/views/presentations.jsp(78,31) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(92,31) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f10.setCode("lbl.title");
     int[] _jspx_push_body_count_spring_005fmessage_005f10 = new int[] { 0 };
     try {
@@ -673,7 +684,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f11 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f11.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f11.setParent(null);
-    // /WEB-INF/views/presentations.jsp(79,31) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(93,31) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f11.setCode("lbl.description");
     int[] _jspx_push_body_count_spring_005fmessage_005f11 = new int[] { 0 };
     try {
@@ -700,9 +711,9 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /WEB-INF/views/presentations.jsp(83,5) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(98,5) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${presentations}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/views/presentations.jsp(83,5) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/presentations.jsp(98,5) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("presentation");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
@@ -719,7 +730,7 @@ public final class presentations_jsp extends org.apache.jasper.runtime.HttpJspBa
           out.write("</a></td>\r\n");
           out.write("\t\t\t\t\t\t\t<td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${presentation.description}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("</td>\t\t\t\t\t\t\t\r\n");
+          out.write("</td>\r\n");
           out.write("\t\t\t\t\t\t</tr>\r\n");
           out.write("\t\t\t\t\t");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f0.doAfterBody();

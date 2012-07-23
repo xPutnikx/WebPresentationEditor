@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
+<%@ page language="java" contentType="text/html; charset=utf8"
+	pageEncoding="utf8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
@@ -29,26 +30,35 @@ body {
 			<div class="container" style="width: 760px">
 				<a class="brand" href="../editor.html">Web Editor</a>
 				<ul class="nav">
-					<li class="active"><a href="home"><spring:message code="btn.home"/></a></li>
-					<li><a href="presentations"><spring:message code="btn.presentations"/></a></li>
-					<li><a href="about"><spring:message code="btn.about"/></a></li>
+					<li class="active"><a href="home"><spring:message
+								code="btn.home" /></a></li>
+					<li><a href="presentations"><spring:message
+								code="btn.presentations" /></a></li>
+					<li><a href="about"><spring:message code="btn.about" /></a></li>
 				</ul>
 				<c:choose>
 					<c:when test="${authenticated}">
 						<form class="pull-right">
 							<button class="btn" type="submit"
-								onClick="window.location='../j_spring_security_logout'; return false;"><spring:message code="btn.logout"/></button>
+								onClick="window.location='../j_spring_security_logout'; return false;">
+								<spring:message code="btn.logout" />
+							</button>
 						</form>
 						<p class="pull-right" style="margin-right: 10px">
-							<spring:message code="lbl.loggedinas"/><a href="userpage">${userName}</a>
+							<spring:message code="lbl.loggedinas" />
+							<a href="userpage">${userName}</a>
 						</p>
 					</c:when>
 					<c:otherwise>
 						<form class="pull-right">
 							<button class="btn" type="submit"
-								onClick="window.location='login'; return false;"><spring:message code="btn.login"/></button>
+								onClick="window.location='login'; return false;">
+								<spring:message code="btn.login" />
+							</button>
 							<button class="btn" type="submit"
-								onClick="window.location='register'; return false;"><spring:message code="btn.registration"/></button>
+								onClick="window.location='register'; return false;">
+								<spring:message code="btn.registration" />
+							</button>
 						</form>
 					</c:otherwise>
 				</c:choose>
@@ -61,7 +71,7 @@ body {
 		</h1>
 		<p>${confirmationMessage}</p>
 	</div>
-	
+
 	<script src="resources/assets/js/jquery.js"></script>
 	<script src="resources/assets/js/bootstrap-transition.js"></script>
 	<script src="resources/assets/js/bootstrap-alert.js"></script>

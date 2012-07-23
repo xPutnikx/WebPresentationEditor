@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
+<%@ page language="java" contentType="text/html; charset=utf8"
+	pageEncoding="utf8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
@@ -47,26 +48,34 @@ body {
 			<div class="container" style="width: 760px">
 				<a class="brand" href="../editor.html">Web Editor</a>
 				<ul class="nav">
-					<li><a href="home"><spring:message code="btn.home"/></a></li>
-					<li><a href="presentations"><spring:message code="btn.presentations"/></a></li>
-					<li><a href="about"><spring:message code="btn.about"/></a></li>
+					<li><a href="home"><spring:message code="btn.home" /></a></li>
+					<li><a href="presentations"><spring:message
+								code="btn.presentations" /></a></li>
+					<li><a href="about"><spring:message code="btn.about" /></a></li>
 				</ul>
 				<c:choose>
 					<c:when test="${authenticated}">
 						<form class="pull-right">
 							<button class="btn" type="submit"
-								onClick="window.location='../j_spring_security_logout'; return false;"><spring:message code="btn.logout"/></button>
+								onClick="window.location='../j_spring_security_logout'; return false;">
+								<spring:message code="btn.logout" />
+							</button>
 						</form>
 						<p class="pull-right" style="margin-right: 10px">
-							<spring:message code="lbl.loggedinas"/><a href="userpage">${userName}</a>
+							<spring:message code="lbl.loggedinas" />
+							<a href="userpage">${userName}</a>
 						</p>
 					</c:when>
 					<c:otherwise>
 						<form class="pull-right">
 							<button class="btn" type="submit"
-								onClick="window.location='login'; return false;"><spring:message code="btn.login"/></button>
+								onClick="window.location='login'; return false;">
+								<spring:message code="btn.login" />
+							</button>
 							<button class="btn" type="submit"
-								onClick="window.location='register'; return false;"><spring:message code="btn.registration"/></button>
+								onClick="window.location='register'; return false;">
+								<spring:message code="btn.registration" />
+							</button>
 						</form>
 					</c:otherwise>
 				</c:choose>
@@ -76,28 +85,30 @@ body {
 	<div class="container" style="width: 520px">
 		<section>
 			<div class="page-header">
-				<h1 style="margin-left: 20px"><spring:message code="lbl.presentation"/>:
-					${presentationTitle}</h1>
+				<h1 style="margin-left: 20px">
+					<spring:message code="lbl.presentation" />
+					: ${presentationTitle}
+				</h1>
 			</div>
 			<p>
-				<b><spring:message code="lbl.title"/>: </b>${presentationTitle}
+				<b><spring:message code="lbl.title" />: </b>${presentationTitle}
 			</p>
 			<p>
-				<b><spring:message code="lbl.author"/>: </b>${presentationUser}
+				<b><spring:message code="lbl.author" />: </b>${presentationUser}
 			</p>
 			<p>
-				<div style="float: left;">
-					<b><spring:message code="lbl.tags"/>:</b>&nbsp
-				</div>
-				<div>
-					<ul style="display: inline; list-style-type: none;">
-						<c:forEach items="${presentationTags}" var="tag">
-							<li style="float: left"><a
-								href="presentations?tag[]=${tag.name}">${tag.name}</a>&nbsp</li>
-						</c:forEach>
-					</ul>
-				</div>
-				<br />
+			<div style="float: left;">
+				<b><spring:message code="lbl.tags" />:</b>&nbsp
+			</div>
+			<div>
+				<ul style="display: inline; list-style-type: none;">
+					<c:forEach items="${presentationTags}" var="tag">
+						<li style="float: left"><a
+							href="presentations?tag[]=${tag.name}">${tag.name}</a>&nbsp</li>
+					</c:forEach>
+				</ul>
+			</div>
+			<br />
 			</p>
 			<p>
 			<div class="fb-like" style="clear: both;"
@@ -106,7 +117,7 @@ body {
 			</p>
 			<div class="fb-comments"
 				data-href="/presentation?id=${presentationId}" data-num-posts="4"
-				data-width="520" ></div>
+				data-width="520"></div>
 		</section>
 	</div>
 	<!-- /container -->

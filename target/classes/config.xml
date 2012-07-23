@@ -32,33 +32,4 @@
      -->
     <!-- JSR-303 support will be detected on classpath and enabled automatically -->
     <mvc:annotation-driven/>
-    
-    <!-- Spring security configuration -->
-    <bean id="userDetailsService" class="com.itransition.webeditor.core.SecurityService"/>
-    <sec:authentication-manager alias="authenticationManager">
-        <sec:authentication-provider user-service-ref='userDetailsService'/>
-        <sec:authentication-provider ref="facebookAuthenticationProvider"/>
-    </sec:authentication-manager>
-    <bean id="oauth2ResourceDetailsService" class="org.springframework.security.oauth2.config.ResourceDetailsServiceFactoryBean"/>
-    <sec:http>
-        <sec:custom-filter before="FILTER_SECURITY_INTERCEPTOR " ref="oauth2AuthFilter"/>
-        <sec:openid-login>
-            <sec:attribute-exchange>
-                <sec:openid-attribute name="email" type="http://schema.openid.net/contact/email" required="true"/>
-                <sec:openid-attribute name="forename" type="http://schema.openid.net/namePerson/first" required="true"/>
-                <sec:openid-attribute name="surname" type="http://schema.openid.net/namePerson/last" required="true"/>
-                <sec:openid-attribute name="name" type="http://schema.openid.net/namePerson/friendly" required="true"/>
-            </sec:attribute-exchange>
-        </sec:openid-login>
-        <sec:form-login login-page='/login/' default-target-url='/' />
-        <sec:http-basic />
-        <sec:logout />
-    </sec:http>
-    <bean id="oauth2TokenServices" class="org.springframework.security.oauth2.consumer.token.InMemoryOAuth2ClientTokenServices" />
-    <!--define an oauth 2 resource for facebook. according to the facebook docs, the 'clientId' 
-        is the App ID, and the 'clientSecret' is the App Secret -->
-    <oauth:resource id="facebook" type="authorization_code"
-        clientId="202086623166314" clientSecret="0838b1813f49ad5625e7c518c0741439"
-        bearerTokenMethod="query" accessTokenUri="https://graph.facebook.com/oauth/access_token"
-        scope="email" userAuthorizationUri="https://www.facebook.com/dialog/oauth" />
 </beans>
