@@ -90,26 +90,34 @@ body {
 					: ${presentationTitle}
 				</h1>
 			</div>
-			<p>
-				<b><spring:message code="lbl.title" />: </b>${presentationTitle}
-			</p>
-			<p>
-				<b><spring:message code="lbl.author" />: </b>${presentationUser}
-			</p>
-			<p>
-			<div style="float: left;">
-				<b><spring:message code="lbl.tags" />:</b>&nbsp
+			<div class="well">
+				<p>
+					<b><spring:message code="lbl.title" />: </b>${presentationTitle}
+				</p>
+				<p>
+					<b><spring:message code="lbl.author" />: </b>${presentationUser}
+				</p>
+				<p>
+				<div style="float: left;">
+					<b><spring:message code="lbl.tags" />:</b>&nbsp
+				</div>
+				<div>
+					<ul style="display: inline; list-style-type: none;">
+						<c:forEach items="${presentationTags}" var="tag">
+							<li style="float: left"><a
+								href="presentations?tag[]=${tag.name}">${tag.name}</a>&nbsp</li>
+						</c:forEach>
+					</ul>
+				</div>
+				</p>
+				<div style="clear: both;">
+					<a class="btn primary" style="margin-top: 10px;"
+						href="../preview.jsp?id=${presentationId}" target="_blank" >Preview</a>
+					<c:if test="${isAuthor}">
+					   <a class="btn" style="margin-top: 10px;" onclick="del(${presentationId});" >Delete</a>
+					</c:if>
+				</div>
 			</div>
-			<div>
-				<ul style="display: inline; list-style-type: none;">
-					<c:forEach items="${presentationTags}" var="tag">
-						<li style="float: left"><a
-							href="presentations?tag[]=${tag.name}">${tag.name}</a>&nbsp</li>
-					</c:forEach>
-				</ul>
-			</div>
-			<br />
-			</p>
 			<p>
 			<div class="fb-like" style="clear: both;"
 				data-href="/presentation?id=${presentationId}" data-send="false"
@@ -124,6 +132,7 @@ body {
 
 	<!-- Le javascript -->
 	<script src="resources/assets/js/jquery.js"></script>
+	<script src="resources/jquery.ba-dotimeout.js"></script>
 	<script src="resources/assets/js/less-1.1.5.min.js"></script>
 	<script src="resources/assets/js/bootstrap-alerts.js"></script>
 	<script src="resources/assets/js/bootstrap-buttons.js"></script>
@@ -132,6 +141,7 @@ body {
 	<script src="resources/assets/js/bootstrap-scrollspy.js"></script>
 	<script src="resources/assets/js/bootstrap-tabs.js"></script>
 	<script src="resources/assets/js/bootstrap-twipsy.js"></script>
+	<script src="resources/deletepresentation.js"></script>
 
 </body>
 </html>

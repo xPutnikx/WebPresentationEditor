@@ -50,7 +50,7 @@ public final class notfound_jsp extends org.apache.jasper.runtime.HttpJspBase
 
 
     try {
-      response.setContentType("text/html; charset=ISO-8859-1");
+      response.setContentType("text/html; charset=utf8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -63,28 +63,27 @@ public final class notfound_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("<!DOCTYPE html>\r\n");
-      out.write("<html lang=\"en\">\r\n");
-      out.write("<head>\r\n");
-      out.write("<meta charset=\"utf-8\">\r\n");
-      out.write("<title>WebEditor: Home</title>\r\n");
       out.write("\r\n");
-      out.write("<!-- Le styles -->\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("<head>\r\n");
+      out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf8\">\r\n");
+      out.write("<title>WebEditor: Not Found 404</title>\r\n");
+      out.write("\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap.css\" rel=\"stylesheet\">\r\n");
       out.write("<style type=\"text/css\">\r\n");
       out.write("body {\r\n");
-      out.write("    padding-top: 60px;\r\n");
+      out.write("\tpadding-top: 60px;\r\n");
       out.write("}\r\n");
       out.write("</style>\r\n");
-      out.write("\r\n");
       out.write("<!-- Le fav and touch icons -->\r\n");
       out.write("<link rel=\"shortcut icon\" href=\"resources/assets/ico/favicon.ico\">\r\n");
       out.write("<link rel=\"apple-touch-icon\"\r\n");
-      out.write("    href=\"resources/assets/ico/apple-touch-icon.png\">\r\n");
+      out.write("\thref=\"resources/assets/ico/apple-touch-icon.png\">\r\n");
       out.write("<link rel=\"apple-touch-icon\" sizes=\"72x72\"\r\n");
-      out.write("    href=\"resources/assets/ico/apple-touch-icon-72x72.png\">\r\n");
+      out.write("\thref=\"resources/assets/ico/apple-touch-icon-72x72.png\">\r\n");
       out.write("<link rel=\"apple-touch-icon\" sizes=\"114x114\"\r\n");
-      out.write("    href=\"resources/assets/ico/apple-touch-icon-114x114.png\">\r\n");
+      out.write("\thref=\"resources/assets/ico/apple-touch-icon-114x114.png\">\r\n");
       out.write("</head>\r\n");
       out.write("\r\n");
       out.write("<body>\r\n");
@@ -110,16 +109,16 @@ public final class notfound_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </div>\r\n");
       out.write("    <!-- /container -->\r\n");
       out.write("\r\n");
-      out.write("    <!-- Le javascript -->\r\n");
-      out.write("    <script src=\"resources/assets/js/jquery.js\"></script>\r\n");
-      out.write("    <script src=\"resources/assets/js/less-1.1.5.min.js\"></script>\r\n");
-      out.write("    <script src=\"resources/assets/js/bootstrap-alerts.js\"></script>\r\n");
-      out.write("    <script src=\"resources/assets/js/bootstrap-buttons.js\"></script>\r\n");
-      out.write("    <script src=\"resources/assets/js/bootstrap-dropdown.js\"></script>\r\n");
-      out.write("    <script src=\"resources/assets/js/bootstrap-modal.js\"></script>\r\n");
-      out.write("    <script src=\"resources/assets/js/bootstrap-scrollspy.js\"></script>\r\n");
-      out.write("    <script src=\"resources/assets/js/bootstrap-tabs.js\"></script>\r\n");
-      out.write("    <script src=\"resources/assets/js/bootstrap-twipsy.js\"></script>\r\n");
+      out.write("\t<!-- Le javascript -->\r\n");
+      out.write("\t<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/less-1.1.5.min.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-alerts.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-buttons.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-dropdown.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-modal.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-scrollspy.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-tabs.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-twipsy.js\"></script>\r\n");
       out.write("\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");
@@ -177,7 +176,7 @@ public final class notfound_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_005fwhen_005f0 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
     _jspx_th_c_005fwhen_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fwhen_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fchoose_005f0);
-    // /WEB-INF/views/notfound.jsp(40,20) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/notfound.jsp(38,20) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fwhen_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${authenticated}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
     int _jspx_eval_c_005fwhen_005f0 = _jspx_th_c_005fwhen_005f0.doStartTag();
     if (_jspx_eval_c_005fwhen_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
