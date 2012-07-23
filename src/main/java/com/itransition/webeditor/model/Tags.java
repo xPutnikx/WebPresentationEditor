@@ -6,14 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.hibernate.search.annotations.Analyze;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Index;
-import org.hibernate.search.annotations.Indexed;
-import org.hibernate.search.annotations.Store;
-
 @Entity
-@Indexed
 public class Tags {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,7 +21,7 @@ public class Tags {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	@Field(index=Index.YES, analyze=Analyze.YES, store=Store.NO)
+	
 	public String getName() {
 		return name;
 	}
