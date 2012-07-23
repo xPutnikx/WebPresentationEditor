@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-<title>WebEditor: Home</title>
+<title>WebEditor: About</title>
 <!-- Le styles -->
 <link href="resources/assets/css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
@@ -29,9 +29,9 @@ body {
 			<div class="container" style="width: 760px">
 				<a class="brand" href="../editor.html">Web Editor</a>
 				<ul class="nav">
-					<li class="active"><a href="home"><spring:message code="btn.home"/></a></li>
+					<li><a href="home"><spring:message code="btn.home"/></a></li>
 					<li><a href="presentations"><spring:message code="btn.presentations"/></a></li>
-					<li><a href="about"><spring:message code="btn.about"/></a></li>
+					<li class="active"><a href="about"><spring:message code="btn.about"/></a></li>
 				</ul>
 				<c:choose>
 					<c:when test="${authenticated}">
@@ -56,18 +56,16 @@ body {
 		</div>
 	</div>
 <iframe src="http://mrdoob.com/lab/javascript/webgl/clouds/" width="1800" height="1240" style="margin-top:-250px;margin-left:-15px;"></iframe>
-<script src="resources/assets/js/jquery.js"></script>
-<script src="resources/assets/js/bootstrap-transition.js"></script>
-<script src="resources/assets/js/bootstrap-alert.js"></script>
-<script src="resources/assets/js/bootstrap-modal.js"></script>
-<script src="resources/assets/js/bootstrap-dropdown.js"></script>
-<script src="resources/assets/js/bootstrap-scrollspy.js"></script>
-<script src="resources/assets/js/bootstrap-tab.js"></script>
-<script src="resources/assets/js/bootstrap-tooltip.js"></script>
-<script src="resources/assets/js/bootstrap-popover.js"></script>
-<script src="resources/assets/js/bootstrap-button.js"></script>
-<script src="resources/assets/js/bootstrap-collapse.js"></script>
-<script src="resources/assets/js/bootstrap-carousel.js"></script>
-<script src="resources/assets/js/bootstrap-typeahead.js"></script>
+
+	<!-- Le javascript -->
+	<script src="resources/assets/js/jquery.js"></script>
+	<script src="resources/assets/js/less-1.1.5.min.js"></script>
+	<script src="resources/assets/js/bootstrap-alerts.js"></script>
+	<script src="resources/assets/js/bootstrap-buttons.js"></script>
+	<script src="resources/assets/js/bootstrap-dropdown.js"></script>
+	<script src="resources/assets/js/bootstrap-modal.js"></script>
+	<script src="resources/assets/js/bootstrap-scrollspy.js"></script>
+	<script src="resources/assets/js/bootstrap-tabs.js"></script>
+	<script src="resources/assets/js/bootstrap-twipsy.js"></script>
 </body>
 </html>

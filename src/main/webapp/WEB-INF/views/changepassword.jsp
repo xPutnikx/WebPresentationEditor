@@ -47,7 +47,7 @@ a {
 			<div class="container" style="width: 760px">
 				<a class="brand" href="../editor.html">Web Editor</a>
 				<ul class="nav">
-					<li class="active"><a href="home"><spring:message code="btn.home"/></a></li>
+					<li><a href="home"><spring:message code="btn.home"/></a></li>
 					<li><a href="presentations"><spring:message code="btn.presentations"/></a></li>
 					<li><a href="about"><spring:message code="btn.about"/></a></li>
 				</ul>
@@ -74,7 +74,7 @@ a {
 		</div>
 	</div>
 <div class="container" style="width: 500px;">
-	<h1>${username} change your password</h1>
+	<h1><spring:message code="lbl.changeupassword"/></h1>
 	<input type=hidden id="userPassword" name="userPassword"
 		value="${password}" /> <input type=hidden id="userId" name="userId"
 		value="${id}" />
@@ -82,26 +82,26 @@ a {
 		commandName="changepassword" style="margin-top:40px;">
 		<div class="well" style="color: black; width: 500px; height: 40px;">
 			<div style="float: left;">
-				Current password<br /> <input type="password" id="currentpassword"
+				<spring:message code="lbl.currentpassword"/><br /> <input type="password" id="currentpassword"
 					style="margin-top: 10px;" />
 			</div>
 			<div style="float: left; margin-top: 25px;" id="currentlabel"></div>
 		</div>
 		<div class="well" style="color: black; width: 500px; height: 40px;">
 			<div style="float: left;">
-				New password<br /> <input type="password" id="newpassword"
+				<spring:message code="lbl.newpassword"/><br /> <input type="password" id="newpassword"
 					style="margin-top: 10px;" />
 			</div>
 			<div style="float: left; margin-top: 25px;" id="newtlabel"></div>
 		</div>
 		<div class="well" style="color: black; width: 500px; height: 40px;">
 			<div style="float: left;">
-				Confirm password<br /> <input type="password" id="confirmpassword"
+				<spring:message code="lbl.confirmpassword"/><br /> <input type="password" id="confirmpassword"
 					style="margin-top: 10px;" />
 			</div>
 			<div style="float: left; margin-top: 25px;" id="confirmlabel"></div>
 		</div>
-		<input class="btn" value="Save" onclick="sub()" style="width: 60px;" />
+		<input class="btn" value="<spring:message code="btn.save"/>" onclick="sub()" style="width: 70px;" />
 	</form:form>
 </div>
 <script src="resources/assets/js/jquery.js"></script>

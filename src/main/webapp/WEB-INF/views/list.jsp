@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<html>
 <head>
-<meta charset="utf-8">
-<title>Change Password</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>List Users</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="by Putnik">
@@ -43,49 +43,48 @@ a {
 </head>
 
 <div class="topbar">
-	<div class="fill">
-		<div class="container" style="width: 760px">
-			<a class="brand" href="../editor.html">Web Editor</a>
-			<ul class="nav">
-				<li class="active"><a href="home">Home</a></li>
-				<li><a href="presentation/show">Presentations</a></li>
-				<li><a href="about">About</a></li>
-			</ul>
-			<c:choose>
-				<c:when test="${authenticated}">
-					<form class="pull-right">
-						<button class="btn" type="submit"
-							onClick="window.location='../j_spring_security_logout'; return false;">Log
-							out</button>
-					</form>
-					<p class="pull-right" style="margin-right: 10px">
-						Logged in as <a href="userpage">${userName}</a>
-					</p>
-				</c:when>
-				<c:otherwise>
-					<form class="pull-right">
-						<button class="btn" type="submit"
-							onClick="window.location='login'; return false;">Log in</button>
-						<button class="btn" type="submit"
-							onClick="window.location='register'; return false;">Register</button>
-					</form>
-				</c:otherwise>
-			</c:choose>
+		<div class="fill">
+			<div class="container" style="width: 760px">
+				<a class="brand" href="../editor.html">Web Editor</a>
+				<ul class="nav">
+					<li><a href="home"><spring:message code="btn.home"/></a></li>
+					<li><a href="presentations"><spring:message code="btn.presentations"/></a></li>
+					<li><a href="about"><spring:message code="btn.about"/></a></li>
+				</ul>
+				<c:choose>
+					<c:when test="${authenticated}">
+						<form class="pull-right">
+							<button class="btn" type="submit"
+								onClick="window.location='../j_spring_security_logout'; return false;"><spring:message code="btn.logout"/></button>
+						</form>
+						<p class="pull-right" style="margin-right: 10px">
+							<spring:message code="lbl.loggedinas"/><a href="userpage">${userName}</a>
+						</p>
+					</c:when>
+					<c:otherwise>
+						<form class="pull-right">
+							<button class="btn" type="submit"
+								onClick="window.location='login'; return false;"><spring:message code="btn.login"/></button>
+							<button class="btn" type="submit"
+								onClick="window.location='register'; return false;"><spring:message code="btn.registration"/></button>
+						</form>
+					</c:otherwise>
+				</c:choose>
+			</div>
 		</div>
 	</div>
-</div>
 
 	<div class="container" style="margin-top: 20px;width: 800px;">
-		<h1>Listing People</h1>
+		<h1><spring:message code="lbl.userlist"/></h1>
 		<div id="content" style="padding: 30px">
 			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>Id</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Enabled</th>
-						<th>User Role</th>
+						<th><spring:message code="lbl.username"/></th>
+						<th><spring:message code="lbl.email"/></th>
+						<th><spring:message code="lbl.enabled"/></th>
+						<th><spring:message code="lbl.role"/></th>
 					</tr>
 				</thead>
 				<tbody id="tbody">
@@ -127,7 +126,7 @@ a {
 				</tbody>
 			</table>
 			<p>
-				<a class="btn" id="edit" data-controls-modal="modal-from-dom" data-backdrop="true" data-keyboard="true">Add Person</a>
+				<a class="btn" id="edit" data-controls-modal="modal-from-dom" data-backdrop="true" data-keyboard="true"><spring:message code="btn.addperson"/></a>
 			</p>
 		</div>
 	</div>
@@ -151,11 +150,11 @@ a {
 
 			<form>
 				<fieldset>
-					<label for="name">Name</label> <input type="text" name="name"
+					<label for="name"><spring:message code="lbl.username"/></label> <input type="text" name="name"
 						id="name" class="text ui-widget-content ui-corner-all"> <label
-						for="email">Email</label> <input type="text" name="email"
+						for="email"><spring:message code="lbl.email"/></label> <input type="text" name="email"
 						id="email" value="" class="text ui-widget-content ui-corner-all">
-					<label for="password">Password</label> <input type="password"
+					<label for="password"><spring:message code="lbl.password"/></label> <input type="password"
 						name="password" id="password" value=""
 						class="text ui-widget-content ui-corner-all">
 				</fieldset>
@@ -179,12 +178,12 @@ a {
 				<button type="button"
 					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only btn primary"
 					role="button" aria-disabled="false" style="background-color:white;">
-					<span class="btn primary">Create an account</span>
+					<span class="btn primary"><spring:message code="btn.createaccount"/></span>
 				</button>
 				<button type="button"
 					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only btn secondary"
 					role="button" aria-disabled="false" style="background-color:white;">
-					<span class="btn secondary">Cancel</span>
+					<span class="btn secondary"><spring:message code="btn.cancel"/></span>
 				</button>
 			</div>
 		</div>

@@ -19,7 +19,7 @@ import com.itransition.webeditor.service.UsersService;
 @Controller
 public class MyPresentationsController {
 	private static final Logger logger = LoggerFactory
-			.getLogger(ListOfPresentationsController.class);
+			.getLogger(MyPresentationsController.class);
 	@Autowired
 	private PresentationsService presentationService;
 	

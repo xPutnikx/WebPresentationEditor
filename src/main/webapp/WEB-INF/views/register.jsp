@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
-<title>WebEditor: Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>WebEditor: Registration</title>
 
 <!-- Le styles -->
 <link href="resources/assets/css/bootstrap.css" rel="stylesheet">
@@ -32,32 +32,26 @@ body {
 			<div class="container" style="width: 760px">
 				<a class="brand" href="../editor.html">Web Editor</a>
 				<ul class="nav">
-					<li><a href="home">Home</a></li>
-					<li><a href="presentation/show">Presentations</a></li>
-					<li><a href="about">About</a></li>
+					<li><a href="home"><spring:message code="btn.home"/></a></li>
+					<li><a href="presentations"><spring:message code="btn.presentations"/></a></li>
+					<li><a href="about"><spring:message code="btn.about"/></a></li>
 				</ul>
-				<form class="navbar-search pull-left"
-					action="presentations/show?title=asd">
-					<input type="text" class="search-query"
-						style="margin-top: 3px; width: 120px" placeholder="Search">
-				</form>
 				<c:choose>
 					<c:when test="${authenticated}">
 						<form class="pull-right">
 							<button class="btn" type="submit"
-								onClick="window.location='../j_spring_security_logout'; return false;">Log
-								out</button>
+								onClick="window.location='../j_spring_security_logout'; return false;"><spring:message code="btn.logout"/></button>
 						</form>
 						<p class="pull-right" style="margin-right: 10px">
-							Logged in as <a href="#">${userName}</a>
+							<spring:message code="lbl.loggedinas"/><a href="userpage">${userName}</a>
 						</p>
 					</c:when>
 					<c:otherwise>
 						<form class="pull-right">
 							<button class="btn" type="submit"
-								onClick="window.location='login'; return false;">Log in</button>
+								onClick="window.location='login'; return false;"><spring:message code="btn.login"/></button>
 							<button class="btn" type="submit"
-								onClick="window.location='register'; return false;">Register</button>
+								onClick="window.location='register'; return false;"><spring:message code="btn.registration"/></button>
 						</form>
 					</c:otherwise>
 				</c:choose>
@@ -68,13 +62,13 @@ body {
 	<div class="container" style="width: 800px">
 		<form:form method="Post" action="register" commandName="registration" 
 		style="width: 230px; margin-left: auto; margin-right: auto;">		
-            <b>User Name:</b><font color="red"><form:errors path="name"/></font>    
+            <b><spring:message code="lbl.username"/>:</b><font color="red"><form:errors path="name"/></font>    
 			<form:input path="name" /><br /><br />
-            <b>Password:</b><font color="red"><form:errors	path="password" /></font>   
+            <b><spring:message code="lbl.password"/>:</b><font color="red"><form:errors	path="password" /></font>   
 			<form:password path="password" /><br /><br />             
-            <b>Confirm Password:</b><font color="red"><form:errors	path="confirmPassword" /></font>   
+            <b><spring:message code="lbl.confirmpassword"/>:</b><font color="red"><form:errors	path="confirmPassword" /></font>   
 			<form:password path="confirmPassword" /><br /><br />			             
-            <b>Email:</b><font color="red"><form:errors path="email" /></font>   
+            <b><spring:message code="lbl.email"/>:</b><font color="red"><form:errors path="email" /></font>   
 			<form:input path="email" /><br /><br />			
 			<input type="submit" class="btn primary" value="Submit" />			
 		</form:form>

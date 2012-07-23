@@ -71,7 +71,7 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf8\">\r\n");
-      out.write("<title>WebEditor: Home</title>\r\n");
+      out.write("<title>WebEditor: About</title>\r\n");
       out.write("<!-- Le styles -->\r\n");
       out.write("<link href=\"resources/assets/css/bootstrap.css\" rel=\"stylesheet\">\r\n");
       out.write("<style type=\"text/css\">\r\n");
@@ -94,7 +94,7 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<div class=\"container\" style=\"width: 760px\">\r\n");
       out.write("\t\t\t\t<a class=\"brand\" href=\"../editor.html\">Web Editor</a>\r\n");
       out.write("\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t<li class=\"active\"><a href=\"home\">");
+      out.write("\t\t\t\t\t<li><a href=\"home\">");
       if (_jspx_meth_spring_005fmessage_005f0(_jspx_page_context))
         return;
       out.write("</a></li>\r\n");
@@ -102,7 +102,7 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_spring_005fmessage_005f1(_jspx_page_context))
         return;
       out.write("</a></li>\r\n");
-      out.write("\t\t\t\t\t<li><a href=\"about\">");
+      out.write("\t\t\t\t\t<li class=\"active\"><a href=\"about\">");
       if (_jspx_meth_spring_005fmessage_005f2(_jspx_page_context))
         return;
       out.write("</a></li>\r\n");
@@ -115,19 +115,17 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
       out.write("<iframe src=\"http://mrdoob.com/lab/javascript/webgl/clouds/\" width=\"1800\" height=\"1240\" style=\"margin-top:-250px;margin-left:-15px;\"></iframe>\r\n");
-      out.write("<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-transition.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-alert.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-modal.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-dropdown.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-scrollspy.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-tab.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-tooltip.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-popover.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-button.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-collapse.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-carousel.js\"></script>\r\n");
-      out.write("<script src=\"resources/assets/js/bootstrap-typeahead.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("\t<!-- Le javascript -->\r\n");
+      out.write("\t<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/less-1.1.5.min.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-alerts.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-buttons.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-dropdown.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-modal.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-scrollspy.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-tabs.js\"></script>\r\n");
+      out.write("\t<script src=\"resources/assets/js/bootstrap-twipsy.js\"></script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -150,7 +148,7 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f0 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f0.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f0.setParent(null);
-    // /WEB-INF/views/about.jsp(32,39) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/about.jsp(32,24) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f0.setCode("btn.home");
     int[] _jspx_push_body_count_spring_005fmessage_005f0 = new int[] { 0 };
     try {
@@ -204,7 +202,7 @@ public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f2 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f2.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f2.setParent(null);
-    // /WEB-INF/views/about.jsp(34,25) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/about.jsp(34,40) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f2.setCode("btn.about");
     int[] _jspx_push_body_count_spring_005fmessage_005f2 = new int[] { 0 };
     try {

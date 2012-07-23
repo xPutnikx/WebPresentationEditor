@@ -115,7 +115,7 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\t\t\t<div class=\"container\" style=\"width: 760px\">\r\n");
       out.write("\t\t\t\t<a class=\"brand\" href=\"../editor.html\">Web Editor</a>\r\n");
       out.write("\t\t\t\t<ul class=\"nav\">\r\n");
-      out.write("\t\t\t\t\t<li class=\"active\"><a href=\"home\">");
+      out.write("\t\t\t\t\t<li><a href=\"home\">");
       if (_jspx_meth_spring_005fmessage_005f0(_jspx_page_context))
         return;
       out.write("</a></li>\r\n");
@@ -137,8 +137,9 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\t</div>\r\n");
       out.write("<div class=\"container\" style=\"width: 500px;\">\r\n");
       out.write("\t<h1>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write(" change your password</h1>\r\n");
+      if (_jspx_meth_spring_005fmessage_005f7(_jspx_page_context))
+        return;
+      out.write("</h1>\r\n");
       out.write("\t<input type=hidden id=\"userPassword\" name=\"userPassword\"\r\n");
       out.write("\t\tvalue=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${password}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
@@ -204,7 +205,7 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
     org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f0 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_spring_005fmessage_005f0.setPageContext(_jspx_page_context);
     _jspx_th_spring_005fmessage_005f0.setParent(null);
-    // /WEB-INF/views/changepassword.jsp(50,39) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/changepassword.jsp(50,24) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_spring_005fmessage_005f0.setCode("btn.home");
     int[] _jspx_push_body_count_spring_005fmessage_005f0 = new int[] { 0 };
     try {
@@ -500,6 +501,33 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
     return false;
   }
 
+  private boolean _jspx_meth_spring_005fmessage_005f7(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:message
+    org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f7 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
+    _jspx_th_spring_005fmessage_005f7.setPageContext(_jspx_page_context);
+    _jspx_th_spring_005fmessage_005f7.setParent(null);
+    // /WEB-INF/views/changepassword.jsp(77,5) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_spring_005fmessage_005f7.setCode("lbl.changeupassword");
+    int[] _jspx_push_body_count_spring_005fmessage_005f7 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_005fmessage_005f7 = _jspx_th_spring_005fmessage_005f7.doStartTag();
+      if (_jspx_th_spring_005fmessage_005f7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_005fmessage_005f7[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_005fmessage_005f7.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_005fmessage_005f7.doFinally();
+      _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.reuse(_jspx_th_spring_005fmessage_005f7);
+    }
+    return false;
+  }
+
   private boolean _jspx_meth_form_005fform_005f0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -524,26 +552,38 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
           out.write("\r\n");
           out.write("\t\t<div class=\"well\" style=\"color: black; width: 500px; height: 40px;\">\r\n");
           out.write("\t\t\t<div style=\"float: left;\">\r\n");
-          out.write("\t\t\t\tCurrent password<br /> <input type=\"password\" id=\"currentpassword\"\r\n");
+          out.write("\t\t\t\t");
+          if (_jspx_meth_spring_005fmessage_005f8(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("<br /> <input type=\"password\" id=\"currentpassword\"\r\n");
           out.write("\t\t\t\t\tstyle=\"margin-top: 10px;\" />\r\n");
           out.write("\t\t\t</div>\r\n");
           out.write("\t\t\t<div style=\"float: left; margin-top: 25px;\" id=\"currentlabel\"></div>\r\n");
           out.write("\t\t</div>\r\n");
           out.write("\t\t<div class=\"well\" style=\"color: black; width: 500px; height: 40px;\">\r\n");
           out.write("\t\t\t<div style=\"float: left;\">\r\n");
-          out.write("\t\t\t\tNew password<br /> <input type=\"password\" id=\"newpassword\"\r\n");
+          out.write("\t\t\t\t");
+          if (_jspx_meth_spring_005fmessage_005f9(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("<br /> <input type=\"password\" id=\"newpassword\"\r\n");
           out.write("\t\t\t\t\tstyle=\"margin-top: 10px;\" />\r\n");
           out.write("\t\t\t</div>\r\n");
           out.write("\t\t\t<div style=\"float: left; margin-top: 25px;\" id=\"newtlabel\"></div>\r\n");
           out.write("\t\t</div>\r\n");
           out.write("\t\t<div class=\"well\" style=\"color: black; width: 500px; height: 40px;\">\r\n");
           out.write("\t\t\t<div style=\"float: left;\">\r\n");
-          out.write("\t\t\t\tConfirm password<br /> <input type=\"password\" id=\"confirmpassword\"\r\n");
+          out.write("\t\t\t\t");
+          if (_jspx_meth_spring_005fmessage_005f10(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("<br /> <input type=\"password\" id=\"confirmpassword\"\r\n");
           out.write("\t\t\t\t\tstyle=\"margin-top: 10px;\" />\r\n");
           out.write("\t\t\t</div>\r\n");
           out.write("\t\t\t<div style=\"float: left; margin-top: 25px;\" id=\"confirmlabel\"></div>\r\n");
           out.write("\t\t</div>\r\n");
-          out.write("\t\t<input class=\"btn\" value=\"Save\" onclick=\"sub()\" style=\"width: 60px;\" />\r\n");
+          out.write("\t\t<input class=\"btn\" value=\"");
+          if (_jspx_meth_spring_005fmessage_005f11(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("\" onclick=\"sub()\" style=\"width: 70px;\" />\r\n");
           out.write("\t");
           int evalDoAfterBody = _jspx_th_form_005fform_005f0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -560,6 +600,114 @@ public final class changepassword_jsp extends org.apache.jasper.runtime.HttpJspB
     } finally {
       _jspx_th_form_005fform_005f0.doFinally();
       _005fjspx_005ftagPool_005fform_005fform_0026_005fstyle_005fmethod_005fcommandName_005faction.reuse(_jspx_th_form_005fform_005f0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_005fmessage_005f8(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:message
+    org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f8 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
+    _jspx_th_spring_005fmessage_005f8.setPageContext(_jspx_page_context);
+    _jspx_th_spring_005fmessage_005f8.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/views/changepassword.jsp(85,4) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_spring_005fmessage_005f8.setCode("lbl.currentpassword");
+    int[] _jspx_push_body_count_spring_005fmessage_005f8 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_005fmessage_005f8 = _jspx_th_spring_005fmessage_005f8.doStartTag();
+      if (_jspx_th_spring_005fmessage_005f8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_005fmessage_005f8[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_005fmessage_005f8.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_005fmessage_005f8.doFinally();
+      _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.reuse(_jspx_th_spring_005fmessage_005f8);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_005fmessage_005f9(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:message
+    org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f9 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
+    _jspx_th_spring_005fmessage_005f9.setPageContext(_jspx_page_context);
+    _jspx_th_spring_005fmessage_005f9.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/views/changepassword.jsp(92,4) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_spring_005fmessage_005f9.setCode("lbl.newpassword");
+    int[] _jspx_push_body_count_spring_005fmessage_005f9 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_005fmessage_005f9 = _jspx_th_spring_005fmessage_005f9.doStartTag();
+      if (_jspx_th_spring_005fmessage_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_005fmessage_005f9[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_005fmessage_005f9.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_005fmessage_005f9.doFinally();
+      _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.reuse(_jspx_th_spring_005fmessage_005f9);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_005fmessage_005f10(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:message
+    org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f10 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
+    _jspx_th_spring_005fmessage_005f10.setPageContext(_jspx_page_context);
+    _jspx_th_spring_005fmessage_005f10.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/views/changepassword.jsp(99,4) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_spring_005fmessage_005f10.setCode("lbl.confirmpassword");
+    int[] _jspx_push_body_count_spring_005fmessage_005f10 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_005fmessage_005f10 = _jspx_th_spring_005fmessage_005f10.doStartTag();
+      if (_jspx_th_spring_005fmessage_005f10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_005fmessage_005f10[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_005fmessage_005f10.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_005fmessage_005f10.doFinally();
+      _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.reuse(_jspx_th_spring_005fmessage_005f10);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_005fmessage_005f11(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:message
+    org.springframework.web.servlet.tags.MessageTag _jspx_th_spring_005fmessage_005f11 = (org.springframework.web.servlet.tags.MessageTag) _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.get(org.springframework.web.servlet.tags.MessageTag.class);
+    _jspx_th_spring_005fmessage_005f11.setPageContext(_jspx_page_context);
+    _jspx_th_spring_005fmessage_005f11.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/views/changepassword.jsp(104,28) name = code type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_spring_005fmessage_005f11.setCode("btn.save");
+    int[] _jspx_push_body_count_spring_005fmessage_005f11 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_005fmessage_005f11 = _jspx_th_spring_005fmessage_005f11.doStartTag();
+      if (_jspx_th_spring_005fmessage_005f11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_005fmessage_005f11[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_005fmessage_005f11.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_005fmessage_005f11.doFinally();
+      _005fjspx_005ftagPool_005fspring_005fmessage_0026_005fcode_005fnobody.reuse(_jspx_th_spring_005fmessage_005f11);
     }
     return false;
   }

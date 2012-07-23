@@ -1,29 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
-<title>WebEditor: Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>WebEditor: Not Found 404</title>
 
-<!-- Le styles -->
 <link href="resources/assets/css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {
-    padding-top: 60px;
+	padding-top: 60px;
 }
 </style>
-
 <!-- Le fav and touch icons -->
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
 <link rel="apple-touch-icon"
-    href="resources/assets/ico/apple-touch-icon.png">
+	href="resources/assets/ico/apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="72x72"
-    href="resources/assets/ico/apple-touch-icon-72x72.png">
+	href="resources/assets/ico/apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="114x114"
-    href="resources/assets/ico/apple-touch-icon-114x114.png">
+	href="resources/assets/ico/apple-touch-icon-114x114.png">
 </head>
 
 <body>
@@ -65,16 +63,16 @@ body {
     </div>
     <!-- /container -->
 
-    <!-- Le javascript -->
-    <script src="resources/assets/js/jquery.js"></script>
-    <script src="resources/assets/js/less-1.1.5.min.js"></script>
-    <script src="resources/assets/js/bootstrap-alerts.js"></script>
-    <script src="resources/assets/js/bootstrap-buttons.js"></script>
-    <script src="resources/assets/js/bootstrap-dropdown.js"></script>
-    <script src="resources/assets/js/bootstrap-modal.js"></script>
-    <script src="resources/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="resources/assets/js/bootstrap-tabs.js"></script>
-    <script src="resources/assets/js/bootstrap-twipsy.js"></script>
+	<!-- Le javascript -->
+	<script src="resources/assets/js/jquery.js"></script>
+	<script src="resources/assets/js/less-1.1.5.min.js"></script>
+	<script src="resources/assets/js/bootstrap-alerts.js"></script>
+	<script src="resources/assets/js/bootstrap-buttons.js"></script>
+	<script src="resources/assets/js/bootstrap-dropdown.js"></script>
+	<script src="resources/assets/js/bootstrap-modal.js"></script>
+	<script src="resources/assets/js/bootstrap-scrollspy.js"></script>
+	<script src="resources/assets/js/bootstrap-tabs.js"></script>
+	<script src="resources/assets/js/bootstrap-twipsy.js"></script>
 
 </body>
 </html>

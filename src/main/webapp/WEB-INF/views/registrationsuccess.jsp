@@ -1,17 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=utf8" pageEncoding="utf8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title>Web Editor Registration Success</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="by Putnik">
 
 <!-- Le styles -->
-<link href="resources/assets/css/bootstrap.css" rel="stylesheet">
 <style>
 body {
 	padding-top: 60px;
@@ -23,68 +23,47 @@ body {
     text-decoration: none;
    } 
   </style>
-<link href="resources/assets/css/bootstrap-responsive.css"
-	rel="stylesheet">
-
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
+<link href="resources/assets/css/bootstrap.css" rel="stylesheet">
 <!-- Le fav and touch icons -->
 <link rel="shortcut icon" href="resources/assets/ico/favicon.ico">
-<link rel="apple-touch-icon-precomposed" sizes="144x144"
-	href="resources/assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-	href="resources/assets/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72"
-	href="resources/assets/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed"
-	href="resources/assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="apple-touch-icon"
+	href="resources/assets/ico/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="resources/assets/ico/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="resources/assets/ico/apple-touch-icon-114x114.png">
 </head>
 
 <body>
 
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container" style="margin-top: 20px;">
-				<a class="btn btn-navbar" data-toggle="collapse"
-					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span>
-				</a> <a class="brand" href="../editor.html">
-				<i class="icon-white icon-edit"></i> Web Editor</a>
-				<div class="nav-collapse">
-					<ul class="nav">
-						<li><a href="home">
-						<i class="icon-white icon-home"></i> Home</a></li>
-						<li><a href="about">
-						<i class="icon-white icon-book"></i> About</a></li>
-						<li><a href="contact">
-						<i class="icon-white icon-pencil"></i> Contact</a></li>
-						<li><a href="listOfPresentations">
-						<i class="icon-white icon-picture"></i>
-						List of Presentations</a></li>
-					</ul>
-				</div>
-				<!--/.nav-collapse -->
-				<form class="navbar-search pull-left" action="">
-					<i class="icon-white icon-search"></i><input type="text" class="search-query span2" placeholder="Search">
-				</form>
-				<ul class="nav pull-right">
-					<ul class="nav">
-						<a class="btn dropdown-toggle" data-toggle="dropdown">
-             			 <i class="icon-user"></i> Account
-             			 <span class="caret"></span>
-           				 </a>
-							<ul class="dropdown-menu">
-							<li><a href="loginform">Login</a></li>
-							<li><a href="../j_spring_security_logout">
-							<i class="icon-off"></i> Logout</a></li>
-							
-							</ul></li>
-					</ul>
-				
+	<div class="topbar">
+		<div class="fill">
+			<div class="container" style="width: 760px">
+				<a class="brand" href="../editor.html">Web Editor</a>
+				<ul class="nav">
+					<li class="active"><a href="home"><spring:message code="btn.home"/></a></li>
+					<li><a href="presentations"><spring:message code="btn.presentations"/></a></li>
+					<li><a href="about"><spring:message code="btn.about"/></a></li>
 				</ul>
+				<c:choose>
+					<c:when test="${authenticated}">
+						<form class="pull-right">
+							<button class="btn" type="submit"
+								onClick="window.location='../j_spring_security_logout'; return false;"><spring:message code="btn.logout"/></button>
+						</form>
+						<p class="pull-right" style="margin-right: 10px">
+							<spring:message code="lbl.loggedinas"/><a href="userpage">${userName}</a>
+						</p>
+					</c:when>
+					<c:otherwise>
+						<form class="pull-right">
+							<button class="btn" type="submit"
+								onClick="window.location='login'; return false;"><spring:message code="btn.login"/></button>
+							<button class="btn" type="submit"
+								onClick="window.location='register'; return false;"><spring:message code="btn.registration"/></button>
+						</form>
+					</c:otherwise>
+				</c:choose>
 			</div>
 		</div>
 	</div>
