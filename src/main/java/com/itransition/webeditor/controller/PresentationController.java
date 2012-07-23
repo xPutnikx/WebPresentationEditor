@@ -10,7 +10,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.itransition.webeditor.core.AuthenticationManager;
 import com.itransition.webeditor.model.Presentations;
 import com.itransition.webeditor.model.Tags;
@@ -45,7 +44,7 @@ public class PresentationController {
 			modelMap.addAttribute("presentationTitle", presentations.getTitle());
 			Users users = usersService.findById(presentations.getUserId());
 			if (users != null) {
-				modelMap.addAttribute("presentationId", users.getId());
+				modelMap.addAttribute("presentationUserId", users.getId());
 				modelMap.addAttribute("presentationUser", users.getName());
 				List<Tags> tags = presentationsService
 						.findTagsByPresentationId(id);

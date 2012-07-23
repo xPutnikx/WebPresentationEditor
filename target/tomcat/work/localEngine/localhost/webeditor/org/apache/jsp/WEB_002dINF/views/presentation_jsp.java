@@ -170,7 +170,7 @@ public final class presentation_jsp extends org.apache.jasper.runtime.HttpJspBas
         return;
       out.write(": </b>\r\n");
       out.write("\t\t\t\t\t<a href=\"user?id=");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${presentationId}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${presentationUserId}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write('"');
       out.write('>');
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${presentationUser}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));

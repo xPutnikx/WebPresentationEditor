@@ -1,9 +1,7 @@
 package com.itransition.webeditor.controller;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.itransition.webeditor.core.AuthenticationManager;
-import com.itransition.webeditor.dao.TagsDao;
 import com.itransition.webeditor.model.Presentations;
 import com.itransition.webeditor.model.Users;
 import com.itransition.webeditor.service.PresentationsService;

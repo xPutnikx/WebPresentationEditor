@@ -2,7 +2,6 @@ package com.itransition.webeditor.controller;
 
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
-import org.springframework.validation.ValidationUtils;
 import com.itransition.webeditor.form.Registration;
 
 @Component("registrationValidator")

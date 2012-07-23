@@ -100,7 +100,7 @@ body {
 				</p>
 				<p>
 					<b><spring:message code="lbl.author" />: </b>
-					<a href="user?id=${presentationId}">${presentationUser}</a>
+					<a href="user?id=${presentationUserId}">${presentationUser}</a>
 				</p>
 				<p>
 				<div style="float: left;">

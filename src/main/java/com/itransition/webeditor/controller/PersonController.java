@@ -7,13 +7,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.NestedServletException;
-
 import com.itransition.webeditor.core.AuthenticationManager;
 import com.itransition.webeditor.core.PermessionDeniedException;
 import com.itransition.webeditor.model.Users;
@@ -25,12 +22,9 @@ import java.util.List;
 @RequestMapping("/")
 public class PersonController {
 	private static final Logger logger = LoggerFactory.getLogger(PersonController.class);
-
 	@Autowired
 	private UsersService usersService;
 	
-	
-
 	@RequestMapping(method = RequestMethod.POST, value = "edit")
 	public String savePerson(@RequestParam ("name") String name,@RequestParam ("email") String email,@RequestParam ("password") String password) throws NestedServletException {
 		Users users=new Users();
@@ -60,6 +54,7 @@ public class PersonController {
 		modelMap.addAttribute("username", getCurrentUserName());
 		return "list";
 	}
+	
 	@RequestMapping(value = "/list", method = RequestMethod.POST)
 	public void changeActivity(@RequestParam ("json") long person,@RequestParam ("enable") boolean enable) throws PermessionDeniedException
 	{
@@ -70,6 +65,7 @@ public class PersonController {
 			usersService.unbanById(person);
 		}
 	}
+	
 	@RequestMapping(value = "/listrole", method = RequestMethod.POST)
 	public void changeRole(@RequestParam ("json") long person,@RequestParam ("role") String role)
 	{
@@ -82,6 +78,7 @@ public class PersonController {
 		}
 		
 	}
+	
 	@RequestMapping(value = "/listdelete", method = RequestMethod.POST)
 	public void delUser(@RequestParam ("json") long person) throws PermessionDeniedException
 	{
