@@ -7,8 +7,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class Registration {
 	@NotEmpty
 	private String name;
-	@NotEmpty
-	@Size(min = 4, max = 20)
+	@Size(min = 4,message="Password is too short")
 	private String password;
 	@NotEmpty
 	private String confirmPassword;

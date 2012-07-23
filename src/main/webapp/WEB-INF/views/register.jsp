@@ -67,31 +67,43 @@ body {
 			</div>
 		</div>
 	</div>
-
 	<div class="container" style="width: 800px">
 		<form:form method="Post" action="register" commandName="registration"
 			style="width: 230px; margin-left: auto; margin-right: auto;">
-			<b><spring:message code="lbl.username" />:</b>
-			<font color="red"><form:errors path="name" /></font>
-			<form:input path="name" />
-			<br />
-			<br />
-			<b><spring:message code="lbl.password" />:</b>
-			<font color="red"><form:errors path="password" /></font>
-			<form:password path="password" />
-			<br />
-			<br />
-			<b><spring:message code="lbl.confirmpassword" />:</b>
-			<font color="red"><form:errors path="confirmPassword" /></font>
-			<form:password path="confirmPassword" />
-			<br />
-			<br />
-			<b><spring:message code="lbl.email" />:</b>
-			<font color="red"><form:errors path="email" /></font>
-			<form:input path="email" />
-			<br />
-			<br />
-			<input type="submit" class="btn primary" value="Submit" />
+			<div class="well"
+				style="color: black; width: 500px; height: 40px; margin-left: -150px;">
+				<div style="margin-top:10px;">
+				<b style="margin-right:40px;">User Name:</b>
+				<form:input path="name" style="margin-right:5px;"/><font color="red"><form:errors path="name" /></font>
+				</div>
+			</div>
+			<div class="well"
+				style="color: black; width: 500px; height: 40px; margin-left: -150px;">
+				<div style="margin-top:10px;">
+				<b  style="margin-right:49px;">Password:</b>
+				<form:password path="password"  style="margin-right:5px;"/><font color="red"><form:errors
+						path="password" /></font>
+				</div>
+			</div>
+			<div class="well"
+				style="color: black; width: 500px; height: 40px; margin-left: -150px;">
+				<div style="margin-top:10px;">
+				<b>Confirm Password:</b>
+				<form:password path="confirmPassword" style="margin-right:5px;"/>
+				<font color="red"><form:errors
+						path="confirmPassword" /></font>
+				</div>
+			</div>
+			<div class="well"
+				style="color: black; width: 500px; height: 40px; margin-left: -150px;">
+				<div style="margin-top:10px;">
+				<b style="margin-right:74px;">Email:</b>
+				<form:input path="email" style="margin-right:5px;" />
+				<font color="red"><form:errors path="email" /></font>
+				</div>
+			</div>
+			<input type="submit" class="btn primary" value="Submit"
+				style="margin-left: -150px;" />
 		</form:form>
 	</div>
 	<!-- /container -->

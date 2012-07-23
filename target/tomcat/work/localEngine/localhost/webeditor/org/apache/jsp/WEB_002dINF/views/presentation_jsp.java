@@ -207,7 +207,6 @@ public final class presentation_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${presentationId}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\" data-num-posts=\"4\"\r\n");
       out.write("\t\t\t\tdata-width=\"520\"></div>\r\n");
-      out.write("\r\n");
       out.write("\t\t</section>\r\n");
       out.write("\t</div>\r\n");
       out.write("\t<!-- /container -->\r\n");
