@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.itransition.webeditor.core.AuthenticationManager;
 import com.itransition.webeditor.core.SearchQueryJson;
 import com.itransition.webeditor.model.Presentations;
 import com.itransition.webeditor.service.PresentationsService;
@@ -47,6 +48,13 @@ public class PresentationsController {
 			@RequestParam(value = "title", required = false) String title,
 			@RequestParam(value = "tag[]", required = false) String[] tags,
 			ModelMap modelMap) {
+		AuthenticationManager authenticationManager = new AuthenticationManager();
+		boolean authenticated = authenticationManager.isAuthenticated();
+		modelMap.addAttribute("authenticated", authenticated);
+		if (authenticated) {
+			modelMap.addAttribute("userName",
+					authenticationManager.getUserName());
+		}
 		String titleValue = generateTitleAreaValue(title);
 		modelMap.addAttribute("titleAreaValue", titleValue);
 		String tagsValue = generateTagsAreaValue(tags);
