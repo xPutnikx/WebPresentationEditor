@@ -45,6 +45,7 @@ public class PresentationController {
 			modelMap.addAttribute("presentationTitle", presentations.getTitle());
 			Users users = usersService.findById(presentations.getUserId());
 			if (users != null) {
+				modelMap.addAttribute("presentationId", users.getId());
 				modelMap.addAttribute("presentationUser", users.getName());
 				List<Tags> tags = presentationsService
 						.findTagsByPresentationId(id);

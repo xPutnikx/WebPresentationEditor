@@ -53,6 +53,10 @@ body {
 								code="btn.presentations" /></a></li>
 					<li><a href="about"><spring:message code="btn.about" /></a></li>
 				</ul>
+				<form class="navbar-search pull-left" action="presentations">
+                    <input type="text" class="search-query" id="search-input" name="title"
+                        style="margin-top: 3px; width: 120px" placeholder="Search">
+                </form>
 				<c:choose>
 					<c:when test="${authenticated}">
 						<form class="pull-right">
@@ -95,7 +99,8 @@ body {
 					<b><spring:message code="lbl.title" />: </b>${presentationTitle}
 				</p>
 				<p>
-					<b><spring:message code="lbl.author" />: </b>${presentationUser}
+					<b><spring:message code="lbl.author" />: </b>
+					<a href="user?id=${presentationId}">${presentationUser}</a>
 				</p>
 				<p>
 				<div style="float: left;">

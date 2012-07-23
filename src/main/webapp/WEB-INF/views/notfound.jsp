@@ -31,10 +31,14 @@ body {
 			<div class="container" style="width: 760px">
 				<a class="brand" href="../editor.html">Web Editor</a>
 				<ul class="nav">
-					<li class="active"><a href="home">Home</a></li>
+					<li><a href="home">Home</a></li>
 					<li><a href="presentations">Presentations</a></li>
 					<li><a href="about">About</a></li>
 				</ul>
+				<form class="navbar-search pull-left" action="presentations">
+                    <input type="text" class="search-query" id="search-input" name="title"
+                        style="margin-top: 3px; width: 120px" placeholder="Search">
+                </form>
 				<c:choose>
 					<c:when test="${authenticated}">
 						<form class="pull-right">

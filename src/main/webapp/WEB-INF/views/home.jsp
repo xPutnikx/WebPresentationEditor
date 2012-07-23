@@ -36,6 +36,10 @@ body {
 								code="btn.presentations" /></a></li>
 					<li><a href="about"><spring:message code="btn.about" /></a></li>
 				</ul>
+				<form class="navbar-search pull-left" action="presentations">
+                    <input type="text" class="search-query" id="search-input" name="title"
+                        style="margin-top: 3px; width: 120px" placeholder="Search">
+                </form>
 				<c:choose>
 					<c:when test="${authenticated}">
 						<form class="pull-right">
@@ -123,10 +127,12 @@ body {
 		</div>
 
 		<footer>
-			<p>
-				&copy; Web Editor 2012 <a href="?lang=en">en</a> | <a
-					href="?lang=ru">ru</a></span>
-			</p>
+
+			<div style="float: left">&copy; Web Editor 2012</div>
+			<div style="float: right">
+				Language: <a href="?lang=en">English</a> | <a href="?lang=ru">Russian</a></span>
+			</div>
+
 		</footer>
 
 	</div>

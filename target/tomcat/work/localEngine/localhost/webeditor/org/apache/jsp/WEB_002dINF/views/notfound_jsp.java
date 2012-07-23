@@ -87,27 +87,31 @@ public final class notfound_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</head>\r\n");
       out.write("\r\n");
       out.write("<body>\r\n");
-      out.write("    <div class=\"topbar\">\r\n");
-      out.write("        <div class=\"fill\">\r\n");
-      out.write("            <div class=\"container\" style=\"width: 760px\">\r\n");
-      out.write("                <a class=\"brand\" href=\"../editor.html\">Web Editor</a>\r\n");
-      out.write("                <ul class=\"nav\">\r\n");
-      out.write("                    <li class=\"active\"><a href=\"home\">Home</a></li>\r\n");
-      out.write("                    <li><a href=\"presentations\">Presentations</a></li>\r\n");
-      out.write("                    <li><a href=\"about\">About</a></li>\r\n");
-      out.write("                </ul>\r\n");
-      out.write("                ");
+      out.write("\t<div class=\"topbar\">\r\n");
+      out.write("\t\t<div class=\"fill\">\r\n");
+      out.write("\t\t\t<div class=\"container\" style=\"width: 760px\">\r\n");
+      out.write("\t\t\t\t<a class=\"brand\" href=\"../editor.html\">Web Editor</a>\r\n");
+      out.write("\t\t\t\t<ul class=\"nav\">\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"home\">Home</a></li>\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"presentations\">Presentations</a></li>\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"about\">About</a></li>\r\n");
+      out.write("\t\t\t\t</ul>\r\n");
+      out.write("\t\t\t\t<form class=\"navbar-search pull-left\" action=\"presentations\">\r\n");
+      out.write("                    <input type=\"text\" class=\"search-query\" id=\"search-input\" name=\"title\"\r\n");
+      out.write("                        style=\"margin-top: 3px; width: 120px\" placeholder=\"Search\">\r\n");
+      out.write("                </form>\r\n");
+      out.write("\t\t\t\t");
       if (_jspx_meth_c_005fchoose_005f0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("            </div>\r\n");
-      out.write("        </div>\r\n");
-      out.write("    </div>\r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\t</div>\r\n");
       out.write("\r\n");
-      out.write("    <div class=\"container\" style=\"width: 800px; text-align: center;\">\r\n");
-      out.write("        <img src=\"resources/assets/img/404.png\" />\r\n");
-      out.write("    </div>\r\n");
-      out.write("    <!-- /container -->\r\n");
+      out.write("\t<div class=\"container\" style=\"width: 800px; text-align: center;\">\r\n");
+      out.write("\t\t<img src=\"resources/assets/img/404.png\" />\r\n");
+      out.write("\t</div>\r\n");
+      out.write("\t<!-- /container -->\r\n");
       out.write("\r\n");
       out.write("\t<!-- Le javascript -->\r\n");
       out.write("\t<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
@@ -146,15 +150,15 @@ public final class notfound_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_005fchoose_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("                    ");
+        out.write("\t\t\t\t\t");
         if (_jspx_meth_c_005fwhen_005f0(_jspx_th_c_005fchoose_005f0, _jspx_page_context))
           return true;
         out.write("\r\n");
-        out.write("                    ");
+        out.write("\t\t\t\t\t");
         if (_jspx_meth_c_005fotherwise_005f0(_jspx_th_c_005fchoose_005f0, _jspx_page_context))
           return true;
         out.write("\r\n");
-        out.write("                ");
+        out.write("\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_005fchoose_005f0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -176,23 +180,23 @@ public final class notfound_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_005fwhen_005f0 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _005fjspx_005ftagPool_005fc_005fwhen_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
     _jspx_th_c_005fwhen_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fwhen_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fchoose_005f0);
-    // /WEB-INF/views/notfound.jsp(38,20) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/notfound.jsp(43,5) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fwhen_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${authenticated}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
     int _jspx_eval_c_005fwhen_005f0 = _jspx_th_c_005fwhen_005f0.doStartTag();
     if (_jspx_eval_c_005fwhen_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("                        <form class=\"pull-right\">\r\n");
-        out.write("                            <button class=\"btn\" type=\"submit\"\r\n");
-        out.write("                                onClick=\"window.location='../j_spring_security_logout'; return false;\">Log\r\n");
-        out.write("                                out</button>\r\n");
-        out.write("                        </form>\r\n");
-        out.write("                        <p class=\"pull-right\" style=\"margin-right: 10px\">\r\n");
-        out.write("                            Logged in as <a href=\"#\">");
+        out.write("\t\t\t\t\t\t<form class=\"pull-right\">\r\n");
+        out.write("\t\t\t\t\t\t\t<button class=\"btn\" type=\"submit\"\r\n");
+        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='../j_spring_security_logout'; return false;\">Log\r\n");
+        out.write("\t\t\t\t\t\t\t\tout</button>\r\n");
+        out.write("\t\t\t\t\t\t</form>\r\n");
+        out.write("\t\t\t\t\t\t<p class=\"pull-right\" style=\"margin-right: 10px\">\r\n");
+        out.write("\t\t\t\t\t\t\tLogged in as <a href=\"#\">");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${userName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
         out.write("</a>\r\n");
-        out.write("                        </p>\r\n");
-        out.write("                    ");
+        out.write("\t\t\t\t\t\t</p>\r\n");
+        out.write("\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_005fwhen_005f0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -218,13 +222,13 @@ public final class notfound_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_005fotherwise_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("                        <form class=\"pull-right\">\r\n");
-        out.write("                            <button class=\"btn\" type=\"submit\"\r\n");
-        out.write("                                onClick=\"window.location='login'; return false;\">Log in</button>\r\n");
-        out.write("                            <button class=\"btn\" type=\"submit\"\r\n");
-        out.write("                                onClick=\"window.location='register'; return false;\">Register</button>\r\n");
-        out.write("                        </form>\r\n");
-        out.write("                    ");
+        out.write("\t\t\t\t\t\t<form class=\"pull-right\">\r\n");
+        out.write("\t\t\t\t\t\t\t<button class=\"btn\" type=\"submit\"\r\n");
+        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='login'; return false;\">Log in</button>\r\n");
+        out.write("\t\t\t\t\t\t\t<button class=\"btn\" type=\"submit\"\r\n");
+        out.write("\t\t\t\t\t\t\t\tonClick=\"window.location='register'; return false;\">Register</button>\r\n");
+        out.write("\t\t\t\t\t\t</form>\r\n");
+        out.write("\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_005fotherwise_005f0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
