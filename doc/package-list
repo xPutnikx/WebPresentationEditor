@@ -1,0 +1,6 @@
+com.itransition.webeditor.controller
+com.itransition.webeditor.core
+com.itransition.webeditor.dao
+com.itransition.webeditor.form
+com.itransition.webeditor.model
+com.itransition.webeditor.service

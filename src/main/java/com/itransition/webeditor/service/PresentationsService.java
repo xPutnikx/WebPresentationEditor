@@ -2,7 +2,6 @@ package com.itransition.webeditor.service;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -16,6 +15,11 @@ import com.itransition.webeditor.model.PresentationTags;
 import com.itransition.webeditor.model.Presentations;
 import com.itransition.webeditor.model.Tags;
 
+/**
+ * The service provides the basic functions for creating, updating, searching,
+ * removing presentations and their tags.
+ * 
+ */
 @Service
 public class PresentationsService {
 	@Autowired
@@ -25,14 +29,35 @@ public class PresentationsService {
 	@Autowired
 	private PresentationTagsDao presentationTagsDao;
 
+	/**
+	 * Finds presentation by specified id.
+	 * 
+	 * @param id
+	 *            presentation id.
+	 * @return presentation
+	 */
 	public Presentations findById(Long id) {
 		return presentationsDao.findById(id);
 	}
 
+	/**
+	 * Finds presentations created by user with specified id.
+	 * 
+	 * @param userId
+	 *            user id.
+	 * @return list of presentations.
+	 */
 	public List<Presentations> findPresentationsByUserId(Long userId) {
 		return presentationsDao.findByUserId(userId);
 	}
 
+	/**
+	 * Finds tags of presentation with specified id.
+	 * 
+	 * @param id
+	 *            presntaion id.
+	 * @return list of tags.
+	 */
 	public List<Tags> findTagsByPresentationId(Long id) {
 		List<PresentationTags> presentationTags = presentationTagsDao
 				.findByPresentationId(id);
@@ -44,10 +69,24 @@ public class PresentationsService {
 		return tags;
 	}
 
+	/**
+	 * Searches presentations by title.
+	 * 
+	 * @param title
+	 *            presentation title.
+	 * @return list of presentations.
+	 */
 	public List<Presentations> searchByTitle(String title) {
 		return presentationsDao.searchByTitle(title);
 	}
 
+	/**
+	 * Searches presentations by tags.
+	 * 
+	 * @param tags
+	 *            presentation tags.
+	 * @return list of presentations.
+	 */
 	public List<Presentations> searchByTags(String[] tags) {
 		List<Long> tagIds = findTagIds(tags);
 		List<Long> presentationIds = findPresentationIds(tagIds);
@@ -55,6 +94,15 @@ public class PresentationsService {
 		return presentations;
 	}
 
+	/**
+	 * Searches presentations by title and tags.
+	 * 
+	 * @param title
+	 *            presentation title.
+	 * @param tags
+	 *            presentation tags.
+	 * @return list of presentations.
+	 */
 	public List<Presentations> searchByTitleAndTags(String title, String[] tags) {
 		Set<Presentations> presentations = new HashSet<Presentations>();
 		presentations.addAll(searchByTitle(title));
@@ -62,20 +110,38 @@ public class PresentationsService {
 		return new ArrayList<Presentations>(presentations);
 	}
 
+	/**
+	 * Searches tags by name condition.
+	 * 
+	 * @param tagName
+	 *            tag name condition.
+	 * @return tag names.
+	 */
 	public List<String> searchTagsByName(String tagName) {
 		return tagsDao.searchByName(tagName);
 	}
 
+	/**
+	 * Gets list of presentations.
+	 * 
+	 * @return list of presentations.
+	 */
 	public List<Presentations> getPresentations() {
 		return presentationsDao.getPresentations();
 	}
 
+	/**
+	 * Saves or overrides specified presentation.
+	 * 
+	 * @param presentations
+	 *            presentation.
+	 */
 	public void save(Presentations presentations) {
 		presentationsDao.save(presentations);
 	}
 
 	/**
-	 * Add list of tags to Tags table and foreign keys to PresentationTags.
+	 * Adds list of tags to Tags table and foreign keys to PresentationTags.
 	 * Creates new tag if it doesn't exist.
 	 * 
 	 * @param tags
@@ -97,10 +163,28 @@ public class PresentationsService {
 		}
 	}
 
+	/**
+	 * Removes presentation and its tags.
+	 * 
+	 * @param id
+	 *            presentation id.
+	 */
 	public void removeById(Long id) {
+		List<PresentationTags> presentationTags = presentationTagsDao
+				.findByPresentationId(id);
+		for (PresentationTags presentationTag : presentationTags) {
+			tagsDao.removeById(presentationTag.getTagId());
+		}
+		presentationTagsDao.removeByPresentationId(id);
 		presentationsDao.removeById(id);
 	}
 
+	/**
+	 * Removes presentations by user id.
+	 * 
+	 * @param userId
+	 *            user id.
+	 */
 	public void removeByUserId(Long userId) {
 		presentationsDao.removeByUserId(userId);
 	}

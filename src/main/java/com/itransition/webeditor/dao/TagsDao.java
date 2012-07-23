@@ -1,11 +1,8 @@
 package com.itransition.webeditor.dao;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import org.hibernate.annotations.Index;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
