@@ -37,69 +37,14 @@ a {
 
 <body>
 
-	<div class="topbar">
-		<div class="fill">
-			<div class="container" style="width: 760px">
-				<a class="brand" href="../editor.html">Web Editor</a>
-				<ul class="nav">
-					<li class="active"><a href="home"><spring:message
-								code="btn.home" /></a></li>
-					<li><a href="presentations"><spring:message
-								code="btn.presentations" /></a></li>
-					<li><a href="about"><spring:message code="btn.about" /></a></li>
-				</ul>
-				<form class="navbar-search pull-left" action="presentations">
-                    <input type="text" class="search-query" id="search-input" name="title"
-                        style="margin-top: 3px; width: 120px" placeholder="Search">
-                </form>
-				<c:choose>
-					<c:when test="${authenticated}">
-						<form class="pull-right">
-							<button class="btn" type="submit"
-								onClick="window.location='../j_spring_security_logout'; return false;">
-								<spring:message code="btn.logout" />
-							</button>
-						</form>
-						<p class="pull-right" style="margin-right: 10px">
-							<spring:message code="lbl.loggedinas" />
-							<a href="userpage">${userName}</a>
-						</p>
-					</c:when>
-					<c:otherwise>
-						<form class="pull-right">
-							<button class="btn" type="submit"
-								onClick="window.location='login'; return false;">
-								<spring:message code="btn.login" />
-							</button>
-							<button class="btn" type="submit"
-								onClick="window.location='register'; return false;">
-								<spring:message code="btn.registration" />
-							</button>
-						</form>
-					</c:otherwise>
-				</c:choose>
-			</div>
-		</div>
-	</div>
+	<jsp:include page="navbar.jsp"></jsp:include>
 
 	<div class="container">
 		<p style="margin-top: 70px;">Mail with a unique key to confirm the registration be sent to
 			your e-mail</p>
 	</div>
 
-	<script src="resources/assets/js/jquery.js"></script>
-	<script src="resources/assets/js/bootstrap-transition.js"></script>
-	<script src="resources/assets/js/bootstrap-alert.js"></script>
-	<script src="resources/assets/js/bootstrap-modal.js"></script>
-	<script src="resources/assets/js/bootstrap-dropdown.js"></script>
-	<script src="resources/assets/js/bootstrap-scrollspy.js"></script>
-	<script src="resources/assets/js/bootstrap-tab.js"></script>
-	<script src="resources/assets/js/bootstrap-tooltip.js"></script>
-	<script src="resources/assets/js/bootstrap-popover.js"></script>
-	<script src="resources/assets/js/bootstrap-button.js"></script>
-	<script src="resources/assets/js/bootstrap-collapse.js"></script>
-	<script src="resources/assets/js/bootstrap-carousel.js"></script>
-	<script src="resources/assets/js/bootstrap-typeahead.js"></script>
+	<jsp:include page="scripts.jsp"></jsp:include>
 
 </body>
 </html>

@@ -217,15 +217,9 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<!-- /container -->\r\n");
       out.write("\r\n");
       out.write("\t<!-- Le javascript -->\r\n");
-      out.write("\t<script src=\"resources/assets/js/jquery.js\"></script>\r\n");
-      out.write("\t<script src=\"resources/assets/js/less-1.1.5.min.js\"></script>\r\n");
-      out.write("\t<script src=\"resources/assets/js/bootstrap-alerts.js\"></script>\r\n");
-      out.write("\t<script src=\"resources/assets/js/bootstrap-buttons.js\"></script>\r\n");
-      out.write("\t<script src=\"resources/assets/js/bootstrap-dropdown.js\"></script>\r\n");
-      out.write("\t<script src=\"resources/assets/js/bootstrap-modal.js\"></script>\r\n");
-      out.write("\t<script src=\"resources/assets/js/bootstrap-scrollspy.js\"></script>\r\n");
-      out.write("\t<script src=\"resources/assets/js/bootstrap-tabs.js\"></script>\r\n");
-      out.write("\t<script src=\"resources/assets/js/bootstrap-twipsy.js\"></script>\r\n");
+      out.write("\t");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "scripts.jsp", out, false);
+      out.write("\r\n");
       out.write("\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");

@@ -204,21 +204,8 @@ a {
 		</div>
 	</div>
 </div>
-<script src="resources/assets/js/jquery.js"></script>
+<jsp:include page="scripts.jsp"></jsp:include>
 <script src="resources/jquery.ba-dotimeout.js"></script>
-<script src="resources/assets/js/bootstrap-transition.js"></script>
-<script src="resources/assets/js/bootstrap-alert.js"></script>
-<script src="resources/assets/js/bootstrap-modal.js"></script>
-<script src="resources/assets/js/bootstrap-dropdown.js"></script>
-<script src="resources/assets/js/bootstrap-scrollspy.js"></script>
-<script src="resources/assets/js/bootstrap-tab.js"></script>
-<script src="resources/assets/js/bootstrap-tooltip.js"></script>
-<script src="resources/assets/js/bootstrap-twipsy.js"></script>
-<script src="resources/assets/js/bootstrap-popover.js"></script>
-<script src="resources/assets/js/bootstrap-button.js"></script>
-<script src="resources/assets/js/bootstrap-collapse.js"></script>
-<script src="resources/assets/js/bootstrap-carousel.js"></script>
-<script src="resources/assets/js/bootstrap-typeahead.js"></script>
 <script src="resources/deletelist.js"></script>
 <script src="resources/checklist.js"></script>
 <script src="resources/changelist.js"></script>

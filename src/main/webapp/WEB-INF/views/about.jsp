@@ -78,73 +78,68 @@ a {
 		</div>
 	</div>
 	<div id="item">
+			<ul>
 			<c:forEach items="${tags}" var="tag">
 				<li><a href="presentations?tag[]=${tag.name}"  style="color:rgb(162, 162, 162);">${tag.name}</a></li>
 			</c:forEach>
+		</ul>
 		</div>
 	<iframe src="http://mrdoob.com/lab/javascript/webgl/clouds/"
-		width="1800" height="1240"
+		width="2400" height="1240"
 		style="margin-top: -250px; margin-left: -15px;"></iframe>
 
 	<!-- Le javascript -->
-<script src="resources/assets/js/jquery.js"></script>
-	<script src="resources/assets/js/bootstrap-transition.js"></script>
-	<script src="resources/assets/js/bootstrap-alert.js"></script>
-	<script src="resources/assets/js/bootstrap-modal.js"></script>
-	<script src="resources/assets/js/bootstrap-dropdown.js"></script>
-	<script src="resources/assets/js/bootstrap-scrollspy.js"></script>
-	<script src="resources/assets/js/bootstrap-tab.js"></script>
-	<script src="resources/assets/js/bootstrap-tooltip.js"></script>
-	<script src="resources/assets/js/bootstrap-popover.js"></script>
-	<script src="resources/assets/js/bootstrap-button.js"></script>
-	<script src="resources/assets/js/bootstrap-collapse.js"></script>
-	<script src="resources/assets/js/bootstrap-carousel.js"></script>
-	<script src="resources/assets/js/bootstrap-typeahead.js"></script>
-	<script type="text/javascript" src="resources/sphere/JQuery.js"></script>
-	<script src="resources/sphere/3DEngine.js" type="text/javascript"
+	<jsp:include page="scripts.jsp"></jsp:include>
+	<script type="text/javascript" src="resources/ring/jquery.js"></script>
+	<script src="resources/ring/3DEngine.js" type="text/javascript"
 		charset="utf-8"></script>
-	<script src="resources/sphere/Sphere.js" type="text/javascript"
+	<script src="resources/ring/Ring.js" type="text/javascript"
 		charset="utf-8"></script>
-	<script type="text/javascript">
+		<script type="text/javascript">
+		//<![CDATA[
+		
 		$(document).ready(function() {
 
 			var camera = new Camera3D();
-			camera.init(0, 0, 0, 150);
-
-			var container = $("#item")
-
+			camera.init(0,0,0,300);
+			
+			var container = $("#item");
+			
 			var item = new Object3D(container);
 
-			item.addChild(new Sphere(100, 10, 100));
-
+			item.addChild(new Ring(200, $("#item ul li").length));
+			
 			var scene = new Scene3D();
 			scene.addToScene(item);
-
-			var mouseX, mouseY = 0;
+			
+			
+			var mouseX,mouseY = 0;
 			var offsetX = $("#item").offset().left;
 			var offsetY = $("#item").offset().top;
-			var speed = 50000;
-
-			$().mousemove(function(e) {
+			var speed = 12000;
+			
+			$().mousemove(function(e){
 				mouseX = e.clientX - offsetX - (container.width() / 2);
 				mouseY = e.clientY - offsetY - (container.height() / 2);
 			});
-
-			var animateIt = function() {
-				if (mouseX != undefined) {
-					axisRotation.y += (mouseX) / speed
+			
+			axisRotation.x = 1.5;
+			
+			var animateIt = function(){
+				if (mouseX != undefined){
+					axisRotation.y += (mouseX) / speed;
 				}
-				if (mouseY != undefined) {
-					axisRotation.x -= mouseY / speed;
-				}
-
+				
 				scene.renderCamera(camera);
-
+				
 			};
-
+			
+			
 			setInterval(animateIt, 20);
-
-		});
+			
+			
+			});
+		//]]>
 	</script>
 </body>
 </html>

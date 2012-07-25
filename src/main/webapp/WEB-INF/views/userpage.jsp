@@ -115,15 +115,7 @@ body {
 			</div>
 		</c:if>
 	</div>
-	<script src="resources/assets/js/jquery.js"></script>
+	<jsp:include page="scripts.jsp"></jsp:include>
 	<script src="resources/jquery-ui-1.8.21.custom.min.js"></script>
-	<script src="resources/assets/js/less-1.1.5.min.js"></script>
-	<script src="resources/assets/js/bootstrap-alerts.js"></script>
-	<script src="resources/assets/js/bootstrap-buttons.js"></script>
-	<script src="resources/assets/js/bootstrap-dropdown.js"></script>
-	<script src="resources/assets/js/bootstrap-modal.js"></script>
-	<script src="resources/assets/js/bootstrap-scrollspy.js"></script>
-	<script src="resources/assets/js/bootstrap-tabs.js"></script>
-	<script src="resources/assets/js/bootstrap-twipsy.js"></script>
 </body>
 </html>

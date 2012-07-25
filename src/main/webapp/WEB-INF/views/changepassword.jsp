@@ -123,20 +123,7 @@ a {
 				onclick="sub()" style="width: 70px;" />
 		</form:form>
 	</div>
-	<script src="resources/assets/js/jquery.js"></script>
-	<script src="resources/assets/js/bootstrap-transition.js"></script>
-	<script src="resources/assets/js/bootstrap-alert.js"></script>
-	<script src="resources/assets/js/bootstrap-modal.js"></script>
-	<script src="resources/assets/js/bootstrap-dropdown.js"></script>
-	<script src="resources/assets/js/bootstrap-scrollspy.js"></script>
-	<script src="resources/assets/js/bootstrap-tab.js"></script>
-	<script src="resources/assets/js/bootstrap-tooltip.js"></script>
-	<script src="resources/assets/js/bootstrap-twipsy.js"></script>
-	<script src="resources/assets/js/bootstrap-popover.js"></script>
-	<script src="resources/assets/js/bootstrap-button.js"></script>
-	<script src="resources/assets/js/bootstrap-collapse.js"></script>
-	<script src="resources/assets/js/bootstrap-carousel.js"></script>
-	<script src="resources/assets/js/bootstrap-typeahead.js"></script>
+	<jsp:include page="scripts.jsp"></jsp:include>
 	<script src="resources/changepassword.js"></script>
 	<script src="resources/jquery.ui.core.js"></script>
 	<script src="resources/jquery.ui.widget.js"></script>
